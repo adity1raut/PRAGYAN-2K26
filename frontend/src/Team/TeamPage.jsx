@@ -1,77 +1,111 @@
 import React from 'react';
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Linkedin, Mail, Instagram, Sparkles, ArrowLeft, Heart, ExternalLink } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import Footer from '../Footer/Footer'
 
 export default function TeamSection() {
   const [hoveredIndex, setHoveredIndex] = React.useState(null);
+  const navigate = useNavigate();
 
   const teamMembers = [
     {
       name: "Alex Quantum",
       role: "Lead Developer",
-      bio: "Pioneering the future of quantum computing and AI integration.",
-      projects: 24,
-      experience: "5+",
-      skills: 20,
-      github: "https://github.com",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face",
       linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
       email: "alex@pragyaa.com"
     },
     {
       name: "Sarah Nexus",
       role: "Creative Director",
-      bio: "Crafting immersive digital experiences that push boundaries.",
-      projects: 18,
-      experience: "4+",
-      skills: 16,
-      github: "https://github.com",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=500&h=500&fit=crop&crop=face",
       linkedin: "https://linkedin.com",
+      instagram: "https://instagram.com",
       email: "sarah@pragyaa.com"
     },
     {
       name: "Max Cyber",
       role: "Tech Architect",
-      bio: "Building scalable systems for tomorrow's challenges today.",
-      projects: 30,
-      experience: "6+",
-      skills: 22,
-      github: "https://github.com",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop&crop=face",
       linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
       email: "max@pragyaa.com"
     }
   ];
 
   return (
-    <section className="min-h-screen bg-gray-950 py-20 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="min-h-screen bg-gray-950 py-20 px-4 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-2 h-2 bg-cyan-400/20 rounded-full"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animation: `float ${5 + Math.random() * 10}s infinite ease-in-out`,
+              animationDelay: `${Math.random() * 5}s`
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Gradient orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+      {/* Back Button */}
+      <div className="absolute top-8 left-8 z-20">
+        <button
+          onClick={() => navigate(-1)}
+          className="group relative flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-900/90 to-gray-800/90 backdrop-blur-xl border-2 border-cyan-500/30 rounded-2xl hover:border-cyan-500/60 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/30"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+          <ArrowLeft className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:-translate-x-1" />
+          <span className="text-cyan-400 group-hover:text-cyan-300 font-semibold text-sm tracking-wide transition-colors duration-300">
+            Back
+          </span>
+          <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur-lg transition-all duration-500"></div>
+        </button>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="text-xs tracking-[3px] text-cyan-400 mb-3 uppercase animate-pulse">
-            Meet The Innovators
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 text-xs tracking-[4px] text-cyan-400 mb-6 uppercase">
+            <Sparkles className="w-4 h-4 animate-spin" style={{ animationDuration: '3s' }} />
+            <span className="animate-pulse">Meet The Innovators</span>
+            <Sparkles className="w-4 h-4 animate-spin" style={{ animationDuration: '3s', animationDirection: 'reverse' }} />
           </div>
-          <h2 className="text-5xl md:text-7xl font-black tracking-wider bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent uppercase">
+          <h2 className="text-6xl md:text-8xl font-black tracking-wider bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent uppercase mb-8 animate-gradient">
             Our Team
           </h2>
+          <div className="w-40 h-1.5 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 mx-auto rounded-full animate-pulse"></div>
         </div>
         
         {/* Team Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {teamMembers.map((member, index) => (
             <div 
               key={index}
               className="relative group"
+              style={{ width: '300px', height: '400px' }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Glowing border effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 blur transition duration-500 animate-pulse"></div>
+              {/* Mega glowing border effect */}
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-1000 animate-pulse"></div>
               
               {/* Card */}
-              <div className="relative bg-gray-900/80 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 overflow-hidden transition-all duration-500 hover:border-cyan-500/50">
+              <div className="relative bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border-2 border-cyan-500/20 rounded-2xl p-4 overflow-hidden transition-all duration-700 hover:border-cyan-500/60 hover:shadow-xl hover:shadow-cyan-500/30 hover:scale-105 w-full h-full flex flex-col justify-between">
+                
+                {/* Background gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
                 
                 {/* Animated background particles */}
-                {hoveredIndex === index && [...Array(8)].map((_, i) => (
+                {hoveredIndex === index && [...Array(10)].map((_, i) => (
                   <div
                     key={i}
                     className="absolute w-1 h-1 bg-cyan-400 rounded-full"
@@ -80,125 +114,97 @@ export default function TeamSection() {
                       left: `${Math.random() * 100}%`,
                       animation: `particleFloat ${2 + Math.random() * 3}s infinite ease-in-out`,
                       animationDelay: `${Math.random() * 2}s`,
-                      opacity: 0.6
+                      opacity: 0.9
                     }}
                   />
                 ))}
 
                 {/* Profile Image Container */}
-                <div className="relative mb-6 mx-auto w-32 h-32">
-                  {/* Rotating border */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-spin" style={{ animationDuration: '3s' }}></div>
-                  
-                  {/* Image */}
-                  <div className="absolute inset-1 rounded-full overflow-hidden bg-gray-800">
-                    <img 
-                      src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${member.name}`}
-                      alt={member.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
+                <div className="flex-shrink-0">
+                  <div className="relative mb-4 mx-auto w-32 h-32">
+                    {/* Multiple rotating borders */}
+                    <div className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-spin opacity-90" style={{ animationDuration: '5s' }}></div>
+                    <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-pink-500 via-cyan-400 to-purple-500 animate-spin opacity-70" style={{ animationDuration: '3s', animationDirection: 'reverse' }}></div>
+                    
+                    {/* Image */}
+                    <div className="absolute inset-0 rounded-full overflow-hidden bg-gray-800 shadow-xl ring-2 ring-cyan-500/30 group-hover:ring-cyan-500/60 transition-all duration-700">
+                      <img 
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-125 group-hover:brightness-110 group-hover:contrast-110"
+                        onError={(e) => {
+                          e.target.src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${member.name}`;
+                        }}
+                      />
+                      {/* Image overlay on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/30 via-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
 
-                  {/* Pulse effect */}
-                  <div className="absolute inset-0 rounded-full bg-cyan-400/20 animate-ping"></div>
-                </div>
-
-                {/* Name */}
-                <h3 className="text-2xl font-bold text-center mb-2 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  {member.name}
-                </h3>
-
-                {/* Role */}
-                <p className="text-cyan-400 text-center text-sm tracking-wider uppercase mb-4">
-                  {member.role}
-                </p>
-
-                {/* Bio */}
-                <p className="text-gray-300 text-center text-sm leading-relaxed mb-6 min-h-[60px]">
-                  {member.bio}
-                </p>
-
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-6 py-4 border-y border-cyan-500/20">
-                  <div className="text-center">
-                    <div className="text-cyan-400 font-bold text-xl">{member.projects}</div>
-                    <div className="text-gray-500 text-xs uppercase">Projects</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-purple-400 font-bold text-xl">{member.experience}</div>
-                    <div className="text-gray-500 text-xs uppercase">Years</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-pink-400 font-bold text-xl">{member.skills}</div>
-                    <div className="text-gray-500 text-xs uppercase">Skills</div>
+                    {/* Multiple pulse effects */}
+                    <div className="absolute -inset-2 rounded-full bg-cyan-400/30 animate-ping opacity-50"></div>
+                    <div className="absolute -inset-1 rounded-full bg-purple-400/30 animate-ping opacity-40" style={{ animationDelay: '0.5s' }}></div>
                   </div>
                 </div>
 
-                {/* Social Links */}
-                <div className="flex justify-center gap-4">
-                  {member.github && (
-                    <a 
-                      href={member.github}
-                      className="w-10 h-10 rounded-full bg-gray-800 border border-cyan-500/30 flex items-center justify-center hover:bg-cyan-500/20 hover:border-cyan-500 hover:scale-110 transition-all duration-300 group/icon"
-                    >
-                      <Github className="w-5 h-5 text-cyan-400 group-hover/icon:text-cyan-300" />
-                    </a>
-                  )}
-                  {member.linkedin && (
-                    <a 
-                      href={member.linkedin}
-                      className="w-10 h-10 rounded-full bg-gray-800 border border-purple-500/30 flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500 hover:scale-110 transition-all duration-300 group/icon"
-                    >
-                      <Linkedin className="w-5 h-5 text-purple-400 group-hover/icon:text-purple-300" />
-                    </a>
-                  )}
-                  {member.twitter && (
-                    <a 
-                      href={member.twitter}
-                      className="w-10 h-10 rounded-full bg-gray-800 border border-pink-500/30 flex items-center justify-center hover:bg-pink-500/20 hover:border-pink-500 hover:scale-110 transition-all duration-300 group/icon"
-                    >
-                      <Twitter className="w-5 h-5 text-pink-400 group-hover/icon:text-pink-300" />
-                    </a>
-                  )}
-                  {member.email && (
-                    <a 
-                      href={`mailto:${member.email}`}
-                      className="w-10 h-10 rounded-full bg-gray-800 border border-cyan-500/30 flex items-center justify-center hover:bg-cyan-500/20 hover:border-cyan-500 hover:scale-110 transition-all duration-300 group/icon"
-                    >
-                      <Mail className="w-5 h-5 text-cyan-400 group-hover/icon:text-cyan-300" />
-                    </a>
-                  )}
+                {/* Content Section */}
+                <div className="flex-grow flex flex-col justify-center">
+                  {/* Name with enhanced styling */}
+                  <h3 className="text-xl font-black text-center mb-2 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent transform transition-all duration-500 group-hover:scale-110 tracking-wide">
+                    {member.name}
+                  </h3>
+
+                  {/* Role with glow effect */}
+                  <div className="relative mb-4">
+                    <p className="text-cyan-400 text-center text-xs tracking-[3px] uppercase opacity-90 font-bold relative z-10">
+                      {member.role}
+                    </p>
+                    <div className="absolute inset-0 text-cyan-400 text-center text-xs tracking-[3px] uppercase font-bold blur-md opacity-50">
+                      {member.role}
+                    </div>
+                  </div>
+
+                  {/* Divider line */}
+                  <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-cyan-500 to-transparent mx-auto mb-4 group-hover:w-24 transition-all duration-500"></div>
                 </div>
 
-                {/* Decorative corner elements */}
-                <div className="absolute top-2 left-2 w-8 h-8 border-l-2 border-t-2 border-cyan-500/30 group-hover:border-cyan-500 transition-colors duration-300"></div>
-                <div className="absolute top-2 right-2 w-8 h-8 border-r-2 border-t-2 border-cyan-500/30 group-hover:border-cyan-500 transition-colors duration-300"></div>
-                <div className="absolute bottom-2 left-2 w-8 h-8 border-l-2 border-b-2 border-cyan-500/30 group-hover:border-cyan-500 transition-colors duration-300"></div>
-                <div className="absolute bottom-2 right-2 w-8 h-8 border-r-2 border-b-2 border-cyan-500/30 group-hover:border-cyan-500 transition-colors duration-300"></div>
+                {/* Social Links Section */}
+                <div className="flex-shrink-0">
+                  <div className="flex justify-center gap-2">
+                    {member.email && (
+                      <a 
+                        href={`mailto:${member.email}`}
+                        className="relative w-8 h-8 rounded-full bg-gradient-to-br from-gray-800/90 to-gray-700/90 border border-cyan-500/40 flex items-center justify-center hover:bg-gradient-to-br hover:from-cyan-500/30 hover:to-cyan-600/30 hover:border-cyan-400 hover:scale-125 hover:rotate-12 transition-all duration-500 group/icon shadow-lg hover:shadow-cyan-500/60"
+                      >
+                        <Mail className="w-4 h-4 text-cyan-400 group-hover/icon:text-cyan-300 transition-colors duration-300" />
+                        <div className="absolute inset-0 rounded-full bg-cyan-400/30 opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+                      </a>
+                    )}
+                    {member.linkedin && (
+                      <a 
+                        href={member.linkedin}
+                        className="relative w-8 h-8 rounded-full bg-gradient-to-br from-gray-800/90 to-gray-700/90 border border-blue-500/40 flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-500/30 hover:to-blue-600/30 hover:border-blue-400 hover:scale-125 hover:rotate-12 transition-all duration-500 group/icon shadow-lg hover:shadow-blue-500/60"
+                      >
+                        <Linkedin className="w-4 h-4 text-blue-400 group-hover/icon:text-blue-300 transition-colors duration-300" />
+                        <div className="absolute inset-0 rounded-full bg-blue-400/30 opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+                      </a>
+                    )}
+                    {member.instagram && (
+                      <a 
+                        href={member.instagram}
+                        className="relative w-8 h-8 rounded-full bg-gradient-to-br from-gray-800/90 to-gray-700/90 border border-pink-500/40 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-500/30 hover:to-pink-600/30 hover:border-pink-400 hover:scale-125 hover:rotate-12 transition-all duration-500 group/icon shadow-lg hover:shadow-pink-500/60"
+                      >
+                        <Instagram className="w-4 h-4 text-pink-400 group-hover/icon:text-pink-300 transition-colors duration-300" />
+                        <div className="absolute inset-0 rounded-full bg-pink-400/30 opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes particleFloat {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-            opacity: 0;
-          }
-          10% {
-            opacity: 0.6;
-          }
-          50% {
-            transform: translate(20px, -20px) scale(1.5);
-            opacity: 0.3;
-          }
-          90% {
-            opacity: 0.6;
-          }
-        }
-      `}</style>
+      <Footer/>
     </section>
   );
 }

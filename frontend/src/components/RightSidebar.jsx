@@ -10,7 +10,7 @@ export default function RightSidebar() {
     { label: "EVENTS", path: "/events" },
     { label: "TEAM", path: "/team" },
     { label: "CONTACT", path: "/contact" },
-    { label: "LOGIN", path: "/login" }
+    { label: "SCHEDULE", path: "/schedule" }
   ];
 
   const handleNavigation = (path) => {

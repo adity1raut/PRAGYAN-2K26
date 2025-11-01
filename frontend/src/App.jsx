@@ -8,6 +8,7 @@ import TeamPage from './Team/TeamPage';
 import Gallery from './Gallery/Gallery';
 import Sponsors from './Sponsors/Sponsors';
 import Contact from './Contact/Contact';
+import SchedulePage from './Schedule/Schedule';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/schedule" element={<SchedulePage />} />
       </Routes>
     </Router>
   );
