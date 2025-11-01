@@ -6,7 +6,7 @@ export default function LeftSidebar() {
   const navigate = useNavigate();
   
   const menuItems = [
-    { label: "TOURNAMENTS", path: "/events" },
+    { label: "TOURNAMENTS", path: "/tournament" },
     { label: "GALLERY", path: "/gallery" },
     { label: "HACKATHON", path: "/events" },
     { label: "WORKSHOPS", path: "/workshops" },

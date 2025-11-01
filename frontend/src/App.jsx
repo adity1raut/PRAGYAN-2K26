@@ -9,6 +9,7 @@ import Gallery from './Gallery/Gallery';
 import Sponsors from './Sponsors/Sponsors';
 import Contact from './Contact/Contact';
 import SchedulePage from './Schedule/Schedule';
+import Tournament from './Tournament/Tournament';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/schedule" element={<SchedulePage />} />
+        <Route path="/tournament" element={<Tournament />} />
       </Routes>
     </Router>
   );
