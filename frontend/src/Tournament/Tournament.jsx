@@ -47,6 +47,7 @@ function Tournament() {
       date: "Oct 10, 2024"
     }
   ];
+  
   return (
     <div className="min-h-screen bg-gray-950 flex flex-col relative">
       {/* Background Layer */}
@@ -54,8 +55,6 @@ function Tournament() {
       
       {/* Main Content */}
       <main className="flex-grow relative overflow-hidden z-10">
-        {/* Remove the existing animated background elements since BackgroundLayer provides them */}
-
         {/* Back Button */}
         <div className="absolute top-6 left-6 z-20">
           <button
@@ -69,15 +68,26 @@ function Tournament() {
           </button>
         </div>
 
+        {/* Header Section with PRAGYAA title */}
+        <section className="pt-20 pb-8 px-4 relative z-10 text-center">
+          <div className="max-w-7xl mx-auto">
+            {/* Main title */}
+            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-[8px] xs:tracking-[10px] sm:tracking-[12px] md:tracking-[15px] my-3 sm:my-4 bg-gradient-to-b from-white via-cyan-200 to-gray-600 bg-clip-text text-transparent uppercase">
+              PRAGYAA
+            </h1>
+
+            {/* Tournament subtitle */}
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl tracking-[1px] xs:tracking-[2px] sm:tracking-[3px] uppercase text-gray-300 font-light">
+              "BRIGHTER THAN EVER BEFORE"
+            </p>
+          </div>
+        </section>
+
         {/* Winners Section */}
         <section className="py-16 px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 text-xs tracking-[4px] text-cyan-400 mb-6 uppercase">
-                <Medal className="w-4 h-4 animate-pulse" />
-                <span>Hall of Fame</span>
-                <Medal className="w-4 h-4 animate-pulse" />
-              </div>
+            
               <h2 className="text-4xl md:text-5xl font-black tracking-wider bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent uppercase mb-4">
                 Recent Winners
               </h2>
@@ -130,31 +140,6 @@ function Tournament() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Custom CSS for animations */}
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-20px) rotate(180deg); }
-        }
-        
-        @keyframes gradient {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        
-        .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
-        }
-
-        .line-clamp-2 {
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-      `}</style>
     </div>
   );
 }

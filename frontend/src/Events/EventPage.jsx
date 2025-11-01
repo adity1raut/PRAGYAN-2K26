@@ -105,16 +105,6 @@ function EventPage() {
       tags: ["Content Creation", "Social Media", "Monetization"]
     }
   ];
-
-  const sponsors = [
-    { name: "TechCorp", logo: "https://via.placeholder.com/200x80/4338CA/FFFFFF?text=TechCorp", tier: "Platinum" },
-    { name: "InnovateLabs", logo: "https://via.placeholder.com/200x80/059669/FFFFFF?text=InnovateLabs", tier: "Gold" },
-    { name: "FutureVision", logo: "https://via.placeholder.com/200x80/DC2626/FFFFFF?text=FutureVision", tier: "Silver" },
-    { name: "StartupHub", logo: "https://via.placeholder.com/200x80/7C3AED/FFFFFF?text=StartupHub", tier: "Bronze" },
-    { name: "DigitalFlow", logo: "https://via.placeholder.com/200x80/EA580C/FFFFFF?text=DigitalFlow", tier: "Bronze" },
-    { name: "CodeMasters", logo: "https://via.placeholder.com/200x80/0891B2/FFFFFF?text=CodeMasters", tier: "Silver" }
-  ];
-
   return (
     <div className="min-h-screen bg-gray-950 flex flex-col relative">
       {/* Background Layer */}
@@ -135,14 +125,24 @@ function EventPage() {
           </button>
         </div>
 
+
+            <section className="pt-10 pb-8 px-4 relative z-10 text-center">
+          <div className="max-w-7xl mx-auto">
+            {/* Main title */}
+            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-[8px] xs:tracking-[10px] sm:tracking-[12px] md:tracking-[15px] my-3 sm:my-4 bg-gradient-to-b from-white via-cyan-200 to-gray-600 bg-clip-text text-transparent uppercase">
+              PRAGYAA
+            </h1>
+
+            {/* Tournament subtitle */}
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl tracking-[1px] xs:tracking-[2px] sm:tracking-[3px] uppercase text-gray-300 font-light">
+              "BRIGHTER THAN EVER BEFORE"
+            </p>
+          </div>
+        </section>
+
         {/* Hero Section */}
-        <section className="py-20 px-4 relative z-10">
+        <section className="py-6 px-4 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 text-xs tracking-[4px] text-cyan-400 mb-6 uppercase">
-              <Calendar className="w-4 h-4 animate-bounce" />
-              <span className="animate-pulse">Upcoming Events</span>
-              <Calendar className="w-4 h-4 animate-bounce" style={{ animationDelay: '0.5s' }} />
-            </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-wider bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent uppercase mb-6 animate-gradient">
               Events & Experiences
             </h1>

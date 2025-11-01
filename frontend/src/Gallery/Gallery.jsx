@@ -179,24 +179,22 @@ function Gallery() {
           </button>
         </div>
 
-        {/* Hero Section with Pragyaa Header */}
-        <section className="py-20 px-4 relative z-10 flex flex-col justify-center items-center text-center min-h-[60vh]">
+            <section className="pt-10 pb-8 px-4 relative z-10 text-center">
+          <div className="max-w-7xl mx-auto">
+            {/* Main title */}
+            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-[8px] xs:tracking-[10px] sm:tracking-[12px] md:tracking-[15px] my-3 sm:my-4 bg-gradient-to-b from-white via-cyan-200 to-gray-600 bg-clip-text text-transparent uppercase">
+              PRAGYAA
+            </h1>
 
-          {/* Main PRAGYAA title */}
-          <h1 className={`text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-[8px] xs:tracking-[10px] sm:tracking-[12px] md:tracking-[15px] my-3 sm:my-4 md:my-5 bg-gradient-to-b from-white via-cyan-200 to-gray-600 bg-clip-text text-transparent uppercase animate-glitch drop-shadow-2xl transition-all duration-700 ease-out delay-100 ${
-            isLoaded ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'
-          }`}>
-            PRAGYAA
-          </h1>
-
-               {/* Top tagline */}
-          <div className={`text-xs sm:text-sm tracking-[2px] sm:tracking-[3px] text-cyan-400 mb-2 sm:mb-3 uppercase font-medium animate-pulse transition-all duration-500 ease-out ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
-          }`}>
-            <Camera className="w-4 h-4 inline mr-2 animate-pulse" />
-            MEMORIES CAPTURED
-            <Camera className="w-4 h-4 inline ml-2 animate-pulse" />
+            {/* Tournament subtitle */}
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl tracking-[1px] xs:tracking-[2px] sm:tracking-[3px] uppercase text-gray-300 font-light">
+              "BRIGHTER THAN EVER BEFORE"
+            </p>
           </div>
+        </section>
+
+        {/* Hero Section with Pragyaa Header */}
+        <section className="py-6 px-4 relative z-10 flex flex-col justify-center items-center text-center">
 
           {/* Gallery subtitle */}
           <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent uppercase mb-6 animate-gradient transition-all duration-600 ease-out delay-200 ${

@@ -12,7 +12,7 @@ const HomePage = () =>  {
   return (
     <div className="relative min-h-screen bg-black text-white overflow-x-hidden font-sans">
       {/* Background Layer */}
-      <BackgroundLayer />
+    
       
       {/* Main Layout Container */}
       <div className="relative w-full min-h-screen bg-gradient-to-br to-gray-800 overflow-hidden">
