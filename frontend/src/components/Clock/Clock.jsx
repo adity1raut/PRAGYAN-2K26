@@ -6,57 +6,65 @@ function Clock() {
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       return (
-        <span className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-widest bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse">
+        <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-widest bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse">
           EVENT STARTED!
         </span>
       );
     } else {
       return (
-        <div className="flex items-center justify-center gap-2 md:gap-4">
+        <div className="flex items-center justify-center gap-1 xs:gap-2 sm:gap-3 md:gap-4">
           <div className="flex flex-col items-center">
-            <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tabular-nums">
-              {String(days).padStart(2, "0")}
-            </span>
-            <span className="text-xs md:text-sm mt-1 text-gray-400 tracking-wider">
+            <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4 shadow-2xl">
+              <span className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tabular-nums drop-shadow-lg">
+                {String(days).padStart(2, "0")}
+              </span>
+            </div>
+            <span className="text-xs sm:text-sm mt-1 sm:mt-2 text-gray-400 tracking-wider font-medium">
               DAYS
             </span>
           </div>
 
-          <span className="text-3xl md:text-4xl lg:text-5xl text-purple-400 font-light">
+          <span className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-cyan-400 font-light animate-pulse">
             :
           </span>
 
           <div className="flex flex-col items-center">
-            <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tabular-nums">
-              {String(hours).padStart(2, "0")}
-            </span>
-            <span className="text-xs md:text-sm mt-1 text-gray-400 tracking-wider">
+            <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4 shadow-2xl">
+              <span className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tabular-nums drop-shadow-lg">
+                {String(hours).padStart(2, "0")}
+              </span>
+            </div>
+            <span className="text-xs sm:text-sm mt-1 sm:mt-2 text-gray-400 tracking-wider font-medium">
               HOURS
             </span>
           </div>
 
-          <span className="text-3xl md:text-4xl lg:text-5xl text-purple-400 font-light">
+          <span className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-cyan-400 font-light animate-pulse">
             :
           </span>
 
           <div className="flex flex-col items-center">
-            <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tabular-nums">
-              {String(minutes).padStart(2, "0")}
-            </span>
-            <span className="text-xs md:text-sm mt-1 text-gray-400 tracking-wider">
+            <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4 shadow-2xl">
+              <span className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tabular-nums drop-shadow-lg">
+                {String(minutes).padStart(2, "0")}
+              </span>
+            </div>
+            <span className="text-xs sm:text-sm mt-1 sm:mt-2 text-gray-400 tracking-wider font-medium">
               MINUTES
             </span>
           </div>
 
-          <span className="text-3xl md:text-4xl lg:text-5xl text-purple-400 font-light">
+          <span className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-cyan-400 font-light animate-pulse">
             :
           </span>
 
           <div className="flex flex-col items-center">
-            <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tabular-nums">
-              {String(seconds).padStart(2, "0")}
-            </span>
-            <span className="text-xs md:text-sm mt-1 text-gray-400 tracking-wider">
+            <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4 shadow-2xl">
+              <span className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tabular-nums drop-shadow-lg">
+                {String(seconds).padStart(2, "0")}
+              </span>
+            </div>
+            <span className="text-xs sm:text-sm mt-1 sm:mt-2 text-gray-400 tracking-wider font-medium">
               SECONDS
             </span>
           </div>
@@ -66,13 +74,16 @@ function Clock() {
   };
 
   return (
-    <div className="flex justify-center items-center py-8 px-4">
+    <div className="flex justify-center items-center py-4 sm:py-6 md:py-8 px-2 sm:px-4">
       {/* Countdown Box with enhanced styling */}
-      <div className="relative w-full max-w-4xl">
+      <div className="relative w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl">
+        {/* Background glow effect */}
+        <div className="absolute inset-0 bg-gradient-to-r rounded-2xl blur-xl"></div>
+        
         {/* Main countdown container */}
-        <div className="relative p-8 md:p-12">
+        <div className="relative bg-gradient-to-br rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12">
           {/* Countdown Timer */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-4 sm:mb-6 md:mb-8">
             <Countdown
               date={new Date("2026-02-22T00:00:00")}
               renderer={renderer}
@@ -80,16 +91,24 @@ function Clock() {
           </div>
 
           {/* Event Dates */}
-          <div className="text-center mt-8 pt-8 border-t border-white/10">
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">
-              21<sup className="text-sm md:text-base">ST</sup> - 22
-              <sup className="text-sm md:text-base">ND</sup> - 23
-              <sup className="text-sm md:text-base">RD</sup>
+          <div className="text-center mt-4 sm:mt-6 md:mt-8 pt-4 sm:pt-6 md:pt-8 border-t border-white/10">
+            <div className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1 sm:mb-2">
+              21<sup className="text-xs sm:text-sm md:text-base">ST</sup> - 22
+              <sup className="text-xs sm:text-sm md:text-base">ND</sup> - 23
+              <sup className="text-xs sm:text-sm md:text-base">RD</sup>
             </div>
-            <div className="text-lg md:text-xl lg:text-2xl text-gray-300 tracking-widest">
+            <div className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 tracking-wider sm:tracking-widest">
               FEBRUARY{" "}
-              <span className="text-purple-400 font-semibold">2026</span>
+              <span className="text-cyan-400 font-semibold">2026</span>
             </div>
+          </div>
+
+          {/* Mobile-specific decorative elements */}
+          <div className="block sm:hidden">
+            <div className="absolute top-2 left-2 w-8 h-8 border-l-2 border-t-2 border-cyan-400/30 rounded-tl-lg"></div>
+            <div className="absolute top-2 right-2 w-8 h-8 border-r-2 border-t-2 border-cyan-400/30 rounded-tr-lg"></div>
+            <div className="absolute bottom-2 left-2 w-8 h-8 border-l-2 border-b-2 border-cyan-400/30 rounded-bl-lg"></div>
+            <div className="absolute bottom-2 right-2 w-8 h-8 border-r-2 border-b-2 border-cyan-400/30 rounded-br-lg"></div>
           </div>
         </div>
       </div>

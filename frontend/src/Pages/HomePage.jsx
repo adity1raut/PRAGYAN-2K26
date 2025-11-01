@@ -14,23 +14,29 @@ const HomePage = () =>  {
       <BackgroundLayer />
       
       {/* Main Layout Container */}
-      <div className="relative w-full h-screen bg-gradient-to-br  to-gray-800 overflow-hidden">
-        {/* Content Container */}
-        <div className="absolute inset-8 md:inset-12 border border-cyan-500/30" />
+      <div className="relative w-full min-h-screen bg-gradient-to-br to-gray-800 overflow-hidden">
+        {/* Content Container - Responsive borders */}
+        <div className="absolute inset-4 sm:inset-6 md:inset-8 lg:inset-12 border border-cyan-500/30" />
         
         {/* Border Overlay System */}
         <BorderOverlay />
         
-        {/* Sidebars */}
-        <LeftSidebar />
-        <RightSidebar />
+        {/* Desktop Layout - Hidden on mobile */}
+        <div className="hidden lg:block">
+          <LeftSidebar />
+          <RightSidebar />
+        </div>
         
-        {/* Main Content */}
-        <MainContent />
+        {/* Main Content - Responsive positioning */}
+        <div className="relative lg:absolute lg:inset-0">
+          <MainContent />
+        </div>
         
-        {/* Social Media Links */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-          <SocialMedia />
+        {/* Social Media Links - Responsive positioning */}
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-10 w-full px-4">
+          <div className="flex justify-center">
+            <SocialMedia />
+          </div>
         </div>
       </div>
 

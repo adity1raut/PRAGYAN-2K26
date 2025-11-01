@@ -8,30 +8,38 @@ export default function SocialMedia() {
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com/",
+      url: "https://www.instagram.com/sggspragyaa/",
       hoverColor: "hover:text-pink-500",
-      glowColor: "hover:shadow-pink-500/50"
+      glowColor: "hover:shadow-pink-500/50",
+      bgGradient: "hover:from-purple-500 hover:via-pink-500 hover:to-orange-500",
+      iconColor: "text-gray-300 group-hover:text-white"
     },
     {
       name: "Facebook", 
       icon: Facebook,
-      url: "https://facebook.com/",
+      url: "https://www.facebook.com/sggspragyaa",
       hoverColor: "hover:text-blue-600",
-      glowColor: "hover:shadow-blue-500/50"
+      glowColor: "hover:shadow-blue-500/50",
+      bgGradient: "hover:from-blue-600 hover:to-blue-700",
+      iconColor: "text-gray-300 group-hover:text-white"
     },
     {
       name: "LinkedIn",
       icon: Linkedin, 
-      url: "https://linkedin.com/",
+      url: "https://www.linkedin.com/company/pragyaa-sggs/",
       hoverColor: "hover:text-blue-700",
-      glowColor: "hover:shadow-blue-600/50"
+      glowColor: "hover:shadow-blue-600/50",
+      bgGradient: "hover:from-blue-600 hover:to-blue-800",
+      iconColor: "text-gray-300 group-hover:text-white"
     },
     {
       name: "YouTube",
       icon: Youtube,
-      url: "https://youtube.com/",
+      url: "https://www.youtube.com/@pragyaa-sggsiet7271",
       hoverColor: "hover:text-red-600", 
-      glowColor: "hover:shadow-red-500/50"
+      glowColor: "hover:shadow-red-500/50",
+      bgGradient: "hover:from-red-500 hover:to-red-600",
+      iconColor: "text-gray-300 group-hover:text-white"
     }
   ];
 
@@ -47,7 +55,7 @@ export default function SocialMedia() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
-                className={`group relative transition-all duration-500 ${social.hoverColor} block`}
+                className={`group relative transition-all duration-500 block`}
                 onMouseEnter={() => setHoveredIcon(social.name)}
                 onMouseLeave={() => setHoveredIcon(null)}
               >
@@ -55,11 +63,11 @@ export default function SocialMedia() {
                 <div className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl ${social.glowColor} shadow-2xl scale-150`}></div>
                 
                 {/* Icon container with background */}
-                <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-2xl border border-gray-700 group-hover:border-gray-600 transition-all duration-500 group-hover:scale-125 shadow-lg transform">
+                <div className={`relative bg-gradient-to-br from-gray-800 to-gray-900 ${social.bgGradient} p-4 rounded-2xl border border-gray-700 group-hover:border-gray-500 transition-all duration-500 group-hover:scale-110 shadow-lg transform`}>
                   {/* Inner glow */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
-                  <IconComponent className="relative w-7 h-7 drop-shadow-lg" />
+                  <IconComponent className={`relative w-7 h-7 drop-shadow-lg transition-colors duration-500 ${social.iconColor}`} />
                 </div>
               </a>
               
