@@ -20,6 +20,17 @@ export default function GamingButton({
       hex: '#00ffff',
       glitchColors: ['#00ffff', '#0099cc', '#00cccc']
     },
+    red: {
+      border: 'border-[#ff5757]/40 hover:border-[#ff5757]',
+      text: 'text-[#ff5757]',
+      shadow: 'shadow-[0_0_20px_#ff5757]',
+      gradient: 'from-[#ff5757]',
+      bg: 'bg-[#ff5757]',
+      glow: 'drop-shadow-[0_0_20px_rgba(255,87,87,0.9)] group-hover:drop-shadow-[0_0_35px_rgba(255,87,87,1)]',
+      innerGlow: 'shadow-[inset_0_0_20px_rgba(255,87,87,0.3)]',
+      hex: '#ff5757',
+      glitchColors: ['#ff5757', '#ff3333', '#ff7777']
+    },
     yellow: {
       border: 'border-yellow-400/40 hover:border-yellow-400',
       text: 'text-yellow-400',

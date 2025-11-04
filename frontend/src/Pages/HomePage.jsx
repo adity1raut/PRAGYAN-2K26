@@ -11,10 +11,9 @@ const HomePage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fallback timer in case video doesn't load
     const timer = setTimeout(() => {
       setLoading(false);
-    },5000); // Adjust duration as needed
+    },5000); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -72,11 +71,11 @@ const HomePage = () => {
               >
                 <stop
                   offset="0%"
-                  style={{ stopColor: "#ef4444", stopOpacity: 1 }}
+                  style={{ stopColor: "#ff5757", stopOpacity: 1 }}
                 />
                 <stop
                   offset="100%"
-                  style={{ stopColor: "#dc2626", stopOpacity: 1 }}
+                  style={{ stopColor: "#ff3333", stopOpacity: 1 }}
                 />
               </linearGradient>
             </defs>
@@ -95,139 +94,25 @@ const HomePage = () => {
             <path
               d="M 30 30 L 330 30 L 276 63 L 252 63 L 243 72 L 87 72 L 78 81 L 63 81 L 30 114 Z"
               fill="none"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1"
               opacity="0.5"
             />
-
-            <g opacity="0.8" filter="url(#glow)">
-              <rect
-                x="180"
-                y="7"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="202"
-                y="7"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="225"
-                y="7"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="248"
-                y="7"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-            </g>
-
-            <g opacity="0.8" filter="url(#glow)">
-              <rect
-                x="300"
-                y="7"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="315"
-                y="7"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="330"
-                y="7"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="345"
-                y="7"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-            </g>
-
-            <g opacity="0.8" filter="url(#glow)">
-              <rect
-                x="7"
-                y="150"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(-45)"
-              />
-              <rect
-                x="7"
-                y="195"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(-45)"
-              />
-              <rect
-                x="7"
-                y="240"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(-45)"
-              />
-              <rect
-                x="7"
-                y="285"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(-45)"
-              />
-              <rect
-                x="7"
-                y="330"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(-45)"
-              />
-            </g>
-
             <path
               d="M 52 37 L 82 37 L 82 52 L 52 52 Z"
               fill="none"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1.5"
               opacity="0.6"
             />
-            <circle cx="67" cy="45" r="3" fill="#ef4444" opacity="0.8" />
+            <circle cx="67" cy="45" r="3" fill="#ff5757" opacity="0.8" />
 
             <line
               x1="105"
               y1="42"
               x2="210"
               y2="42"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1"
               opacity="0.4"
             />
@@ -236,7 +121,7 @@ const HomePage = () => {
               y1="48"
               x2="180"
               y2="48"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1"
               opacity="0.4"
             />
@@ -266,11 +151,11 @@ const HomePage = () => {
               >
                 <stop
                   offset="0%"
-                  style={{ stopColor: "#ef4444", stopOpacity: 1 }}
+                  style={{ stopColor: "#ff5757", stopOpacity: 1 }}
                 />
                 <stop
                   offset="100%"
-                  style={{ stopColor: "#dc2626", stopOpacity: 1 }}
+                  style={{ stopColor: "#ff3333", stopOpacity: 1 }}
                 />
               </linearGradient>
             </defs>
@@ -289,139 +174,25 @@ const HomePage = () => {
             <path
               d="M 354 30 L 54 30 L 108 63 L 132 63 L 141 72 L 297 72 L 306 81 L 321 81 L 354 114 Z"
               fill="none"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1"
               opacity="0.5"
             />
-
-            <g opacity="0.8" filter="url(#glowTopRight)">
-              <rect
-                x="192"
-                y="7"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="170"
-                y="7"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="147"
-                y="7"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="124"
-                y="7"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-            </g>
-
-            <g opacity="0.8" filter="url(#glowTopRight)">
-              <rect
-                x="75"
-                y="7"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="60"
-                y="7"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="45"
-                y="7"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="30"
-                y="7"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-            </g>
-
-            <g opacity="0.8" filter="url(#glowTopRight)">
-              <rect
-                x="373"
-                y="150"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(45)"
-              />
-              <rect
-                x="373"
-                y="195"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(45)"
-              />
-              <rect
-                x="373"
-                y="240"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(45)"
-              />
-              <rect
-                x="373"
-                y="285"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(45)"
-              />
-              <rect
-                x="373"
-                y="330"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(45)"
-              />
-            </g>
-
             <path
               d="M 332 37 L 302 37 L 302 52 L 332 52 Z"
               fill="none"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1.5"
               opacity="0.6"
             />
-            <circle cx="317" cy="45" r="3" fill="#ef4444" opacity="0.8" />
+            <circle cx="317" cy="45" r="3" fill="#ff5757" opacity="0.8" />
 
             <line
               x1="279"
               y1="42"
               x2="174"
               y2="42"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1"
               opacity="0.4"
             />
@@ -430,7 +201,7 @@ const HomePage = () => {
               y1="48"
               x2="204"
               y2="48"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1"
               opacity="0.4"
             />
@@ -463,11 +234,11 @@ const HomePage = () => {
               >
                 <stop
                   offset="0%"
-                  style={{ stopColor: "#ef4444", stopOpacity: 1 }}
+                  style={{ stopColor: "#ff5757", stopOpacity: 1 }}
                 />
                 <stop
                   offset="100%"
-                  style={{ stopColor: "#dc2626", stopOpacity: 1 }}
+                  style={{ stopColor: "#ff3333", stopOpacity: 1 }}
                 />
               </linearGradient>
             </defs>
@@ -486,139 +257,26 @@ const HomePage = () => {
             <path
               d="M 354 354 L 54 354 L 108 321 L 132 321 L 141 312 L 297 312 L 306 303 L 321 303 L 354 270 Z"
               fill="none"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1"
               opacity="0.5"
             />
 
-            <g opacity="0.8" filter="url(#glowBottomRight)">
-              <rect
-                x="192"
-                y="373"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="170"
-                y="373"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="147"
-                y="373"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="124"
-                y="373"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-            </g>
-
-            <g opacity="0.8" filter="url(#glowBottomRight)">
-              <rect
-                x="75"
-                y="373"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="60"
-                y="373"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="45"
-                y="373"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="30"
-                y="373"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-            </g>
-
-            <g opacity="0.8" filter="url(#glowBottomRight)">
-              <rect
-                x="373"
-                y="210"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(-45)"
-              />
-              <rect
-                x="373"
-                y="165"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(-45)"
-              />
-              <rect
-                x="373"
-                y="120"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(-45)"
-              />
-              <rect
-                x="373"
-                y="75"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewX(-45)"
-              />
-              <rect
-                x="373"
-                y="30"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(-45)"
-              />
-            </g>
-
             <path
               d="M 332 347 L 302 347 L 302 332 L 332 332 Z"
               fill="none"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1.5"
               opacity="0.6"
             />
-            <circle cx="317" cy="339" r="3" fill="#ef4444" opacity="0.8" />
+            <circle cx="317" cy="339" r="3" fill="#ff5757" opacity="0.8" />
 
             <line
               x1="279"
               y1="342"
               x2="174"
               y2="342"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1"
               opacity="0.4"
             />
@@ -627,7 +285,7 @@ const HomePage = () => {
               y1="336"
               x2="204"
               y2="336"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1"
               opacity="0.4"
             />
@@ -657,11 +315,11 @@ const HomePage = () => {
               >
                 <stop
                   offset="0%"
-                  style={{ stopColor: "#ef4444", stopOpacity: 1 }}
+                  style={{ stopColor: "#ff5757", stopOpacity: 1 }}
                 />
                 <stop
                   offset="100%"
-                  style={{ stopColor: "#dc2626", stopOpacity: 1 }}
+                  style={{ stopColor: "#ff3333", stopOpacity: 1 }}
                 />
               </linearGradient>
             </defs>
@@ -680,139 +338,25 @@ const HomePage = () => {
             <path
               d="M 30 354 L 330 354 L 276 321 L 252 321 L 243 312 L 87 312 L 78 303 L 63 303 L 30 270 Z"
               fill="none"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1"
               opacity="0.5"
             />
-
-            <g opacity="0.8" filter="url(#glowBottomLeft)">
-              <rect
-                x="180"
-                y="373"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="202"
-                y="373"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="225"
-                y="373"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="248"
-                y="373"
-                width="12"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-            </g>
-
-            <g opacity="0.8" filter="url(#glowBottomLeft)">
-              <rect
-                x="300"
-                y="373"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="315"
-                y="373"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="330"
-                y="373"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="345"
-                y="373"
-                width="9"
-                height="4"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-            </g>
-
-            <g opacity="0.8" filter="url(#glowBottomLeft)">
-              <rect
-                x="7"
-                y="210"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(45)"
-              />
-              <rect
-                x="7"
-                y="165"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(45)"
-              />
-              <rect
-                x="7"
-                y="120"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(45)"
-              />
-              <rect
-                x="7"
-                y="75"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewX(45)"
-              />
-              <rect
-                x="7"
-                y="30"
-                width="4"
-                height="18"
-                fill="#ef4444"
-                transform="skewY(45)"
-              />
-            </g>
-
             <path
               d="M 52 347 L 82 347 L 82 332 L 52 332 Z"
               fill="none"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1.5"
               opacity="0.6"
             />
-            <circle cx="67" cy="339" r="3" fill="#ef4444" opacity="0.8" />
+            <circle cx="67" cy="339" r="3" fill="#ff5757" opacity="0.8" />
 
             <line
               x1="105"
               y1="342"
               x2="210"
               y2="342"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1"
               opacity="0.4"
             />
@@ -821,7 +365,7 @@ const HomePage = () => {
               y1="336"
               x2="180"
               y2="336"
-              stroke="#ef4444"
+              stroke="#ff5757"
               strokeWidth="1"
               opacity="0.4"
             />

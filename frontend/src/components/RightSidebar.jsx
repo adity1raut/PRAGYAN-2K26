@@ -59,7 +59,7 @@ export default function RightSidebar() {
               item={menuItem.label} 
               index={index} 
               side="right" 
-              color="purple" 
+              color="red"  // Changed from "purple" to "red"
             />
           </div>
         </div>

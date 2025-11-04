@@ -32,14 +32,14 @@ export default function LeftSidebar() {
       {/* Top right corner - Static */}
       <div className="absolute -top-16 -right-16 w-16 h-16">
         {/* Single gaming border */}
-        <div className="absolute top-0 right-0 w-full h-0.5 bg-gradient-to-l from-cyan-500 via-purple-500 to-transparent"></div>
-        <div className="absolute top-0 right-0 w-0.5 h-full bg-gradient-to-b from-cyan-500 via-purple-500 to-transparent"></div>
+        <div className="absolute top-0 right-0 w-full h-0.5 bg-gradient-to-l from-[#ff5757] via-purple-500 to-transparent"></div>
+        <div className="absolute top-0 right-0 w-0.5 h-full bg-gradient-to-b from-[#ff5757] via-purple-500 to-transparent"></div>
         
         {/* Corner bracket */}
-        <div className="absolute top-1 right-1 w-6 h-6 border-t-2 border-r-2 border-cyan-400 shadow-lg shadow-cyan-500/50"></div>
+        <div className="absolute top-1 right-1 w-6 h-6 border-t-2 border-r-2 border-[#ff5757] shadow-lg shadow-[#ff5757]/50"></div>
         
         {/* Tech dot */}
-        <div className="absolute top-2 right-2 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-2 right-2 w-1 h-1 bg-[#ff5757] rounded-full animate-pulse"></div>
       </div>
 
       {menuItems.map((menuItem, index) => (
@@ -59,7 +59,7 @@ export default function LeftSidebar() {
               item={menuItem.label} 
               index={index} 
               side="left" 
-              color="cyan" 
+              color="red"  // Changed from "cyan" to "red"
             />
           </div>
           {/* Connecting line between buttons (except last one) */}
@@ -77,10 +77,10 @@ export default function LeftSidebar() {
         <div className="absolute bottom-0 right-0 w-0.5 h-full bg-gradient-to-t from-red-500 via-purple-500 to-transparent"></div>
         
         {/* Corner bracket */}
-        <div className="absolute bottom-1 right-1 w-6 h-6 border-b-2 border-r-2 border-cyan-400 shadow-lg shadow-cyan-500/50"></div>
+        <div className="absolute bottom-1 right-1 w-6 h-6 border-b-2 border-r-2 border-[#ff5757] shadow-lg shadow-[#ff5757]/50"></div>
         
         {/* Tech dot */}
-        <div className="absolute bottom-2 right-2 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-2 right-2 w-1 h-1 bg-[#ff5757] rounded-full animate-pulse"></div>
       </div>
     </div>
   );
