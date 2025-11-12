@@ -13,15 +13,15 @@ const HomePage = () => {
       <BackgroundLayer />
 
       {/* MenuBar - Responsive positioning */}
-      <div className="fixed top-2 right-2 sm:top-4 sm:right-4 md:top-6 md:right-6 lg:top-8 lg:right-8 z-50">
+      <div className="fixed top-4 right-4 md:top-6 md:right-6 lg:top-8 lg:right-8 z-50">
         <MenuBar />
       </div>
 
       {/* Main Layout Container */}
       <div className="relative w-full">
-        {/* Corner designs - Hidden on mobile/tablet, visible on desktop */}
+        {/* Corner designs - Hidden on mobile/tablet */}
         {/* Top-left corner */}
-        <div className="absolute top-0 left-0 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden md:block opacity-80 lg:opacity-100 pointer-events-none">
+        <div className="absolute top-0 left-0 w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden lg:block opacity-80 lg:opacity-100">
           <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 256 256">
             {/* Glow effect */}
             <defs>
@@ -67,8 +67,9 @@ const HomePage = () => {
             <line x1="70" y1="32" x2="120" y2="32" stroke="#ff5757" strokeWidth="1" opacity="0.4" />
           </svg>
         </div>
+
         {/* Top-right corner */}
-        <div className="absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden md:block opacity-80 lg:opacity-100 pointer-events-none">
+        <div className="absolute top-0 right-0 w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden lg:block opacity-80 lg:opacity-100">
           <svg className="absolute top-0 right-0 w-full h-full" viewBox="0 0 256 256">
             <defs>
               <filter id="glowTopRight">
@@ -113,8 +114,9 @@ const HomePage = () => {
             <line x1="136" y1="32" x2="186" y2="32" stroke="#ff5757" strokeWidth="1" opacity="0.4" />
           </svg>
         </div>
+
         {/* Bottom-right corner */}
-        <div className="absolute bottom-0 right-0 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden md:block opacity-80 lg:opacity-100 pointer-events-none">
+        <div className="absolute bottom-0 right-0 w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden lg:block opacity-80 lg:opacity-100">
           <svg className="absolute bottom-0 right-0 w-full h-full" viewBox="0 0 256 256">
             <defs>
               <filter id="glowBottomRight">
@@ -159,8 +161,9 @@ const HomePage = () => {
             <line x1="136" y1="224" x2="186" y2="224" stroke="#ff5757" strokeWidth="1" opacity="0.4" />
           </svg>
         </div>
+
         {/* Bottom-left corner */}
-        <div className="absolute bottom-0 left-0 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden md:block opacity-80 lg:opacity-100 pointer-events-none">
+        <div className="absolute bottom-0 left-0 w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden lg:block opacity-80 lg:opacity-100">
           <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 256 256">
             <defs>
               <filter id="glowBottomLeft">
@@ -206,19 +209,20 @@ const HomePage = () => {
           </svg>
         </div>
 
-        {/* Desktop Sidebars - visible on xl and up */}
+        {/* Desktop Sidebars */}
         <div className="hidden xl:block">
           <LeftSidebar />
           <RightSidebar />
         </div>
 
-        {/* Main Content - Responsive padding and centering */}
-        <div className="flex items-center justify-center px-2 py-6 sm:px-4 sm:py-8 md:px-6 md:py-12 lg:px-8 xl:px-12 2xl:px-16">
+
+        {/* Main Content */}
+        <div className="relative min-h-screen flex items-center justify-center px-4 py-8 sm:px-6 sm:py-12 md:px-8 md:py-16 lg:px-12 xl:px-16">
           <MainContent />
         </div>
 
-        {/* Social Media Links - Responsive positioning */}
-        <div className="fixed bottom-2 left-1/2 -translate-x-1/2 z-20 sm:bottom-4 md:bottom-6 lg:bottom-8">
+        {/* Social Media Links */}
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-20 md:bottom-6 lg:bottom-8">
           <SocialMedia />
         </div>
       </div>
