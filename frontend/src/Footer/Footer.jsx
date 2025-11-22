@@ -130,16 +130,16 @@ const Footer = () => {
               </p>
             </div>
             
-            {/* Social Media Links */}
+           {/* Social Media Links */}
             <div className="flex justify-center md:justify-start space-x-3 pt-2">
               <a
                 href="https://www.instagram.com/sggspragyaa"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on Instagram"
-                className="group flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 transition-all duration-300"
+                className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 transition-all duration-300"
               >
-                <Instagram className="w-4 h-4 text-gray-400 group-hover:text-white" />
+                <Instagram className="w-4 h-4 text-gray-400 hover:text-white transition-colors duration-300" />
               </a>
 
               <a
@@ -147,9 +147,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Connect with us on LinkedIn"
-                className="group flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 hover:bg-blue-600 transition-all duration-300"
+                className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 hover:bg-[#0077b5] transition-all duration-300"
               >
-                <Linkedin className="w-4 h-4 text-gray-400 group-hover:text-white" />
+                <Linkedin className="w-4 h-4 text-gray-400 hover:text-white transition-colors duration-300" />
               </a>
 
               <a
@@ -157,9 +157,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Like us on Facebook"
-                className="group flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 hover:bg-blue-700 transition-all duration-300"
+                className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 hover:bg-[#1877f2] transition-all duration-300"
               >
-                <Facebook className="w-4 h-4 text-gray-400 group-hover:text-white" />
+                <Facebook className="w-4 h-4 text-gray-400 hover:text-white transition-colors duration-300" />
               </a>
 
               <a
@@ -167,9 +167,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on X (Twitter)"
-                className="group flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 hover:bg-blue-400 transition-all duration-300"
+                className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 hover:bg-black transition-all duration-300"
               >
-                <Twitter className="w-4 h-4 text-gray-400 group-hover:text-white" />
+                <Twitter className="w-4 h-4 text-gray-400 hover:text-white transition-colors duration-300" />
               </a>
 
               <a
@@ -177,9 +177,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Subscribe to our YouTube channel"
-                className="group flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 hover:bg-red-600 transition-all duration-300"
+                className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 hover:bg-[#ff0000] transition-all duration-300"
               >
-                <Youtube className="w-4 h-4 text-gray-400 group-hover:text-white" />
+                <Youtube className="w-4 h-4 text-gray-400 hover:text-white transition-colors duration-300" />
               </a>
             </div>
           </div>
