@@ -4,30 +4,104 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import BackgroundLayer from "../components/BackgroundLayer";
 
-const teamMembers = [
-  { name: "Luffy", role: "Founder" },
-  { name: "Monkey D. Luffy", role: "Creative Director" },
-  { name: "Luffy chan", role: "Lead Developer" },
-  { name: "Lucy", role: "UX Designer" },
-  { name: "Luffy kun", role: "Marketing Manager" },
-  { name: "Monkey chan", role: "Product Manager" }
-];
-
-const images = [
-  "https://ik.imagekit.io/gopichakradhar/luffy/o1.jpeg?updatedAt=1754289569411",
-  "https://ik.imagekit.io/gopichakradhar/luffy/o2.jpeg?updatedAt=1754289569307",
-  "https://ik.imagekit.io/gopichakradhar/luffy/o4.jpeg?updatedAt=1754289569398",
-  "https://ik.imagekit.io/gopichakradhar/luffy/o3.jpeg?updatedAt=1754289569422",
-  "https://ik.imagekit.io/gopichakradhar/luffy/o5.jpeg?updatedAt=1754289569406",
-  "https://ik.imagekit.io/gopichakradhar/luffy/o6.jpeg?updatedAt=1754289569438"
-];
+const committees = {
+  web: {
+    name: "Web Committee",
+    members: [
+      { name: "Luffy", role: "Founder" },
+      { name: "Monkey D. Luffy", role: "Creative Director" },
+      { name: "Luffy chan", role: "Lead Developer" },
+      { name: "Lucy", role: "UX Designer" },
+      { name: "Luffy kun", role: "Marketing Manager" },
+      { name: "Monkey chan", role: "Product Manager" }
+    ],
+    images: [
+      "https://ik.imagekit.io/gopichakradhar/luffy/o1.jpeg?updatedAt=1754289569411",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o2.jpeg?updatedAt=1754289569307",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o4.jpeg?updatedAt=1754289569398",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o3.jpeg?updatedAt=1754289569422",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o5.jpeg?updatedAt=1754289569406",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o6.jpeg?updatedAt=1754289569438"
+    ]
+  },
+  content: {
+    name: "Content Committee",
+    members: [
+      { name: "Writer 1", role: "Head Writer" },
+      { name: "Writer 2", role: "Content Strategist" },
+      { name: "Writer 3", role: "Editor" }
+    ],
+    images: [
+      "https://ik.imagekit.io/gopichakradhar/luffy/o1.jpeg?updatedAt=1754289569411",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o2.jpeg?updatedAt=1754289569307",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o4.jpeg?updatedAt=1754289569398"
+    ]
+  },
+  design: {
+    name: "Design Committee",
+    members: [
+      { name: "Designer 1", role: "Lead Designer" },
+      { name: "Designer 2", role: "UI/UX Designer" },
+      { name: "Designer 3", role: "Graphic Designer" }
+    ],
+    images: [
+      "https://ik.imagekit.io/gopichakradhar/luffy/o3.jpeg?updatedAt=1754289569422",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o5.jpeg?updatedAt=1754289569406",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o6.jpeg?updatedAt=1754289569438"
+    ]
+  },
+  marketing: {
+    name: "Marketing Committee",
+    members: [
+      { name: "Marketer 1", role: "Marketing Head" },
+      { name: "Marketer 2", role: "Social Media Manager" },
+      { name: "Marketer 3", role: "Brand Strategist" }
+    ],
+    images: [
+      "https://ik.imagekit.io/gopichakradhar/luffy/o1.jpeg?updatedAt=1754289569411",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o4.jpeg?updatedAt=1754289569398",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o5.jpeg?updatedAt=1754289569406"
+    ]
+  },
+  events: {
+    name: "Events Committee",
+    members: [
+      { name: "Event Manager 1", role: "Events Head" },
+      { name: "Event Manager 2", role: "Coordinator" },
+      { name: "Event Manager 3", role: "Logistics Manager" }
+    ],
+    images: [
+      "https://ik.imagekit.io/gopichakradhar/luffy/o2.jpeg?updatedAt=1754289569307",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o3.jpeg?updatedAt=1754289569422",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o6.jpeg?updatedAt=1754289569438"
+    ]
+  },
+  technical: {
+    name: "Technical Committee",
+    members: [
+      { name: "Tech Lead 1", role: "Technical Head" },
+      { name: "Tech Lead 2", role: "Backend Developer" },
+      { name: "Tech Lead 3", role: "DevOps Engineer" }
+    ],
+    images: [
+      "https://ik.imagekit.io/gopichakradhar/luffy/o1.jpeg?updatedAt=1754289569411",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o5.jpeg?updatedAt=1754289569406",
+      "https://ik.imagekit.io/gopichakradhar/luffy/o4.jpeg?updatedAt=1754289569398"
+    ]
+  }
+};
 
 export default function TeamCarousel() {
   const navigate = useNavigate();
+  const [selectedCommittee, setSelectedCommittee] = useState('web');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [nameOpacity, setNameOpacity] = useState(1);
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+
+  const currentCommittee = committees[selectedCommittee];
+  const teamMembers = currentCommittee.members;
+  const images = currentCommittee.images;
 
   const updateCarousel = (newIndex) => {
     if (isAnimating) return;
@@ -45,6 +119,13 @@ export default function TeamCarousel() {
     setTimeout(() => {
       setIsAnimating(false);
     }, 800);
+  };
+
+  const handleCommitteeChange = (committeeKey) => {
+    setSelectedCommittee(committeeKey);
+    setCurrentIndex(0);
+    setNameOpacity(0);
+    setTimeout(() => setNameOpacity(1), 300);
   };
 
   const getCardPosition = (index) => {
@@ -83,13 +164,13 @@ export default function TeamCarousel() {
       {/* Background Layer */}
       <BackgroundLayer />
 
-      {/* Main Content */}
-      <main className="flex-grow relative overflow-hidden z-10">
+      {/* Left Sidebar - Committee Selection */}
+      <div className="fixed left-0 top-0 h-full w-64 bg-gradient-to-b from-gray-900/95 to-gray-800/95 backdrop-blur-xl border-r-2 border-cyan-500/20 z-30 flex flex-col">
         {/* Back Button */}
-        <div className="absolute top-6 left-6 z-20">
+        <div className="p-6 border-b border-cyan-500/20">
           <button
             onClick={() => navigate(-1)}
-            className="group relative flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-900/90 to-gray-800/90 backdrop-blur-xl border-2 border-cyan-500/30 rounded-2xl hover:border-cyan-500/60 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/30"
+            className="group relative flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-900/90 to-gray-800/90 backdrop-blur-xl border-2 border-cyan-500/30 rounded-2xl hover:border-cyan-500/60 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/30 w-full"
           >
             <ArrowLeft className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:-translate-x-1" />
             <span className="text-cyan-400 group-hover:text-cyan-300 font-semibold text-sm tracking-wide transition-colors duration-300">
@@ -98,6 +179,45 @@ export default function TeamCarousel() {
           </button>
         </div>
 
+        {/* Committee Title */}
+        <div className="p-6 border-b border-cyan-500/20">
+          <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 tracking-wide">
+            Committees
+          </h3>
+        </div>
+
+        {/* Committee List */}
+        <div className="flex-1 overflow-y-auto py-4 px-3 space-y-2">
+          {Object.entries(committees).map(([key, committee]) => (
+            <button
+              key={key}
+              onClick={() => handleCommitteeChange(key)}
+              className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-300 ${
+                selectedCommittee === key
+                  ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border-2 border-cyan-500/50 text-cyan-300 shadow-lg shadow-cyan-500/20'
+                  : 'bg-gray-800/50 border-2 border-transparent text-gray-400 hover:bg-gray-800/80 hover:text-cyan-400 hover:border-cyan-500/30'
+              }`}
+            >
+              <span className="font-semibold text-sm tracking-wide block">
+                {committee.name}
+              </span>
+              <span className="text-xs opacity-70 mt-1 block">
+                {committee.members.length} members
+              </span>
+            </button>
+          ))}
+        </div>
+
+        {/* Footer Info */}
+        <div className="p-4 border-t border-cyan-500/20">
+          <p className="text-xs text-gray-500 text-center">
+            Select a committee to view members
+          </p>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <main className="flex-grow relative overflow-hidden z-10 ml-64">
         {/* Team Carousel Content */}
         <div className="min-h-screen flex flex-col items-center justify-center overflow-hidden py-5 md:py-20 pt-24">
           <div className="flex flex-col md:flex-row w-full max-w-7xl h-auto md:h-[80vh] gap-5 md:gap-16 items-center justify-center px-4">
@@ -196,6 +316,12 @@ export default function TeamCarousel() {
 
             {/* Controls Section */}
             <div className="flex-1 flex flex-col justify-center items-center gap-10 md:gap-10 md:pl-10 w-full">
+              <div className="mb-8 md:mb-12">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 tracking-wider text-center">
+                  {currentCommittee.name}
+                </h2>
+              </div>
+              
               {/* Navigation Arrows - Desktop */}
               <div className="hidden md:flex flex-row gap-8 items-center justify-center">
                 <button
@@ -266,7 +392,9 @@ export default function TeamCarousel() {
       </main>
 
       {/* Footer */}
-      <Footer />
+      <div className="ml-64">
+        <Footer />
+      </div>
     </div>
   );
 }
