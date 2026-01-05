@@ -7,21 +7,7 @@ const BackgroundForHome = () => {
   return (
     <div className="fixed inset-0 z-0">
     
-      <StarField
-        density="high"
-        showComets={true}
-        cometCount={5}
-        isDark={true}
-      />
-      <GridLines
-       strokeColor="#ff5757" 
-        horizontalLines={25}
-        verticalLines={25}
-        strokeOpacity={0.15}
-        strokeWidth={0.5}
-        speed={8}
-        opacity={0.3}
-      />
+    
     </div>
   );
 };
