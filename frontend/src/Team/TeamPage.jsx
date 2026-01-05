@@ -3,95 +3,11 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import BackgroundLayer from "../components/BackgroundLayer";
-import Aditya from "./Aditya.jpg"
-
-const committees = {
-  web: {
-    name: "Web Committee",
-    members: [
-      { name: "Aditya Raut", role: "Lead Developer" },
-      { name: "Nandu Jadhav", role: "Co-Lead Developer" },
-      { name: "Saloni Tarone", role: "Main Developer" },
-      { name: "Amit Verma", role: "Main Developer" },
-      { name: "N/A", role: "Product Manager" }
-    ],
-    images: [
-      Aditya,
-      "https://ik.imagekit.io/gopichakradhar/luffy/o4.jpeg?updatedAt=1754289569398",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o3.jpeg?updatedAt=1754289569422",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o5.jpeg?updatedAt=1754289569406",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o6.jpeg?updatedAt=1754289569438"
-    ]
-  },
-  content: {
-    name: "Content Committee",
-    members: [
-      { name: "Writer 1", role: "Head Writer" },
-      { name: "Writer 2", role: "Content Strategist" },
-      { name: "Writer 3", role: "Editor" }
-    ],
-    images: [
-      "https://ik.imagekit.io/gopichakradhar/luffy/o1.jpeg?updatedAt=1754289569411",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o2.jpeg?updatedAt=1754289569307",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o4.jpeg?updatedAt=1754289569398"
-    ]
-  },
-  design: {
-    name: "Design Committee",
-    members: [
-      { name: "Designer 1", role: "Lead Designer" },
-      { name: "Designer 2", role: "UI/UX Designer" },
-      { name: "Designer 3", role: "Graphic Designer" }
-    ],
-    images: [
-      "https://ik.imagekit.io/gopichakradhar/luffy/o3.jpeg?updatedAt=1754289569422",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o5.jpeg?updatedAt=1754289569406",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o6.jpeg?updatedAt=1754289569438"
-    ]
-  },
-  marketing: {
-    name: "Marketing Committee",
-    members: [
-      { name: "Marketer 1", role: "Marketing Head" },
-      { name: "Marketer 2", role: "Social Media Manager" },
-      { name: "Marketer 3", role: "Brand Strategist" }
-    ],
-    images: [
-      "https://ik.imagekit.io/gopichakradhar/luffy/o1.jpeg?updatedAt=1754289569411",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o4.jpeg?updatedAt=1754289569398",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o5.jpeg?updatedAt=1754289569406"
-    ]
-  },
-  events: {
-    name: "Events Committee",
-    members: [
-      { name: "Event Manager 1", role: "Events Head" },
-      { name: "Event Manager 2", role: "Coordinator" },
-      { name: "Event Manager 3", role: "Logistics Manager" }
-    ],
-    images: [
-      "https://ik.imagekit.io/gopichakradhar/luffy/o2.jpeg?updatedAt=1754289569307",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o3.jpeg?updatedAt=1754289569422",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o6.jpeg?updatedAt=1754289569438"
-    ]
-  },
-  technical: {
-    name: "Technical Committee",
-    members: [
-      { name: "Tech Lead 1", role: "Technical Head" },
-      { name: "Tech Lead 2", role: "Backend Developer" },
-      { name: "Tech Lead 3", role: "DevOps Engineer" }
-    ],
-    images: [
-      "https://ik.imagekit.io/gopichakradhar/luffy/o1.jpeg?updatedAt=1754289569411",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o5.jpeg?updatedAt=1754289569406",
-      "https://ik.imagekit.io/gopichakradhar/luffy/o4.jpeg?updatedAt=1754289569398"
-    ]
-  }
-};
+import teamData from "./teamData.json";
 
 export default function TeamCarousel() {
   const navigate = useNavigate();
+  const [committees] = useState(teamData);
   const [selectedCommittee, setSelectedCommittee] = useState('web');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -99,7 +15,7 @@ export default function TeamCarousel() {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const currentCommittee = committees[selectedCommittee];
+  const currentCommittee = committees[selectedCommittee] || { members: [], images: [], name: '' };
   const teamMembers = currentCommittee.members;
   const images = currentCommittee.images;
 
@@ -165,6 +81,15 @@ export default function TeamCarousel() {
     }, 5000);
     return () => clearTimeout(timer);
   }, []);
+
+  // Add early return if data is not loaded
+  if (!teamMembers.length || !teamMembers[currentIndex]) {
+    return (
+      <div className="min-h-screen bg-gray-950 flex items-center justify-center">
+        <div className="text-cyan-400 text-xl">Loading...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-950 flex flex-col relative overflow-x-hidden">
