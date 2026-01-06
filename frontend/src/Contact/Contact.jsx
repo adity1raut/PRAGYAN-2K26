@@ -81,66 +81,60 @@ function Contact() {
 
         {/* Contact Info Cards */}
         <section className="py-16 px-4 relative z-10">
-  <div className="max-w-8xl mx-auto">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-      {contactInfo.map((info, index) => (
-        <div
-          key={info.id}
-          className="flex flex-col gap-2bg-gray-900/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl sm:p-6 p-6 hover:scale-105 transform transition-transform duration-300"
-        >
-          <div className="mb-4  text-center">
-            {info.icon}
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {contactInfo.map((info) => (
+                <div
+                  key={info.id}
+                  className="bg-gray-900/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6"
+                >
+                  <div className="mb-4">
+                    {info.icon}
+                  </div>
+
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {info.title}
+                  </h3>
+
+                  <p className="text-lg font-semibold text-gray-300 mb-4">
+                    {info.value}
+                  </p>
+
+                  {info.link && (
+                    <a
+                      href={info.link}
+                      className="inline-block px-4 py-2 bg-cyan-500 rounded-lg font-semibold text-white transition-colors duration-300"
+                    >
+                      {info.title === 'Email Address' ? 'Send Email' : 'Call Now'}
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Map Section */}
+            <div className="bg-gray-900/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl overflow-hidden">
+              <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-4">
+                <h3 className="text-lg font-bold flex items-center gap-2">
+                  <MapPin size={20} />
+                  Our Location
+                </h3>
+              </div>
+              <div className="h-96">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.9097757547947!2d77.29045427586921!3d19.111613650852224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bce29b9903d053d%3A0x2c5238a90ab55c03!2sShri%20Guru%20Gobind%20Singhji%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1766939429340!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="SGGSIET Location Map"
+                ></iframe>
+              </div>
+            </div>
           </div>
-
-          <h3
-            className="text-xl font-bold sm:text-xl text-white mb-3 tracking-widest overflow-hidden text-ellipsis whitespace-nowrap text-center"
-            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
-          >
-            {info.title}
-          </h3>
-
-          <p
-            className={`text-2xl font-bold text-gray-200 mb-4 sm:text-lg  tracking-wider overflow-hidden text-ellipsis whitespace-nowrap text-center ${index !== 0 ? 'pl-4' : ''}`}
-            style={{ fontFamily: '"Merriweather",serif' }}
-          >
-            {info.value}
-          </p>
-
-          {info.link && (
-            <a
-              href={info.link}
-              className="block mx-auto px-4 py-2 bg-cyan-500 rounded-lg font-semibold text-white transition-colors duration-300 w-fit my-auto hover:bg-cyan-600"
-            >
-              {info.title === 'Email Address' ? 'Send Email' : 'Call Now'}
-            </a>
-          )}
-        </div>
-      ))}
-    </div>
-
-    {/* Map Section */}
-    <div className="bg-gray-900/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl overflow-hidden">
-      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-4">
-        <h3 className="text-lg font-bold flex items-center gap-2 text-center">
-          <MapPin size={20} />
-          Our Location
-        </h3>
-      </div>
-      <div className="h-96">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.9097757547947!2d77.29045427586921!3d19.111613650852224!2m3!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bce29b9903d053d%3A0x2c5238a90ab55c03!2sShri%20Guru%20Gobind%20Singhji%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1766939429340!5m2!1sen!2sin" 
-          width="100%" 
-          height="100%" 
-          style={{ border: 0 }} 
-          allowFullScreen="" 
-          loading="lazy" 
-          referrerPolicy="no-referrer-when-downgrade"
-          title="SGGSIET Location Map"
-        ></iframe>
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
       </main>
 
       {/* Footer Component */}
