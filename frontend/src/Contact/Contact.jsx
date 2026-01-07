@@ -35,6 +35,42 @@ function Contact() {
     navigate(-1)
   }
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500))
+
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    })
+    setIsSubmitting(false)
+    alert('Thank you for your message! We\'ll get back to you soon.')
+  }
+
+  const getColorClasses = (color) => {
+    const colors = {
+      cyan: "from-cyan-500 to-cyan-600",
+      purple: "from-purple-500 to-purple-600",
+      pink: "from-pink-500 to-pink-600",
+      yellow: "from-yellow-500 to-yellow-600"
+    }
+    return colors[color] || colors.cyan
+  }
+
   return (
     <div className="min-h-screen bg-black flex flex-col relative">
       {/* Background Layer */}

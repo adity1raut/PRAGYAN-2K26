@@ -21,7 +21,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-black text-white overflow-x-hidden font-sans">
+    <div className="relative min-h-screen bg-black text-white overflow-x-hidden overflow-y-auto font-sans">
       <BackgroundLayer />
 
       {/* MenuBar - Responsive positioning */}
@@ -230,11 +230,6 @@ const HomePage = () => {
         {/* Main Content */}
         <div className={`relative min-h-screen flex items-center justify-center px-4 py-8 sm:px-6 sm:py-12 md:px-8 md:py-16 lg:px-12 xl:px-16 ${shouldAnimate ? 'animate-fadeInUp' : ''}`}>
           <MainContent />
-        </div>
-
-        {/* Social Media Links */}
-        <div className={`fixed bottom-4 left-1/2 -translate-x-1/2 z-20 md:bottom-6 lg:bottom-8 ${shouldAnimate ? 'animate-fadeInUp' : ''}`}>
-          <SocialMedia />
         </div>
       </div>
 
