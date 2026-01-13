@@ -33,8 +33,6 @@ const HomePage = () => {
 
       {/* Main Layout Container */}
       <div className="relative w-full">
-        {/* Corner designs - Hidden on mobile/tablet */}
-        {/* Top-left corner */}
         <div
           className={`absolute top-0 left-0 w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden lg:block opacity-80 lg:opacity-100 ${shouldAnimate ? "animate-slideInTopLeft" : ""}`}
         >

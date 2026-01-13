@@ -144,4 +144,3 @@
               <line x1="186" y1="224" x2="136" y2="224" stroke="#fbbf24" strokeWidth="1" opacity="0.4" />
             </svg>
           </div>
-

@@ -22,16 +22,16 @@ function EventPage() {
         <div className="absolute top-4 left-4 z-20">
           <button
             onClick={() => navigate(-1)}
-            className="flex items-center gap-2 px-4 py-2 bg-gray-900 border border-cyan-500/40 rounded-xl hover:border-cyan-400 transition"
+            className="flex items-center gap-2 px-4 py-2 bg-gray-900 border border-red-500/40 rounded-xl hover:border-red-400 transition"
           >
-            <ArrowLeft className="w-4 h-4 text-cyan-400" />
-            <span className="text-cyan-400 font-semibold text-sm">Back</span>
+            <ArrowLeft className="w-4 h-4 text-red-400" />
+            <span className="text-red-400 font-semibold text-sm">Back</span>
           </button>
         </div>
 
         {/* Title */}
         <section className="pt-24 pb-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent uppercase">
+          <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent uppercase">
             Events & Experiences
           </h1>
           <p className="text-gray-400 mt-4 max-w-3xl mx-auto">
@@ -48,8 +48,8 @@ function EventPage() {
                 onClick={() => setSelectedCategory(key)}
                 className={`px-5 py-2 rounded-xl text-sm font-semibold transition ${
                   selectedCategory === key
-                    ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white scale-105"
-                    : "bg-gray-900 text-gray-400 border border-gray-700 hover:text-cyan-400"
+                    ? "bg-gradient-to-r from-red-500 to-red-600 text-white scale-105"
+                    : "bg-gray-900 text-gray-400 border border-gray-700 hover:text-red-400"
                 }`}
               >
                 {category.name}
