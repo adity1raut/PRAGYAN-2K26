@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Home, ArrowLeft } from 'lucide-react';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Home, ArrowLeft } from "lucide-react";
 
 const NotFound = () => {
   const navigate = useNavigate();
@@ -20,15 +20,15 @@ const NotFound = () => {
     <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden flex items-center justify-center p-4">
       {/* Animated background grid */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div 
+        <div
           className="absolute inset-0"
           style={{
             backgroundImage: `
               linear-gradient(rgba(255, 87, 87, 0.2) 1px, transparent 1px),
               linear-gradient(90deg, rgba(255, 87, 87, 0.2) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px',
-            animation: 'gridMove 20s linear infinite'
+            backgroundSize: "50px 50px",
+            animation: "gridMove 20s linear infinite",
           }}
         />
       </div>
@@ -39,9 +39,9 @@ const NotFound = () => {
         <div className="mb-6 md:mb-8">
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-red-500/30 rounded-full blur-3xl animate-pulse" />
-            <div 
+            <div
               className={`relative text-7xl sm:text-8xl md:text-9xl transition-transform duration-200 ${
-                glitchActive ? 'scale-110' : 'scale-100'
+                glitchActive ? "scale-110" : "scale-100"
               }`}
             >
               😢
@@ -51,18 +51,24 @@ const NotFound = () => {
 
         {/* 404 Text with glitch */}
         <div className="mb-4 md:mb-6">
-          <h1 
+          <h1
             className={`text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-wider bg-gradient-to-b from-red-400 via-red-500 to-red-700 bg-clip-text text-transparent relative ${
-              glitchActive ? 'animate-glitch' : ''
+              glitchActive ? "animate-glitch" : ""
             }`}
           >
             404
             {glitchActive && (
               <>
-                <span className="absolute inset-0 text-red-500/50 blur-sm" style={{ transform: 'translate(-2px, 2px)' }}>
+                <span
+                  className="absolute inset-0 text-red-500/50 blur-sm"
+                  style={{ transform: "translate(-2px, 2px)" }}
+                >
                   404
                 </span>
-                <span className="absolute inset-0 text-cyan-500/50 blur-sm" style={{ transform: 'translate(2px, -2px)' }}>
+                <span
+                  className="absolute inset-0 text-cyan-500/50 blur-sm"
+                  style={{ transform: "translate(2px, -2px)" }}
+                >
                   404
                 </span>
               </>
@@ -84,11 +90,13 @@ const NotFound = () => {
         {/* Action buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             className="group flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 rounded-lg sm:rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-red-500/50 w-full sm:w-auto max-w-xs"
           >
             <Home className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
-            <span className="font-semibold text-sm sm:text-base uppercase tracking-wider">Go Home</span>
+            <span className="font-semibold text-sm sm:text-base uppercase tracking-wider">
+              Go Home
+            </span>
           </button>
 
           <button
@@ -96,7 +104,9 @@ const NotFound = () => {
             className="group flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gray-800/80 hover:bg-gray-700/80 border-2 border-red-500/40 hover:border-red-500/70 rounded-lg sm:rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg w-full sm:w-auto max-w-xs"
           >
             <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 group-hover:-translate-x-1 transition-transform duration-300" />
-            <span className="font-semibold text-sm sm:text-base uppercase tracking-wider">Go Back</span>
+            <span className="font-semibold text-sm sm:text-base uppercase tracking-wider">
+              Go Back
+            </span>
           </button>
         </div>
 
@@ -122,7 +132,7 @@ const NotFound = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 2}s`
+              animationDelay: `${Math.random() * 2}s`,
             }}
           />
         ))}
@@ -140,7 +150,8 @@ const NotFound = () => {
         }
 
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px);
             opacity: 0.3;
           }
@@ -151,7 +162,8 @@ const NotFound = () => {
         }
 
         @keyframes glitch {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0);
           }
           20% {

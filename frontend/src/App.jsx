@@ -1,18 +1,23 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 // Lazy load all pages for better performance
-const HomePage = lazy(() => import('./Pages/HomePage'));
-const About = lazy(() => import('./About/About'));
-const EventPage = lazy(() => import('./Events/EventPage'));
-const WorkShop = lazy(() => import('./WorkShop/WorkShop'));
-const TeamPage = lazy(() => import('./Team/TeamPage'));
-const Gallery = lazy(() => import('./Gallery/Gallery'));
-const Sponsors = lazy(() => import('./Sponsors/Sponsors'));
-const Contact = lazy(() => import('./Contact/Contact'));
-const SchedulePage = lazy(() => import('./Schedule/Schedule'));
-const Tournament = lazy(() => import('./Tournament/Tournament'));
-const NotFound = lazy(() => import('./Pages/NotFound'));
+const HomePage = lazy(() => import("./Pages/HomePage"));
+const About = lazy(() => import("./About/About"));
+const EventPage = lazy(() => import("./Events/EventPage"));
+const WorkShop = lazy(() => import("./WorkShop/WorkShop"));
+const TeamPage = lazy(() => import("./Team/TeamPage"));
+const Gallery = lazy(() => import("./Gallery/Gallery"));
+const Sponsors = lazy(() => import("./Sponsors/Sponsors"));
+const Contact = lazy(() => import("./Contact/Contact"));
+const SchedulePage = lazy(() => import("./Schedule/Schedule"));
+const Tournament = lazy(() => import("./Tournament/Tournament"));
+const NotFound = lazy(() => import("./Pages/NotFound"));
 
 // Loading component
 const PageLoader = () => (
@@ -28,12 +33,12 @@ function App() {
 
   useEffect(() => {
     // Check if video has already been shown in this session
-    const hasShownVideo = sessionStorage.getItem('videoShown');
-    
+    const hasShownVideo = sessionStorage.getItem("videoShown");
+
     if (!hasShownVideo) {
       setLoading(true);
       // Mark video as shown for this session
-      sessionStorage.setItem('videoShown', 'true');
+      sessionStorage.setItem("videoShown", "true");
     }
 
     // Detect mobile devices
@@ -41,7 +46,7 @@ function App() {
       setIsMobile(window.innerWidth < 768);
     };
     checkMobile();
-    window.addEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
 
     // Reduced timeout for better UX (3 seconds instead of 5)
     const timer = setTimeout(() => {
@@ -50,13 +55,13 @@ function App() {
 
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener("resize", checkMobile);
     };
   }, []);
 
   const handleVideoCanPlay = () => {
     // Skip the first second and play optimally
-    const video = document.getElementById('loaderVideo');
+    const video = document.getElementById("loaderVideo");
     if (video && !videoStarted) {
       video.currentTime = 1;
       video.playbackRate = 1.2; // Slightly faster playback
@@ -79,7 +84,7 @@ function App() {
             onEnded={() => setLoading(false)}
             onError={() => setLoading(false)}
             className={`w-full h-full ${
-              isMobile ? 'object-contain' : 'object-cover'
+              isMobile ? "object-contain" : "object-cover"
             }`}
           >
             <source src="/pragyaa2.mp4" type="video/mp4" />

@@ -1,16 +1,16 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import GamingButton from './GamingButton';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import GamingButton from "./GamingButton";
 
 export default function LeftSidebar() {
   const navigate = useNavigate();
-  
+
   const menuItems = [
     { label: "TOURNAMENTS", path: "/tournament" },
     { label: "GALLERY", path: "/gallery" },
     { label: "HACKATHON", path: "/events" },
     { label: "WORKSHOPS", path: "/workshops" },
-    { label: "SPONSORS", path: "/sponsors" }
+    { label: "SPONSORS", path: "/sponsors" },
   ];
 
   const handleNavigation = (path) => {
@@ -24,24 +24,24 @@ export default function LeftSidebar() {
         {/* Single gaming border */}
         <div className="absolute top-0 right-0 w-full h-0.5 bg-gradient-to-l from-[#ff5757] via-purple-500 to-transparent"></div>
         <div className="absolute top-0 right-0 w-0.5 h-full bg-gradient-to-b from-[#ff5757] via-purple-500 to-transparent"></div>
-        
+
         {/* Corner bracket */}
         <div className="absolute top-0.5 right-0.5 sm:top-1 sm:right-1 w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-6 xl:h-6 border-t-2 border-r-2 border-[#ff5757] shadow-lg shadow-[#ff5757]/50"></div>
-        
+
         {/* Tech dot */}
         <div className="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 w-0.5 h-0.5 sm:w-1 sm:h-1 bg-[#ff5757] rounded-full"></div>
       </div>
 
       {menuItems.map((menuItem, index) => (
-        <div 
-          key={menuItem.label} 
-          className="relative flex items-center group"
-        >
-          <div onClick={() => handleNavigation(menuItem.path)} className="cursor-pointer">
-            <GamingButton 
-              item={menuItem.label} 
-              index={index} 
-              side="left" 
+        <div key={menuItem.label} className="relative flex items-center group">
+          <div
+            onClick={() => handleNavigation(menuItem.path)}
+            className="cursor-pointer"
+          >
+            <GamingButton
+              item={menuItem.label}
+              index={index}
+              side="left"
               color="red"
               size="small"
             />
@@ -54,10 +54,10 @@ export default function LeftSidebar() {
         {/* Single gaming border */}
         <div className="absolute bottom-0 right-0 w-full h-0.5 bg-gradient-to-l from-red-500 via-purple-500 to-transparent"></div>
         <div className="absolute bottom-0 right-0 w-0.5 h-full bg-gradient-to-t from-red-500 via-purple-500 to-transparent"></div>
-        
+
         {/* Corner bracket */}
         <div className="absolute bottom-0.5 right-0.5 sm:bottom-1 sm:right-1 w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-6 xl:h-6 border-b-2 border-r-2 border-[#ff5757] shadow-lg shadow-[#ff5757]/50"></div>
-        
+
         {/* Tech dot */}
         <div className="absolute bottom-1.5 right-1.5 sm:bottom-2 sm:right-2 w-0.5 h-0.5 sm:w-1 sm:h-1 bg-[#ff5757] rounded-full"></div>
       </div>

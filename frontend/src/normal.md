@@ -12,9 +12,9 @@ import SchedulePage from './Schedule/Schedule';
 import Tournament from './Tournament/Tournament';
 
 function App() {
-  return (
-    <Router>
-      <Routes>
+return (
+<Router>
+<Routes>
 
         <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<Navigate to="/" replace />} />
@@ -30,11 +30,12 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/contact" element={<Contact />} />
-  
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
-  );
+
+);
 }
 
 export default App;

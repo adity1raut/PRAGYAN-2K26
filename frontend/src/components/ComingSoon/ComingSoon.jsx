@@ -1,7 +1,6 @@
 import React from "react";
 
 function ComingSoon() {
-
   return (
     <section className="flex flex-col items-center justify-center px-4 py-16 relative z-10 overflow-hidden ">
       <div className="max-w-4xl mx-auto text-center space-y-8 relative">

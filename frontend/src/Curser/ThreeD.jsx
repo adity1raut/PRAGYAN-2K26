@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 import * as THREE from "https://cdn.skypack.dev/three@0.148.0";
 
@@ -9,7 +8,7 @@ const ThreeD = () => {
     // Mobile detection for performance optimization
     const isMobile = window.innerWidth < 768;
     const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
-    
+
     const sizes = {
       width: window.innerWidth,
       height: window.innerHeight,
@@ -68,7 +67,12 @@ const ThreeD = () => {
 
     // CAMERA
     const updateCamPos = new THREE.Vector3(-0.3, 0, 5);
-    const camera = new THREE.PerspectiveCamera(25, sizes.width / sizes.height, 1, 500);
+    const camera = new THREE.PerspectiveCamera(
+      25,
+      sizes.width / sizes.height,
+      1,
+      500,
+    );
     camera.position.set(-0.3, 0, 5);
     scene.add(camera);
 
@@ -181,11 +185,11 @@ const ThreeD = () => {
     };
 
     window.scrollTo({ top: 0, behavior: "smooth" });
-    
+
     // Adjust counts based on device
     const cubeCount = isMobile ? 10 : isTablet ? 20 : 30;
     const particleCount = isMobile ? 50 : isTablet ? 100 : 200;
-    
+
     Array(cubeCount).fill().forEach(generateCube);
     Array(particleCount).fill().forEach(generateParticle);
     animate();
@@ -209,7 +213,13 @@ const ThreeD = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="webgl" style={{ width: '100%', height: '100%' }} />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className="webgl"
+      style={{ width: "100%", height: "100%" }}
+    />
+  );
 };
 
 export default ThreeD;
