@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function GlobalStyles() {
   return (
@@ -109,7 +109,7 @@ export default function GlobalStyles() {
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
-      
+
       .scrollbar-hide::-webkit-scrollbar {
         display: none;
       }

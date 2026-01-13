@@ -23,11 +23,7 @@
       { "name": "Writer 2", "role": "Content Strategist" },
       { "name": "Writer 3", "role": "Editor" }
     ],
-    "images": [
-      "/Aditya.jpg",
-      "/Aditya.jpg",
-      "/Aditya.jpg"
-    ]
+    "images": ["/Aditya.jpg", "/Aditya.jpg", "/Aditya.jpg"]
   },
   "design": {
     "name": "Design Committee",
@@ -36,11 +32,7 @@
       { "name": "Designer 2", "role": "UI/UX Designer" },
       { "name": "Designer 3", "role": "Graphic Designer" }
     ],
-    "images": [
-      "/Aditya.jpg",
-      "/Aditya.jpg",
-      "/Aditya.jpg"
-    ]
+    "images": ["/Aditya.jpg", "/Aditya.jpg", "/Aditya.jpg"]
   },
   "marketing": {
     "name": "Marketing Committee",
@@ -49,11 +41,7 @@
       { "name": "Marketer 2", "role": "Social Media Manager" },
       { "name": "Marketer 3", "role": "Brand Strategist" }
     ],
-    "images": [
-      "/Aditya.jpg",
-      "/Aditya.jpg",
-      "/Aditya.jpg"
-    ]
+    "images": ["/Aditya.jpg", "/Aditya.jpg", "/Aditya.jpg"]
   },
   "events": {
     "name": "Events Committee",
@@ -62,11 +50,7 @@
       { "name": "Event Manager 2", "role": "Coordinator" },
       { "name": "Event Manager 3", "role": "Logistics Manager" }
     ],
-    "images": [
-      "/Aditya.jpg",
-      "/Aditya.jpg",
-      "/Aditya.jpg"
-    ]
+    "images": ["/Aditya.jpg", "/Aditya.jpg", "/Aditya.jpg"]
   },
   "technical": {
     "name": "Technical Committee",
@@ -75,10 +59,6 @@
       { "name": "Tech Lead 2", "role": "Backend Developer" },
       { "name": "Tech Lead 3", "role": "DevOps Engineer" }
     ],
-    "images": [
-      "/Aditya.jpg",
-      "/Aditya.jpg",
-      "/Aditya.jpg"
-    ]
+    "images": ["/Aditya.jpg", "/Aditya.jpg", "/Aditya.jpg"]
   }
 }

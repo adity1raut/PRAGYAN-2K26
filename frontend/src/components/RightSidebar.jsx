@@ -1,16 +1,16 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import GamingButton from "./GamingButton";
 
 export default function RightSidebar() {
   const navigate = useNavigate();
-  
+
   const menuItems = [
     { label: "ABOUT", path: "/about" },
     { label: "EVENTS", path: "/events" },
     { label: "TEAM", path: "/team" },
     { label: "CONTACT", path: "/contact" },
-    { label: "SCHEDULE", path: "/schedule" }
+    { label: "SCHEDULE", path: "/schedule" },
   ];
 
   const handleNavigation = (path) => {
@@ -24,24 +24,24 @@ export default function RightSidebar() {
         {/* Single gaming border */}
         <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 via-cyan-500 to-transparent"></div>
         <div className="absolute top-0 left-0 w-0.5 h-full bg-gradient-to-b from-purple-500 via-cyan-500 to-transparent"></div>
-        
+
         {/* Corner bracket */}
         <div className="absolute top-0.5 left-0.5 sm:top-1 sm:left-1 w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-6 xl:h-6 border-t-2 border-l-2 border-purple-400 shadow-lg shadow-purple-500/50"></div>
-        
+
         {/* Tech dot */}
         <div className="absolute top-1.5 left-1.5 sm:top-2 sm:left-2 w-0.5 h-0.5 sm:w-1 sm:h-1 bg-purple-400 rounded-full"></div>
       </div>
 
       {menuItems.map((menuItem, index) => (
-        <div 
-          key={menuItem.label} 
-          className="relative flex items-center group"
-        >
-          <div onClick={() => handleNavigation(menuItem.path)} className="cursor-pointer">
-            <GamingButton 
-              item={menuItem.label} 
-              index={index} 
-              side="right" 
+        <div key={menuItem.label} className="relative flex items-center group">
+          <div
+            onClick={() => handleNavigation(menuItem.path)}
+            className="cursor-pointer"
+          >
+            <GamingButton
+              item={menuItem.label}
+              index={index}
+              side="right"
               color="red"
               size="small"
             />
@@ -54,14 +54,13 @@ export default function RightSidebar() {
         {/* Single gaming border */}
         <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-red-500 via-purple-500 to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-0.5 h-full bg-gradient-to-t from-red-500 via-purple-500 to-transparent"></div>
-        
+
         {/* Corner bracket */}
         <div className="absolute bottom-0.5 left-0.5 sm:bottom-1 sm:left-1 w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-6 xl:h-6 border-b-2 border-l-2 border-purple-400 shadow-lg shadow-purple-500/50"></div>
-        
+
         {/* Tech dot */}
         <div className="absolute bottom-1.5 left-1.5 sm:bottom-2 sm:left-2 w-0.5 h-0.5 sm:w-1 sm:h-1 bg-purple-400 rounded-full"></div>
       </div>
-
     </div>
   );
 }

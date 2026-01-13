@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import eventData from "./eventData";
-import EventCard from "./eventCards"; 
+import EventCard from "./eventCards";
 
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";

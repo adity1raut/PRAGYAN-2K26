@@ -1,55 +1,53 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
-function StarField({ 
-  density = 'medium', 
-  showComets = true, 
-  cometCount = 3, 
+function StarField({
+  density = "medium",
+  showComets = true,
+  cometCount = 3,
   isDark = true,
   showNebula = true,
   showPulsars = true,
-  showConstellations = false 
+  showConstellations = false,
 }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
     const container = containerRef.current;
-    container.innerHTML = '';
+    container.innerHTML = "";
 
     // Mobile detection for performance
     const isMobile = window.innerWidth < 768;
     const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
 
     // Enhanced density mapping with mobile optimization
-    const densityMap = isMobile 
+    const densityMap = isMobile
       ? { low: 50, medium: 150, high: 300, ultra: 500 }
       : isTablet
-      ? { low: 100, medium: 250, high: 500, ultra: 800 }
-      : { low: 150, medium: 400, high: 800, ultra: 1200 };
-    
+        ? { low: 100, medium: 250, high: 500, ultra: 800 }
+        : { low: 150, medium: 400, high: 800, ultra: 1200 };
+
     const starCount = densityMap[density] || densityMap.medium;
-    
-    // Reduce comet count on mobile
-    const adjustedCometCount = isMobile ? Math.min(cometCount, 2) : cometCount;
 
     // Create nebula background if enabled
-    if (showNebula && !isMobile) { // Skip nebula on mobile for performance
+    if (showNebula && !isMobile) {
+      // Skip nebula on mobile for performance
       const nebulaCount = isTablet ? 2 : 3;
       for (let i = 0; i < nebulaCount; i++) {
-        const nebula = document.createElement('div');
-        nebula.style.position = 'absolute';
-        nebula.style.borderRadius = '50%';
-        nebula.style.pointerEvents = 'none';
-        
+        const nebula = document.createElement("div");
+        nebula.style.position = "absolute";
+        nebula.style.borderRadius = "50%";
+        nebula.style.pointerEvents = "none";
+
         const size = 200 + Math.random() * 300;
         const colors = [
-          'rgba(99, 102, 241, 0.08)', // Purple
-          'rgba(59, 130, 246, 0.06)', // Blue
-          'rgba(16, 185, 129, 0.05)', // Emerald
-          'rgba(245, 101, 101, 0.04)', // Red
-          'rgba(139, 69, 19, 0.03)'   // Brown
+          "rgba(99, 102, 241, 0.08)", // Purple
+          "rgba(59, 130, 246, 0.06)", // Blue
+          "rgba(16, 185, 129, 0.05)", // Emerald
+          "rgba(245, 101, 101, 0.04)", // Red
+          "rgba(139, 69, 19, 0.03)", // Brown
         ];
-        
+
         nebula.style.width = `${size}px`;
         nebula.style.height = `${size}px`;
         nebula.style.left = `${Math.random() * 100}%`;
@@ -57,134 +55,142 @@ function StarField({
         nebula.style.background = `radial-gradient(circle, ${colors[Math.floor(Math.random() * colors.length)]}, transparent 70%)`;
         nebula.style.animation = `nebulaFloat ${20 + Math.random() * 30}s infinite ease-in-out alternate`;
         nebula.style.animationDelay = `${Math.random() * 10}s`;
-        nebula.style.filter = 'blur(1px)';
-        
+        nebula.style.filter = "blur(1px)";
+
         container.appendChild(nebula);
       }
     }
 
     // Enhanced star creation
     for (let i = 0; i < starCount; i++) {
-      const star = document.createElement('div');
-      star.style.position = 'absolute';
-      star.style.borderRadius = '50%';
-      star.style.pointerEvents = 'none';
-      
+      const star = document.createElement("div");
+      star.style.position = "absolute";
+      star.style.borderRadius = "50%";
+      star.style.pointerEvents = "none";
+
       // Enhanced size distribution
       const sizeRand = Math.random();
       let size, intensity, starType;
-      
+
       if (sizeRand < 0.7) {
         size = 0.5 + Math.random() * 0.5; // Tiny stars
         intensity = 0.3 + Math.random() * 0.4;
-        starType = 'normal';
+        starType = "normal";
       } else if (sizeRand < 0.85) {
         size = 1 + Math.random() * 0.5; // Small stars
         intensity = 0.5 + Math.random() * 0.3;
-        starType = 'normal';
+        starType = "normal";
       } else if (sizeRand < 0.95) {
         size = 1.5 + Math.random() * 1; // Medium stars
         intensity = 0.6 + Math.random() * 0.3;
-        starType = 'bright';
+        starType = "bright";
       } else {
         size = 2 + Math.random() * 1.5; // Large stars
         intensity = 0.8 + Math.random() * 0.2;
-        starType = 'giant';
+        starType = "giant";
       }
-      
+
       // Enhanced color variations
-      const colorVariations = isDark ? [
-        '#ff5757', '#ff6b6b', '#ff4444', '#ff3333', '#ff8787', '#ffa0a0'
-      ] : [
-        '#ff5757', '#ff4444', '#ff3333', '#cc2929', '#ff6b6b', '#ee4444'
-      ];
-      
-      const baseColor = colorVariations[Math.floor(Math.random() * colorVariations.length)];
-      
+      const colorVariations = isDark
+        ? ["#ff5757", "#ff6b6b", "#ff4444", "#ff3333", "#ff8787", "#ffa0a0"]
+        : ["#ff5757", "#ff4444", "#ff3333", "#cc2929", "#ff6b6b", "#ee4444"];
+
+      const baseColor =
+        colorVariations[Math.floor(Math.random() * colorVariations.length)];
+
       star.style.width = `${size}px`;
       star.style.height = `${size}px`;
       star.style.left = `${Math.random() * 100}%`;
       star.style.top = `${Math.random() * 100}%`;
       star.style.backgroundColor = baseColor;
       star.style.opacity = intensity;
-      
+
       // Enhanced animations based on star type
-      if (starType === 'giant') {
-        star.style.animation = `giantTwinkle ${2 + Math.random() * 3}s infinite ease-in-out alternate`;
-        star.style.boxShadow = isDark 
+      if (starType === "giant") {
+        star.style.animation = `giantTwinkle 3s infinite ease-in-out`;
+        star.style.boxShadow = isDark
           ? `0 0 ${size * 3}px ${size}px rgba(255, 87, 87, 0.6), 0 0 ${size * 6}px rgba(255, 87, 87, 0.3)`
           : `0 0 ${size * 2}px rgba(255, 68, 68, 0.8)`;
-      } else if (starType === 'bright') {
-        star.style.animation = `brightTwinkle ${1.5 + Math.random() * 2}s infinite ease-in-out alternate`;
-        star.style.boxShadow = isDark 
+      } else if (starType === "bright") {
+        star.style.animation = `brightTwinkle 3s infinite ease-in-out`;
+        star.style.boxShadow = isDark
           ? `0 0 ${size * 2}px rgba(255, 87, 87, 0.8)`
           : `0 0 ${size * 1.5}px rgba(255, 68, 68, 0.6)`;
       } else {
-        star.style.animation = `normalTwinkle ${1 + Math.random() * 2}s infinite ease-in-out alternate`;
-        star.style.boxShadow = isDark 
+        star.style.animation = `normalTwinkle 3s infinite ease-in-out`;
+        star.style.boxShadow = isDark
           ? `0 0 ${size}px rgba(255, 87, 87, 0.5)`
           : `0 0 ${size * 0.5}px rgba(255, 68, 68, 0.4)`;
       }
-      
+
       star.style.animationDelay = `${Math.random() * 5}s`;
       container.appendChild(star);
     }
 
     // Enhanced pulsars (rapidly spinning neutron stars)
-    if (showPulsars && !isMobile) { // Skip pulsars on mobile
+    if (showPulsars && !isMobile) {
+      // Skip pulsars on mobile
       const pulsarCount = isTablet ? 1 : 2;
       for (let i = 0; i < pulsarCount; i++) {
-        const pulsar = document.createElement('div');
-        pulsar.style.position = 'absolute';
-        pulsar.style.width = '3px';
-        pulsar.style.height = '3px';
-        pulsar.style.borderRadius = '50%';
-        pulsar.style.backgroundColor = isDark ? '#00ffff' : '#0891b2';
+        const pulsar = document.createElement("div");
+        pulsar.style.position = "absolute";
+        pulsar.style.width = "3px";
+        pulsar.style.height = "3px";
+        pulsar.style.borderRadius = "50%";
+        pulsar.style.backgroundColor = isDark ? "#00ffff" : "#0891b2";
         pulsar.style.left = `${Math.random() * 100}%`;
         pulsar.style.top = `${Math.random() * 100}%`;
         pulsar.style.boxShadow = isDark
-          ? '0 0 20px 5px rgba(0, 255, 255, 0.8), 0 0 40px 10px rgba(0, 255, 255, 0.4)'
-          : '0 0 15px 3px rgba(8, 145, 178, 0.6)';
+          ? "0 0 20px 5px rgba(0, 255, 255, 0.8), 0 0 40px 10px rgba(0, 255, 255, 0.4)"
+          : "0 0 15px 3px rgba(8, 145, 178, 0.6)";
         pulsar.style.animation = `pulsar 0.5s linear infinite`;
         pulsar.style.animationDelay = `${Math.random() * 2}s`;
-        
+
         container.appendChild(pulsar);
       }
     }
 
     // Constellation lines (if enabled)
-    if (showConstellations && !isMobile) { // Skip on mobile
+    if (showConstellations && !isMobile) {
+      // Skip on mobile
       for (let i = 0; i < 3; i++) {
-        const line = document.createElement('div');
-        line.style.position = 'absolute';
-        line.style.height = '1px';
+        const line = document.createElement("div");
+        line.style.position = "absolute";
+        line.style.height = "1px";
         line.style.width = `${50 + Math.random() * 100}px`;
         line.style.background = isDark
-          ? 'rgba(255, 255, 255, 0.2)'
-          : 'rgba(74, 85, 104, 0.3)';
+          ? "rgba(255, 255, 255, 0.2)"
+          : "rgba(74, 85, 104, 0.3)";
         line.style.left = `${Math.random() * 80 + 10}%`;
         line.style.top = `${Math.random() * 80 + 10}%`;
         line.style.transform = `rotate(${Math.random() * 360}deg)`;
         line.style.animation = `fadeInOut ${10 + Math.random() * 20}s infinite ease-in-out`;
         line.style.animationDelay = `${Math.random() * 10}s`;
-        
+
         container.appendChild(line);
       }
     }
-
-  }, [density, showComets, cometCount, isDark, showNebula, showPulsars, showConstellations]);
+  }, [
+    density,
+    showComets,
+    cometCount,
+    isDark,
+    showNebula,
+    showPulsars,
+    showConstellations,
+  ]);
 
   return (
     <>
-      <div 
-        ref={containerRef} 
-        style={{ 
-          position: 'absolute', 
-          inset: 0, 
-          pointerEvents: 'none', 
-          overflow: 'hidden', 
-          zIndex: 1 
-        }} 
+      <div
+        ref={containerRef}
+        style={{
+          position: "absolute",
+          inset: 0,
+          pointerEvents: "none",
+          overflow: "hidden",
+          zIndex: 1,
+        }}
       />
     </>
   );
