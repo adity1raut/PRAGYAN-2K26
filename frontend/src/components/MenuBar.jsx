@@ -85,102 +85,47 @@ const MenuBar = () => {
           </button>
         </div>
 
-        {/* Full Screen Menu Panel */}
-        <div className={`fixed inset-0 z-[60] transition-all duration-500 ease-out ${
+        {/* Dropdown Menu Panel - Right Side */}
+        <div className={`fixed top-16 right-4 z-[60] w-72 transition-all duration-500 ease-out ${
           isMenuOpen 
-            ? 'opacity-100 visible' 
-            : 'opacity-0 invisible'
+            ? 'opacity-100 visible translate-y-0' 
+            : 'opacity-0 invisible -translate-y-4'
         }`}>
-          {/* Enhanced Background with stronger blur and gradient */}
-          <div className="absolute inset-0 bg-gray-900/97 backdrop-blur-[120px] backdrop-saturate-200">
-            {/* Animated Background Gradient with blur */}
-            <div className="absolute inset-0 bg-gradient-to-br from-red-500/30 via-orange-500/25 to-rose-500/30 animate-gradient-shift blur-3xl"></div>
+          {/* Menu Container with backdrop blur */}
+          <div className="bg-gray-900/95 backdrop-blur-xl border border-red-500/30 rounded-2xl shadow-2xl shadow-red-500/20 overflow-hidden">
             
-            {/* Multiple blur layers for enhanced effect */}
-            <div className="absolute inset-0 backdrop-blur-[80px]"></div>
-            <div className="absolute inset-0 bg-black/40 backdrop-blur-2xl"></div>
-          </div>
-
-          {/* Content Container */}
-          <div className="relative h-full flex flex-col items-center justify-center px-6 py-20">
-            
-            {/* Header with Animation */}
-            <div className={`mb-8 text-center transition-all duration-700 ${
-              isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
-            }`}>
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-rose-400 bg-clip-text text-transparent animate-text-shimmer">
+            {/* Header */}
+            <div className="px-6 py-4 border-b border-red-500/20 bg-gradient-to-r from-red-500/10 to-orange-500/10">
+              <h3 className="text-lg font-bold bg-gradient-to-r from-red-400 via-orange-400 to-rose-400 bg-clip-text text-transparent">
                 Navigation
               </h3>
-              <div className="mt-4 flex items-center justify-center space-x-2">
-                <div className="w-2 h-2 bg-red-500 rounded-full animate-bounce-delay-1"></div>
-                <div className="w-2 h-2 bg-orange-500 rounded-full animate-bounce-delay-2"></div>
-                <div className="w-2 h-2 bg-rose-500 rounded-full animate-bounce-delay-3"></div>
-              </div>
             </div>
 
-            {/* Menu Items - Full Screen Layout */}
-            <div className="w-full max-w-md space-y-4 overflow-y-auto max-h-[70vh] custom-scrollbar px-4">
+            {/* Menu Items */}
+            <div className="max-h-[70vh] overflow-y-auto custom-scrollbar py-3 px-3">
               {menuItems.map((item, index) => (
-                <div
+                <button
                   key={item.name}
-                  className={`menu-item-parent transition-all duration-300 ${
-                    isMenuOpen ? 'animate-slide-in-stagger' : ''
-                  }`}
-                  style={{
-                    animationDelay: `${index * 60}ms`
-                  }}
+                  onClick={() => handleNavigation(item.href)}
+                  className="w-full text-left px-4 py-2.5 text-sm text-gray-300 hover:text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-red-600/80 hover:via-orange-600/80 hover:to-rose-600/80 border border-transparent hover:border-red-500/50 hover:shadow-lg hover:shadow-red-500/30 group"
                 >
-                  <button
-                    onClick={() => handleNavigation(item.href)}
-                    className="menu-item-child relative flex items-center justify-center px-8 py-5 text-gray-300 rounded-2xl text-lg font-medium transition-all duration-300 overflow-hidden group/item hover:shadow-2xl transform hover:-translate-y-2 border border-red-900/30 hover:border-red-700/50 bg-gray-900/50 backdrop-blur-xl w-full"
-                  >
-                    {/* Top decorative line */}
-                    <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-red-500/50 to-transparent"></div>
-                    
-                    {/* Bottom decorative line */}
-                    <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-orange-500/50 to-transparent"></div>
-                    
-                    {/* Animated background layers */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-orange-500/0 to-rose-500/0 group-hover/item:from-red-500/35 group-hover/item:via-orange-500/35 group-hover/item:to-rose-500/35 transition-all duration-500 rounded-2xl"></div>
-                    
-                    <div className="absolute inset-0 bg-gradient-to-r from-red-600/90 via-orange-600/90 to-rose-600/90 translate-x-[-110%] group-hover/item:translate-x-0 transition-transform duration-500 ease-out rounded-2xl shadow-lg shadow-red-500/50"></div>
-                    
-                    {/* Shimmer effect */}
-                    <div className="absolute inset-0 -translate-x-full group-hover/item:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-2xl"></div>
-                    
-                    {/* Pulse animation on hover */}
-                    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover/item:opacity-100 group-hover/item:animate-pulse-ring"></div>
-                    
-                    {/* Menu item text with center alignment */}
-                    <span className="relative z-10 group-hover/item:text-white transition-all duration-300 group-hover/item:font-bold group-hover/item:scale-110 text-center w-full tracking-wide">
-                      {item.name}
-                    </span>
-                    
-                    {/* Hover indicator - Arrow */}
-                    <div className="absolute right-6 opacity-0 group-hover/item:opacity-100 transition-all duration-300 transform -translate-x-4 group-hover/item:translate-x-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </button>
-                </div>
+                  <span className="font-medium">{item.name}</span>
+                  <svg className="w-4 h-4 inline-block ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
               ))}
             </div>
-
-            {/* Footer with pulse animation */}
-            <div className={`mt-8 text-center transition-all duration-700 delay-300 ${
-              isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
-            }`}>
-              <p className="text-gray-400 text-sm">Tap anywhere to close</p>
-            </div>
           </div>
+        </div>
 
-          {/* Close on backdrop click */}
+        {/* Backdrop overlay - Click to close */}
+        {isMenuOpen && (
           <div 
-            className="absolute inset-0 z-[-1]"
+            className="fixed inset-0 z-[55] bg-black/50 backdrop-blur-sm transition-opacity duration-500"
             onClick={() => setIsMenuOpen(false)}
           />
-        </div>
+        )}
       </nav>
 
       {/* Enhanced Custom CSS for animations */}
