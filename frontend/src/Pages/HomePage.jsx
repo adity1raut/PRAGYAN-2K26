@@ -33,7 +33,7 @@ const HomePage = () => {
       <div className="relative w-full">
         {/* Corner designs - Hidden on mobile/tablet */}
         {/* Top-left corner */}
-        <div className={`absolute top-0 left-0 w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden lg:block opacity-80 lg:opacity-100 ${shouldAnimate ? 'animate-slideInTopLeft' : ''}`}>
+        <div className={`absolute top-0 left-0 w-64 h-64 min-[780px]:w-72 min-[780px]:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden min-[780px]:block opacity-80 lg:opacity-100 ${shouldAnimate ? 'animate-slideInTopLeft' : ''}`}>
           <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 256 256">
             {/* Glow effect */}
             <defs>
@@ -81,7 +81,7 @@ const HomePage = () => {
         </div>
 
         {/* Top-right corner */}
-        <div className={`absolute top-0 right-0 w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden lg:block opacity-80 lg:opacity-100 ${shouldAnimate ? 'animate-slideInTopRight' : ''}`}>
+        <div className={`absolute top-0 right-0 w-64 h-64 min-[780px]:w-72 min-[780px]:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden min-[780px]:block opacity-80 lg:opacity-100 ${shouldAnimate ? 'animate-slideInTopRight' : ''}`}>
           <svg className="absolute top-0 right-0 w-full h-full" viewBox="0 0 256 256">
             <defs>
               <filter id="glowTopRight">
@@ -128,7 +128,7 @@ const HomePage = () => {
         </div>
 
         {/* Bottom-right corner */}
-        <div className={`absolute bottom-0 right-0 w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden lg:block opacity-80 lg:opacity-100 ${shouldAnimate ? 'animate-slideInBottomRight' : ''}`}>
+        <div className={`absolute bottom-0 right-0 w-64 h-64 min-[780px]:w-72 min-[780px]:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden min-[780px]:block opacity-80 lg:opacity-100 ${shouldAnimate ? 'animate-slideInBottomRight' : ''}`}>
           <svg className="absolute bottom-0 right-0 w-full h-full" viewBox="0 0 256 256">
             <defs>
               <filter id="glowBottomRight">
@@ -175,7 +175,7 @@ const HomePage = () => {
         </div>
 
         {/* Bottom-left corner */}
-        <div className={`absolute bottom-0 left-0 w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden lg:block opacity-80 lg:opacity-100 ${shouldAnimate ? 'animate-slideInBottomLeft' : ''}`}>
+        <div className={`absolute bottom-0 left-0 w-64 h-64 min-[780px]:w-72 min-[780px]:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 overflow-hidden hidden min-[780px]:block opacity-80 lg:opacity-100 ${shouldAnimate ? 'animate-slideInBottomLeft' : ''}`}>
           <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 256 256">
             <defs>
               <filter id="glowBottomLeft">
@@ -222,13 +222,13 @@ const HomePage = () => {
         </div>
 
         {/* Desktop Sidebars */}
-        <div className="hidden xl:block">
+        <div className="hidden min-[780px]:block">
           <LeftSidebar shouldAnimate={shouldAnimate} />
           <RightSidebar shouldAnimate={shouldAnimate} />
         </div>
 
         {/* Main Content */}
-        <div className={`relative min-h-screen flex items-center justify-center px-4 py-8 sm:px-6 sm:py-12 md:px-8 md:py-16 lg:px-12 xl:px-16 ${shouldAnimate ? 'animate-fadeInUp' : ''}`}>
+        <div className={`relative min-h-screen flex items-center justify-center px-4 py-8 sm:px-6 sm:py-12 md:px-8 md:py-16 min-[780px]:px-8 min-[780px]:py-4 lg:px-12 lg:py-4 xl:px-16 xl:py-6 ${shouldAnimate ? 'animate-fadeInUp' : ''}`}>
           <MainContent />
         </div>
       </div>
