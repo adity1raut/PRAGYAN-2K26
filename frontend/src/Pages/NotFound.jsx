@@ -139,7 +139,7 @@ const NotFound = () => {
       </div>
 
       {/* CSS Animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes gridMove {
           0% {
             transform: translate(0, 0);
