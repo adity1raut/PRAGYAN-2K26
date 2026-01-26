@@ -41,8 +41,8 @@ function EventCard({ event, index }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const smoothX = useSpring(x, { stiffness: 120, damping: 20 });
-  const smoothY = useSpring(y, { stiffness: 120, damping: 20 });
+  const smoothX = useSpring(x, { stiffness: 100, damping: 30});
+  const smoothY = useSpring(y, { stiffness: 100, damping: 30 });
 
   const handleMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
