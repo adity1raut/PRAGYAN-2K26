@@ -13,7 +13,7 @@ const eventData = {
           icon: "Users",
           prizePool: 10000,
           entryFee: 199,
-
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
         
       },
       {
@@ -26,6 +26,7 @@ const eventData = {
         venue: "Chemical Engineering Department",
         prizePool: 3000,
           entryFee: 199,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
 
       },
       {
@@ -38,6 +39,7 @@ const eventData = {
         venue: "Mechanical Engineering Department",
         prizePool: 10000,
           entryFee: 199,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
 
       },
       {
@@ -50,6 +52,7 @@ const eventData = {
         venue: "Mechanical Engineering Department",
         prizePool: 5000,
           entryFee: 99,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "Mecha Verse (GEAR WAR)",
@@ -59,6 +62,7 @@ const eventData = {
           "A mechanical puzzle event focused on gear assemblies, where participants analyze, identify, and solve gear-based challenges testing mechanical intuition and problem-solving.",
         icon: "Users",
         venue: "Mechanical Engineering Department",
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "PESA-Pronergy (Lathe -X)",
@@ -68,6 +72,7 @@ const eventData = {
           "LatheX-The Turning Arena: LatheX provide a platform for students to show their lathe machine skills like turning, facing, knuring, etc and compete among each other.",
         icon: "Users",
         venue: "Production Engineering Department",
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "PESA-Pronergy (Designation)",
@@ -79,6 +84,7 @@ const eventData = {
         venue: "Production Engineering Department",
         prizePool: 10000,
           entryFee: 199,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "ELITE (Technical Paper Presentation)",
@@ -87,6 +93,7 @@ const eventData = {
         description:
           "An event where students present research papers or innovative ideas before experts to enhance research, technical, and presentation skills. Abstracts will be shortlisted for final presentation.",
         icon: "Users",
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "ELITE (Tech Quest)",
@@ -95,6 +102,7 @@ const eventData = {
         description:
           "A competitive technology-based challenge event conducted in multiple rounds to test participants' technical knowledge, logical thinking, problem-solving skills, and awareness of recent innovations",
         icon: "Users",
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "TESA-Texplorer2 ",
@@ -106,6 +114,7 @@ const eventData = {
         venue: "Textile Engineering Department",
         prizePool: 15000,
           entryFee: 199,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "TESA-Texplorer ",
@@ -117,6 +126,7 @@ const eventData = {
         venue: "Textile Engineering Department",
         prizePool: 5000,
           entryFee: 99,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "TESA-Texplorer1 ",
@@ -128,6 +138,7 @@ const eventData = {
         venue: "Textile Engineering Department",
         prizePool: 5000,
           entryFee: 99,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "CESA-Cenfest",
@@ -139,6 +150,7 @@ const eventData = {
         venue: "Civil Engineering Department",
         prizePool: 5000,
           entryFee: 49,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "CESA-Cenfest1",
@@ -150,6 +162,7 @@ const eventData = {
         venue: "Civil Engineering Department",
         prizePool: 5000,
           entryFee: 49,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "CESA-Cenfest3",
@@ -161,6 +174,7 @@ const eventData = {
         venue: "Civil Engineering Department",
         prizePool: 5000,
           entryFee: 49,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "CESA-Cenfest4",
@@ -172,6 +186,7 @@ const eventData = {
         venue: "Civil Engineering Department",
         prizePool: 5000,
           entryFee: 49,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "CESA-Cenfest5",
@@ -183,6 +198,7 @@ const eventData = {
         venue: "Civil Engineering Department",
         prizePool: 5000,
           entryFee: 49,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "CESA-Cenfest6",
@@ -194,6 +210,7 @@ const eventData = {
         venue: "Civil Engineering Department",
         prizePool: 5000,
           entryFee: 49,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "EESA - Electrospark",
@@ -205,6 +222,7 @@ const eventData = {
         venue: "Electrical Engineering Department",
         prizePool: 5000,
           entryFee: 99,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "EESA - Electrospark1",
@@ -216,6 +234,7 @@ const eventData = {
         venue: "Electrical Engineering Department",
         prizePool: 5000,
           entryFee: 99,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "EESA - Electrospark2",
@@ -227,6 +246,7 @@ const eventData = {
         venue: "Electrical Engineering Department",
         prizePool: 5000,
           entryFee: 99,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "ITSA",
@@ -238,6 +258,7 @@ const eventData = {
         venue: "CCF/Language Lab",
         prizePool: 7000,
           entryFee: 99,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "ITSA1",
@@ -247,6 +268,7 @@ const eventData = {
           " Workshop-Generative AI & Prompt Engineering, A hands on workshop introducing students to Generative Al, Large Language Models, Prompt Engineering techniques, and real world usage of Al tools",
         icon: "Users",
         venue: "CCF/Language Lab",
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "Oratex",
@@ -255,6 +277,7 @@ const eventData = {
         description:
           "Brief Description:  The event includes: Oratex is a 3-stage oratory competition designed to test participants' communication skills, spontaneity, and critical. [1] Speech Relay - A coordinated team-speaking round. [2] Debate - A structured argumentative round between teams.  [3] Extempore-An individual impromptu speaking round.",
         icon: "Users",
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "Math-E-Magic ",
@@ -266,6 +289,7 @@ const eventData = {
         venue: "Admin Building",
         prizePool: 5000,
           entryFee: 49,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "HACKIT",
@@ -277,6 +301,7 @@ const eventData = {
         venue: "CCF/Language Lab",
         prizePool: 10000,
           entryFee: 99,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
     ],
   },
@@ -294,6 +319,7 @@ const eventData = {
         venue: "A4 Hall",
         prizePool: 10000,
         entryFee: 199,
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
 
       },
       {
@@ -306,6 +332,7 @@ const eventData = {
         venue: "PMC-CAD Road",
         prizePool: 15000,
           entryFee: 0.00,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "E-Venture ",
@@ -317,6 +344,7 @@ const eventData = {
         venue: "Auditorium",
         prizePool: 30000,
           entryFee: 49,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "GameVerse",
@@ -328,6 +356,7 @@ const eventData = {
         venue: "CCF/Language Lab,EXTC Dept",
         prizePool: 5000,
           entryFee: 199,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "GameVerse1",
@@ -339,6 +368,7 @@ const eventData = {
         venue: "CCF/Language Lab,EXTC Dept",
         prizePool: 5000,
           entryFee: 199,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "GameVerse2",
@@ -350,6 +380,7 @@ const eventData = {
         venue: "CCF/Language Lab,EXTC Dept",
         prizePool: 5000,
           entryFee: 199,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "Galactic Glide",
@@ -362,6 +393,7 @@ const eventData = {
         venue: "Green Campus",
         prizePool: 10000,
           entryFee: 199,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "PRAGYAA Yuva Sansad",
@@ -373,6 +405,7 @@ const eventData = {
         venue: "A4 Hall",
         prizePool: 10000,
           entryFee: 99,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "Gyan PRAGYAA ",
@@ -381,6 +414,7 @@ const eventData = {
         description:
           "A national-level poster presentation competition at PRAGYAA, where students from across the country showcase their innovative ideas and projects. This platform focuses on technology for a sustainable and intelligent future, encouraging creativity, research, and impactful solutions that can shape tomorrow.",
         icon: "Trophy",
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
 
       },
       {
@@ -393,6 +427,7 @@ const eventData = {
         venue: "PMC-EMC Road",
         prizePool: 50000,
           entryFee: 199,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "PRAGYAA Movie Night",
@@ -402,6 +437,7 @@ const eventData = {
           "Movies:Interstellar - Embark on a mind-bending journey across space and time.The Dark Knight-Witness the rise of a legend in the battle between justice and chaos.",
         icon: "Star",
         venue: "Auditorium",
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "FarOff",
@@ -413,6 +449,7 @@ const eventData = {
         venue: "Entire Campus",
         prizePool: 5000,
           entryFee: 99,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "CheckMate",
@@ -424,6 +461,7 @@ const eventData = {
         venue: "Admin GF/Gymnasium",
         prizePool: 5000,
           entryFee: 99,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "Reelify",
@@ -434,6 +472,7 @@ const eventData = {
         icon: "Star",
         prizePool: 5000,
           entryFee: 99,
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
     ],
   },
