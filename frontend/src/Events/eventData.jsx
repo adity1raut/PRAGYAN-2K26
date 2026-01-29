@@ -8,11 +8,23 @@ const eventData = {
         title: "ChemTrek (IDP)",
         tagline: "Industry Defined Problem (IDP)",
         description:
-          "A real-life challenge where students apply chemical engineering knowledge to solve industry-sourced problems and present practical solutions.",
+          "Industry Defined Problem (IDP): A real-life challenge where students apply chemical engineering knowledge to solve industry-sourced problems and present practical solutions.",
           venue: "Chemical Engineering Department",
           icon: "Users",
           prizePool: 10000,
           entryFee: 199,
+          members:4,
+          coordinators: [
+            {
+              name: "Mr. Harshit Mengre ",
+              phone: "7720950041"
+            },
+            {
+              name: "Atharva Bhosale",
+              phone: "7499478708"
+            }
+          ],
+          faculty:"Dr. A. P. Chauhan",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
         
       },
@@ -25,26 +37,50 @@ const eventData = {
         icon: "Users",
         venue: "Chemical Engineering Department",
         prizePool: 3000,
-          entryFee: 199,
+          entryFee: 49,
+          members:1,
+          coordinators: [
+            {
+              name: "Mr. Harshit Mengre ",
+              phone: "7720950041"
+            },
+            {
+              name: "Atharva Bhosale",
+              phone: "7499478708"
+            }
+          ],
+          faculty:"Dr. A. P. Chauhan",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
 
       },
       {
-        id: "Mecha Verse (Contraption Cascade)",
-        title: "Mecha Verse (Contraption Cascade)",
+        id: "Mechaverse (Contraption Cascade)",
+        title: "Mechaverse (Contraption Cascade)",
         tagline: "Battle of the Bots",
         description:
           "Contraption: A creativity-driven event where participants design and construct an elaborate mechanical setup to solve industry ready challenges.",
         icon: "Users",
         venue: "Mechanical Engineering Department",
-        prizePool: 10000,
+        prizePool: 5000,
           entryFee: 199,
+          members:4,
+          coordinators: [
+            {
+              name: "Mr. Balaji Kasture",
+              phone: "7249438491"
+            },
+            {
+              name: "Balaji Kalyankar",
+              phone: "9699536593"
+            }
+          ],
+          faculty:"Prof. M. D. Sukre",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
 
       },
       {
-        id: "Mecha Verse (CAD-WAR)",
-        title: "Mecha Verse (CAD-WAR)",
+        id: "Mechaverse (CAD-WAR)",
+        title: "Mechaverse (CAD-WAR)",
         tagline: "Design. Innovate. Dominate.",
         description:
           "A design-oriented challenge where participants use CAD software to solve mechanical design problems under time constraints, testing accuracy, speed, and conceptual understanding.",
@@ -52,56 +88,41 @@ const eventData = {
         venue: "Mechanical Engineering Department",
         prizePool: 5000,
           entryFee: 99,
+          members:4,
+          coordinators: [
+            {
+              name: "Mr. Balaji Kasture",
+              phone: "7249438491"
+            },
+            {
+              name: "Balaji Kalyankar",
+              phone: "9699536593"
+            }
+          ],
+          faculty:"Prof. M. D. Sukre",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
-        id: "Mecha Verse (GEAR WAR)",
-        title: "Mecha Verse (GEAR WAR)",
-        tagline: "Gear. Solve. Dominate.",
+        id: "Mechaverse (Marketing Mania) ",
+        title: "Mechaverse (Marketing Mania) ",
+        tagline: "Solve.Innovate.Dominate.",
         description:
           "A mechanical puzzle event focused on gear assemblies, where participants analyze, identify, and solve gear-based challenges testing mechanical intuition and problem-solving.",
         icon: "Users",
         venue: "Mechanical Engineering Department",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "PESA-Pronergy (Lathe -X)",
-        title: "PESA-Pronergy (Lathe -X)",
-        tagline: "LatheX-The Turning Arena",
-        description:
-          "LatheX-The Turning Arena: LatheX provide a platform for students to show their lathe machine skills like turning, facing, knuring, etc and compete among each other.",
-        icon: "Users",
-        venue: "Production Engineering Department",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "PESA-Pronergy (Designation)",
-        title: "PESA-Pronergy (Designation)",
-        tagline: "Product design hackathon",
-        description:
-          "Designathon - Product Design Hackathon: Designathon is basically product design competition where students design new or innovative design and also present their manufacturability and cost analysis.",
-        icon: "Users",
-        venue: "Production Engineering Department",
-        prizePool: 10000,
-          entryFee: 199,
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "ELITE (Technical Paper Presentation)",
-        title: "ELITE (Technical Paper Presentation)",
-        tagline: "Technical Paper Presentation",
-        description:
-          "An event where students present research papers or innovative ideas before experts to enhance research, technical, and presentation skills. Abstracts will be shortlisted for final presentation.",
-        icon: "Users",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "ELITE (Tech Quest)",
-        title: "ELITE (Tech Quest)",
-        tagline: "logical thinking, problem-solving skills",
-        description:
-          "A competitive technology-based challenge event conducted in multiple rounds to test participants' technical knowledge, logical thinking, problem-solving skills, and awareness of recent innovations",
-        icon: "Users",
+        prizePool:5000,
+        members:2,
+        coordinators: [
+          {
+            name: "Mr. Balaji Kasture",
+            phone: "7249438491"
+          },
+          {
+            name: "Balaji Kalyankar",
+            phone: "9699536593"
+          }
+        ],
+        faculty:"Prof. M. D. Sukre",
         registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -112,8 +133,20 @@ const eventData = {
           "Style Your Partner: A fun and creative event where participants design and style their partners using textile materials, showcasing innovation in fabric draping, color coordination, and trendsetting looks",
         icon: "Users",
         venue: "Textile Engineering Department",
-        prizePool: 15000,
+        prizePool: 12000,
           entryFee: 199,
+          members:2,
+          coordinators: [
+            {
+              name: "Mr. Hanuman Kadam",
+              phone: "9067277491"
+            },
+            {
+              name: "Jaydeep Kadam",
+              phone: "8637763753"
+            }
+          ],
+          faculty:"Prof. Devashish Patil",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -126,6 +159,18 @@ const eventData = {
         venue: "Textile Engineering Department",
         prizePool: 5000,
           entryFee: 99,
+          members:2,
+          coordinators: [
+            {
+              name: "Mr. Hanuman Kadam",
+              phone: "9067277491"
+            },
+            {
+              name: "Jaydeep Kadam",
+              phone: "8637763753"
+            }
+          ],
+          faculty:"Prof. Devashish Patil",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -136,8 +181,20 @@ const eventData = {
           "TexQuiz: A competitive quiz focusing on textile science, technology, and industry trends that tests participants' knowledge of fibers, fabrics, manufacturing processes, and fashion history.",
         icon: "Users",
         venue: "Textile Engineering Department",
-        prizePool: 5000,
-          entryFee: 99,
+        prizePool: 3000,
+          entryFee: 49,
+          members:1,
+          coordinators: [
+            {
+              name: "Mr. Hanuman Kadam",
+              phone: "9067277491"
+            },
+            {
+              name: "Jaydeep Kadam",
+              phone: "8637763753"
+            }
+          ],
+          faculty:"Prof. Devashish Patil",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -149,7 +206,19 @@ const eventData = {
         icon: "Users",
         venue: "Civil Engineering Department",
         prizePool: 5000,
-          entryFee: 49,
+          entryFee: 199,
+          members:4,
+          coordinators: [
+            {
+              name: "Mr. Omkar Dalvi",
+              phone: "7823058329"
+            },
+            {
+              name: "Ayush Gulhane",
+              phone: "9665082890"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -162,6 +231,18 @@ const eventData = {
         venue: "Civil Engineering Department",
         prizePool: 5000,
           entryFee: 49,
+          members:1,
+          coordinators: [
+            {
+              name: "Mr. Omkar Dalvi",
+              phone: "7823058329"
+            },
+            {
+              name: "Ayush Gulhane",
+              phone: "9665082890"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -173,19 +254,19 @@ const eventData = {
         icon: "Users",
         venue: "Civil Engineering Department",
         prizePool: 5000,
-          entryFee: 49,
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "CESA-Cenfest4",
-        title: "CESA-Cenfest",
-        tagline: "Tender X",
-        description:
-          "Tender X: Prepare a detailed tender/report as per given requirements. A real-world test of documentation, estimation, and presentation skills.",
-        icon: "Users",
-        venue: "Civil Engineering Department",
-        prizePool: 5000,
-          entryFee: 49,
+          entryFee: 99,
+          members:2,
+          coordinators: [
+            {
+              name: "Mr. Omkar Dalvi",
+              phone: "7823058329"
+            },
+            {
+              name: "Ayush Gulhane",
+              phone: "9665082890"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -197,7 +278,19 @@ const eventData = {
         icon: "Users",
         venue: "Civil Engineering Department",
         prizePool: 5000,
-          entryFee: 49,
+          entryFee: 199,
+          members:4,
+          coordinators: [
+            {
+              name: "Mr. Omkar Dalvi",
+              phone: "7823058329"
+            },
+            {
+              name: "Ayush Gulhane",
+              phone: "9665082890"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -209,19 +302,19 @@ const eventData = {
         icon: "Users",
         venue: "Civil Engineering Department",
         prizePool: 5000,
-          entryFee: 49,
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "EESA - Electrospark",
-        title: "EESA - Electrospark",
-        tagline: "Guess the component",
-        description:
-          "Guess the component: This is one type of game where one participant out of the team of two will get the component name he have to express to his team mate about behaviour of components and he needs to recognise component name.",
-        icon: "Users",
-        venue: "Electrical Engineering Department",
-        prizePool: 5000,
-          entryFee: 99,
+          entryFee: 199,
+          members:4,
+          coordinators: [
+            {
+              name: "Mr. Omkar Dalvi",
+              phone: "7823058329"
+            },
+            {
+              name: "Ayush Gulhane",
+              phone: "9665082890"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -234,6 +327,14 @@ const eventData = {
         venue: "Electrical Engineering Department",
         prizePool: 5000,
           entryFee: 99,
+          members:3,
+          coordinators: [
+            {
+              name: "Mr. Shubham Tayde",
+              phone: "9075066926"
+            }
+          ],
+          faculty:"Dr. P. S. Jamwal",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -245,7 +346,15 @@ const eventData = {
         icon: "Users",
         venue: "Electrical Engineering Department",
         prizePool: 5000,
-          entryFee: 99,
+          entryFee: 49,
+          members:1,
+          coordinators: [
+            {
+              name: "Mr. Shubham Tayde",
+              phone: "9075066926"
+            }
+          ],
+          faculty:"Dr. P. S. Jamwal",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -258,26 +367,19 @@ const eventData = {
         venue: "CCF/Language Lab",
         prizePool: 7000,
           entryFee: 99,
+          members:1,
+          coordinators: [
+            {
+              name: "Mr. Om Rakhade",
+              phone: "7057676048"
+            },
+            {
+              name: "Krushna Ingle",
+              phone: "7972484842"
+            }
+          ],
+          faculty:"Dr. A. D. Sawarkar",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "ITSA1",
-        title: "ITSA",
-        tagline: "AI INNOVATORS(Gen AI workshop",
-        description:
-          " Workshop-Generative AI & Prompt Engineering, A hands on workshop introducing students to Generative Al, Large Language Models, Prompt Engineering techniques, and real world usage of Al tools",
-        icon: "Users",
-        venue: "CCF/Language Lab",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "Oratex",
-        title: "Oratex",
-        tagline: "(By Oratory Language Club)",
-        description:
-          "Brief Description:  The event includes: Oratex is a 3-stage oratory competition designed to test participants' communication skills, spontaneity, and critical. [1] Speech Relay - A coordinated team-speaking round. [2] Debate - A structured argumentative round between teams.  [3] Extempore-An individual impromptu speaking round.",
-        icon: "Users",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
         id: "Math-E-Magic ",
@@ -289,18 +391,18 @@ const eventData = {
         venue: "Admin Building",
         prizePool: 5000,
           entryFee: 49,
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "HACKIT",
-        title: "HACKIT",
-        tagline: "Code Clash 2.0",
-        description:
-          " Code Clash 2.0 is a 3-stage technical challenge designed to test participants' logic, coding ability, and real-time problem solving. The event includes:    A)Tech Quiz-A fast test of cybersecurity, programming, and technical fundamentals.  B)Scenario-Based Coding - Participants write code to solve given problem statements.   C)Surprise Round-Guess-the-output and rapid-fire questions.",
-        icon: "Users",
-        venue: "CCF/Language Lab",
-        prizePool: 10000,
-          entryFee: 99,
+          members:1,
+          coordinators: [
+            {
+              name: "Mr. Shailesh Dhoke",
+              phone: "8999101169"
+            },
+            {
+              name: "Piyush Mudhol",
+              phone: "8421608031"
+            }
+          ],
+          faculty:"Dr. Nilesh khandekar",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
     ],
@@ -309,43 +411,32 @@ const eventData = {
   creative: {
     name: "Creative Events",
     events: [
+      
       {
-        id: "E-Venture- IPL Auction",
-        title: "E-Venture (IPL Auction)",
-        tagline: "Business strategy competition modeled on IPL auction",
+        id: "HACKIT",
+        title: "HACKIT",
+        tagline: "Code Clash 2.0",
         description:
-          "E Venture - A dynamic entrepreneurship track in PRAGYAA that celebrates innovation, strategy, and business thinking.IPL Auction: A fun and strategic simulation of the Indian Premier League auction, where participants bid on players and form teams testing negotiation and planning skills.",
-        icon: "Trophy",
-        venue: "A4 Hall",
-        prizePool: 10000,
-        entryFee: 199,
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-
-      },
-      {
-        id: "E-Venture- Startup Expo ",
-        title: "E-Venture (Startup Expo)",
-        tagline: "Startup Expo for innovative ventures",
-        description:
-          "E Venture - A dynamic entrepreneurship track in PRAGYAA that celebrates innovation, strategy, and business thinking.Startup Expo: Showcase your startup ideas and connect with investors and mentors. ",
-        icon: "Trophy",
-        venue: "PMC-CAD Road",
-        prizePool: 15000,
-          entryFee: 0.00,
+          " Code Clash 2.0 is a 3-stage technical challenge designed to test participants' logic, coding ability, and real-time problem solving. The event includes:    A)Tech Quiz-A fast test of cybersecurity, programming, and technical fundamentals.  B)Scenario-Based Coding - Participants write code to solve given problem statements.   C)Surprise Round-Guess-the-output and rapid-fire questions.",
+        icon: "Users",
+        venue: "CCF/Language Lab",
+        prizePool: 7000,
+          entryFee: 99,
+          members:2,
+          coordinators: [
+            {
+              name: "Mr. Aditya Ghuge",
+              phone: "9356606201"
+            },
+            {
+              name: "Sainikesh Kokle",
+              phone: "8390199418"
+            }
+          ],
+          faculty:"Dr. Rupsingh P. Matwale",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
-      {
-        id: "E-Venture ",
-        title: "E-Venture (Lightning Pitch)",
-        tagline: "Lightning pitch competition for startups",
-        description:
-          "E Venture - A dynamic entrepreneurship track in PRAGYAA that celebrates innovation, strategy, and business thinking.Lightning Pitch: Quick, impactful startup idea presentations testing creativity and persuasion. ",
-        icon: "Trophy",
-        venue: "Auditorium",
-        prizePool: 30000,
-          entryFee: 49,
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
+     
       {
         id: "GameVerse",
         title: "GameVerse",
@@ -356,6 +447,18 @@ const eventData = {
         venue: "CCF/Language Lab,EXTC Dept",
         prizePool: 5000,
           entryFee: 199,
+          members:4,
+          coordinators: [
+            {
+              name: "Dnyaneshwar Haral",
+              phone: "8624014616"
+            },
+            {
+              name: "Satveer Singh Granthi",
+              phone: "8767190713"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -368,6 +471,79 @@ const eventData = {
         venue: "CCF/Language Lab,EXTC Dept",
         prizePool: 5000,
           entryFee: 199,
+          members:4,
+          coordinators: [
+            {
+              name: "Tejas Ghirepunjhe ",
+              phone: "8237168722"
+            },
+            {
+              name: "Shadman Sheikh",
+              phone: "8421100350"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+      },
+      {
+        id: "E-Venture- IPL Auction",
+        title: "E-Venture (IPL Auction)",
+        tagline: "Business strategy competition modeled on IPL auction",
+        description:
+          "E Venture - A dynamic entrepreneurship track in PRAGYAA that celebrates innovation, strategy, and business thinking.IPL Auction: A fun and strategic simulation of the Indian Premier League auction, where participants bid on players and form teams testing negotiation and planning skills.",
+        icon: "Trophy",
+        venue: "A4 Hall",
+        prizePool: 10000,
+        entryFee: 199,
+       
+        coordinators: [
+          {
+            name: "Mr. Darshan Singh",
+            phone: "9322199877"
+          }
+        ],
+        faculty:"Dr. Milind Bhalerao",
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+
+      },
+      {
+        id: "E-Venture- Startup Expo ",
+        title: "E-Venture (Startup Expo)",
+        tagline: "Startup Expo for innovative ventures",
+        description:
+          "E Venture - A dynamic entrepreneurship track in PRAGYAA that celebrates innovation, strategy, and business thinking.Startup Expo: Showcase your startup ideas and connect with investors and mentors. ",
+        icon: "Trophy",
+        venue: "PMC-CAD Road",
+       
+          entryFee: 199,
+          members:4,
+          coordinators: [
+            {
+              name: "Mr. Darshan Singh",
+              phone: "9322199877"
+            }
+          ],
+          faculty:"Dr. Milind Bhalerao",
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+      },
+      {
+        id: "E-Venture ",
+        title: "E-Venture (Lightning Pitch)",
+        tagline: "Lightning pitch competition for startups",
+        description:
+          "E Venture - A dynamic entrepreneurship track in PRAGYAA that celebrates innovation, strategy, and business thinking.Lightning Pitch: Quick, impactful startup idea presentations testing creativity and persuasion. ",
+        icon: "Trophy",
+        venue: "Auditorium",
+        prizePool: 30000,
+          entryFee: 199,
+          
+        coordinators: [
+          {
+            name: "Mr. Darshan Singh",
+            phone: "9322199877"
+          }
+        ],
+        faculty:"Dr. Milind Bhalerao",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -380,6 +556,18 @@ const eventData = {
         venue: "CCF/Language Lab,EXTC Dept",
         prizePool: 5000,
           entryFee: 199,
+          members:5,
+          coordinators: [
+            {
+              name: "Aditya Dhawale ",
+              phone: "7387585352"
+            },
+            {
+              name: "Pushpinder Singh Ragi ",
+              phone: "9067246730"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -391,8 +579,20 @@ const eventData = {
           "An exciting aeromodelling competition where participants design, build, and fly model aircraft inspired by the spirit of exploration and innovation. Test your creativity, precision, and understanding of aerodynamics as you compete to make your aircraft soar the farthest and fastest-taking your ideas beyond the skies, into the galaxy.",
         icon: "Trophy",
         venue: "Green Campus",
-        prizePool: 10000,
-          entryFee: 199,
+        prizePool: 7000,
+          entryFee: 99,
+          members:2,
+          coordinators: [
+            {
+              name: "Aditya Chopade",
+              phone: "8482890101"
+            },
+            {
+              name: "Dnynoba More",
+              phone: "7620725789"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -405,15 +605,41 @@ const eventData = {
         venue: "A4 Hall",
         prizePool: 10000,
           entryFee: 99,
+          members:1,
+          coordinators: [
+            {
+              name: "Mr. Harshal Tejankar",
+              phone: "9146374089"
+            },
+            {
+              name: "Aryan Mali ",
+              phone: "9325996530"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
-        id: "Gyan PRAGYAA ",
-        title: "Gyan PRAGYAA ",
+        id: "Vision Edge",
+        title: "Vision Edge ",
         tagline: "National Level Poster Presentation",
         description:
           "A national-level poster presentation competition at PRAGYAA, where students from across the country showcase their innovative ideas and projects. This platform focuses on technology for a sustainable and intelligent future, encouraging creativity, research, and impactful solutions that can shape tomorrow.",
         icon: "Trophy",
+        prizePool: 10000,
+        entryFee:99,
+        members:2,
+        coordinators: [
+          {
+            name: "Dipali Wadwale",
+            phone: "9763212227"
+          },
+          {
+            name: "Vijay Shinde",
+            phone: "8446250150"
+          }
+        ],
+        faculty:"Dr Atul Shinde",
         registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
 
       },
@@ -425,8 +651,20 @@ const eventData = {
           "InnoVerse in PRAGYAA-Multiverse of Innovation, is a dynamic showcase of engineering talent where students present projects that blend technology, innovation, and multidisciplinary thinking. The expo serves as a platform for emerging technologists to demonstrate working models, research projects, design solutions, and technical creativity that contribute to societal and industrial progress.",
         icon: "Trophy",
         venue: "PMC-EMC Road",
-        prizePool: 50000,
+        prizePool: 30000,
           entryFee: 199,
+          members:4,
+          coordinators: [
+            {
+              name: "Krishna Gaikwad ",
+              phone: "8767154816"
+            },
+            {
+              name: "Hitesh Khandekar",
+              phone: "8855953179"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -437,18 +675,41 @@ const eventData = {
           "Movies:Interstellar - Embark on a mind-bending journey across space and time.The Dark Knight-Witness the rise of a legend in the battle between justice and chaos.",
         icon: "Star",
         venue: "Auditorium",
+        coordinators: [
+          {
+            name: "Momin Mohammad Talha",
+            phone: "8999140169"
+          },
+          {
+            name: "Alankrut Meshram",
+            phone: "8087859932"
+          }
+        ],
+        faculty:"Dr Atul Shinde",
         registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
-        id: "FarOff",
-        title: "FarOff",
+        id: "FarOath6.0",
+        title: "FarOath 6.0",
         tagline: "Treasure Hunt",
         description:
           " A thrilling treasure hunt where participants solve clues, crack codes, and race against time to find hidden treasures. A test of wit, teamwork, and adventure.",
         icon: "Star",
         venue: "Entire Campus",
         prizePool: 5000,
-          entryFee: 99,
+          entryFee: 199,
+          members:4,
+          coordinators: [
+            {
+              name: "Krishna Jagdambe",
+              phone: "7066658615"
+            },
+            {
+              name: "Krushna Pimple",
+              phone: "8459295642"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
       {
@@ -461,17 +722,18 @@ const eventData = {
         venue: "Admin GF/Gymnasium",
         prizePool: 5000,
           entryFee: 99,
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "Reelify",
-        title: "Reelify",
-        tagline: "Reel Making Competition",
-        description:
-          " Reelify is PRAGYAA's ultimate Reel Making Competition where creativity, storytelling, and innovation collide.Participants are challenged to craft captivating short videos that showcase their imagination, skills, and unique perspective.",
-        icon: "Star",
-        prizePool: 5000,
-          entryFee: 99,
+          members:1,
+          coordinators: [
+            {
+              name: "Vijyot Silare ",
+              phone: "9172894479"
+            },
+            {
+              name: "Tanisha Dhoot",
+              phone: "8975360958"
+            }
+          ],
+          faculty:"Dr Atul Shinde",
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
       },
     ],

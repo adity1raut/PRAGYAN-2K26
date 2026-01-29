@@ -37,7 +37,7 @@ export default function EventPage() {
           </div>
 
           {/* Title */}
-          <section className="pt-20 pb-10 text-center">
+          <section className="pt-15 pb-8 text-center">
             <h1 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent uppercase">
               Events & Experiences
             </h1>
@@ -72,7 +72,7 @@ export default function EventPage() {
               md:columns-2
               xl:columns-3
               gap-16
-              space-y-12
+              space-y-10
             "
             
             >

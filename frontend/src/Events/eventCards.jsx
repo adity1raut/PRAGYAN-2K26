@@ -46,8 +46,8 @@ function EventCard({ event, index }) {
 
   const handleMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    x.set((e.clientX - rect.left - rect.width / 2) * 0.25);
-    y.set((e.clientY - rect.top - rect.height / 2) * 0.25);
+    x.set((e.clientX - rect.left - rect.width / 2) * 0.15);
+    y.set((e.clientY - rect.top - rect.height / 2) * 0.15);
   };
 
   const reset = () => {
@@ -88,10 +88,10 @@ function EventCard({ event, index }) {
 
   {/* Icon + Content */}
 
-  <div className="mt-4 rounded-xl bg-black/35 backdrop-blur-md p-4 flex flex-col flex-1">
+  <div className="mt-3 rounded-xl bg-black/35 backdrop-blur-md p-4 flex flex-col flex-1">
     <h3 className="text-xl font-semibold text-white tracking-widest mb-1">{event.title}</h3>
-    <p className="mt-1 text-sm uppercase text-cyan-400/80 tracking-[0.1em]">{event.tagline}</p>
-    <p className="mt-2 text-[1rem] text-gray-300 leading-relaxed tracking-wide  font-normal flex-1"
+    <p className="text-sm uppercase text-cyan-400/80 tracking-[0.1em]">{event.tagline}</p>
+    <p className="mt-1 text-[1rem] text-gray-300 leading-relaxed tracking-wide  font-normal flex-1"
     style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
       {event.description}
     </p>
@@ -99,11 +99,32 @@ function EventCard({ event, index }) {
   🏆 Prize Pool : ₹{event.prizePool}
 </p>
 
-<p className="text-gray-400" style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
-  🎟 Entry Fee : ₹{event.entryFee}
-</p>
-<p className="mt-1 text-sm text-cyan-400/80 text-gray-300"
-    style={{ fontFamily: " system-ui, sans-serif" }}>📍{event.venue}</p>
+<div className="flex items-center gap-6 text-gray-400"
+     style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
+
+  <p style={{ fontFamily: " sans-serif" }}>🎟 Entry Fee : ₹{event.entryFee}</p>
+  <p style={{ fontFamily: "sans-serif" }}>👥 Team : {event.members} Members</p>
+
+</div>
+<div className="mt-3">
+  <p className="text-sm text-gray-300 font-medium mb-1" style={{ fontFamily: "Inter,system-ui, sans-serif" }}>
+    📞 Coordinators
+  </p>
+
+  <div className="space-y-1 text-sm text-gray-400">
+    {event.coordinators.map((coord, index) => (
+      <p key={index} style={{ fontFamily: "system-ui, sans-serif" }}>
+        {coord.name} —{" "}
+        <a
+          href={`tel:${coord.phone}`}
+          className="text-cyan-400 hover:underline" style={{ fontFamily: "Inter, system-ui, sans-serif" }}
+        >
+          {coord.phone}
+        </a>
+      </p>
+    ))}
+  </div>
+</div>
 
 <a
   href={event.registerLink}
@@ -116,7 +137,7 @@ function EventCard({ event, index }) {
     justify-center
     rounded-xl
     px-4
-    py-2
+    py-1
     text-sm
     font-semibold
     tracking-widest
@@ -155,7 +176,7 @@ export default function NeonEventCards({ events = [] }) {
       {/* Flex Wrapper for Centered Cards */}
       <div className="flex flex-wrap justify-center gap-5 max-w-6xl mx-auto">
         {events.map((event, i) => (
-          <div key={i} className="w-full sm:w-80 lg:w-96">
+          <div key={i} className="w-full sm:w-80 lg:w-96 p-4">
             <EventCard event={event} index={i} />
             <div
   className="
