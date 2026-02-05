@@ -1,230 +1,153 @@
 import React from "react";
-import {
-  ExternalLink,
-  ArrowLeft,
-  Heart,
-  Trophy,
-  Crown,
-  Star,
-} from "lucide-react";
+import { ArrowLeft, Crown, Award } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import BackgroundLayer from "../components/BackgroundLayer";
 
 function Sponsors() {
-  const [hoveredIndex, setHoveredIndex] = React.useState(null);
   const navigate = useNavigate();
 
-  const sponsors = [
+  const titleSponsors = [
     {
       id: 1,
-      name: "TechCorp Industries",
-      tier: "Platinum Sponsor",
-      description:
-        "Leading technology solutions provider specializing in innovative software development and digital transformation services.",
-      website: "https://techcorp.com",
-      image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop",
-      featured: true,
-    },
-    {
-      id: 2,
-      name: "Global Finance Group",
-      tier: "Gold Sponsor",
-      description:
-        "Premier financial services company offering comprehensive banking, investment, and wealth management solutions worldwide.",
-      website: "https://globalfinance.com",
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop",
-      featured: true,
-    },
-    {
-      id: 3,
-      name: "Green Energy Solutions",
-      tier: "Gold Sponsor",
-      description:
-        "Pioneering renewable energy company committed to sustainable power solutions and environmental conservation initiatives.",
-      website: "https://greenenergy.com",
-      image:
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=300&fit=crop",
-      featured: false,
-    },
-    {
-      id: 4,
-      name: "MediCare Plus",
-      tier: "Silver Sponsor",
-      description:
-        "Trusted healthcare provider delivering quality medical services and advanced patient care across multiple specialties.",
-      website: "https://medicareplus.com",
-      image:
-        "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=300&fit=crop",
-      featured: false,
-    },
-    {
-      id: 5,
-      name: "Education First",
-      tier: "Silver Sponsor",
-      description:
-        "Educational technology platform revolutionizing learning experiences through innovative digital tools and resources.",
-      website: "https://educationfirst.com",
-      image:
-        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop",
-      featured: false,
-    },
-    {
-      id: 6,
-      name: "AutoDrive Motors",
-      tier: "Bronze Sponsor",
-      description:
-        "Automotive excellence with cutting-edge vehicle manufacturing and next-generation mobility solutions.",
-      website: "https://autodrive.com",
-      image:
-        "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=300&fit=crop",
-      featured: false,
+      name: "Sharda Construction & Corporation Pvt. Ltd.",
+      logo: "/sharda-construction.jpg",
     },
   ];
 
-  const getTierColor = (tier) => {
-    if (tier.includes("Platinum")) return "from-gray-300 to-gray-100";
-    if (tier.includes("Gold")) return "from-yellow-400 to-yellow-500";
-    if (tier.includes("Silver")) return "from-gray-400 to-gray-500";
-    return "from-orange-500 to-orange-600";
-  };
-
-  const getTierIcon = (tier) => {
-    if (tier.includes("Platinum")) return <Crown className="w-3 h-3" />;
-    if (tier.includes("Gold")) return <Trophy className="w-3 h-3" />;
-    if (tier.includes("Silver")) return <Star className="w-3 h-3" />;
-    return <Heart className="w-3 h-3" />;
-  };
+  const otherSponsors = [
+    {
+      id: 2,
+      name: "Hotel Manju Palace",
+      logo: "/hotel-manju-palace.png",
+    },
+    {
+      id: 3,
+      name: "Aqua Gold Mineral Water",
+      logo: "/aqua-gold.png",
+    },
+    {
+      id: 4,
+      name: "Raj Opticals",
+      logo: "/raj-opticals.png",
+    },
+  ];
 
   return (
-    <div className="min-h-screen bg-black flex flex-col relative">
+    <div className="min-h-screen bg-black flex flex-col relative overflow-x-hidden">
       {/* Background Layer */}
       <BackgroundLayer />
 
+      {/* Back Button */}
+      <div className="fixed top-4 sm:top-6 left-4 sm:left-6 z-50">
+        <button
+          onClick={() => navigate(-1)}
+          className="group relative flex items-center gap-2 sm:gap-3 px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 bg-gradient-to-r from-gray-950 to-gray-900 backdrop-blur-xl border-2 border-red-500/40 rounded-xl sm:rounded-2xl hover:border-red-500/80 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-red-500/30"
+        >
+          <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 group-hover:text-red-400 transition-colors duration-300 group-hover:-translate-x-1" />
+          <span className="text-red-500 group-hover:text-red-400 font-semibold text-xs sm:text-sm tracking-wide transition-colors duration-300">
+            Back
+          </span>
+        </button>
+      </div>
+
       {/* Main Content */}
       <main className="flex-grow relative overflow-hidden z-10">
-        {/* Back Button */}
-        <div className="absolute top-6 left-6 z-20">
-          <button
-            onClick={() => navigate(-1)}
-            className="group relative flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-950 to-gray-900 backdrop-blur-xl border-2 border-red-500/40 rounded-2xl hover:border-red-500/80 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-red-500/30"
-          >
-            <ArrowLeft className="w-5 h-5 text-red-500 group-hover:text-red-400 transition-colors duration-300 group-hover:-translate-x-1" />
-            <span className="text-red-500 group-hover:text-red-400 font-semibold text-sm tracking-wide transition-colors duration-300">
-              Back
-            </span>
-          </button>
-        </div>
-
-        <section className="pt-10 pb-8 px-4 relative z-10 text-center">
+        {/* Header Section */}
+        <section className="pt-16 sm:pt-20 md:pt-24 pb-3 sm:pb-4 md:pb-6 px-4 relative z-10 text-center">
           <div className="max-w-7xl mx-auto">
             {/* Main title */}
-            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-[8px] xs:tracking-[10px] sm:tracking-[12px] md:tracking-[15px] my-3 sm:my-4 bg-gradient-to-b from-white via-red-200 to-gray-600 bg-clip-text text-transparent uppercase">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-[4px] xs:tracking-[6px] sm:tracking-[8px] md:tracking-[10px] lg:tracking-[12px] my-2 sm:my-3 bg-gradient-to-b from-white via-red-200 to-gray-600 bg-clip-text text-transparent uppercase transition-all duration-600 ease-out delay-100">
               PRAGYAA
             </h1>
-
-            {/* Tournament subtitle */}
-            <p className="text-sm xs:text-base sm:text-lg md:text-xl tracking-[1px] xs:tracking-[2px] sm:tracking-[3px] uppercase text-gray-300 font-light">
+            {/* Subtitle */}
+            <p className="text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-lg tracking-[1px] xs:tracking-[1.5px] sm:tracking-[2px] md:tracking-[3px] uppercase text-gray-300 font-light transition-all duration-600 ease-out delay-150">
               "BRIGHTER THAN EVER BEFORE"
             </p>
           </div>
         </section>
 
         {/* Hero Section */}
-        <section className="py-6 px-4 relative z-10">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-wider bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-clip-text text-transparent uppercase mb-6 animate-gradient">
+        <section className="py-3 sm:py-4 md:py-6 px-4 relative z-10">
+          <div className="max-w-7xl mx-auto text-center mb-8 sm:mb-12">
+            <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-wider bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-clip-text text-transparent uppercase mb-3 sm:mb-4 md:mb-6 animate-gradient">
               Our Sponsors
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Thank you to our amazing partners who make everything possible.
-              Together, we're building the future of innovation.
+            </h2>
+            <p className="text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-lg tracking-[1px] xs:tracking-[1.5px] sm:tracking-[2px] text-gray-300 max-w-2xl mx-auto">
+              Thank you to our amazing partners who make PRAGYAA possible
             </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-red-500 via-red-600 to-red-700 mx-auto rounded-full animate-pulse"></div>
           </div>
-        </section>
 
-        {/* Sponsors Grid */}
-        <section className="py-16 px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {sponsors.map((sponsor, index) => (
+          {/* Title Sponsor Section */}
+          <div className="max-w-7xl mx-auto mb-12 sm:mb-16 md:mb-20">
+            <div className="text-center mb-6 sm:mb-8 md:mb-10">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Crown className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-400" />
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent uppercase">
+                  Title Sponsor
+                </h3>
+                <Crown className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-400" />
+              </div>
+              <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div className="flex justify-center">
+              {titleSponsors.map((sponsor) => (
                 <div
                   key={sponsor.id}
-                  className="relative group"
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
+                  className="group relative bg-gradient-to-br from-yellow-900/20 via-gray-900/80 to-yellow-900/20 backdrop-blur-sm rounded-2xl border-2 border-yellow-500/40 overflow-hidden hover:border-yellow-500/80 transition-all duration-500 hover:shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 w-full max-w-2xl"
                 >
-                  {/* Featured badge */}
-                  {sponsor.featured && (
-                    <div className="absolute top-4 right-4 z-20 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                      <Star className="w-3 h-3" />
-                      Featured
-                    </div>
-                  )}
-
-                  {/* Glow effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-red-500 via-red-600 to-red-700 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-1000"></div>
-
-                  {/* Card */}
-                  <div className="relative bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border-2 border-red-500/20 rounded-2xl overflow-hidden transition-all duration-700 hover:border-red-500/60 hover:shadow-xl hover:shadow-red-500/30 hover:scale-105">
-                    {/* Image */}
-                    <div className="relative h-48 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <div className="relative p-8 sm:p-10 md:p-12 lg:p-16 flex flex-col items-center justify-center min-h-[250px] sm:min-h-[300px]">
+                    <div className="w-full h-40 sm:h-48 md:h-56 flex items-center justify-center mb-6">
                       <img
-                        src={sponsor.image}
+                        src={sponsor.logo}
                         alt={sponsor.name}
-                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                        className="max-w-full max-h-full object-contain filter drop-shadow-2xl group-hover:scale-110 transition-all duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
-
-                      {/* Tier badge */}
-                      <div
-                        className={`absolute top-4 left-4 bg-gradient-to-r ${getTierColor(sponsor.tier)} text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1`}
-                      >
-                        {getTierIcon(sponsor.tier)}
-                        {sponsor.tier}
-                      </div>
                     </div>
+                    <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-yellow-400 text-center">
+                      {sponsor.name}
+                    </h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-                    {/* Content */}
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors duration-300">
-                        {sponsor.name}
-                      </h3>
+          {/* Other Sponsors Section */}
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-6 sm:mb-8 md:mb-10">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Award className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent uppercase">
+                  Other Sponsors
+                </h3>
+                <Award className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />
+              </div>
+              <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto rounded-full"></div>
+            </div>
 
-                      <p className="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed">
-                        {sponsor.description}
-                      </p>
-
-                      {/* Animated background particles */}
-                      {hoveredIndex === index &&
-                        [...Array(8)].map((_, i) => (
-                          <div
-                            key={i}
-                            className="absolute w-1 h-1 bg-red-400 rounded-full"
-                            style={{
-                              top: `${Math.random() * 100}%`,
-                              left: `${Math.random() * 100}%`,
-                              animation: `particleFloat ${2 + Math.random() * 3}s infinite ease-in-out`,
-                              animationDelay: `${Math.random() * 2}s`,
-                              opacity: 0.9,
-                            }}
-                          />
-                        ))}
-
-                      {/* Website Button */}
-                      <a
-                        href={sponsor.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group/btn relative w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 rounded-lg font-semibold text-white hover:from-red-500 hover:to-red-600 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/50"
-                      >
-                        <span>Visit Website</span>
-                        <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                      </a>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 max-w-5xl mx-auto">
+              {otherSponsors.map((sponsor) => (
+                <div
+                  key={sponsor.id}
+                  className="group relative bg-gradient-to-br from-red-900/20 via-gray-900/80 to-red-900/20 backdrop-blur-sm rounded-xl border-2 border-red-500/30 overflow-hidden hover:border-red-500/60 transition-all duration-500 hover:shadow-xl hover:shadow-red-500/20 hover:scale-105"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <div className="relative p-6 sm:p-8 flex flex-col items-center justify-center min-h-[180px] sm:min-h-[200px]">
+                    <div className="w-full h-28 sm:h-32 flex items-center justify-center mb-4">
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="max-w-full max-h-full object-contain filter drop-shadow-lg group-hover:scale-110 transition-all duration-500"
+                      />
                     </div>
+                    <h4 className="text-sm sm:text-base md:text-lg font-semibold text-red-400 text-center">
+                      {sponsor.name}
+                    </h4>
                   </div>
                 </div>
               ))}
@@ -234,32 +157,12 @@ function Sponsors() {
       </main>
 
       {/* Footer */}
-      <Footer />
+      <div className="relative z-20 w-full mt-8 sm:mt-12 md:mt-16">
+        <Footer />
+      </div>
 
       {/* Custom CSS for animations */}
       <style jsx>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-20px) rotate(180deg);
-          }
-        }
-
-        @keyframes particleFloat {
-          0%,
-          100% {
-            transform: translateY(0px) scale(1);
-            opacity: 0.9;
-          }
-          50% {
-            transform: translateY(-30px) scale(1.2);
-            opacity: 0.6;
-          }
-        }
-
         @keyframes gradient {
           0%,
           100% {
@@ -275,11 +178,25 @@ function Sponsors() {
           animation: gradient 3s ease infinite;
         }
 
-        .line-clamp-3 {
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
+        html {
+          scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+          background: rgba(0, 0, 0, 0.5);
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: rgba(239, 68, 68, 0.5);
+          border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+          background: rgba(239, 68, 68, 0.7);
         }
       `}</style>
     </div>

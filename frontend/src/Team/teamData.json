@@ -2,50 +2,30 @@
   "Head of PRAGYAA": {
     "name": "Head of PRAGYAA",
     "members": [
-      { "name": "Malhar Maradwar", "role": "Head of PRAGYAA" }
-    ],
-    "images": [
-      "/Malhar_maradwar.png"
+      { "name": "Malhar Maradwar", "role": "Head of PRAGYAA", "image": "/Malhar_maradwar.png" }
     ]
   },
   "General Co-ordinator": {
     "name": "General Co-ordinator",
     "members": [
-      { "name": "Mohit Kumare", "role": "Event Affairs" },
-      { "name": "Harshita Kabra", "role": "Hospitality and Guest Management" },
-      { "name": "Mohit Joshi", "role": "Finance and Accounting" },
-      { "name": "Shantanu Bhoyar", "role": "Public Relations & Outreach" },
-      { "name": "Dhananjay Markunde", "role": "Discipline & Support" },
-      { "name": "Ritesh Yevatkar", "role": "Sponsorship & Branding" },
-      { "name": "Atharva Supe", "role": "Website & Logistics" },
-      { "name": "Saurabh Petkar", "role": "Aesthetics Management" }
-    ],
-    "images": [
-      "/Mohit_Kumare.png",
-      "/Harshita_Kabra.png",
-      "/Mohit_Joshi.png",
-      "/Shantanu_Bhoyar.png",
-      "/Dhananjay_Markunde.png",
-      "/Aditya.jpg",
-      "/Atharva_Supe.png",
-      "/Saurabh_Petkar.png"
+      { "name": "Mohit Kumare", "role": "Event Affairs", "image": "/Mohit_Kumare.png" },
+      { "name": "Harshita Kabra", "role": "Hospitality and Guest Management", "image": "/Harshita_Kabra.png" },
+      { "name": "Mohit Joshi", "role": "Finance and Accounting", "image": "/Mohit_Joshi.png" },
+      { "name": "Shantanu Bhoyar", "role": "Public Relations & Outreach", "image": "/Shantanu_Bhoyar.png" },
+      { "name": "Dhananjay Markunde", "role": "Discipline & Support", "image": "/Dhananjay_Markunde.png" },
+      { "name": "Ritesh Yevatkar", "role": "Sponsorship & Branding", "image": "/Malhar_maradwar.png" },
+      { "name": "Atharva Supe", "role": "Website & Logistics", "image": "/Atharva_Supe.png" },
+      { "name": "Saurabh Petkar", "role": "Aesthetics Management", "image": "/Saurabh_Petkar.png" }
     ]
   },
   "web": {
     "name": "Web Committee",
     "members": [
-      { "name": "Aditya Raut", "role": "Lead Developer" },
-      { "name": "Nandu Jadhav", "role": "Co-Lead Developer" },
-      { "name": "Saloni Tarone", "role": "Main Developer" },
-      { "name": "Amit Verma", "role": "Main Developer" },
-      { "name": "N/A", "role": "Product Manager" }
-    ],
-    "images": [
-      "/Aditya.jpg",
-      "/Aditya.jpg",
-      "/Aditya.jpg",
-      "/Aditya.jpg",
-      "/Aditya.jpg"
+      { "name": "Aditya Raut", "role": "Lead Developer", "image": "/Aditya_Raut.png" },
+      { "name": "Nandu Jadhav", "role": "Co-Lead Developer", "image": "/Nandelkishor_jadhav.png" },
+      { "name": "Saloni Tarone", "role": "Main Developer", "image": "/SaloniTarone.png" },
+      { "name": "Amit Verma", "role": "Main Developer", "image": "/AmitVerma.png" },
+      { "name": "Ishita Rander", "role": "Main Developer", "image": "/IshitaRnader.png" }
     ]
   }
 }

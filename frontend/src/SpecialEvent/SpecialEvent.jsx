@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowLeft, Microscope, Beaker, Atom, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, Microscope, Lightbulb, Users, Award, ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import BackgroundLayer from "../components/BackgroundLayer";
@@ -10,12 +10,12 @@ function SpecialEvent() {
 
   // Gallery images from previous years
   const galleryImages = [
-    { src: "/Aditya.jpg", title: "Science Exhibition 2025" },
-    { src: "/Aditya.jpg", title: "Robotics Workshop 2025" },
-    { src: "/Aditya.jpg", title: "Chemistry Lab Session 2025" },
-    { src: "/Aditya.jpg", title: "Physics Experiments 2025" },
-    { src: "/Aditya.jpg", title: "Innovation Fair 2025" },
-    { src: "/Aditya.jpg", title: "Tech Competition 2025" },
+    { src: "/Junior_Scientist_6.jpeg" },
+    { src: "/Junior_Scientist_5.jpeg" },
+    { src: "/Junior_Scientist_1.jpeg" },
+    { src: "/Junior_Scientist_2.jpeg" },
+    { src: "/Junior_Scientist_3.jpeg" },
+    { src: "/Junior_Scientist_4.jpeg" },
   ];
 
   const nextImage = () => {
@@ -46,6 +46,15 @@ function SpecialEvent() {
           </button>
         </div>
 
+        {/* Register Button - Top Right */}
+        <div className="fixed top-4 sm:top-6 right-4 sm:right-6 z-50">
+          <button className="group relative px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 bg-gradient-to-r from-red-600 to-red-700 backdrop-blur-xl border-2 border-red-500/40 rounded-xl sm:rounded-2xl hover:border-red-400 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-red-500/50">
+            <span className="text-white font-semibold text-xs sm:text-sm tracking-wide">
+              Register Now
+            </span>
+          </button>
+        </div>
+
         {/* Header Section */}
         <section className="pt-16 sm:pt-20 md:pt-24 pb-3 sm:pb-4 md:pb-6 px-4 relative z-10 text-center">
           <div className="max-w-7xl mx-auto">
@@ -63,85 +72,78 @@ function SpecialEvent() {
         {/* Junior Scientists Section */}
         <section className="py-3 sm:py-4 md:py-6 px-4 relative z-10 flex flex-col justify-center items-center text-center">
           <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-wider bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-clip-text text-transparent uppercase mb-3 sm:mb-4 md:mb-6 animate-gradient">
-            Junior Scientists Program
+            Junior Scientists Exhibition
           </h2>
           <p className="text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-lg tracking-[1px] xs:tracking-[1.5px] sm:tracking-[2px] md:tracking-[3px] my-1.5 sm:my-2 md:my-3 lg:my-4 uppercase text-gray-300 font-light max-w-4xl leading-relaxed">
-            "Igniting Young Minds - For Classes 6 to 9"
+            "Inspiring Young Minds Through Science"
           </p>
           <div className="w-20 sm:w-24 md:w-32 h-0.5 sm:h-1 bg-gradient-to-r from-red-500 via-red-600 to-red-700 mx-auto rounded-full animate-pulse mb-8"></div>
         </section>
 
-        {/* Activities Section */}
+        {/* About Section */}
         <section className="py-6 px-4 relative z-10">
+          <div className="max-w-5xl mx-auto bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70 border-2 border-red-500/30 rounded-2xl p-8">
+            <p className="text-gray-200 text-sm sm:text-base md:text-lg leading-relaxed text-center">
+              Junior Scientist is a special educational event organized by Pragyaa for primary school children, 
+              where students will showcase their self-made science projects and explain their ideas, working models, 
+              and real-life applications in a simple and creative manner. The objective of this event is to promote 
+              scientific thinking, curiosity, and innovation among young learners while enhancing their confidence 
+              and communication skills. During the exhibition, participants will interact with visitors and judges 
+              by answering questions, which helps strengthen their understanding and presentation abilities. This 
+              event offers parents, teachers, and guests an opportunity to witness the creativity and potential of 
+              young minds as they engage in practical and enjoyable learning experiences.
+            </p>
+          </div>
+        </section>
+
+        {/* Key Features Section */}
+        <section className="py-8 px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Activity Card 1 */}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent uppercase mb-8">
+              Event Highlights
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Feature Card 1 */}
               <div className="bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70 border-2 border-red-500/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/20">
                 <div className="flex justify-center mb-4">
                   <Microscope className="w-16 h-16 text-red-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">Science Experiments</h3>
+                <h3 className="text-xl font-bold text-white mb-3 text-center">Project Exhibition</h3>
                 <p className="text-gray-300 text-sm text-center">
-                  Hands-on experiments in Physics, Chemistry, and Biology with expert guidance.
+                  Students showcase self-made science projects with working models and demonstrations.
                 </p>
               </div>
 
-              {/* Activity Card 2 */}
+              {/* Feature Card 2 */}
               <div className="bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70 border-2 border-red-500/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/20">
                 <div className="flex justify-center mb-4">
-                  <Beaker className="w-16 h-16 text-red-400" />
+                  <Lightbulb className="w-16 h-16 text-red-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">Lab Sessions</h3>
+                <h3 className="text-xl font-bold text-white mb-3 text-center">Creative Thinking</h3>
                 <p className="text-gray-300 text-sm text-center">
-                  Interactive lab sessions to understand scientific concepts through practical learning.
+                  Promotes scientific thinking, curiosity, and innovation among young learners.
                 </p>
               </div>
 
-              {/* Activity Card 3 */}
+              {/* Feature Card 3 */}
               <div className="bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70 border-2 border-red-500/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/20">
                 <div className="flex justify-center mb-4">
-                  <Atom className="w-16 h-16 text-red-400" />
+                  <Users className="w-16 h-16 text-red-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">Robotics & Tech</h3>
+                <h3 className="text-xl font-bold text-white mb-3 text-center">Interactive Sessions</h3>
                 <p className="text-gray-300 text-sm text-center">
-                  Introduction to robotics, coding, and modern technology for young innovators.
+                  Students interact with visitors and judges, enhancing communication skills.
                 </p>
               </div>
 
-              {/* Activity Card 4 */}
+              {/* Feature Card 4 */}
               <div className="bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70 border-2 border-red-500/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/20">
                 <div className="flex justify-center mb-4">
-                  <Sparkles className="w-16 h-16 text-red-400" />
+                  <Award className="w-16 h-16 text-red-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">Innovation Projects</h3>
+                <h3 className="text-xl font-bold text-white mb-3 text-center">Confidence Building</h3>
                 <p className="text-gray-300 text-sm text-center">
-                  Create and showcase innovative science projects with mentorship support.
-                </p>
-              </div>
-
-              {/* Activity Card 5 */}
-              <div className="bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70 border-2 border-red-500/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/20">
-                <div className="flex justify-center mb-4">
-                  <svg className="w-16 h-16 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">Science Quiz</h3>
-                <p className="text-gray-300 text-sm text-center">
-                  Participate in exciting science quizzes and competitions to test your knowledge.
-                </p>
-              </div>
-
-              {/* Activity Card 6 */}
-              <div className="bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70 border-2 border-red-500/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/20">
-                <div className="flex justify-center mb-4">
-                  <svg className="w-16 h-16 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">Learning Workshops</h3>
-                <p className="text-gray-300 text-sm text-center">
-                  Attend workshops on various scientific topics by experienced educators.
+                  Strengthens understanding, presentation abilities, and builds confidence.
                 </p>
               </div>
             </div>
@@ -160,14 +162,9 @@ function SpecialEvent() {
               <div className="relative aspect-video">
                 <img
                   src={galleryImages[currentImageIndex].src}
-                  alt={galleryImages[currentImageIndex].title}
+                  alt="Junior Scientist Exhibition"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                  <h3 className="text-white text-lg sm:text-xl font-bold text-center">
-                    {galleryImages[currentImageIndex].title}
-                  </h3>
-                </div>
               </div>
 
               {/* Navigation Buttons */}
@@ -214,27 +211,12 @@ function SpecialEvent() {
                 >
                   <img
                     src={image.src}
-                    alt={image.title}
+                    alt="Gallery thumbnail"
                     className="w-full h-full object-cover"
                   />
                 </button>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Registration Info */}
-        <section className="py-8 px-4 relative z-10">
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70 border-2 border-red-500/30 rounded-2xl p-8 text-center">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Join the Junior Scientists Program!
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Open for students from Classes 6 to 9. Experience the joy of science through interactive learning and exciting activities.
-            </p>
-            <button className="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-all shadow-lg shadow-red-500/50">
-              Register Now
-            </button>
           </div>
         </section>
       </main>
