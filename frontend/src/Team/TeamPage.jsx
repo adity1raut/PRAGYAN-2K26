@@ -18,11 +18,10 @@ export default function TeamCarousel() {
 
   const currentCommittee = committees[selectedCommittee] || {
     members: [],
-    images: [],
     name: "",
   };
   const teamMembers = currentCommittee.members;
-  const images = currentCommittee.images;
+  const images = teamMembers.map(member => member.image);
 
   useEffect(() => {
     const timer = setTimeout(() => {
