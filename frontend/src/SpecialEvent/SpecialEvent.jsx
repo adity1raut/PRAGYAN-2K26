@@ -106,6 +106,68 @@ function SpecialEvent() {
           </div>
         </section>
 
+        {/* Event Dates & Prize Pool Section - Small Screens Only */}
+        <section className="py-6 sm:py-8 px-4 relative z-10 lg:hidden">
+          <div className="max-w-5xl mx-auto space-y-4 sm:space-y-6">
+            {/* Event Dates */}
+            <div className="bg-gradient-to-br from-gray-900/90 via-red-900/50 to-gray-900/90 border-2 border-red-500/40 rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center backdrop-blur-sm">
+              <h3 className="text-sm sm:text-base md:text-lg text-red-400 uppercase tracking-wider mb-2 font-medium">
+                Mark Your Calendar
+              </h3>
+              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                February 20-22, 2026
+              </p>
+            </div>
+
+            {/* Exciting Prize Pool Announcement */}
+            <div className="relative overflow-hidden bg-gradient-to-r from-red-600 via-red-500 to-orange-500 rounded-xl sm:rounded-2xl p-1 animate-gradient">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 via-transparent to-red-600/20 animate-pulse"></div>
+              <div className="relative bg-black/90 rounded-lg sm:rounded-xl p-6 sm:p-8 md:p-10">
+                <div className="text-center space-y-3 sm:space-y-4">
+                  {/* Sparkle/Trophy Icon Effect */}
+                  <div className="flex justify-center">
+                    <div className="relative">
+                      <Award className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 text-yellow-400 animate-pulse" />
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
+                      <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-red-400 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xs sm:text-sm md:text-base text-red-300 uppercase tracking-[2px] sm:tracking-[3px] font-semibold animate-pulse">
+                    🎯 Exciting Announcement 🎯
+                  </h3>
+                  
+                  <div className="space-y-2">
+                    <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent animate-gradient leading-tight">
+                      WIN UP TO
+                    </p>
+                    <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black bg-gradient-to-r from-yellow-200 via-yellow-400 to-red-400 bg-clip-text text-transparent animate-gradient drop-shadow-2xl">
+                      ₹5,00,000
+                    </p>
+                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-red-300 uppercase tracking-wider">
+                      In Prize Money! 🏆
+                    </p>
+                  </div>
+                  
+                  <div className="pt-2 sm:pt-4">
+                    <p className="text-xs sm:text-sm md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                      The brightest young minds will be rewarded with incredible prizes! 
+                      <span className="text-yellow-400 font-semibold"> Don't miss this golden opportunity</span> to showcase your innovation and creativity!
+                    </p>
+                  </div>
+
+                  {/* Decorative Elements */}
+                  <div className="flex justify-center gap-2 sm:gap-4 pt-2">
+                    <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent rounded-full"></div>
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-bounce"></div>
+                    <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Key Features Section */}
         <section className="py-6 sm:py-8 px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
