@@ -49,14 +49,14 @@ function SpecialEvent() {
         {/* Register Button - Top Right */}
         <div className="fixed top-4 sm:top-6 right-4 sm:right-6 z-50">
           <a 
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
+            href="/home"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-block"
           >
             <button className="group relative px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 bg-gradient-to-r from-red-600 to-red-700 backdrop-blur-xl border-2 border-red-500/40 rounded-xl sm:rounded-2xl hover:border-red-400 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-red-500/50">
               <span className="text-white font-semibold text-xs sm:text-sm tracking-wide">
-                Register Now
+               Registration Coming Soon
               </span>
             </button>
           </a>

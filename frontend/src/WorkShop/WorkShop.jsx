@@ -347,7 +347,7 @@ function WorkShop() {
                           onClick={() => handleRegister(workshop.id)}
                           className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-lg hover:from-red-400 hover:to-red-500 transition-all duration-300 font-medium flex items-center justify-center gap-2 hover:scale-105 hover:shadow-lg hover:shadow-red-500/50"
                         >
-                          Register Now
+                         Registration Coming Soon
                           <ExternalLink size={16} />
                         </button>
                       </div>
