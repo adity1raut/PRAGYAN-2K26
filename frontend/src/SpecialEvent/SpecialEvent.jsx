@@ -48,20 +48,23 @@ function SpecialEvent() {
 
         {/* Register Button - Top Right */}
         <div className="fixed top-4 sm:top-6 right-4 sm:right-6 z-50">
-          <button className="group relative px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 bg-gradient-to-r from-red-600 to-red-700 backdrop-blur-xl border-2 border-red-500/40 rounded-xl sm:rounded-2xl hover:border-red-400 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-red-500/50">
-            <span className="text-white font-semibold text-xs sm:text-sm tracking-wide">
-              Register Now
-            </span>
-          </button>
+          <a 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-block"
+          >
+            <button className="group relative px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 bg-gradient-to-r from-red-600 to-red-700 backdrop-blur-xl border-2 border-red-500/40 rounded-xl sm:rounded-2xl hover:border-red-400 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-red-500/50">
+              <span className="text-white font-semibold text-xs sm:text-sm tracking-wide">
+                Register Now
+              </span>
+            </button>
+          </a>
         </div>
 
         {/* Header Section */}
         <section className="pt-16 sm:pt-20 md:pt-24 pb-3 sm:pb-4 md:pb-6 px-4 relative z-10 text-center">
           <div className="max-w-7xl mx-auto">
-            {/* Tagline */}
-            <div className="text-xs sm:text-sm md:text-base tracking-[2px] sm:tracking-[3px] text-red-400 mb-3 sm:mb-4 uppercase font-medium animate-pulse">
-              Multiverse of innovation
-            </div>
 
             {/* Main Image */}
             <div className="my-3 sm:my-4 md:my-5">
@@ -71,11 +74,6 @@ function SpecialEvent() {
                 className="w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto drop-shadow-2xl"
               />
             </div>
-
-            {/* Subtitle */}
-            <p className="text-xs xs:text-sm sm:text-base md:text-lg tracking-[1px] xs:tracking-[2px] sm:tracking-[3px] uppercase text-gray-300 font-light mt-2">
-              "BRIGHTER THAN EVER BEFORE"
-            </p>
           </div>
         </section>
 

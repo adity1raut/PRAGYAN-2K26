@@ -1,0 +1,432 @@
+/* ===== GALLERY CONTAINER ===== */
+.animated-gallery-container {
+  min-height: 100vh;
+  background: #000000;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ===== HEADER SECTION ===== */
+.gallery-header {
+  padding: 2rem 3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(to right, rgba(10, 10, 10, 0.95), rgba(23, 23, 23, 0.95));
+  border: 2px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(16px);
+  box-shadow: none;
+}
+
+.back-button:hover {
+  background: linear-gradient(to right, rgba(10, 10, 10, 0.95), rgba(23, 23, 23, 0.95));
+  border-color: rgba(239, 68, 68, 0.8);
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(239, 68, 68, 0.3);
+}
+
+.back-button:hover svg {
+  transform: translateX(-0.25rem);
+  color: #f87171;
+}
+
+.back-button:hover span {
+  color: #f87171;
+}
+
+.gallery-title-section {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
+
+.gallery-title {
+  font-size: 5rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #ef4444, #dc2626, #b91c1c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.5rem;
+  margin: 0;
+  text-transform: uppercase;
+  animation: titleFloat 3s ease-in-out infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes titleFloat {
+  0%, 100% {
+    transform: translateY(0);
+    background-position: 0% 50%;
+  }
+  50% {
+    transform: translateY(-10px);
+    background-position: 100% 50%;
+  }
+}
+
+.gallery-subtitle {
+  font-size: 1.2rem;
+  color: rgba(209, 213, 219, 1);
+  margin: 1rem 0;
+  letter-spacing: 0.3rem;
+  font-weight: 300;
+}
+
+.title-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.decoration-line {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ef4444, transparent);
+}
+
+.decoration-dot {
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ef4444;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ===== GALLERY CONTENT ===== */
+.gallery-content {
+  padding: 3rem 0;
+  position: relative;
+  z-index: 5;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  position: relative;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ef4444, #dc2626, #b91c1c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+  border-radius: 2px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ===== GALLERY STRIPS ===== */
+.gallery-strips-container {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.gallery-strip {
+  width: 100%;
+  overflow: hidden;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.strip-track {
+  display: flex;
+  gap: 2rem;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+/* Different animation directions and speeds for each strip */
+.strip-one .strip-track {
+  animation: scrollRight 40s linear infinite;
+}
+
+.strip-two .strip-track {
+  animation: scrollLeft 35s linear infinite;
+}
+
+.strip-three .strip-track {
+  animation: scrollRight 45s linear infinite;
+}
+
+.strip-four .strip-track {
+  animation: scrollLeft 38s linear infinite;
+}
+
+/* Pause animation on hover */
+.gallery-strip:hover .strip-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-33.333%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ===== GALLERY ITEMS ===== */
+.gallery-item {
+  flex-shrink: 0;
+  width: 350px;
+  height: 450px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(239, 68, 68, 0.2);
+}
+
+.image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(239, 68, 68, 0.15),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.6s;
+  opacity: 0;
+  z-index: 2;
+}
+
+.gallery-item.hovered .image-wrapper::before {
+  opacity: 1;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0) 0%,
+    rgba(220, 38, 38, 0) 100%
+  );
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+/* Hover Effects */
+.gallery-item.hovered {
+  transform: scale(1.05) translateY(-10px);
+  z-index: 10;
+}
+
+.gallery-item.hovered .image-wrapper {
+  box-shadow: 0 20px 60px rgba(239, 68, 68, 0.4),
+              0 0 40px rgba(220, 38, 38, 0.3);
+  border-color: rgba(239, 68, 68, 0.6);
+}
+
+.gallery-item.hovered img {
+  transform: scale(1.1);
+}
+
+.gallery-item.hovered .image-overlay {
+  opacity: 0.3;
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.3) 0%,
+    rgba(220, 38, 38, 0.3) 100%
+  );
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+  .gallery-item {
+    width: 300px;
+    height: 400px;
+  }
+
+  .gallery-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-header {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .gallery-title {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .gallery-subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .gallery-item {
+    width: 250px;
+    height: 350px;
+  }
+
+  .strip-track {
+    gap: 1.5rem;
+  }
+
+  .back-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-title {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .gallery-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .gallery-item {
+    width: 200px;
+    height: 300px;
+  }
+
+  .decoration-line {
+    width: 50px;
+  }
+
+  .gallery-strip {
+    padding: 1rem 0;
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  .strip-track,
+  .gallery-title {
+    animation: none;
+  }
+
+  .gallery-item.hovered {
+    transform: scale(1.02);
+  }
+
+  .gallery-item.hovered img {
+    transform: scale(1.05);
+  }
+}
+
+/* ===== LOADING STATE ===== */
+.gallery-item img {
+  background: linear-gradient(
+    90deg,
+    rgba(31, 31, 31, 0.5) 0%,
+    rgba(55, 55, 55, 0.5) 50%,
+    rgba(31, 31, 31, 0.5) 100%
+  );
+  background-size: 200% 100%;
+}
+
+.gallery-item img[src=""] {
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

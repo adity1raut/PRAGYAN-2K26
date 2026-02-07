@@ -130,10 +130,6 @@ const updateCarousel = (newIndex) => {
       {/* Title Section */}
       <section className="pt-16 sm:pt-20 md:pt-24 pb-4 sm:pb-6 px-4 relative z-10 text-center">
         <div className="max-w-7xl mx-auto">
-          {/* Tagline */}
-          <div className="text-xs sm:text-sm md:text-base tracking-[2px] sm:tracking-[3px] text-red-400 mb-3 sm:mb-4 uppercase font-medium animate-pulse">
-            Multiverse of innovation
-          </div>
 
           {/* Main Image */}
           <div className="my-3 sm:my-4 md:my-5">
@@ -143,11 +139,6 @@ const updateCarousel = (newIndex) => {
               className="w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto drop-shadow-2xl"
             />
           </div>
-
-          {/* Subtitle */}
-          <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl tracking-[1px] xs:tracking-[2px] sm:tracking-[3px] uppercase text-gray-300 font-light mt-2">
-            "BRIGHTER THAN EVER BEFORE"
-          </p>
         </div>
       </section>
 
