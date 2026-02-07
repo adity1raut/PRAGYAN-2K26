@@ -1,513 +1,329 @@
-import React, { useState, useEffect } from "react";
-import {
-  ArrowLeft,
-  Calendar,
-  MapPin,
-  Users,
-  X,
-  ChevronLeft,
-  ChevronRight,
-  Sparkles,
-  Camera,
-} from "lucide-react";
+import React, { useState } from "react";
+import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import BackgroundLayer from "../components/BackgroundLayer";
 
-function Gallery() {
+function AnimatedGallery() {
   const navigate = useNavigate();
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [hoveredImage, setHoveredImage] = useState(null);
 
-  useEffect(() => {
-    // Trigger animation after component mounts
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 50);
+  const handleBack = () => navigate(-1);
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  // ...existing galleryItems and categories arrays...
-  const galleryItems = [
-    {
-      id: 1,
-      title: "Tech Conference 2024",
-      category: "Conferences",
-      date: "March 15, 2024",
-      location: "Convention Center",
-      attendees: 500,
-      image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
-      description:
-        "Annual technology conference featuring industry leaders and innovative solutions.",
-    },
-    {
-      id: 2,
-      title: "React Workshop",
-      category: "Workshops",
-      date: "February 28, 2024",
-      location: "Tech Hub",
-      attendees: 25,
-      image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop",
-      description:
-        "Hands-on React development workshop for intermediate developers.",
-    },
-    {
-      id: 3,
-      title: "Startup Networking Event",
-      category: "Networking",
-      date: "April 10, 2024",
-      location: "Business Center",
-      attendees: 150,
-      image:
-        "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop",
-      description:
-        "Networking event connecting startups with investors and mentors.",
-    },
-    {
-      id: 4,
-      title: "Design Thinking Seminar",
-      category: "Seminars",
-      date: "January 20, 2024",
-      location: "Creative Studio",
-      attendees: 75,
-      image:
-        "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&h=400&fit=crop",
-      description:
-        "Interactive seminar on design thinking methodologies and practices.",
-    },
-    {
-      id: 5,
-      title: "AI & Machine Learning Summit",
-      category: "Conferences",
-      date: "May 5, 2024",
-      location: "Tech Campus",
-      attendees: 300,
-      image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
-      description:
-        "Summit exploring the latest trends in artificial intelligence and machine learning.",
-    },
-    {
-      id: 6,
-      title: "Digital Marketing Workshop",
-      category: "Workshops",
-      date: "March 8, 2024",
-      location: "Marketing Hub",
-      attendees: 40,
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      description:
-        "Comprehensive workshop on modern digital marketing strategies.",
-    },
-    {
-      id: 7,
-      title: "Innovation Awards Ceremony",
-      category: "Awards",
-      date: "December 15, 2023",
-      location: "Grand Hall",
-      attendees: 200,
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop",
-      description:
-        "Annual ceremony recognizing outstanding innovation in technology.",
-    },
-    {
-      id: 8,
-      title: "Women in Tech Panel",
-      category: "Panels",
-      date: "March 25, 2024",
-      location: "Conference Room",
-      attendees: 80,
-      image:
-        "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop",
-      description:
-        "Panel discussion featuring successful women leaders in technology.",
-    },
-    {
-      id: 9,
-      title: "Blockchain Meetup",
-      category: "Meetups",
-      date: "April 18, 2024",
-      location: "Tech Lounge",
-      attendees: 60,
-      image:
-        "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop",
-      description:
-        "Monthly meetup discussing blockchain technology and cryptocurrency trends.",
-    },
-  ];
-
-  const categories = [
-    "All",
-    "Conferences",
-    "Workshops",
-    "Networking",
-    "Seminars",
-    "Awards",
-    "Panels",
-    "Meetups",
-  ];
-
-  // ...existing functions...
-  const getCategoryColor = (category) => {
-    switch (category) {
-      case "Conferences":
-        return "from-blue-500 to-cyan-500";
-      case "Workshops":
-        return "from-green-500 to-emerald-500";
-      case "Networking":
-        return "from-purple-500 to-indigo-500";
-      case "Seminars":
-        return "from-orange-500 to-yellow-500";
-      case "Awards":
-        return "from-red-500 to-pink-500";
-      case "Panels":
-        return "from-pink-500 to-rose-500";
-      case "Meetups":
-        return "from-indigo-500 to-purple-500";
-      default:
-        return "from-gray-500 to-gray-600";
-    }
+  const galleryPhotos = {
+    stripOne: [
+      { src: "/Gallery/jr1.jpg" },
+      { src: "/Gallery/jr2.jpg" },
+      { src: "/Gallery/jr3.jpg" },
+      { src: "/Gallery/jr4.jpg" },
+    ],
+    stripTwo: [
+      { src: "/Gallery/jr5.jpg" },
+      { src: "/Gallery/jr6.jpg" },
+      { src: "/Gallery/t1.jpg" },
+      { src: "/Gallery/t2.jpg" },
+    ],
+    stripThree: [
+      { src: "/Gallery/t3.jpg" },
+      { src: "/Gallery/t4.jpg" },
+      { src: "/Gallery/t5.jpg" },
+      { src: "/Gallery/t6.jpg" },
+    ],
+    stripFour: [
+      { src: "/Gallery/t7.jpg" },
+      { src: "/Gallery/t8.jpg" },
+      { src: "/Gallery/t9.jpg" },
+      { src: "/Gallery/t10.jpg" },
+      { src: "/Gallery/t11.jpg" },
+      { src: "/Gallery/t12.jpg" },
+    ],
   };
 
-  const filteredItems =
-    selectedCategory === "All"
-      ? galleryItems
-      : galleryItems.filter((item) => item.category === selectedCategory);
-
-  const handleBack = () => {
-    navigate("/");
-  };
-
-  const openModal = (item) => {
-    setSelectedImage(item);
-  };
-
-  const closeModal = () => {
-    setSelectedImage(null);
-  };
-
-  const navigateImage = (direction) => {
-    const currentIndex = filteredItems.findIndex(
-      (item) => item.id === selectedImage.id,
+  const renderStrip = (photos, className, stripIndex) => {
+    // Duplicate photos for seamless infinite scroll
+    const duplicatedPhotos = [...photos, ...photos];
+    
+    return (
+      <div className="gallery_strip_wrapper">
+        <div className={`gallery__strip ${className}`}>
+          {duplicatedPhotos.map((photo, i) => (
+            <div 
+              className="photo" 
+              key={i}
+              onMouseEnter={() => setHoveredImage(`${stripIndex}-${i}`)}
+              onMouseLeave={() => setHoveredImage(null)}
+            >
+              <div className="photo__image">
+                <div className="photo__border">
+                  <div className="photo__glow"></div>
+                  <img src={photo.src} alt="" loading="lazy" />
+                  <div className="photo__overlay">
+                    <div className="photo__overlay-grid"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     );
-    let newIndex;
-
-    if (direction === "next") {
-      newIndex = (currentIndex + 1) % filteredItems.length;
-    } else {
-      newIndex =
-        currentIndex === 0 ? filteredItems.length - 1 : currentIndex - 1;
-    }
-
-    setSelectedImage(filteredItems[newIndex]);
   };
 
   return (
     <div className="min-h-screen bg-gray-950 flex flex-col relative">
-      {/* Background Layer */}
       <BackgroundLayer />
 
-      {/* Main Content */}
       <main className="flex-grow relative overflow-hidden z-10">
-        {/* Back Button */}
-        <div className="absolute top-6 left-6 z-20">
+        <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
           <button
             onClick={handleBack}
-            className="group relative flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-900/90 to-gray-800/90 backdrop-blur-xl border-2 border-red-500/30 rounded-2xl hover:border-red-500/60 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-red-500/30"
+            className="group relative flex items-center gap-2 sm:gap-3 px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-gray-950 to-gray-900 backdrop-blur-xl border-2 border-red-500/40 rounded-xl sm:rounded-2xl hover:border-red-500/80 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-red-500/30"
           >
-            <ArrowLeft className="w-5 h-5 text-red-400 group-hover:text-red-300 transition-colors duration-300 group-hover:-translate-x-1" />
-            <span className="text-red-400 group-hover:text-red-300 font-semibold text-sm tracking-wide transition-colors duration-300">
-              Home
+            <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 group-hover:text-red-400 transition-colors duration-300 group-hover:-translate-x-1" />
+            <span className="text-red-500 group-hover:text-red-400 font-semibold text-xs sm:text-sm tracking-wide transition-colors duration-300">
+              Back
             </span>
           </button>
         </div>
 
-        <section className="pt-10 pb-8 px-4 relative z-10 text-center">
+        <section className="pt-20 sm:pt-24 md:pt-28 pb-6 sm:pb-8 px-4 relative z-10 text-center">
           <div className="max-w-7xl mx-auto">
-            {/* Tagline */}
-            <div className="text-xs sm:text-sm md:text-base tracking-[2px] sm:tracking-[3px] text-red-400 mb-3 sm:mb-4 uppercase font-medium animate-pulse">
-              Multiverse of innovation
-            </div>
-
-            {/* Main Image */}
-            <div className="my-3 sm:my-4 md:my-5">
-              <img
-                src="/Pragyaa_main_image.png"
-                alt="PRAGYAA 2026"
-                className="w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto drop-shadow-2xl"
-              />
-            </div>
-
-            {/* Subtitle */}
-            <p className="text-sm xs:text-base sm:text-lg md:text-xl tracking-[1px] xs:tracking-[2px] sm:tracking-[3px] uppercase text-gray-300 font-light mt-2">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-[3px] xs:tracking-[5px] sm:tracking-[8px] md:tracking-[12px] lg:tracking-[15px] my-2 sm:my-3 md:my-4 bg-gradient-to-b from-white via-red-200 to-gray-600 bg-clip-text text-transparent uppercase">
+              PRAGYAA
+            </h1>
+            <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl tracking-[1px] xs:tracking-[2px] sm:tracking-[3px] uppercase text-gray-300 font-light">
               "BRIGHTER THAN EVER BEFORE"
             </p>
           </div>
         </section>
 
-        {/* Hero Section with Pragyaa Header */}
-        <section className="py-6 px-4 relative z-10 flex flex-col justify-center items-center text-center">
-          {/* Gallery subtitle */}
-          <h2
-            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-clip-text text-transparent uppercase mb-6 animate-gradient transition-all duration-600 ease-out delay-200 ${
-              isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
-            Event Gallery
-          </h2>
-
-          {/* Description */}
-          <p
-            className={`text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl tracking-[1px] xs:tracking-[2px] sm:tracking-[3px] my-3 sm:my-4 md:my-5 uppercase text-gray-300 font-light max-w-4xl leading-relaxed transition-all duration-600 ease-out delay-300 ${
-              isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
-            "CAPTURING MOMENTS OF INNOVATION"
-          </p>
-
-          {/* Decorative line */}
-          <div
-            className={`w-32 h-1 bg-gradient-to-r from-red-500 via-red-600 to-red-700 mx-auto rounded-full animate-pulse transition-all duration-600 ease-out delay-400 ${
-              isLoaded ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
-            }`}
-          ></div>
-
-          {/* Additional decorative elements */}
-          <div
-            className={`absolute top-1/4 left-4 w-1 h-16 bg-gradient-to-b from-red-400 to-transparent opacity-30 sm:hidden transition-all duration-500 ease-out delay-500 ${
-              isLoaded ? "opacity-30 scale-y-100" : "opacity-0 scale-y-0"
-            }`}
-          ></div>
-          <div
-            className={`absolute top-1/4 right-4 w-1 h-16 bg-gradient-to-b from-red-400 to-transparent opacity-30 sm:hidden transition-all duration-500 ease-out delay-550 ${
-              isLoaded ? "opacity-30 scale-y-100" : "opacity-0 scale-y-0"
-            }`}
-          ></div>
-
-          {/* Mobile-specific glow effects */}
-          <div
-            className={`absolute inset-0 bg-gradient-radial from-red-500/5 via-transparent to-transparent pointer-events-none sm:hidden transition-opacity duration-800 ease-out delay-150 ${
-              isLoaded ? "opacity-100" : "opacity-0"
-            }`}
-          ></div>
-        </section>
-
-        {/* Filter Section */}
-        <section className="py-8 px-4 relative z-10">
+        <section className="py-6 sm:py-8 md:py-10 px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                    selectedCategory === category
-                      ? "bg-gradient-to-r from-red-500 to-red-700 text-white shadow-lg scale-105"
-                      : "bg-gray-900/50 text-gray-400 hover:text-red-400 border border-gray-700/50 hover:border-red-500/50"
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Gallery Grid */}
-        <section className="py-8 px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredItems.map((item, index) => (
-                <div
-                  key={item.id}
-                  className="relative group cursor-pointer"
-                  onClick={() => openModal(item)}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  {/* Glow effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-red-500 via-red-600 to-red-700 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-1000"></div>
-
-                  {/* Card */}
-                  <div className="relative bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border-2 border-red-500/20 rounded-2xl overflow-hidden transition-all duration-700 hover:border-red-500/60 hover:shadow-xl hover:shadow-red-500/30 hover:scale-105">
-                    {/* Image */}
-                    <div className="h-64 overflow-hidden relative">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
-
-                      {/* Category Badge */}
-                      <div
-                        className={`absolute top-4 left-4 bg-gradient-to-r ${getCategoryColor(item.category)} text-white px-3 py-1 rounded-full text-xs font-bold`}
-                      >
-                        {item.category}
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6">
-                      {/* Animated background particles */}
-                      {hoveredIndex === index &&
-                        [...Array(8)].map((_, i) => (
-                          <div
-                            key={i}
-                            className="absolute w-1 h-1 bg-red-400 rounded-full"
-                            style={{
-                              top: `${Math.random() * 100}%`,
-                              left: `${Math.random() * 100}%`,
-                              animation: `particleFloat ${2 + Math.random() * 3}s infinite ease-in-out`,
-                              animationDelay: `${Math.random() * 2}s`,
-                              opacity: 0.9,
-                            }}
-                          />
-                        ))}
-
-                      {/* Title */}
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors duration-300">
-                        {item.title}
-                      </h3>
-
-                      {/* Event Details */}
-                      <div className="space-y-2 mb-4">
-                        <div className="flex items-center gap-2 text-gray-300 text-sm">
-                          <Calendar className="w-4 h-4 text-red-400" />
-                          <span>{item.date}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-gray-300 text-sm">
-                          <MapPin className="w-4 h-4 text-red-400" />
-                          <span>{item.location}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-gray-300 text-sm">
-                          <Users className="w-4 h-4 text-red-400" />
-                          <span>{item.attendees} attendees</span>
-                        </div>
-                      </div>
-
-                      {/* Description */}
-                      <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-wider bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-clip-text text-transparent uppercase mb-6 sm:mb-8 animate-gradient">
+              Gallery
+            </h2>
+            <div className="gallery-container">
+              {renderStrip(galleryPhotos.stripOne, "one", 0)}
+              {renderStrip(galleryPhotos.stripTwo, "two", 1)}
+              {renderStrip(galleryPhotos.stripThree, "three", 2)}
+              {renderStrip(galleryPhotos.stripFour, "four", 3)}
             </div>
           </div>
         </section>
       </main>
 
-      {/* Modal - same as before */}
-      {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4">
-          <div className="relative max-w-4xl w-full bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border-2 border-red-500/30 rounded-2xl overflow-hidden">
-            {/* Close Button */}
-            <button
-              onClick={closeModal}
-              className="absolute top-4 right-4 z-10 bg-gray-900/90 hover:bg-gray-800/90 text-red-400 rounded-full p-2 transition-all duration-300 hover:scale-110"
-            >
-              <X size={24} />
-            </button>
-
-            {/* Navigation Buttons */}
-            <button
-              onClick={() => navigateImage("prev")}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-900/90 hover:bg-gray-800/90 text-red-400 rounded-full p-2 transition-all duration-300 hover:scale-110"
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button
-              onClick={() => navigateImage("next")}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-900/90 hover:bg-gray-800/90 text-red-400 rounded-full p-2 transition-all duration-300 hover:scale-110"
-            >
-              <ChevronRight size={24} />
-            </button>
-
-            {/* Modal Content */}
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              {/* Image */}
-              <div className="h-96 lg:h-auto">
-                <img
-                  src={selectedImage.image}
-                  alt={selectedImage.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Details */}
-              <div className="p-6">
-                <div
-                  className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${getCategoryColor(selectedImage.category)} mb-4`}
-                >
-                  {selectedImage.category}
-                </div>
-
-                <h2 className="text-2xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors duration-300">
-                  {selectedImage.title}
-                </h2>
-
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-2 text-gray-300">
-                    <Calendar className="w-5 h-5 text-red-400" />
-                    <span>{selectedImage.date}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-300">
-                    <MapPin className="w-5 h-5 text-red-400" />
-                    <span>{selectedImage.location}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-300">
-                    <Users className="w-5 h-5 text-red-400" />
-                    <span>{selectedImage.attendees} attendees</span>
-                  </div>
-                </div>
-
-                <p className="text-gray-300 leading-relaxed">
-                  {selectedImage.description}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Footer Component */}
       <Footer />
 
-      {/* Custom CSS for animations */}
       <style jsx>{`
+        .gallery-container {
+          display: flex;
+          gap: 0.5rem;
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+        }
+
+        /* Ambient glow effect */
+        .gallery-container::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.1), transparent 70%);
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        .gallery_strip_wrapper {
+          flex: 1;
+          overflow: hidden;
+          display: flex;
+          align-items: flex-start;
+          background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+          border-left: 1px solid rgba(239, 68, 68, 0.1);
+          position: relative;
+        }
+
+        .gallery_strip_wrapper::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            180deg,
+            rgba(239, 68, 68, 0.05) 0%,
+            transparent 20%,
+            transparent 80%,
+            rgba(239, 68, 68, 0.05) 100%
+          );
+          pointer-events: none;
+        }
+
+        .gallery__strip {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          padding: 1.5rem 0;
+          width: 100%;
+          animation: float 40s linear infinite;
+          position: relative;
+          z-index: 2;
+        }
+
+        .gallery__strip.one {
+          animation-duration: 35s;
+        }
+
+        .gallery__strip.two {
+          animation-duration: 45s;
+          animation-direction: reverse;
+        }
+
+        .gallery__strip.three {
+          animation-duration: 38s;
+        }
+
+        .gallery__strip.four {
+          animation-duration: 42s;
+          animation-direction: reverse;
+        }
+
+        .gallery__strip:hover {
+          animation-play-state: paused;
+        }
+
+        .photo {
+          width: 100%;
+          position: relative;
+          padding: 0 0.5rem;
+        }
+
+        .photo__image {
+          width: 100%;
+          position: relative;
+        }
+
+        .photo__border {
+          position: relative;
+          padding: 2px;
+          background: linear-gradient(135deg, 
+            rgba(239, 68, 68, 0.3) 0%,
+            rgba(220, 38, 38, 0.2) 25%,
+            rgba(185, 28, 28, 0.1) 50%,
+            rgba(220, 38, 38, 0.2) 75%,
+            rgba(239, 68, 68, 0.3) 100%
+          );
+          background-size: 200% 200%;
+          animation: borderShift 4s ease infinite;
+          border-radius: 8px;
+          overflow: hidden;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .photo:hover .photo__border {
+          background: linear-gradient(135deg, 
+            rgba(239, 68, 68, 0.6) 0%,
+            rgba(220, 38, 38, 0.4) 25%,
+            rgba(185, 28, 28, 0.3) 50%,
+            rgba(220, 38, 38, 0.4) 75%,
+            rgba(239, 68, 68, 0.6) 100%
+          );
+          padding: 3px;
+          transform: translateY(-4px);
+          box-shadow: 
+            0 10px 40px -10px rgba(239, 68, 68, 0.5),
+            0 0 20px rgba(239, 68, 68, 0.3),
+            inset 0 0 20px rgba(239, 68, 68, 0.1);
+        }
+
+        .photo__glow {
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: radial-gradient(circle, rgba(239, 68, 68, 0.3) 0%, transparent 70%);
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        .photo:hover .photo__glow {
+          opacity: 1;
+          animation: pulse 2s ease-in-out infinite;
+        }
+
+        .photo__border img {
+          width: 100%;
+          height: auto;
+          display: block;
+          object-fit: cover;
+          border-radius: 6px;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          position: relative;
+          z-index: 2;
+          aspect-ratio: 4/3;
+        }
+
+        .photo:hover .photo__border img {
+          transform: scale(1.05);
+          filter: brightness(1.1) contrast(1.05);
+        }
+
+        .photo__overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            135deg,
+            rgba(239, 68, 68, 0.1) 0%,
+            transparent 50%,
+            rgba(185, 28, 28, 0.1) 100%
+          );
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          border-radius: 6px;
+          pointer-events: none;
+          z-index: 3;
+        }
+
+        .photo:hover .photo__overlay {
+          opacity: 1;
+        }
+
+        .photo__overlay-grid {
+          width: 100%;
+          height: 100%;
+          background-image: 
+            linear-gradient(rgba(239, 68, 68, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(239, 68, 68, 0.03) 1px, transparent 1px);
+          background-size: 20px 20px;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+        }
+
+        .photo:hover .photo__overlay-grid {
+          opacity: 1;
+        }
+
         @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px) rotate(0deg);
+          from { 
+            transform: translateY(0); 
           }
-          50% {
-            transform: translateY(-20px) rotate(180deg);
-          }
-        }
-
-        @keyframes particleFloat {
-          0%,
-          100% {
-            transform: translateY(0px) scale(1);
-            opacity: 0.9;
-          }
-          50% {
-            transform: translateY(-30px) scale(1.2);
-            opacity: 0.6;
+          to { 
+            transform: translateY(-50%); 
           }
         }
 
-        @keyframes gradient {
-          0%,
-          100% {
+        @keyframes borderShift {
+          0%, 100% {
             background-position: 0% 50%;
           }
           50% {
@@ -515,47 +331,150 @@ function Gallery() {
           }
         }
 
-        @keyframes glitch {
-          0%,
-          100% {
-            transform: translate(0);
+        @keyframes pulse {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 0.3;
           }
-          20% {
-            transform: translate(-2px, 2px);
-          }
-          40% {
-            transform: translate(-2px, -2px);
-          }
-          60% {
-            transform: translate(2px, 2px);
-          }
-          80% {
-            transform: translate(2px, -2px);
+          50% {
+            transform: scale(1.1);
+            opacity: 0.5;
           }
         }
 
-        .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
+        @keyframes gradient {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
         }
 
-        .animate-glitch {
-          animation: glitch 4s ease-in-out infinite;
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+          .gallery-container {
+            gap: 0.25rem;
+          }
+
+          .gallery__strip {
+            gap: 1.25rem;
+            padding: 1.25rem 0;
+          }
+
+          .photo {
+            padding: 0 0.25rem;
+          }
         }
 
-        .line-clamp-2 {
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
+        @media (max-width: 768px) {
+          .gallery-container {
+            flex-direction: column;
+            gap: 1rem;
+          }
+
+          .gallery_strip_wrapper {
+            border-left: none;
+            border-top: 1px solid rgba(239, 68, 68, 0.1);
+          }
+
+          .gallery__strip {
+            flex-direction: row;
+            gap: 1rem;
+            padding: 0 1rem;
+            animation: scroll 30s linear infinite;
+          }
+
+          .gallery__strip.one {
+            animation-duration: 25s;
+          }
+
+          .gallery__strip.two {
+            animation-duration: 35s;
+          }
+
+          .gallery__strip.three {
+            animation-duration: 28s;
+          }
+
+          .gallery__strip.four {
+            animation-duration: 32s;
+          }
+
+          .photo {
+            min-width: 280px;
+            max-width: 280px;
+            padding: 0;
+          }
+
+          .photo__border img {
+            aspect-ratio: 3/4;
+          }
+
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          .gallery__strip.two,
+          .gallery__strip.four {
+            animation-direction: reverse;
+          }
         }
 
-        .bg-gradient-radial {
-          background: radial-gradient(circle, var(--tw-gradient-stops));
+        @media (max-width: 640px) {
+          .gallery__strip {
+            gap: 0.75rem;
+            padding: 0 0.75rem;
+          }
+
+          .photo {
+            min-width: 240px;
+            max-width: 240px;
+          }
+
+          .photo__border {
+            padding: 1.5px;
+          }
+
+          .photo:hover .photo__border {
+            padding: 2px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .photo {
+            min-width: 200px;
+            max-width: 200px;
+          }
+
+          .gallery__strip {
+            gap: 0.5rem;
+            padding: 0 0.5rem;
+          }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+          .gallery__strip {
+            animation: none;
+          }
+
+          .photo__border,
+          .photo__border img,
+          .photo__overlay,
+          .photo__overlay-grid,
+          .photo__glow {
+            transition: none;
+          }
         }
       `}</style>
     </div>
   );
 }
 
-export default Gallery;
+export default AnimatedGallery;
