@@ -11,7 +11,7 @@ function Sponsors() {
     {
       id: 1,
       name: "Sharda Construction & Corporation Pvt. Ltd.",
-      logo: "/sharda-construction.jpg",
+      logo: "/Sponsors/sharda-construction.jpg",
     },
   ];
 
@@ -19,17 +19,17 @@ function Sponsors() {
     {
       id: 2,
       name: "Hotel Manju Palace",
-      logo: "/hotel-manju-palace.png",
+      logo: "/Sponsors/hotel-manju-palace.png",
     },
     {
       id: 3,
       name: "Aqua Gold Mineral Water",
-      logo: "/aqua-gold.png",
+      logo: "/Sponsors/aqua-gold.png",
     },
     {
       id: 4,
       name: "Raj Opticals",
-      logo: "/raj-opticals.png",
+      logo: "/Sponsors/raj-opticals.png",
     },
   ];
 

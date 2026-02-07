@@ -11,7 +11,7 @@ function Guest() {
     name: "Dr. Tikle Sir",
     title: "Chief Guest 2026",
     designation: "Distinguished Academic Leader & Visionary",
-    image: "/tikale.webp",
+    image: "/Guest/Tiklesh_sir.jpeg",
     description:
       "An esteemed academician and visionary leader who has made remarkable contributions to technical education and research, inspiring countless students and faculty members.",
   };
@@ -22,21 +22,21 @@ function Guest() {
       name: "Dr. Mukesh Sir",
       year: "2025",
       designation: "Renowned Research Scholar & Industry Expert",
-      image: "/Mukesh_sir.jpg",
+      image: "/Guest/Mukesh_sir.jpg",
     },
     {
       id: 2,
       name: "Dr. Dinesh Sir",
       year: "2025",
       designation: "Eminent Professor & Educational Innovator",
-      image: "/Dinesh_Sir.jpg",
+      image: "/Guest/Dinesh_Sir.jpg",
     },
     {
       id: 3,
       name: "Dr. H.C. Verma Sir",
       year: "2023",
       designation: "Legendary Physics Educator & Author",
-      image: "/hc-verma-bw.jpg",
+      image: "/Guest/hc-verma-bw.jpg",
     },
   ];
 
