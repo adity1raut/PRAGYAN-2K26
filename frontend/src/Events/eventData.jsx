@@ -434,7 +434,11 @@ const eventData = {
             }
           ],
           faculty:"Dr. Rupsingh P. Matwale",
+<<<<<<< HEAD
           registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+=======
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+>>>>>>> 58a845d0a5560d599df2eb99367569cae57e7962
       },
       {
         id: "E-Venture- IPL Auction",
@@ -519,7 +523,11 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
+<<<<<<< HEAD
           registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+=======
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+>>>>>>> 58a845d0a5560d599df2eb99367569cae57e7962
       },
       {
         id: "Vision Edge",
