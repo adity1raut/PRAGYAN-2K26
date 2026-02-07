@@ -18,7 +18,6 @@ const Sponsors = lazy(() => import("./Sponsors/Sponsors"));
 const Guest = lazy(() => import("./Guest/Guest"));
 const SchedulePage = lazy(() => import("./Schedule/Schedule"));
 const SpecialEvent = lazy(() => import("./SpecialEvent/SpecialEvent"));
-const NotFound = lazy(() => import("./Pages/NotFound"));
 
 // Loading component
 const PageLoader = () => (
@@ -127,7 +126,7 @@ function App() {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/sponsors" element={<Sponsors />} />
               <Route path="/guest" element={<Guest />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </Suspense>
         </ErrorBoundary>
