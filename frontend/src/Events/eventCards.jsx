@@ -4,11 +4,11 @@ import { Trophy, Users, Phone, X, MapPin } from "lucide-react";
 function EventCard({ event, onClick }) {
   return (
     <div
-      className="bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70 border-2 border-red-500/30 rounded-xl overflow-hidden shadow-lg shadow-red-500/10 hover:border-red-500/50 hover:scale-105 transition-all duration-300 cursor-pointer p-4 sm:p-6 flex flex-col"
+      className="bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70 border-2 border-red-500/30 rounded-xl overflow-hidden shadow-lg shadow-red-500/10 hover:border-red-500/50 hover:scale-105 transition-all duration-300 cursor-pointer p-6 sm:p-12 flex flex-col"
       onClick={onClick}
     >
-      <h3 className="text-base sm:text-lg font-bold text-white mb-2">{event.title}</h3>
-      <p className="text-xs sm:text-sm text-red-300 mb-3 sm:mb-4">{event.tagline}</p>
+      
+      <p className="text-lg sm:text-sm text-white mb-3 sm:mb-4">{event.tagline}</p>
 
       <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm mb-3 sm:mb-4">
         <div className="flex items-center gap-1 text-yellow-400">
