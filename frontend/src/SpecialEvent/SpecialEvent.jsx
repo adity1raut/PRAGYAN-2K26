@@ -94,14 +94,11 @@ function SpecialEvent() {
         <section className="py-4 sm:py-6 px-4 relative z-10">
           <div className="max-w-5xl mx-auto bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70 border-2 border-red-500/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
             <p className="text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-center">
-              Junior Scientist is a special educational event organized by Pragyaa for primary school children, 
-              where students will showcase their self-made science projects and explain their ideas, working models, 
-              and real-life applications in a simple and creative manner. The objective of this event is to promote 
-              scientific thinking, curiosity, and innovation among young learners while enhancing their confidence 
-              and communication skills. During the exhibition, participants will interact with visitors and judges 
-              by answering questions, which helps strengthen their understanding and presentation abilities. This 
-              event offers parents, teachers, and guests an opportunity to witness the creativity and potential of 
-              young minds as they engage in practical and enjoyable learning experiences.
+             Junior Scientist is a science exhibition competition designed
+            exclusively for school students. It provides a platform for young minds to showcase
+            innovative science models, experiments, and concepts. The competition
+            encourages curiosity, creativity, and scientific thinking while helping students gain
+            confidence in presenting their ideas.
             </p>
           </div>
         </section>
