@@ -4,39 +4,38 @@ import { Trophy, Users, Phone, X, MapPin } from "lucide-react";
 function EventCard({ event, onClick }) {
   return (
     <div
-      className="bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70 border-2 border-red-500/30 rounded-xl overflow-hidden shadow-lg shadow-red-500/10 hover:border-red-500/50 hover:scale-105 transition-all duration-300 cursor-pointer p-4 sm:p-6 flex flex-col"
       onClick={onClick}
+      className="bg-gradient-to-br from-red-900/70 via-gray-900/80 to-red-900/70
+      border-2 border-red-500/30 rounded-xl shadow-lg p-6 sm:p-12
+      hover:scale-105 transition-all duration-300 cursor-pointer flex flex-col"
     >
-      <h3 className="text-base sm:text-lg font-bold text-white mb-2">{event.title}</h3>
-      <p className="text-xs sm:text-sm text-red-300 mb-3 sm:mb-4">{event.tagline}</p>
+      
+      <p className="text-lg sm:text-base font-semibold text-white mb-4 text-center">
+        {event.tagline}
+      </p>
 
-      <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm mb-3 sm:mb-4">
+      <div className="flex flex-wrap justify-center gap-3 text-xs sm:text-sm mb-4">
         <div className="flex items-center gap-1 text-yellow-400">
           <Trophy className="w-3 h-3 sm:w-4 sm:h-4" />
-          <span className="font-semibold">₹{event.prizePool}</span>
         </div>
-        <div className="flex items-center gap-1 text-gray-300">
-          <span>Entry: ₹{event.entryFee}</span>
-        </div>
-        <div className="flex items-center gap-1 text-gray-300">
-          <Users className="w-3 h-3 sm:w-4 sm:h-4" />
-          <span>{event.members} Members</span>
-        </div>
+        <span className="text-yellow-400 font-semibold">₹{event.prizePool}</span>
+        <span className="text-gray-300">Entry: ₹{event.entryFee}</span>
+        <span className="text-gray-300">{event.members} Members</span>
       </div>
 
-      {/* View Details Button */}
       <button
-        className="mt-auto px-3 sm:px-4 py-2 bg-gradient-to-r from-red-600 to-red-700 text-white text-xs sm:text-sm rounded-lg font-semibold hover:from-red-500 hover:to-red-600 transition-all duration-300 shadow hover:shadow-red-500/40"
         onClick={(e) => {
           e.stopPropagation();
           onClick();
         }}
+        className="mt-auto px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold hover:bg-red-500"
       >
         View Details
       </button>
     </div>
   );
 }
+
 
 /* ------------------------------- EVENT MODAL -------------------------------- */
 
@@ -61,7 +60,7 @@ function EventModal({ event, onClose }) {
 
         <div className="p-4 sm:p-6 md:p-8">
           <div className="mb-4 sm:mb-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">{event.title}</h2>
+            
             <p className="text-base sm:text-lg text-red-300">{event.tagline}</p>
           </div>
 

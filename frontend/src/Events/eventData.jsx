@@ -25,7 +25,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. A. P. Chauhan",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
         
       },
       {
@@ -50,7 +50,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. A. P. Chauhan",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
 
       },
       {
@@ -75,7 +75,7 @@ const eventData = {
             }
           ],
           faculty:"Prof. M. D. Sukre",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
 
       },
       {
@@ -100,7 +100,7 @@ const eventData = {
             }
           ],
           faculty:"Prof. M. D. Sukre",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "Mechaverse (Marketing Mania) ",
@@ -123,7 +123,7 @@ const eventData = {
           }
         ],
         faculty:"Prof. M. D. Sukre",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "TESA-Texplorer2 ",
@@ -147,7 +147,7 @@ const eventData = {
             }
           ],
           faculty:"Prof. Devashish Patil",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "TESA-Texplorer ",
@@ -171,7 +171,7 @@ const eventData = {
             }
           ],
           faculty:"Prof. Devashish Patil",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "TESA-Texplorer1 ",
@@ -195,7 +195,7 @@ const eventData = {
             }
           ],
           faculty:"Prof. Devashish Patil",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "CESA-Cenfest",
@@ -219,7 +219,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "CESA-Cenfest1",
@@ -243,7 +243,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "CESA-Cenfest3",
@@ -267,7 +267,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "CESA-Cenfest5",
@@ -291,7 +291,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "CESA-Cenfest6",
@@ -315,7 +315,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "EESA - Electrospark1",
@@ -335,7 +335,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. P. S. Jamwal",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "EESA - Electrospark2",
@@ -355,7 +355,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. P. S. Jamwal",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "ITSA",
@@ -379,7 +379,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. A. D. Sawarkar",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "Math-E-Magic ",
@@ -403,7 +403,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. Nilesh khandekar",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
     ],
   },
@@ -434,56 +434,11 @@ const eventData = {
             }
           ],
           faculty:"Dr. Rupsingh P. Matwale",
+<<<<<<< HEAD
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+=======
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-     
-      {
-        id: "GameVerse",
-        title: "GameVerse",
-        tagline: "BGMI",
-        description:
-          "Enter the universe of ultimate gaming battles, where players compete in BGMI, Free Fire, and Valorant, showcasing skill, strategy, and teamwork to become the ultimate champion.",
-        icon: "Star",
-        venue: "CCF/Language Lab,EXTC Dept",
-        prizePool: 5000,
-          entryFee: 199,
-          members:4,
-          coordinators: [
-            {
-              name: "Dnyaneshwar Haral",
-              phone: "8624014616"
-            },
-            {
-              name: "Satveer Singh Granthi",
-              phone: "8767190713"
-            }
-          ],
-          faculty:"Dr Atul Shinde",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "GameVerse1",
-        title: "GameVerse",
-        tagline: "FreeFire Max",
-        description:
-          "Enter the universe of ultimate gaming battles, where players compete in BGMI, Free Fire, and Valorant, showcasing skill, strategy, and teamwork to become the ultimate champion.",
-        icon: "Star",
-        venue: "CCF/Language Lab,EXTC Dept",
-        prizePool: 5000,
-          entryFee: 199,
-          members:4,
-          coordinators: [
-            {
-              name: "Tejas Ghirepunjhe ",
-              phone: "8237168722"
-            },
-            {
-              name: "Shadman Sheikh",
-              phone: "8421100350"
-            }
-          ],
-          faculty:"Dr Atul Shinde",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+>>>>>>> 58a845d0a5560d599df2eb99367569cae57e7962
       },
       {
         id: "E-Venture- IPL Auction",
@@ -503,7 +458,7 @@ const eventData = {
           }
         ],
         faculty:"Dr. Milind Bhalerao",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
 
       },
       {
@@ -524,7 +479,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. Milind Bhalerao",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "E-Venture ",
@@ -544,7 +499,7 @@ const eventData = {
           }
         ],
         faculty:"Dr. Milind Bhalerao",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "GameVerse2",
@@ -568,56 +523,11 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
+<<<<<<< HEAD
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+=======
           registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "Galactic Glide",
-        title: "Galactic Glide",
-        tagline:
-          "Soar beyond the skies with creativity, precision, and innovation",
-        description:
-          "An exciting aeromodelling competition where participants design, build, and fly model aircraft inspired by the spirit of exploration and innovation. Test your creativity, precision, and understanding of aerodynamics as you compete to make your aircraft soar the farthest and fastest-taking your ideas beyond the skies, into the galaxy.",
-        icon: "Trophy",
-        venue: "Green Campus",
-        prizePool: 7000,
-          entryFee: 99,
-          members:2,
-          coordinators: [
-            {
-              name: "Aditya Chopade",
-              phone: "8482890101"
-            },
-            {
-              name: "Dnynoba More",
-              phone: "7620725789"
-            }
-          ],
-          faculty:"Dr Atul Shinde",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
-      },
-      {
-        id: "PRAGYAA Yuva Sansad",
-        title: "PRAGYAA Yuva Sansad",
-        tagline: "A platform for voice that will lead tomorrow",
-        description:
-          "PRAGYAA Yuva Sansad is a youth-driven parliamentary simulation designed to foster leadership, critical thinking, and policy-making skills. Participants engage in structured debates on national and societal issues, propose meaningful solutions, and experience the workings of a real legislative assembly. The event aims to empower young voices to think analytically, communicate effectively, and contribute to a progressive and informed future.",
-        icon: "Trophy",
-        venue: "A4 Hall",
-        prizePool: 10000,
-          entryFee: 99,
-          members:1,
-          coordinators: [
-            {
-              name: "Mr. Harshal Tejankar",
-              phone: "9146374089"
-            },
-            {
-              name: "Aryan Mali ",
-              phone: "9325996530"
-            }
-          ],
-          faculty:"Dr Atul Shinde",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+>>>>>>> 58a845d0a5560d599df2eb99367569cae57e7962
       },
       {
         id: "Vision Edge",
@@ -640,7 +550,7 @@ const eventData = {
           }
         ],
         faculty:"Dr Atul Shinde",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
 
       },
       {
@@ -665,7 +575,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "PRAGYAA Movie Night",
@@ -686,7 +596,7 @@ const eventData = {
           }
         ],
         faculty:"Dr Atul Shinde",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "FarOath6.0",
@@ -710,7 +620,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
       {
         id: "CheckMate",
@@ -734,7 +644,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfXXXXXXXX/viewform"
+          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
       },
     ],
   },
