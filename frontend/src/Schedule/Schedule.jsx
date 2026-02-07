@@ -71,10 +71,6 @@ const SchedulePage = () => {
         {/* Header Section */}
         <section className="pt-16 sm:pt-20 md:pt-24 pb-3 sm:pb-4 md:pb-6 px-4 relative z-10 text-center">
           <div className="max-w-7xl mx-auto">
-            {/* Tagline */}
-            <div className="text-xs sm:text-sm md:text-base tracking-[2px] sm:tracking-[3px] text-red-400 mb-3 sm:mb-4 uppercase font-medium animate-pulse">
-              Multiverse of innovation
-            </div>
 
             {/* Main Image */}
             <div className="my-3 sm:my-4 md:my-5">
@@ -85,10 +81,6 @@ const SchedulePage = () => {
               />
             </div>
 
-            {/* Subtitle */}
-            <p className="text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-lg tracking-[1px] xs:tracking-[1.5px] sm:tracking-[2px] md:tracking-[3px] uppercase text-gray-300 font-light transition-all duration-600 ease-out delay-150 mt-2">
-              "BRIGHTER THAN EVER BEFORE"
-            </p>
           </div>
         </section>
 

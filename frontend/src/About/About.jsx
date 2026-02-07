@@ -79,10 +79,6 @@ function About() {
         {/* Title Section */}
         <section className="pt-20 sm:pt-24 md:pt-28 pb-6 sm:pb-8 px-4 relative z-10 text-center">
           <div className="max-w-7xl mx-auto">
-            {/* Tagline */}
-            <div className="text-xs sm:text-sm md:text-base tracking-[2px] sm:tracking-[3px] text-red-400 mb-3 sm:mb-4 uppercase font-medium animate-pulse">
-              Multiverse of innovation
-            </div>
 
             {/* Main Image */}
             <div className="my-3 sm:my-4 md:my-5">
@@ -92,11 +88,6 @@ function About() {
                 className="w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto drop-shadow-2xl"
               />
             </div>
-
-            {/* Tournament subtitle */}
-            <p className="text-sm xs:text-base sm:text-lg md:text-xl tracking-[2px] xs:tracking-[3px] sm:tracking-[4px] uppercase text-gray-300 font-light mt-2">
-              "BRIGHTER THAN EVER BEFORE"
-            </p>
           </div>
         </section>
 
