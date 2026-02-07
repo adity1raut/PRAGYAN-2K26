@@ -378,6 +378,63 @@ export default function MainContent() {
             </div>
           </div>
 
+          {/* Prize Pool Announcement - Small Screens Only */}
+          <div
+            id="prize-pool-section"
+            data-animate-section
+            className={`mt-3 sm:mt-4 transition-all duration-700 ${
+              visibleSections.has("prize-pool-section")
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-20"
+            }`}
+          >
+            <div className="relative overflow-hidden bg-gradient-to-r from-red-600 via-red-500 to-orange-500 rounded-xl p-1 animate-gradient">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 via-transparent to-red-600/20 animate-pulse"></div>
+              <div className="relative bg-black/90 rounded-lg p-4 sm:p-6">
+                <div className="text-center space-y-2 sm:space-y-3">
+                  {/* Sparkle/Trophy Icon Effect */}
+                  <div className="flex justify-center">
+                    <div className="relative">
+                      <Trophy className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-400 animate-pulse" />
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
+                      <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-red-400 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-[10px] sm:text-xs text-red-300 uppercase tracking-[2px] sm:tracking-[3px] font-semibold animate-pulse">
+                    🎯 Exciting Announcement 🎯
+                  </h3>
+                  
+                  <div className="space-y-1 sm:space-y-2">
+                    <p className="text-xl sm:text-2xl font-black bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent animate-gradient leading-tight">
+                      WIN UP TO
+                    </p>
+                    <p className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-yellow-200 via-yellow-400 to-red-400 bg-clip-text text-transparent animate-gradient drop-shadow-2xl">
+                      ₹5,00,000
+                    </p>
+                    <p className="text-sm sm:text-base font-bold text-red-300 uppercase tracking-wider">
+                      In Prize Money! 🏆
+                    </p>
+                  </div>
+                  
+                  <div className="pt-1 sm:pt-2">
+                    <p className="text-[10px] sm:text-xs text-gray-300 leading-relaxed">
+                      The brightest minds will be rewarded with incredible prizes! 
+                      <span className="text-yellow-400 font-semibold"> Don't miss this golden opportunity</span> to showcase your innovation!
+                    </p>
+                  </div>
+
+                  {/* Decorative Elements */}
+                  <div className="flex justify-center gap-2 sm:gap-3 pt-1 sm:pt-2">
+                    <div className="w-12 sm:w-16 h-0.5 bg-gradient-to-r from-transparent via-red-500 to-transparent rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-bounce"></div>
+                    <div className="w-12 sm:w-16 h-0.5 bg-gradient-to-r from-transparent via-red-500 to-transparent rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div
             id="about-section"
             data-animate-section
@@ -398,6 +455,8 @@ export default function MainContent() {
               robotics, fostering excellence in technology.
             </p>
           </div>
+
+          
         </div>
 
         
@@ -477,7 +536,7 @@ export default function MainContent() {
                 </p>
               </div>
               
-              <div className="w-full aspect-[4/5] rounded-xl overflow-hidden border-2 border-red-500/50 shadow-lg shadow-red-500/30">
+              <div className="w-[70%] sm:w-full aspect-[4/5] rounded-xl overflow-hidden border-2 border-red-500/50 shadow-lg shadow-red-500/30 mx-auto">
                 <img
                   src={TikaleImage}
                   alt={vipGuests[3].name}
@@ -894,7 +953,7 @@ export default function MainContent() {
             <span className="text-white text-xl font-bold">×</span>
           </button>
           
-          <div className="relative h-64 sm:h-80 overflow-hidden rounded-t-2xl">
+          <div className="relative h-52 sm:h-80 overflow-hidden rounded-t-2xl">
             <img
               src={TikaleImage}
               alt={vipGuests[3].name}

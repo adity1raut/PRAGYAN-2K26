@@ -219,10 +219,10 @@ function Gallery() {
         <div className="absolute top-6 left-6 z-20">
           <button
             onClick={handleBack}
-            className="group relative flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-900/90 to-gray-800/90 backdrop-blur-xl border-2 border-cyan-500/30 rounded-2xl hover:border-cyan-500/60 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/30"
+            className="group relative flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-900/90 to-gray-800/90 backdrop-blur-xl border-2 border-red-500/30 rounded-2xl hover:border-red-500/60 transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-red-500/30"
           >
-            <ArrowLeft className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:-translate-x-1" />
-            <span className="text-cyan-400 group-hover:text-cyan-300 font-semibold text-sm tracking-wide transition-colors duration-300">
+            <ArrowLeft className="w-5 h-5 text-red-400 group-hover:text-red-300 transition-colors duration-300 group-hover:-translate-x-1" />
+            <span className="text-red-400 group-hover:text-red-300 font-semibold text-sm tracking-wide transition-colors duration-300">
               Home
             </span>
           </button>
@@ -231,7 +231,7 @@ function Gallery() {
         <section className="pt-10 pb-8 px-4 relative z-10 text-center">
           <div className="max-w-7xl mx-auto">
             {/* Tagline */}
-            <div className="text-xs sm:text-sm md:text-base tracking-[2px] sm:tracking-[3px] text-cyan-400 mb-3 sm:mb-4 uppercase font-medium animate-pulse">
+            <div className="text-xs sm:text-sm md:text-base tracking-[2px] sm:tracking-[3px] text-red-400 mb-3 sm:mb-4 uppercase font-medium animate-pulse">
               Multiverse of innovation
             </div>
 
@@ -255,7 +255,7 @@ function Gallery() {
         <section className="py-6 px-4 relative z-10 flex flex-col justify-center items-center text-center">
           {/* Gallery subtitle */}
           <h2
-            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent uppercase mb-6 animate-gradient transition-all duration-600 ease-out delay-200 ${
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-clip-text text-transparent uppercase mb-6 animate-gradient transition-all duration-600 ease-out delay-200 ${
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -273,26 +273,26 @@ function Gallery() {
 
           {/* Decorative line */}
           <div
-            className={`w-32 h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 mx-auto rounded-full animate-pulse transition-all duration-600 ease-out delay-400 ${
+            className={`w-32 h-1 bg-gradient-to-r from-red-500 via-red-600 to-red-700 mx-auto rounded-full animate-pulse transition-all duration-600 ease-out delay-400 ${
               isLoaded ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
             }`}
           ></div>
 
           {/* Additional decorative elements */}
           <div
-            className={`absolute top-1/4 left-4 w-1 h-16 bg-gradient-to-b from-cyan-400 to-transparent opacity-30 sm:hidden transition-all duration-500 ease-out delay-500 ${
+            className={`absolute top-1/4 left-4 w-1 h-16 bg-gradient-to-b from-red-400 to-transparent opacity-30 sm:hidden transition-all duration-500 ease-out delay-500 ${
               isLoaded ? "opacity-30 scale-y-100" : "opacity-0 scale-y-0"
             }`}
           ></div>
           <div
-            className={`absolute top-1/4 right-4 w-1 h-16 bg-gradient-to-b from-cyan-400 to-transparent opacity-30 sm:hidden transition-all duration-500 ease-out delay-550 ${
+            className={`absolute top-1/4 right-4 w-1 h-16 bg-gradient-to-b from-red-400 to-transparent opacity-30 sm:hidden transition-all duration-500 ease-out delay-550 ${
               isLoaded ? "opacity-30 scale-y-100" : "opacity-0 scale-y-0"
             }`}
           ></div>
 
           {/* Mobile-specific glow effects */}
           <div
-            className={`absolute inset-0 bg-gradient-radial from-cyan-500/5 via-transparent to-transparent pointer-events-none sm:hidden transition-opacity duration-800 ease-out delay-150 ${
+            className={`absolute inset-0 bg-gradient-radial from-red-500/5 via-transparent to-transparent pointer-events-none sm:hidden transition-opacity duration-800 ease-out delay-150 ${
               isLoaded ? "opacity-100" : "opacity-0"
             }`}
           ></div>
@@ -308,8 +308,8 @@ function Gallery() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     selectedCategory === category
-                      ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg scale-105"
-                      : "bg-gray-900/50 text-gray-400 hover:text-cyan-400 border border-gray-700/50 hover:border-cyan-500/50"
+                      ? "bg-gradient-to-r from-red-500 to-red-700 text-white shadow-lg scale-105"
+                      : "bg-gray-900/50 text-gray-400 hover:text-red-400 border border-gray-700/50 hover:border-red-500/50"
                   }`}
                 >
                   {category}
@@ -332,10 +332,10 @@ function Gallery() {
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   {/* Glow effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-1000"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-red-500 via-red-600 to-red-700 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-1000"></div>
 
                   {/* Card */}
-                  <div className="relative bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border-2 border-cyan-500/20 rounded-2xl overflow-hidden transition-all duration-700 hover:border-cyan-500/60 hover:shadow-xl hover:shadow-cyan-500/30 hover:scale-105">
+                  <div className="relative bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border-2 border-red-500/20 rounded-2xl overflow-hidden transition-all duration-700 hover:border-red-500/60 hover:shadow-xl hover:shadow-red-500/30 hover:scale-105">
                     {/* Image */}
                     <div className="h-64 overflow-hidden relative">
                       <img
@@ -360,7 +360,7 @@ function Gallery() {
                         [...Array(8)].map((_, i) => (
                           <div
                             key={i}
-                            className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+                            className="absolute w-1 h-1 bg-red-400 rounded-full"
                             style={{
                               top: `${Math.random() * 100}%`,
                               left: `${Math.random() * 100}%`,
@@ -372,22 +372,22 @@ function Gallery() {
                         ))}
 
                       {/* Title */}
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors duration-300">
                         {item.title}
                       </h3>
 
                       {/* Event Details */}
                       <div className="space-y-2 mb-4">
                         <div className="flex items-center gap-2 text-gray-300 text-sm">
-                          <Calendar className="w-4 h-4 text-cyan-400" />
+                          <Calendar className="w-4 h-4 text-red-400" />
                           <span>{item.date}</span>
                         </div>
                         <div className="flex items-center gap-2 text-gray-300 text-sm">
-                          <MapPin className="w-4 h-4 text-cyan-400" />
+                          <MapPin className="w-4 h-4 text-red-400" />
                           <span>{item.location}</span>
                         </div>
                         <div className="flex items-center gap-2 text-gray-300 text-sm">
-                          <Users className="w-4 h-4 text-cyan-400" />
+                          <Users className="w-4 h-4 text-red-400" />
                           <span>{item.attendees} attendees</span>
                         </div>
                       </div>
@@ -408,11 +408,11 @@ function Gallery() {
       {/* Modal - same as before */}
       {selectedImage && (
         <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4">
-          <div className="relative max-w-4xl w-full bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border-2 border-cyan-500/30 rounded-2xl overflow-hidden">
+          <div className="relative max-w-4xl w-full bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border-2 border-red-500/30 rounded-2xl overflow-hidden">
             {/* Close Button */}
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 z-10 bg-gray-900/90 hover:bg-gray-800/90 text-cyan-400 rounded-full p-2 transition-all duration-300 hover:scale-110"
+              className="absolute top-4 right-4 z-10 bg-gray-900/90 hover:bg-gray-800/90 text-red-400 rounded-full p-2 transition-all duration-300 hover:scale-110"
             >
               <X size={24} />
             </button>
@@ -420,13 +420,13 @@ function Gallery() {
             {/* Navigation Buttons */}
             <button
               onClick={() => navigateImage("prev")}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-900/90 hover:bg-gray-800/90 text-cyan-400 rounded-full p-2 transition-all duration-300 hover:scale-110"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-900/90 hover:bg-gray-800/90 text-red-400 rounded-full p-2 transition-all duration-300 hover:scale-110"
             >
               <ChevronLeft size={24} />
             </button>
             <button
               onClick={() => navigateImage("next")}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-900/90 hover:bg-gray-800/90 text-cyan-400 rounded-full p-2 transition-all duration-300 hover:scale-110"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-900/90 hover:bg-gray-800/90 text-red-400 rounded-full p-2 transition-all duration-300 hover:scale-110"
             >
               <ChevronRight size={24} />
             </button>
@@ -450,21 +450,21 @@ function Gallery() {
                   {selectedImage.category}
                 </div>
 
-                <h2 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                <h2 className="text-2xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors duration-300">
                   {selectedImage.title}
                 </h2>
 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-300">
-                    <Calendar className="w-5 h-5 text-cyan-400" />
+                    <Calendar className="w-5 h-5 text-red-400" />
                     <span>{selectedImage.date}</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-300">
-                    <MapPin className="w-5 h-5 text-cyan-400" />
+                    <MapPin className="w-5 h-5 text-red-400" />
                     <span>{selectedImage.location}</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-300">
-                    <Users className="w-5 h-5 text-cyan-400" />
+                    <Users className="w-5 h-5 text-red-400" />
                     <span>{selectedImage.attendees} attendees</span>
                   </div>
                 </div>
