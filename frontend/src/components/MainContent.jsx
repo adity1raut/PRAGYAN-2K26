@@ -20,7 +20,6 @@ import { useNavigate } from "react-router-dom";
 import Director from '../assets/director-manesh-kokare.jpg'
 import Dean from '../assets/dean-sb-dethe.jpg'
 import fac_Cor from '../assets/Atul_Shine_sir.webp'
-import TikaleImage from '/tikale.webp'
 
 export default function MainContent() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -266,13 +265,13 @@ export default function MainContent() {
                   
                   <div className="space-y-1 sm:space-y-2">
                     <p className="text-xl sm:text-2xl font-black bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent animate-gradient leading-tight">
-                      WIN UP TO
+                      PRIZE Pool Worth
                     </p>
                     <p className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-yellow-200 via-yellow-400 to-red-400 bg-clip-text text-transparent animate-gradient drop-shadow-2xl">
                       ₹5,00,000+
                     </p>
                     <p className="text-sm sm:text-base font-bold text-red-300 uppercase tracking-wider">
-                      In Prize Money! 🏆
+                      In Total Rewards! 🏆
                     </p>
                   </div>
                   
@@ -344,7 +343,7 @@ export default function MainContent() {
                 
                 <div className="w-[70%] sm:w-full aspect-[4/5] rounded-xl overflow-hidden border-2 border-red-500/50 shadow-lg shadow-red-500/30 mx-auto">
                   <img
-                    src={TikaleImage}
+                    src="/Guest/Tiklesh_sir.jpeg"
                     alt="Dr. Tikle Sir"
                     className="w-full h-full object-cover object-center"
                   />
@@ -651,7 +650,7 @@ export default function MainContent() {
           
           <div className="relative h-52 sm:h-80 overflow-hidden rounded-t-2xl">
             <img
-              src={TikaleImage}
+              src="/Guest/Tiklesh_sir.jpeg"
               alt="Dr. Tikle Sir"
               className="w-full h-full object-cover object-center"
             />
