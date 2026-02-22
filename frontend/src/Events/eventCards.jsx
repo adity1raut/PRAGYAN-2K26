@@ -8,7 +8,7 @@ function EventCard({ event, onClick }) {
       onClick={onClick}
     >
       
-      <p className="text-lg sm:text-sm text-white mb-3 sm:mb-4">{event.tagline}</p>
+      <p className="text-xl sm:text-sm text-white mb-3 sm:mb-4">{event.tagline}</p>
 
       <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm mb-3 sm:mb-4">
         <div className="flex items-center gap-1 text-yellow-400">
@@ -130,6 +130,7 @@ function EventModal({ event, onClose }) {
             className="block w-full text-center px-4 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-red-600 to-red-700 text-white text-base sm:text-lg font-bold rounded-xl hover:from-red-500 hover:to-red-600 transition-all duration-300 shadow-lg shadow-red-500/30 hover:shadow-red-500/50"
           >
           Register Now
+
           </a>
         </div>
       </div>
