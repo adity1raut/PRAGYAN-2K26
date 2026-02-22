@@ -114,7 +114,7 @@ function App() {
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/home" element={<Navigate to="/" replace />} />
+              <Route path="https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform" element={<Navigate to="/" replace />} />
               <Route path="/about" element={<About />} />
               <Route path="/events" element={<EventPage />} />
               <Route path="/events/:category" element={<EventPage />} />

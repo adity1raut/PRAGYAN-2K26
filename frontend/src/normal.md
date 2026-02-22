@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import HomePage from './Pages/HomePage';
+import HomePage from './home';
 import About from './About/About';
 import EventPage from './Events/EventPage';
 import WorkShop from './WorkShop/WorkShop';
@@ -17,7 +17,7 @@ return (
 <Routes>
 
         <Route path="/" element={<HomePage />} />
-        <Route path="/home" element={<Navigate to="/" replace />} />
+        <Route path="https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform" element={<Navigate to="/" replace />} />
 
         <Route path="/about" element={<About />} />
 

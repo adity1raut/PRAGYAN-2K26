@@ -129,7 +129,8 @@ function EventModal({ event, onClose }) {
             rel="noopener noreferrer"
             className="block w-full text-center px-4 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-red-600 to-red-700 text-white text-base sm:text-lg font-bold rounded-xl hover:from-red-500 hover:to-red-600 transition-all duration-300 shadow-lg shadow-red-500/30 hover:shadow-red-500/50"
           >
-          ✨ Register ✨
+          Register Now
+
           </a>
         </div>
       </div>
