@@ -25,7 +25,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. A. P. Chauhan",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
         
       },
       {
@@ -50,7 +50,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. A. P. Chauhan",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
 
       },
       {
@@ -75,7 +75,7 @@ const eventData = {
             }
           ],
           faculty:"Prof. M. D. Sukre",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
 
       },
       {
@@ -100,7 +100,7 @@ const eventData = {
             }
           ],
           faculty:"Prof. M. D. Sukre",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "Mechaverse (Marketing Mania) ",
@@ -123,7 +123,7 @@ const eventData = {
           }
         ],
         faculty:"Prof. M. D. Sukre",
-        registerLink: "/home"
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "TESA-Texplorer2 ",
@@ -147,7 +147,7 @@ const eventData = {
             }
           ],
           faculty:"Prof. Devashish Patil",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "TESA-Texplorer ",
@@ -171,7 +171,7 @@ const eventData = {
             }
           ],
           faculty:"Prof. Devashish Patil",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "TESA-Texplorer1 ",
@@ -195,7 +195,7 @@ const eventData = {
             }
           ],
           faculty:"Prof. Devashish Patil",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "CESA-Cenfest",
@@ -219,7 +219,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "CESA-Cenfest1",
@@ -243,7 +243,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "CESA-Cenfest3",
@@ -267,7 +267,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "CESA-Cenfest5",
@@ -291,7 +291,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "CESA-Cenfest6",
@@ -315,7 +315,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "EESA - Electrospark1",
@@ -335,7 +335,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. P. S. Jamwal",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "EESA - Electrospark2",
@@ -355,7 +355,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. P. S. Jamwal",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "ITSA",
@@ -379,7 +379,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. A. D. Sawarkar",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "Math-E-Magic ",
@@ -403,7 +403,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. Nilesh khandekar",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
     ],
   },
@@ -434,7 +434,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. Rupsingh P. Matwale",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "E-Venture- IPL Auction",
@@ -454,7 +454,7 @@ const eventData = {
           }
         ],
         faculty:"Dr. Milind Bhalerao",
-        registerLink: "/home"
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
 
       },
       {
@@ -475,7 +475,7 @@ const eventData = {
             }
           ],
           faculty:"Dr. Milind Bhalerao",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "E-Venture ",
@@ -495,7 +495,7 @@ const eventData = {
           }
         ],
         faculty:"Dr. Milind Bhalerao",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
 
       {
@@ -519,7 +519,7 @@ const eventData = {
           }
         ],
         faculty:"Dr Atul Shinde",
-        registerLink: "/home"
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
 
       },
       {
@@ -544,7 +544,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "PRAGYAA Movie Night",
@@ -565,7 +565,7 @@ const eventData = {
           }
         ],
         faculty:"Dr Atul Shinde",
-        registerLink: "/home"
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "FarOath6.0",
@@ -589,7 +589,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
       {
         id: "CheckMate",
@@ -613,7 +613,7 @@ const eventData = {
             }
           ],
           faculty:"Dr Atul Shinde",
-          registerLink: "/home"
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
       },
     ],
   },

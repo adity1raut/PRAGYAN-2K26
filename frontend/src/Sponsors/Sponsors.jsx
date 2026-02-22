@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowLeft, Crown, Award } from "lucide-react";
+import { ArrowLeft, Award } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import BackgroundLayer from "../components/BackgroundLayer";
@@ -7,15 +7,12 @@ import BackgroundLayer from "../components/BackgroundLayer";
 function Sponsors() {
   const navigate = useNavigate();
 
-  const titleSponsors = [
+  const otherSponsors = [
     {
       id: 1,
-      name: "Sharda Construction & Corporation Pvt. Ltd.",
+      name: "Sharda Construction & Corporation Pv. Ltd.",
       logo: "/Sponsors/sharda-construction.jpg",
     },
-  ];
-
-  const otherSponsors = [
     {
       id: 2,
       name: "Hotel Manju Palace",
@@ -30,6 +27,11 @@ function Sponsors() {
       id: 4,
       name: "Raj Opticals",
       logo: "/Sponsors/raj-opticals.png",
+    },
+    {
+      id: 5,
+      name: "Renapurkar's Nexus Sports Academy",
+      logo: "/Sponsors/Renapurkars_Nexus_Sports_Academy.jpeg",
     },
   ];
 
@@ -79,45 +81,7 @@ function Sponsors() {
             </p>
           </div>
 
-          {/* Title Sponsor Section */}
-          <div className="max-w-7xl mx-auto mb-8 sm:mb-12 md:mb-16 lg:mb-20 px-2 sm:px-0">
-            <div className="text-center mb-6 sm:mb-8 md:mb-10">
-              <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                <Crown className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-yellow-400" />
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent uppercase">
-                  Title Sponsor
-                </h3>
-                <Crown className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-yellow-400" />
-              </div>
-              <div className="w-16 sm:w-24 md:w-32 h-0.5 sm:h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto rounded-full"></div>
-            </div>
-
-            <div className="flex justify-center">
-              {titleSponsors.map((sponsor) => (
-                <div
-                  key={sponsor.id}
-                  className="group relative bg-gradient-to-br from-yellow-900/20 via-gray-900/80 to-yellow-900/20 backdrop-blur-sm rounded-xl sm:rounded-2xl border-2 border-yellow-500/40 overflow-hidden hover:border-yellow-500/80 transition-all duration-500 hover:shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 w-full max-w-2xl"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  <div className="relative p-8 sm:p-10 md:p-12 lg:p-16 flex flex-col items-center justify-center min-h-[250px] sm:min-h-[300px]">
-                    <div className="w-full h-40 sm:h-48 md:h-56 flex items-center justify-center mb-6">
-                      <img
-                        src={sponsor.logo}
-                        alt={sponsor.name}
-                        className="max-w-full max-h-full object-contain filter drop-shadow-2xl group-hover:scale-110 transition-all duration-500"
-                      />
-                    </div>
-                    <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-yellow-400 text-center">
-                      {sponsor.name}
-                    </h4>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Other Sponsors Section */}
+          {/* Sponsors Grid (Title sponsor removed; all sponsors shown uniformly) */}
           <div className="max-w-7xl mx-auto px-2 sm:px-0">
             <div className="text-center mb-6 sm:mb-8 md:mb-10">
               <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
