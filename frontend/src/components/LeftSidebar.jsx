@@ -8,7 +8,7 @@ export default function LeftSidebar() {
   const menuItems = [
     { label: "JUNIOR SCIENTISTS", path: "/junior-scientists" },
     { label: "GALLERY", path: "/gallery" },
-    { label: "HACKATHON", path: "/events" },
+    { label: "E-VENTURE", path: "/e-venture" },
     { label: "FAQ", path: "/faq" },
     { label: "SPONSORS", path: "/sponsors" },
   ];

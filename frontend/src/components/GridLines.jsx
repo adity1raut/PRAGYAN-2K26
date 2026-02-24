@@ -14,38 +14,46 @@ function GridLines({
   const containerRef = useRef(null);
   const styleRef = useRef(null);
 
-  // Memoize animation styles to prevent recalculation
+  const cellW = useMemo(() => 100 / verticalLines,   [verticalLines]);
+  const cellH = useMemo(() => 100 / horizontalLines, [horizontalLines]);
+
   const animationStyles = useMemo(
     () => `
     @keyframes moveDiagonal {
-      0% { transform: translate3d(-100px, -100px, 0); }
-      100% { transform: translate3d(100px, 100px, 0); }
+      0%   { transform: translate3d(-120px, -120px, 0); }
+      100% { transform: translate3d(120px,   120px, 0); }
     }
-    
     @keyframes gridPulse {
-      0%, 100% { stroke-opacity: ${strokeOpacity * 0.5}; }
-      50% { stroke-opacity: ${strokeOpacity}; }
+      0%, 100% { stroke-opacity: ${strokeOpacity * 0.4}; }
+      50%       { stroke-opacity: ${strokeOpacity}; }
     }
-    
     @keyframes slideHorizontal {
-      0% { transform: translate3d(-100px, 0, 0); }
-      100% { transform: translate3d(100px, 0, 0); }
+      0%   { transform: translate3d(-120px, 0, 0); }
+      100% { transform: translate3d(120px,  0, 0); }
     }
-    
     @keyframes slideVertical {
-      0% { transform: translate3d(0, -100px, 0); }
-      100% { transform: translate3d(0, 100px, 0); }
+      0%   { transform: translate3d(0, -120px, 0); }
+      100% { transform: translate3d(0,  120px, 0); }
     }
-    
     @keyframes gridGlow {
-      0%, 100% { 
-        stroke-opacity: ${strokeOpacity * 0.7}; 
-        filter: drop-shadow(0 0 2px ${strokeColor}); 
+      0%, 100% {
+        stroke-opacity: ${strokeOpacity * 0.6};
+        filter: drop-shadow(0 0 3px ${strokeColor});
       }
-      50% { 
-        stroke-opacity: ${Math.min(strokeOpacity * 1.2, 1)}; 
-        filter: drop-shadow(0 0 8px ${strokeColor}); 
+      50% {
+        stroke-opacity: ${Math.min(strokeOpacity * 1.4, 1)};
+        filter: drop-shadow(0 0 12px ${strokeColor}) drop-shadow(0 0 20px ${strokeColor}80);
       }
+    }
+    @keyframes dotPulse {
+      0%, 100% { opacity: ${strokeOpacity * 1.2}; r: 1.2; }
+      50%       { opacity: ${Math.min(strokeOpacity * 2.5, 1)}; r: 2.2; }
+    }
+    @keyframes scanSweep {
+      0%   { transform: translateY(-5%); opacity: 0; }
+      5%   { opacity: 1; }
+      95%  { opacity: 1; }
+      100% { transform: translateY(105%); opacity: 0; }
     }
   `,
     [strokeColor, strokeOpacity],
@@ -55,30 +63,22 @@ function GridLines({
     const gridContainer = containerRef.current;
     if (!gridContainer) return;
 
-    // Remove old style if exists
     if (styleRef.current?.parentNode) {
       styleRef.current.parentNode.removeChild(styleRef.current);
     }
 
-    // Create and cache style element
     const style = document.createElement("style");
     style.textContent = animationStyles;
     document.head.appendChild(style);
     styleRef.current = style;
 
-    // Use DocumentFragment for better performance
+    const ns = "http://www.w3.org/2000/svg";
     const fragment = document.createDocumentFragment();
 
-    const gridSvg = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "svg",
-    );
+    const gridSvg = document.createElementNS(ns, "svg");
     gridSvg.setAttribute("width", "100%");
     gridSvg.setAttribute("height", "100%");
-    gridSvg.setAttribute(
-      "viewBox",
-      "-100 -100 calc(100vw + 200) calc(100vh + 200)",
-    );
+    gridSvg.setAttribute("viewBox", "-120 -120 calc(100vw + 240) calc(100vh + 240)");
     gridSvg.setAttribute("preserveAspectRatio", "xMidYMid slice");
     gridSvg.style.cssText = `
       position: absolute;
@@ -87,24 +87,17 @@ function GridLines({
       animation: moveDiagonal ${speed}s linear infinite;
     `;
 
-    // Create defs for reusable patterns (better performance)
-    const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+    const defs = document.createElementNS(ns, "defs");
 
-    // Create line pattern for horizontal lines
+    // ── Horizontal line pattern ─────────────────────────────────────────
     if (horizontalLines > 0) {
-      const hPattern = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "pattern",
-      );
-      hPattern.setAttribute("id", "hGrid");
-      hPattern.setAttribute("width", "100");
-      hPattern.setAttribute("height", `${100 / horizontalLines}`);
-      hPattern.setAttribute("patternUnits", "userSpaceOnUse");
+      const hPat = document.createElementNS(ns, "pattern");
+      hPat.setAttribute("id", "hGrid");
+      hPat.setAttribute("width", "100");
+      hPat.setAttribute("height", String(cellH));
+      hPat.setAttribute("patternUnits", "userSpaceOnUse");
 
-      const hLine = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "line",
-      );
+      const hLine = document.createElementNS(ns, "line");
       hLine.setAttribute("x1", "0");
       hLine.setAttribute("y1", "0");
       hLine.setAttribute("x2", "100");
@@ -113,25 +106,19 @@ function GridLines({
       hLine.setAttribute("stroke-width", String(strokeWidth));
       hLine.setAttribute("stroke-opacity", String(strokeOpacity));
 
-      hPattern.appendChild(hLine);
-      defs.appendChild(hPattern);
+      hPat.appendChild(hLine);
+      defs.appendChild(hPat);
     }
 
-    // Create line pattern for vertical lines
+    // ── Vertical line pattern ───────────────────────────────────────────
     if (verticalLines > 0) {
-      const vPattern = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "pattern",
-      );
-      vPattern.setAttribute("id", "vGrid");
-      vPattern.setAttribute("width", `${100 / verticalLines}`);
-      vPattern.setAttribute("height", "100");
-      vPattern.setAttribute("patternUnits", "userSpaceOnUse");
+      const vPat = document.createElementNS(ns, "pattern");
+      vPat.setAttribute("id", "vGrid");
+      vPat.setAttribute("width", String(cellW));
+      vPat.setAttribute("height", "100");
+      vPat.setAttribute("patternUnits", "userSpaceOnUse");
 
-      const vLine = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "line",
-      );
+      const vLine = document.createElementNS(ns, "line");
       vLine.setAttribute("x1", "0");
       vLine.setAttribute("y1", "0");
       vLine.setAttribute("x2", "0");
@@ -140,88 +127,128 @@ function GridLines({
       vLine.setAttribute("stroke-width", String(strokeWidth));
       vLine.setAttribute("stroke-opacity", String(strokeOpacity));
 
-      vPattern.appendChild(vLine);
-      defs.appendChild(vPattern);
+      vPat.appendChild(vLine);
+      defs.appendChild(vPat);
     }
+
+    // ── Intersection dot pattern ────────────────────────────────────────
+    const dotPat = document.createElementNS(ns, "pattern");
+    dotPat.setAttribute("id", "dotGrid");
+    dotPat.setAttribute("width",  String(cellW));
+    dotPat.setAttribute("height", String(cellH));
+    dotPat.setAttribute("patternUnits", "userSpaceOnUse");
+
+    const dot = document.createElementNS(ns, "circle");
+    dot.setAttribute("cx", "0");
+    dot.setAttribute("cy", "0");
+    dot.setAttribute("r",  "1.5");
+    dot.setAttribute("fill", strokeColor);
+    dot.setAttribute("fill-opacity", String(Math.min(strokeOpacity * 2, 0.6)));
+    if (enableGlow) {
+      dot.style.cssText = `animation: dotPulse ${speed * 0.7}s infinite ease-in-out;`;
+    }
+
+    dotPat.appendChild(dot);
+    defs.appendChild(dotPat);
+
+    // ── Glow filter ─────────────────────────────────────────────────────
+    const filter = document.createElementNS(ns, "filter");
+    filter.setAttribute("id", "lineGlow");
+    filter.setAttribute("x", "-20%");
+    filter.setAttribute("y", "-20%");
+    filter.setAttribute("width", "140%");
+    filter.setAttribute("height", "140%");
+
+    const feGaussian = document.createElementNS(ns, "feGaussianBlur");
+    feGaussian.setAttribute("stdDeviation", "2");
+    feGaussian.setAttribute("result", "blur");
+
+    const feMerge = document.createElementNS(ns, "feMerge");
+    const feMergeNode1 = document.createElementNS(ns, "feMergeNode");
+    feMergeNode1.setAttribute("in", "blur");
+    const feMergeNode2 = document.createElementNS(ns, "feMergeNode");
+    feMergeNode2.setAttribute("in", "SourceGraphic");
+    feMerge.appendChild(feMergeNode1);
+    feMerge.appendChild(feMergeNode2);
+
+    filter.appendChild(feGaussian);
+    filter.appendChild(feMerge);
+    defs.appendChild(filter);
 
     gridSvg.appendChild(defs);
 
-    // Use patterns instead of individual lines for better performance
+    // ── Grid rects ──────────────────────────────────────────────────────
     if (horizontalLines > 0) {
-      const hRect = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "rect",
-      );
+      const hRect = document.createElementNS(ns, "rect");
       hRect.setAttribute("width", "100%");
       hRect.setAttribute("height", "100%");
       hRect.setAttribute("fill", "url(#hGrid)");
-      hRect.style.cssText = enableGlow
-        ? `animation: gridPulse ${speed * 0.8}s infinite alternate ease-in-out;`
-        : "";
+      if (enableGlow) {
+        hRect.style.cssText = `animation: gridPulse ${speed * 0.9}s infinite alternate ease-in-out;`;
+      }
       gridSvg.appendChild(hRect);
     }
 
     if (verticalLines > 0) {
-      const vRect = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "rect",
-      );
+      const vRect = document.createElementNS(ns, "rect");
       vRect.setAttribute("width", "100%");
       vRect.setAttribute("height", "100%");
       vRect.setAttribute("fill", "url(#vGrid)");
-      vRect.style.cssText = enableGlow
-        ? `animation: gridPulse ${speed * 0.8}s infinite alternate ease-in-out 0.3s;`
-        : "";
+      if (enableGlow) {
+        vRect.style.cssText = `animation: gridPulse ${speed * 0.9}s infinite alternate ease-in-out 0.4s;`;
+      }
       gridSvg.appendChild(vRect);
     }
 
-    // Add special moving lines (optional for better performance)
-    if (enableMovingLines) {
-      const movingLinesCount = 3;
-      for (let i = 0; i < movingLinesCount; i++) {
-        // Moving horizontal line
-        const movingHLine = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "line",
-        );
-        movingHLine.setAttribute("x1", "0");
-        movingHLine.setAttribute("y1", `${20 + i * 30}%`);
-        movingHLine.setAttribute("x2", "100%");
-        movingHLine.setAttribute("y2", `${20 + i * 30}%`);
-        movingHLine.setAttribute("stroke", strokeColor);
-        movingHLine.setAttribute("stroke-width", String(strokeWidth * 2));
-        movingHLine.setAttribute(
-          "stroke-opacity",
-          String(Math.min(strokeOpacity * 1.8, 1)),
-        );
-        movingHLine.style.cssText = `
-          animation: slideHorizontal ${speed * 1.5}s linear infinite ${i * 2}s
-          ${enableGlow ? `, gridGlow 4s infinite ease-in-out ${i * 2}s` : ""};
-          will-change: transform;
-        `;
-        gridSvg.appendChild(movingHLine);
+    // Intersection dots layer
+    const dotRect = document.createElementNS(ns, "rect");
+    dotRect.setAttribute("width", "100%");
+    dotRect.setAttribute("height", "100%");
+    dotRect.setAttribute("fill", "url(#dotGrid)");
+    if (enableGlow) {
+      dotRect.setAttribute("filter", "url(#lineGlow)");
+    }
+    gridSvg.appendChild(dotRect);
 
-        // Moving vertical line
-        const movingVLine = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "line",
-        );
-        movingVLine.setAttribute("x1", `${25 + i * 25}%`);
-        movingVLine.setAttribute("y1", "0");
-        movingVLine.setAttribute("x2", `${25 + i * 25}%`);
-        movingVLine.setAttribute("y2", "100%");
-        movingVLine.setAttribute("stroke", strokeColor);
-        movingVLine.setAttribute("stroke-width", String(strokeWidth * 2));
-        movingVLine.setAttribute(
-          "stroke-opacity",
-          String(Math.min(strokeOpacity * 1.8, 1)),
-        );
-        movingVLine.style.cssText = `
-          animation: slideVertical ${speed * 1.5}s linear infinite ${i * 2 + 1}s
-          ${enableGlow ? `, gridGlow 4s infinite ease-in-out ${i * 2 + 1}s` : ""};
+    // ── Moving accent lines ─────────────────────────────────────────────
+    if (enableMovingLines) {
+      const movingCount = 5;
+      for (let i = 0; i < movingCount; i++) {
+        // Horizontal moving line
+        const mH = document.createElementNS(ns, "line");
+        mH.setAttribute("x1", "0");
+        mH.setAttribute("y1", `${15 + i * 17}%`);
+        mH.setAttribute("x2", "100%");
+        mH.setAttribute("y2", `${15 + i * 17}%`);
+        mH.setAttribute("stroke", strokeColor);
+        mH.setAttribute("stroke-width", String(strokeWidth * 2.5));
+        mH.setAttribute("stroke-opacity", String(Math.min(strokeOpacity * 2, 0.9)));
+        if (enableGlow) mH.setAttribute("filter", "url(#lineGlow)");
+        mH.style.cssText = `
+          animation:
+            slideHorizontal ${speed * 1.6}s linear infinite ${i * 1.8}s
+            ${enableGlow ? `, gridGlow ${3 + i * 0.5}s infinite ease-in-out ${i * 1.8}s` : ""};
           will-change: transform;
         `;
-        gridSvg.appendChild(movingVLine);
+        gridSvg.appendChild(mH);
+
+        // Vertical moving line
+        const mV = document.createElementNS(ns, "line");
+        mV.setAttribute("x1", `${20 + i * 16}%`);
+        mV.setAttribute("y1", "0");
+        mV.setAttribute("x2", `${20 + i * 16}%`);
+        mV.setAttribute("y2", "100%");
+        mV.setAttribute("stroke", strokeColor);
+        mV.setAttribute("stroke-width", String(strokeWidth * 2.5));
+        mV.setAttribute("stroke-opacity", String(Math.min(strokeOpacity * 2, 0.9)));
+        if (enableGlow) mV.setAttribute("filter", "url(#lineGlow)");
+        mV.style.cssText = `
+          animation:
+            slideVertical ${speed * 1.6}s linear infinite ${i * 1.8 + 0.9}s
+            ${enableGlow ? `, gridGlow ${3 + i * 0.5}s infinite ease-in-out ${i * 1.8 + 0.9}s` : ""};
+          will-change: transform;
+        `;
+        gridSvg.appendChild(mV);
       }
     }
 
@@ -229,7 +256,23 @@ function GridLines({
     gridContainer.innerHTML = "";
     gridContainer.appendChild(fragment);
 
-    // Cleanup
+    // ── Scan sweep overlay (separate div so it doesn't move with grid) ──
+    if (enableGlow) {
+      const scan = document.createElement("div");
+      scan.style.cssText = `
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(to bottom, transparent, ${strokeColor}55, transparent);
+        pointer-events: none;
+        animation: scanSweep ${speed * 2.2}s linear infinite;
+        will-change: transform, opacity;
+      `;
+      gridContainer.appendChild(scan);
+    }
+
     return () => {
       if (styleRef.current?.parentNode) {
         styleRef.current.parentNode.removeChild(styleRef.current);
@@ -246,6 +289,8 @@ function GridLines({
     enableMovingLines,
     enableGlow,
     animationStyles,
+    cellW,
+    cellH,
   ]);
 
   return (

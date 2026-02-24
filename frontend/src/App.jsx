@@ -18,6 +18,8 @@ const Sponsors = lazy(() => import("./Sponsors/Sponsors"));
 const Guest = lazy(() => import("./Guest/Guest"));
 const SchedulePage = lazy(() => import("./Schedule/Schedule"));
 const SpecialEvent = lazy(() => import("./SpecialEvent/SpecialEvent"));
+const EVenturePage = lazy(() => import("./EVenture/EVenturePage"));
+const EventDetailPage = lazy(() => import("./Events/EventDetailPage"));
 
 // Loading component
 const PageLoader = () => (
@@ -119,8 +121,10 @@ function App() {
               <Route path="/events" element={<EventPage />} />
               <Route path="/events/:category" element={<EventPage />} />
               <Route path="/events/:category/:department" element={<EventPage />} />
+              <Route path="/event/:eventId" element={<EventDetailPage />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/junior-scientists" element={<SpecialEvent />} />
+              <Route path="/e-venture" element={<EVenturePage />} />
               <Route path="/schedule" element={<SchedulePage />} />
               <Route path="/team" element={<TeamPage />} />
               <Route path="/gallery" element={<Gallery />} />
