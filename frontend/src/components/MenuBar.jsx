@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   Home,
@@ -11,6 +11,7 @@ import {
   Star,
   Clock,
   Zap,
+  TrendingUp,
 } from "lucide-react";
 
 const MenuBar = () => {
@@ -48,18 +49,19 @@ const MenuBar = () => {
     };
   }, [isMenuOpen]);
 
-  // Updated menu items matching App.jsx routes with icons
+  // Menu items matching desktop navigation (Right sidebar + Left sidebar order)
   const menuItems = [
     { name: "Home", href: "/", icon: Home },
     { name: "About", href: "/about", icon: Info },
     { name: "Events", href: "/events", icon: Calendar },
-    { name: "FAQ", href: "/faq", icon: HelpCircle },
-    { name: "Junior Scientists", href: "/junior-scientists", icon: Zap, featured: true },
-    { name: "Schedule", href: "/schedule", icon: Clock },
     { name: "Team", href: "/team", icon: Users },
+    { name: "Guest", href: "/guest", icon: Star },
+    { name: "Schedule", href: "/schedule", icon: Clock },
+    { name: "Junior Scientists", href: "/junior-scientists", icon: Zap, featured: true },
     { name: "Gallery", href: "/gallery", icon: Image },
+    { name: "E-Venture", href: "/e-venture", icon: TrendingUp },
+    { name: "FAQ", href: "/faq", icon: HelpCircle },
     { name: "Sponsors", href: "/sponsors", icon: Award },
-    { name: "VIP Guests", href: "/guest", icon: Star },
   ];
 
   const handleNavigation = (href) => {
