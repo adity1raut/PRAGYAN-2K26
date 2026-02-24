@@ -9,7 +9,7 @@ import { useNavigate, useParams } from "react-router-dom";
 export default function EventPage() {
   const navigate = useNavigate();
   const { category, department } = useParams();
-  const [selectedCategory, setSelectedCategory] = useState("Departmental");
+  const [selectedCategory, setSelectedCategory] = useState("Flagship");
   const [selectedDepartment, setSelectedDepartment] = useState(null);
 
   // Handle URL parameters on mount and when they change
@@ -23,8 +23,8 @@ export default function EventPage() {
         setSelectedCategory(categoryKey);
       }
     } else {
-      // Default to Departmental if no category in URL
-      setSelectedCategory("Departmental");
+      // Default to Flagship if no category in URL
+      setSelectedCategory("Flagship");
     }
     if (department) {
       setSelectedDepartment(decodeURIComponent(department));
@@ -118,13 +118,13 @@ export default function EventPage() {
   // Handle back to departments
   const handleBackToDepartments = () => {
     setSelectedDepartment(null);
-    navigate('/events/departmental');
+    navigate("/events/departmental");
   };
 
   // Handle back to creative events
   const handleBackToCreativeEvents = () => {
     setSelectedDepartment(null);
-    navigate('/events/creative');
+    navigate("/events/creative");
   };
 
   // For non-departmental categories
@@ -332,8 +332,31 @@ export default function EventPage() {
               </div>
             )}
 
-            {/* Non-Departmental/Creative Events Display */}
-            {selectedCategory !== "Departmental" && selectedCategory !== "creative" && (
+            {/* Flagship Events Display */}
+            {selectedCategory === "Flagship" && (
+              <div className="max-w-6xl mx-auto px-2 sm:px-0">
+                <NeonEventCards events={currentEvents} />
+              </div>
+            )}
+
+            {/* E-Venture Events Display */}
+            {selectedCategory === "eVenture" && (
+              <div className="max-w-6xl mx-auto px-2 sm:px-0">
+                <div className="mb-8 text-center">
+                  <p className="text-sm sm:text-base text-yellow-400 font-semibold tracking-wider uppercase">
+                    Pragyaa × E-CELL presents
+                  </p>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-1 tracking-wider">
+                    E-Venture
+                  </h2>
+                  <div className="w-24 h-0.5 bg-gradient-to-r from-yellow-500 via-red-500 to-yellow-500 mx-auto rounded-full mt-3 animate-pulse"></div>
+                </div>
+                <NeonEventCards events={currentEvents} />
+              </div>
+            )}
+
+            {/* Non-Departmental/Creative/Flagship/eVenture Events Display */}
+            {selectedCategory !== "Departmental" && selectedCategory !== "creative" && selectedCategory !== "Flagship" && selectedCategory !== "eVenture" && (
               <div className="max-w-6xl mx-auto px-2 sm:px-0">
                 {uniqueTitles.map((title) => {
                   const filtered = currentEvents.filter((e) =>

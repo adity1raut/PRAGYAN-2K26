@@ -1,5 +1,178 @@
 
 const eventData = {
+  Flagship: {
+    name: "Flagship Events",
+    events: [
+      {
+        id: "Inno Verse",
+        title: "Inno Verse",
+        tagline: "Project Exhibition & Competition.",
+        description:
+          "InnoVerse in PRAGYAA-Multiverse of Innovation, is a dynamic showcase of engineering talent where students present projects that blend technology, innovation, and multidisciplinary thinking. The expo serves as a platform for emerging technologists to demonstrate working models, research projects, design solutions, and technical creativity that contribute to societal and industrial progress.",
+        icon: "Trophy",
+        venue: "PMC-EMC Road",
+        prizePool: 30000,
+        entryFee: 199,
+        members: 4,
+        coordinators: [
+          { name: "Krishna Gaikwad", phone: "8767154816" },
+          { name: "Hitesh Khandekar", phone: "8855953179" }
+        ],
+        faculty: "Dr Atul Shinde",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Eligibility & Team",
+            items: [
+              "Individual or team participation (max 4 members per team)",
+              "Valid college ID is mandatory for all participants",
+              "Entry fee: ₹199 per team (non-refundable) — includes participation certificate and exhibition space",
+              "Open to engineering, diploma, and science students"
+            ]
+          },
+          {
+            section: "Project Domains",
+            items: [
+              "Technovision (Embedded Intelligence): Robotics, IoT, Embedded Systems",
+              "Energize & Mobility (Power & Mechanics): Electric Vehicles, battery management, renewable energy generators",
+              "AgriTech Solutions (Mechanizing Agriculture): Automated irrigation, crop monitoring drones, harvesting bots"
+            ]
+          },
+          {
+            section: "Presentation Format",
+            items: [
+              "Setup time as per event schedule",
+              "5–7 minute project presentation followed by 2–3 minute Q&A",
+              "Must explain: problem statement, working principle, innovation/application, and feasibility/future scope",
+              "Working prototype or simulation along with a poster must be presented"
+            ]
+          },
+          {
+            section: "Judging Criteria",
+            items: [
+              "Innovation and originality of the idea",
+              "Technical implementation and correctness",
+              "Practicality and real-world relevance",
+              "Quality of demonstration",
+              "Presentation and communication skills"
+            ]
+          },
+          {
+            section: "Disqualification",
+            items: [
+              "Cheating or plagiarism will result in immediate disqualification",
+              "Use of unsafe wiring or hazardous materials is not permitted",
+              "Misbehaviour or failure to follow instructions leads to disqualification"
+            ]
+          }
+        ]
+      },
+      {
+        id: "Vision Edge",
+        title: "Vision Edge",
+        tagline: "National Level Poster Presentation",
+        description:
+          "A national-level poster presentation competition at PRAGYAA, where students from across the country showcase their innovative ideas and projects. This platform focuses on technology for a sustainable and intelligent future, encouraging creativity, research, and impactful solutions that can shape tomorrow.",
+        icon: "Trophy",
+        prizePool: 10000,
+        entryFee: 99,
+        members: 2,
+        coordinators: [
+          { name: "Dipali Wadwale", phone: "9763212227" },
+          { name: "Vijay Shinde", phone: "8446250150" }
+        ],
+        faculty: "Dr Atul Shinde",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Theme & Eligibility",
+            items: [
+              "Theme: \"Technology for a Sustainable and Intelligent Future\"",
+              "Open to Diploma, UG, and PG students",
+              "Individual or team (max 4 members); interdisciplinary teams are allowed",
+              "Entry fee: ₹99 per team/individual (non-refundable)",
+              "One poster per team/individual only"
+            ]
+          },
+          {
+            section: "Poster Specifications",
+            items: [
+              "Size: A1 or A2, portrait orientation",
+              "Printed or hand-drawn posters are accepted",
+              "Poster must be self-supporting (no wall attachment needed)",
+              "Required sections: Title, Participant Name(s), Institution, Problem Statement/Objective, Methodology/Concept, Results/Expected Outcomes, Conclusion, References"
+            ]
+          },
+          {
+            section: "Presentation",
+            items: [
+              "3–5 minutes per team/individual",
+              "Cover: research motivation, technical approach, innovation/relevance, key outcomes",
+              "Late submissions will not be accepted"
+            ]
+          },
+          {
+            section: "Ethics & Rules",
+            items: [
+              "No plagiarism; AI tools limited to assistance only — core ideas must be participant's own work",
+              "Judges' decisions are final and binding",
+              "All participants receive participation certificates; best posters receive merit certificates and prizes"
+            ]
+          },
+          {
+            section: "Coordinators",
+            items: [
+              "Mohit Kumare – 8080720803",
+              "Shreyansh Rajput – 8308032884"
+            ]
+          }
+        ]
+      },
+      {
+        id: "AI Bootcamp",
+        title: "AI Bootcamp",
+        tagline: "Hands-on Artificial Intelligence Workshop",
+        description:
+          "A flagship hands-on AI Bootcamp at PRAGYAA where participants explore the fundamentals of Artificial Intelligence and Machine Learning through practical sessions, guided workshops, and real-world problem solving. Ideal for enthusiasts looking to kickstart their journey into the world of AI.",
+        icon: "Trophy",
+        venue: "Seminar Hall",
+        entryFee: 199,
+        members: 1,
+        coordinators: [{ name: "PRAGYAA Team", phone: "8080720803" }],
+        faculty: "Dr Atul Shinde",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Participation",
+            items: [
+              "Individual participation; open to all students",
+              "Entry fee: ₹199 (non-refundable)",
+              "Valid college ID required",
+              "Prior AI/ML knowledge is not mandatory"
+            ]
+          },
+          {
+            section: "Workshop Format",
+            items: [
+              "Hands-on practical sessions on AI/ML fundamentals",
+              "Guided workshops with real-world problem-solving exercises",
+              "Participants must bring their own laptops (preferred)",
+              "All necessary software and datasets will be provided"
+            ]
+          },
+          {
+            section: "General Rules",
+            items: [
+              "Participants must be present for the entire duration",
+              "No disruptive behaviour during sessions",
+              "Coordinators' instructions must be followed at all times"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
   Departmental: {
     name: "Departmental Events",
     events: [
@@ -9,49 +182,113 @@ const eventData = {
         tagline: "Industry Defined Problem (IDP)",
         description:
           "Industry Defined Problem (IDP): A real-life challenge where students apply chemical engineering knowledge to solve industry-sourced problems and present practical solutions.",
-          venue: "Chemical Engineering Department",
-          icon: "Users",
-          prizePool: 10000,
-          entryFee: 199,
-          members:4,
-          coordinators: [
-            {
-              name: "Mr. Harshit Mengre ",
-              phone: "7720950041"
-            },
-            {
-              name: "Atharva Bhosale",
-              phone: "7499478708"
-            }
-          ],
-          faculty:"Dr. A. P. Chauhan",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
-        
+        venue: "Chemical Engineering Department",
+        icon: "Users",
+        prizePool: 10000,
+        entryFee: 199,
+        members: 4,
+        coordinators: [
+          { name: "Mr. Harshit Mengre", phone: "7720950041" },
+          { name: "Atharva Bhosale", phone: "7499478708" }
+        ],
+        faculty: "Dr. A. P. Chauhan",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Theme & Eligibility",
+            items: [
+              "Theme: Green & Sustainable Chemical Engineering",
+              "Open to Diploma, UG, and PG students of Chemical Engineering and allied disciplines",
+              "Inter-college teams are allowed",
+              "Teams of max 4 members; each member can be in only one team"
+            ]
+          },
+          {
+            section: "Event Format",
+            items: [
+              "Teams receive 2–3 industry-defined problem statements related to green engineering, sustainable processes, energy efficiency, waste minimization, and environmental compliance",
+              "Teams must select one problem and present their solution before an expert panel",
+              "Time limit for presentation as per event schedule"
+            ]
+          },
+          {
+            section: "Judging Criteria",
+            items: [
+              "Problem understanding and clarity",
+              "Innovation and originality of the proposed solution",
+              "Technical accuracy and scientific validity",
+              "Sustainability impact",
+              "Feasibility of implementation",
+              "Presentation and communication skills"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "Plagiarism leads to immediate disqualification",
+              "Valid college ID mandatory for all participants",
+              "Judges' and coordinators' decisions are final"
+            ]
+          }
+        ]
       },
       {
         id: "ChemTrek (Quiztillation)",
         title: "ChemTrek (Quiztillation)",
         tagline: "The Ultimate Chemical Quiz",
         description:
-          "Quiztillation: A fast-paced quiz focused on core chemical engineering topics tested through multiple rounds.       ",
+          "Quiztillation: A fast-paced quiz focused on core chemical engineering topics tested through multiple rounds.",
         icon: "Users",
         venue: "Chemical Engineering Department",
         prizePool: 3000,
-          entryFee: 49,
-          members:1,
-          coordinators: [
-            {
-              name: "Mr. Harshit Mengre ",
-              phone: "7720950041"
-            },
-            {
-              name: "Atharva Bhosale",
-              phone: "7499478708"
-            }
-          ],
-          faculty:"Dr. A. P. Chauhan",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
-
+        entryFee: 49,
+        members: 1,
+        coordinators: [
+          { name: "Mr. Harshit Mengre", phone: "7720950041" },
+          { name: "Atharva Bhosale", phone: "7499478708" }
+        ],
+        faculty: "Dr. A. P. Chauhan",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Eligibility",
+            items: [
+              "Open to undergraduate Chemical Engineering and allied discipline students (all years and colleges)",
+              "Individual participation only",
+              "National level competition — inter-college participation encouraged"
+            ]
+          },
+          {
+            section: "Quiz Format",
+            items: [
+              "30 objective questions, 2 marks each",
+              "Total duration: 60 minutes",
+              "3 different question sets distributed to prevent copying",
+              "No negative marking"
+            ]
+          },
+          {
+            section: "Topics Covered",
+            items: [
+              "Fluid Mechanics",
+              "Mass Transfer",
+              "Heat Transfer",
+              "Thermodynamics",
+              "Chemical Reaction Engineering",
+              "Environmental Engineering",
+              "Membrane Technology"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "No electronic gadgets (mobiles, smartwatches, calculators) allowed",
+              "Participants must report 10 minutes before the start",
+              "Tie-breaker round at organizer's discretion",
+              "Judges' decisions are final"
+            ]
+          }
+        ]
       },
       {
         id: "Mechaverse (Contraption Cascade)",
@@ -62,21 +299,53 @@ const eventData = {
         icon: "Users",
         venue: "Mechanical Engineering Department",
         prizePool: 5000,
-          entryFee: 199,
-          members:4,
-          coordinators: [
-            {
-              name: "Mr. Balaji Kasture",
-              phone: "7249438491"
-            },
-            {
-              name: "Balaji Kalyankar",
-              phone: "9699536593"
-            }
-          ],
-          faculty:"Prof. M. D. Sukre",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
-
+        entryFee: 199,
+        members: 4,
+        coordinators: [
+          { name: "Mr. Balaji Kasture", phone: "7249438491" },
+          { name: "Balaji Kalyankar", phone: "9699536593" }
+        ],
+        faculty: "Prof. M. D. Sukre",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Team & Setup",
+            items: [
+              "Teams of 4–5 members",
+              "Entry fee: ₹199 per team",
+              "Objective: move a ball from one end of the contraption to the other through a series of conversions",
+              "Build area: 1.5m × 1.5m (no height limit)",
+              "Minimum 7 conversions required to qualify"
+            ]
+          },
+          {
+            section: "Event Rules",
+            items: [
+              "2 hours to assemble and test the contraption on-site",
+              "Maximum 2 attempts allowed; best attempt counts",
+              "Allowed paths: loops, slopes, air routes, water routes",
+              "All materials must be brought by participants"
+            ]
+          },
+          {
+            section: "Scoring",
+            items: [
+              "Completeness: 40 points",
+              "Creativity: 30 points",
+              "10 points per conversion",
+              "Bonus: +5 pts per loop, +5 pts for a jump, +10 pts for climbing 50 cm height",
+              "Penalty: -5 pts per hand touch; ball crossing boundary = restart"
+            ]
+          },
+          {
+            section: "Awards",
+            items: [
+              "Best in Show",
+              "Most Creative",
+              "Most Functional"
+            ]
+          }
+        ]
       },
       {
         id: "Mechaverse (CAD-WAR)",
@@ -87,536 +356,1209 @@ const eventData = {
         icon: "Users",
         venue: "Mechanical Engineering Department",
         prizePool: 5000,
-          entryFee: 99,
-          members:4,
-          coordinators: [
-            {
-              name: "Mr. Balaji Kasture",
-              phone: "7249438491"
-            },
-            {
-              name: "Balaji Kalyankar",
-              phone: "9699536593"
-            }
-          ],
-          faculty:"Prof. M. D. Sukre",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 99,
+        members: 4,
+        coordinators: [
+          { name: "Mr. Balaji Kasture", phone: "7249438491" },
+          { name: "Balaji Kalyankar", phone: "9699536593" }
+        ],
+        faculty: "Prof. M. D. Sukre",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Eligibility & Venue",
+            items: [
+              "Open to Diploma / BE / BTech students",
+              "Individual (1v1) format — no teams",
+              "Valid college ID mandatory",
+              "Date: 1 March 2026, 11:00 AM – 05:00 PM",
+              "Venue: PLM Lab, Mechanical Engineering Department",
+              "Software: AutoCAD"
+            ]
+          },
+          {
+            section: "Rounds",
+            items: [
+              "Round 1 (45–60 min): 3D modeling task — evaluated on accuracy, constraints, and features",
+              "Round 2 (60–90 min): Complex 3D part modeling from 2D drawing / isometric view / physical component",
+              "Round 3 (90–120 min): Assembly modeling / reverse engineering / creative design challenge"
+            ]
+          },
+          {
+            section: "Evaluation Criteria",
+            items: [
+              "Dimensional Accuracy: 30–40%",
+              "Features and Constraints: 20%",
+              "Design Intent: 10%",
+              "Neat Modeling: 10%",
+              "File Organization: 10%",
+              "Completion Time: 10%"
+            ]
+          },
+          {
+            section: "Prize Distribution",
+            items: [
+              "1st Place: ₹3,000 + Trophy + Certificate",
+              "2nd Place: ₹1,500 + Certificate",
+              "3rd Place: ₹500 + Certificate",
+              "Participation certificates for all"
+            ]
+          }
+        ]
       },
       {
-        id: "Mechaverse (Marketing Mania) ",
-        title: "Mechaverse (Marketing Mania) ",
-        tagline: "Solve.Innovate.Dominate.",
+        id: "Mechaverse (Marketing Mania)",
+        title: "Mechaverse (Marketing Mania)",
+        tagline: "Solve. Innovate. Dominate.",
         description:
           "A mechanical puzzle event focused on gear assemblies, where participants analyze, identify, and solve gear-based challenges testing mechanical intuition and problem-solving.",
         icon: "Users",
         venue: "Mechanical Engineering Department",
-        prizePool:5000,
-        members:2,
+        prizePool: 5000,
+        members: 2,
         coordinators: [
+          { name: "Mr. Balaji Kasture", phone: "7249438491" },
+          { name: "Balaji Kalyankar", phone: "9699536593" }
+        ],
+        faculty: "Prof. M. D. Sukre",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
           {
-            name: "Mr. Balaji Kasture",
-            phone: "7249438491"
+            section: "Eligibility",
+            items: [
+              "Open to all students",
+              "Individual or group (max 4 members per team)",
+              "Valid college ID required",
+              "Date: 28 Feb 2026, 12:15 PM – 5:00 PM",
+              "Venue: PLM Lab, Mechanical Engineering Department",
+              "Format: Shark Tank-inspired"
+            ]
           },
           {
-            name: "Balaji Kalyankar",
-            phone: "9699536593"
+            section: "Rounds",
+            items: [
+              "Round 1 — Product Review & Advertising Challenge: Given a product, participants must review and advertise/sell it convincingly",
+              "Round 2 — Innovation & Improvement Presentation: Propose improvements to a product or concept (PPT presentation recommended)",
+              "Round 3 (Optional) — Problem Solving & Q&A: Critical thinking and decision-making under pressure"
+            ]
+          },
+          {
+            section: "Judging Criteria",
+            items: [
+              "Creativity & Originality",
+              "Communication Skills",
+              "Innovation & Practical Thinking",
+              "Confidence & Stage Presence",
+              "Team Coordination"
+            ]
+          },
+          {
+            section: "Awards",
+            items: [
+              "1st Place: Certificate + Trophy",
+              "2nd Place: Certificate",
+              "3rd Place: Certificate",
+              "Participation certificates for all"
+            ]
           }
-        ],
-        faculty:"Prof. M. D. Sukre",
-        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        ]
       },
       {
-        id: "TESA-Texplorer2 ",
-        title: "TESA-Texplorer ",
+        id: "Mechaverse (PESA Design-A-Thon)",
+        title: "Mechaverse (PESA Design-A-Thon)",
+        tagline: "Design for a Sustainable Future",
+        description:
+          "PESA Design-A-Thon: A design competition where participants create innovative solutions addressing real-world mechanical and sustainability challenges, blending engineering creativity with practical problem solving.",
+        icon: "Users",
+        venue: "Mechanical Engineering Department",
+        prizePool: 5000,
+        entryFee: 199,
+        members: 4,
+        coordinators: [
+          { name: "Mr. Balaji Kasture", phone: "7249438491" },
+          { name: "Balaji Kalyankar", phone: "9699536593" }
+        ],
+        faculty: "Prof. M. D. Sukre",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Eligibility & Team",
+            items: [
+              "Open to all engineering students",
+              "Teams of 2–4 members; interdisciplinary teams encouraged",
+              "Valid college ID mandatory",
+              "Entry fee: ₹199 per team"
+            ]
+          },
+          {
+            section: "Event Format",
+            items: [
+              "Participants receive a real-world mechanical or sustainability challenge",
+              "Teams must design an innovative solution within the allotted time",
+              "Presentation of design concept, feasibility, and impact before judges",
+              "CAD drawings, sketches, or prototypes may be used to present the design"
+            ]
+          },
+          {
+            section: "Judging Criteria",
+            items: [
+              "Design innovation and creativity",
+              "Technical feasibility and accuracy",
+              "Sustainability and environmental consideration",
+              "Presentation quality and clarity",
+              "Practicality of the proposed solution"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "All design work must be original; plagiarism leads to disqualification",
+              "Judges' decisions are final",
+              "Participants must follow all venue and event guidelines"
+            ]
+          }
+        ]
+      },
+      {
+        id: "TESA-Texplorer (Style Your Partner)",
+        title: "TESA-Texplorer (Style Your Partner)",
         tagline: "Style your partner",
         description:
-          "Style Your Partner: A fun and creative event where participants design and style their partners using textile materials, showcasing innovation in fabric draping, color coordination, and trendsetting looks",
+          "Style Your Partner: A fun and creative event where participants design and style their partners using textile materials, showcasing innovation in fabric draping, color coordination, and trendsetting looks.",
         icon: "Users",
         venue: "Textile Engineering Department",
         prizePool: 12000,
-          entryFee: 199,
-          members:2,
-          coordinators: [
-            {
-              name: "Mr. Hanuman Kadam",
-              phone: "9067277491"
-            },
-            {
-              name: "Jaydeep Kadam",
-              phone: "8637763753"
-            }
-          ],
-          faculty:"Prof. Devashish Patil",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 199,
+        members: 2,
+        coordinators: [
+          { name: "Mr. Hanuman Kadam", phone: "9067277491" },
+          { name: "Jaydeep Kadam", phone: "8637763753" }
+        ],
+        faculty: "Prof. Devashish Patil",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Team Structure",
+            items: [
+              "Designer + Model pairs only — no solo entries",
+              "Designer stitches the outfit; model performs the ramp walk",
+              "Each team must consist of exactly 2 members: one designer, one model"
+            ]
+          },
+          {
+            section: "Design Preparation",
+            items: [
+              "Designer must prepare: Mood Board, Colour Board, Cost Sheet, and Inspiration Board",
+              "Submission of these boards is mandatory for judging",
+              "Instrumental music only (MP3/WAV format) — must be submitted 48 hours before the event"
+            ]
+          },
+          {
+            section: "Themes",
+            items: [
+              "Colour Psychology",
+              "Indian Tradition to Modern",
+              "Indian Mythology",
+              "Five Elements of Nature",
+              "Cultural Fusion"
+            ]
+          },
+          {
+            section: "Event Segments",
+            items: [
+              "Solo Ramp Walk: 1–2 minutes",
+              "Group Ramp Walk: 3–5 minutes",
+              "Poster Presentation: 4–5 minutes",
+              "Q&A Round: 2 minutes"
+            ]
+          },
+          {
+            section: "Judging Criteria (100 pts)",
+            items: [
+              "Creativity & Theme Fit: 30 points",
+              "Stitching / Design Quality: 25 points",
+              "Ramp Walk Performance: 20 points",
+              "Poster Visuals: 15 points",
+              "Overall Impact & Q&A: 10 points"
+            ]
+          }
+        ]
       },
       {
-        id: "TESA-Texplorer ",
-        title: "TESA-Texplorer ",
+        id: "TESA-Texplorer (T-Shirt Painting)",
+        title: "TESA-Texplorer (T-Shirt Painting)",
         tagline: "Draw your design",
         description:
           "Draw Your Design: A creative contest where participants sketch original textile or garment designs, emphasizing artistic skills, fabric texture representation, color schemes, and contemporary styling.",
         icon: "Users",
         venue: "Textile Engineering Department",
         prizePool: 5000,
-          entryFee: 99,
-          members:2,
-          coordinators: [
-            {
-              name: "Mr. Hanuman Kadam",
-              phone: "9067277491"
-            },
-            {
-              name: "Jaydeep Kadam",
-              phone: "8637763753"
-            }
-          ],
-          faculty:"Prof. Devashish Patil",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 99,
+        members: 2,
+        coordinators: [
+          { name: "Mr. Hanuman Kadam", phone: "9067277491" },
+          { name: "Jaydeep Kadam", phone: "8637763753" }
+        ],
+        faculty: "Prof. Devashish Patil",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Participation",
+            items: [
+              "Individual or pairs (1–2 members)",
+              "Entry fee: ₹99",
+              "Theme will be announced on the spot or communicated prior to the event"
+            ]
+          },
+          {
+            section: "Materials",
+            items: [
+              "T-shirts will be provided by the organizers",
+              "Participants must bring their own fabric markers, colors, or paints",
+              "No pre-painted or pre-designed t-shirts allowed"
+            ]
+          },
+          {
+            section: "Event Rules",
+            items: [
+              "Time limit: 1–2 hours",
+              "Designs must be entirely original",
+              "No tracing or copying reference designs directly",
+              "Participants may use stencils but must create them themselves"
+            ]
+          },
+          {
+            section: "Judging Criteria",
+            items: [
+              "Creativity & Originality: 40%",
+              "Theme Relevance: 30%",
+              "Aesthetic Appeal: 20%",
+              "Overall Presentation: 10%"
+            ]
+          }
+        ]
       },
       {
-        id: "TESA-Texplorer1 ",
-        title: "TESA-Texplorer ",
+        id: "TESA-Texplorer (TexQuiz)",
+        title: "TESA-Texplorer (TexQuiz)",
         tagline: "TexQuiz",
         description:
           "TexQuiz: A competitive quiz focusing on textile science, technology, and industry trends that tests participants' knowledge of fibers, fabrics, manufacturing processes, and fashion history.",
         icon: "Users",
         venue: "Textile Engineering Department",
         prizePool: 3000,
-          entryFee: 49,
-          members:1,
-          coordinators: [
-            {
-              name: "Mr. Hanuman Kadam",
-              phone: "9067277491"
-            },
-            {
-              name: "Jaydeep Kadam",
-              phone: "8637763753"
-            }
-          ],
-          faculty:"Prof. Devashish Patil",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 49,
+        members: 1,
+        coordinators: [
+          { name: "Mr. Hanuman Kadam", phone: "9067277491" },
+          { name: "Jaydeep Kadam", phone: "8637763753" }
+        ],
+        faculty: "Prof. Devashish Patil",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Format",
+            items: [
+              "Individual participation only",
+              "3 progressive rounds"
+            ]
+          },
+          {
+            section: "Rounds",
+            items: [
+              "Round 1 — MCQ Test: Objective questions on textile science and technology; all participants",
+              "Round 2 — Textile Puzzle Solving: Top 20 participants qualify; analytical and conceptual puzzles",
+              "Round 3 — Rapid Fire: Top 10 participants qualify; fast-paced questions under time pressure"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "No mobiles, notes, books, calculators, or smart devices allowed",
+              "Judges' decisions are final and binding",
+              "Misconduct or use of unfair means leads to disqualification"
+            ]
+          },
+          {
+            section: "Awards",
+            items: [
+              "1st Place: Trophy + Certificate",
+              "2nd & 3rd Place: Certificates (with optional reward)",
+              "Participation certificates for all"
+            ]
+          }
+        ]
       },
       {
-        id: "CESA-Cenfest",
-        title: "CESA-Cenfest",
+        id: "CESA-Cenfest (Bridge Building)",
+        title: "CESA-Cenfest (Bridge Building)",
         tagline: "Bridge Building",
         description:
-          "Bridge Building: Classic engineering challenge-design & construct a strong bridge using ice-cream sticks. Show your structural skills and compete for maximum load capacity.",
+          "Bridge Building: Classic engineering challenge — design & construct a strong bridge using ice-cream sticks. Show your structural skills and compete for maximum load capacity.",
         icon: "Users",
         venue: "Civil Engineering Department",
         prizePool: 5000,
-          entryFee: 199,
-          members:4,
-          coordinators: [
-            {
-              name: "Mr. Omkar Dalvi",
-              phone: "7823058329"
-            },
-            {
-              name: "Ayush Gulhane",
-              phone: "9665082890"
-            }
-          ],
-          faculty:"Dr Atul Shinde",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 199,
+        members: 4,
+        coordinators: [
+          { name: "Mr. Omkar Dalvi", phone: "7823058329" },
+          { name: "Ayush Gulhane", phone: "9665082890" }
+        ],
+        faculty: "Dr Atul Shinde",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Team & Materials",
+            items: [
+              "Team: 2–4 members",
+              "Time limit: 2 hours for construction",
+              "Bridge dimensions: 40 cm (L) × 10 cm (B) × 10 cm (H)",
+              "Materials provided: 200 ice-cream sticks and glue",
+              "Deck slab thickness: max 0.5 cm",
+              "No pre-assembled parts; basic tools only (no power tools)"
+            ]
+          },
+          {
+            section: "Testing",
+            items: [
+              "Bridge tested with incremental weight placed at the center",
+              "Loading continues until collapse",
+              "Last weight successfully held = performance score",
+              "Any bridge that fails before testing starts will be disqualified"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "College ID cards mandatory",
+              "No electronic devices allowed during construction",
+              "No pre-built or store-bought components",
+              "Coordinators' and judges' decisions are final",
+              "Misconduct or cheating leads to disqualification"
+            ]
+          }
+        ]
       },
       {
-        id: "CESA-Cenfest1",
-        title: "CESA-Cenfest",
+        id: "CESA-Cenfest (CAD-WAR)",
+        title: "CESA-Cenfest (CAD-WAR)",
         tagline: "CAD - WAR",
         description:
-          " Convert a single-line plan into a professional double-line plan using CAD tools. Speed, accuracy, and drafting skills will decide the winner.",
+          "Convert a single-line plan into a professional double-line plan using CAD tools. Speed, accuracy, and drafting skills will decide the winner.",
         icon: "Users",
         venue: "Civil Engineering Department",
         prizePool: 5000,
-          entryFee: 49,
-          members:1,
-          coordinators: [
-            {
-              name: "Mr. Omkar Dalvi",
-              phone: "7823058329"
-            },
-            {
-              name: "Ayush Gulhane",
-              phone: "9665082890"
-            }
-          ],
-          faculty:"Dr Atul Shinde",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 49,
+        members: 1,
+        coordinators: [
+          { name: "Mr. Omkar Dalvi", phone: "7823058329" },
+          { name: "Ayush Gulhane", phone: "9665082890" }
+        ],
+        faculty: "Dr Atul Shinde",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Format",
+            items: [
+              "Solo participation (1 participant per entry)",
+              "Software: AutoCAD 2024",
+              "Time limit: 1 hour",
+              "If more than 50 participants, an elimination round will be added"
+            ]
+          },
+          {
+            section: "Task",
+            items: [
+              "Participants will be given a residential single-line floor plan",
+              "Must convert it into a professional detailed double-line plan",
+              "Drafting, detailing, labelling, colouring, and schedule of openings required"
+            ]
+          },
+          {
+            section: "Judging Criteria",
+            items: [
+              "Completeness of the plan",
+              "Accuracy of dimensions and drafting standards",
+              "Proper labelling and colouring",
+              "Time utilization"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "College ID cards mandatory",
+              "No electronic devices other than the assigned computer allowed",
+              "Coordinators' and judges' decisions are final"
+            ]
+          }
+        ]
       },
       {
-        id: "CESA-Cenfest3",
-        title: "CESA-Cenfest",
+        id: "CESA-Cenfest (Build Blind)",
+        title: "CESA-Cenfest (Build Blind)",
         tagline: "Build Blind",
         description:
-          "Build Blind: A fun twist on bridge building! Two members per team - one blindfolded builder, the other guiding. Bridges made with ice-cream sticks & Fevicol. Test your coordination and trust!.",
+          "Build Blind: A fun twist on bridge building! Two members per team — one blindfolded builder, the other guiding. Bridges made with ice-cream sticks & Fevicol. Test your coordination and trust!",
         icon: "Users",
         venue: "Civil Engineering Department",
         prizePool: 5000,
-          entryFee: 99,
-          members:2,
-          coordinators: [
-            {
-              name: "Mr. Omkar Dalvi",
-              phone: "7823058329"
-            },
-            {
-              name: "Ayush Gulhane",
-              phone: "9665082890"
-            }
-          ],
-          faculty:"Dr Atul Shinde",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 99,
+        members: 2,
+        coordinators: [
+          { name: "Mr. Omkar Dalvi", phone: "7823058329" },
+          { name: "Ayush Gulhane", phone: "9665082890" }
+        ],
+        faculty: "Dr Atul Shinde",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Team Structure",
+            items: [
+              "Strictly 2 members per team: one blindfolded Builder + one Guide",
+              "Roles cannot be swapped during the event",
+              "Materials: ice-cream sticks and Fevicol (provided by organizers)"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "Guide may only give verbal instructions — no touching of materials or the builder",
+              "Builder must remain blindfolded throughout the construction phase",
+              "Blindfold is removed only at the end for final evaluation",
+              "Time limit: 15 minutes"
+            ]
+          },
+          {
+            section: "Evaluation",
+            items: [
+              "Structural integrity of the built item",
+              "Quality of communication between the team",
+              "Completion level within the time limit",
+              "Judges' decisions are final"
+            ]
+          }
+        ]
       },
       {
-        id: "CESA-Cenfest5",
-        title: "CESA-Cenfest",
+        id: "CESA-Cenfest (Float-a-BO(a)T)",
+        title: "CESA-Cenfest (Float-a-BO(a)T)",
         tagline: "Float a BO(a)T",
         description:
           "Build a boat with provided materials, then test it by applying weights. How much load can your boat carry before sinking? Put your design to the ultimate test!",
         icon: "Users",
         venue: "Civil Engineering Department",
         prizePool: 5000,
-          entryFee: 199,
-          members:4,
-          coordinators: [
-            {
-              name: "Mr. Omkar Dalvi",
-              phone: "7823058329"
-            },
-            {
-              name: "Ayush Gulhane",
-              phone: "9665082890"
-            }
-          ],
-          faculty:"Dr Atul Shinde",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 199,
+        members: 4,
+        coordinators: [
+          { name: "Mr. Omkar Dalvi", phone: "7823058329" },
+          { name: "Ayush Gulhane", phone: "9665082890" }
+        ],
+        faculty: "Dr Atul Shinde",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Team & Design Specs",
+            items: [
+              "Team: 2–4 members",
+              "Maximum boat dimensions: 30 cm × 30 cm × 30 cm",
+              "Flat center surface must be at least 14 cm × 14 cm",
+              "All materials provided by organizers"
+            ]
+          },
+          {
+            section: "Testing",
+            items: [
+              "Boats are tested in a water tank",
+              "Failure conditions: boat sinks 6 cm or more, or tilts beyond 30 degrees",
+              "Scoring: ratio of boat weight to (total weight held + boat weight); lower ratio wins"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "No pre-built or store-bought boat components",
+              "All construction must happen at the venue within the allotted time",
+              "College ID cards mandatory",
+              "Coordinators' and judges' decisions are final",
+              "Misconduct or cheating leads to disqualification"
+            ]
+          }
+        ]
       },
       {
-        id: "CESA-Cenfest6",
-        title: "CESA-Cenfest",
+        id: "CESA-Cenfest (Town Planning)",
+        title: "CESA-Cenfest (Town Planning)",
         tagline: "Town Planning",
         description:
-          "Design a sustainable, well-structured miniature town layout based on given constraints. Participants must plan roads, utilities, zoning, public spaces, and infrastructure using smart urban-planning principles. Show your creativity, problem-solving, and ability to balance aesthetics with functionality just like a real city planner.",
+          "Design a sustainable, well-structured miniature town layout based on given constraints. Participants must plan roads, utilities, zoning, public spaces, and infrastructure using smart urban-planning principles.",
         icon: "Users",
         venue: "Civil Engineering Department",
         prizePool: 5000,
-          entryFee: 199,
-          members:4,
-          coordinators: [
-            {
-              name: "Mr. Omkar Dalvi",
-              phone: "7823058329"
-            },
-            {
-              name: "Ayush Gulhane",
-              phone: "9665082890"
-            }
-          ],
-          faculty:"Dr Atul Shinde",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 199,
+        members: 4,
+        coordinators: [
+          { name: "Mr. Omkar Dalvi", phone: "7823058329" },
+          { name: "Ayush Gulhane", phone: "9665082890" }
+        ],
+        faculty: "Dr Atul Shinde",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Team & Format",
+            items: [
+              "Team: max 4 members",
+              "Teams receive a problem statement / scenario on which the town plan must be based",
+              "Must prepare and present a detailed tender report / planning proposal",
+              "No copying from the internet or AI-generated content; false rates or unrealistic estimates attract penalty marks"
+            ]
+          },
+          {
+            section: "Plan Requirements",
+            items: [
+              "Design a miniature town layout based on given constraints",
+              "Must cover: roads, utilities, zoning, public spaces, and infrastructure",
+              "Apply smart urban-planning and sustainable development principles",
+              "Presentation of the plan before a jury panel"
+            ]
+          },
+          {
+            section: "Judging Criteria",
+            items: [
+              "Comprehensiveness of the town plan",
+              "Sustainability and environmental planning",
+              "Feasibility and practicality of the proposal",
+              "Clarity and quality of presentation"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "College ID cards mandatory",
+              "No electronic devices (other than permitted tools) allowed",
+              "Coordinators' and judges' decisions are final"
+            ]
+          }
+        ]
       },
       {
-        id: "EESA - Electrospark1",
-        title: "EESA - Electrospark",
+        id: "EESA-Electrospark (Voltage Voyage)",
+        title: "EESA-Electrospark (Voltage Voyage)",
         tagline: "Voltage Voyage",
         description:
-          "It is technical quize competition on all the core electrical concepts as well as the fundamentals.",
+          "It is a technical quiz competition on all the core electrical concepts as well as the fundamentals.",
         icon: "Users",
         venue: "Electrical Engineering Department",
         prizePool: 5000,
-          entryFee: 99,
-          members:3,
-          coordinators: [
-            {
-              name: "Mr. Shubham Tayde",
-              phone: "9075066926"
-            }
-          ],
-          faculty:"Dr. P. S. Jamwal",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 99,
+        members: 3,
+        coordinators: [{ name: "Mr. Shubham Tayde", phone: "9075066926" }],
+        faculty: "Dr. P. S. Jamwal",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Team & Format",
+            items: [
+              "Teams of 2–3 members",
+              "Format: MCQ rounds, rapid-fire rounds, or buzzer rounds on core electrical engineering topics",
+              "Multiple rounds — top teams from each round progress further"
+            ]
+          },
+          {
+            section: "Topics Covered",
+            items: [
+              "Basic electrical circuits and laws",
+              "AC/DC machines and transformers",
+              "Power systems and protection",
+              "Control systems",
+              "Electronics and instrumentation",
+              "Electrical engineering fundamentals"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "No mobiles, smartwatches, calculators (unless explicitly permitted), or reference material allowed",
+              "Tie-breaker round conducted at organizers' discretion",
+              "Judges' and coordinators' decisions are final and binding"
+            ]
+          }
+        ]
       },
       {
-        id: "EESA - Electrospark2",
-        title: "EESA - Electrospark",
+        id: "EESA-Electrospark (Step Into Strange)",
+        title: "EESA-Electrospark (Step Into Strange)",
+        tagline: "Step Into Strange",
+        description:
+          "Step Into Strange: An unconventional electrical engineering challenge where participants must diagnose and solve unusual circuit problems, pushing the boundaries of their theoretical and practical knowledge.",
+        icon: "Users",
+        venue: "Electrical Engineering Department",
+        prizePool: 5000,
+        entryFee: 99,
+        members: 2,
+        coordinators: [{ name: "Mr. Shubham Tayde", phone: "9075066926" }],
+        faculty: "Dr. P. S. Jamwal",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Team & Format",
+            items: [
+              "Teams of 2 members",
+              "Event: ElectroQuest — Guess the Electrical Component",
+              "One participant receives a component name; the other must explain its behavior, working, and applications — without naming it directly"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "Hand gestures are allowed",
+              "Directly stating the component name, spelling it out, drawing it, or using mobile phones is strictly prohibited",
+              "Fixed time limit per round; points awarded per correct identification",
+              "Judges' decision is final"
+            ]
+          },
+          {
+            section: "Evaluation",
+            items: [
+              "Accuracy of description",
+              "Clarity of communication",
+              "Number of components correctly identified within the time limit"
+            ]
+          }
+        ]
+      },
+      {
+        id: "EESA-Electrospark (Breadboard Buildoff)",
+        title: "EESA-Electrospark (Breadboard Buildoff)",
         tagline: "Breadboard Circuit Building",
         description:
-          " Breadboard Circuit Building Competition: The competition is based on core electrical/electronics circuits to test your project circuit/any circuit implementation on breadboards .",
+          "Breadboard Circuit Building Competition: The competition is based on core electrical/electronics circuits to test your project circuit/any circuit implementation on breadboards.",
         icon: "Users",
         venue: "Electrical Engineering Department",
         prizePool: 5000,
-          entryFee: 49,
-          members:1,
-          coordinators: [
-            {
-              name: "Mr. Shubham Tayde",
-              phone: "9075066926"
-            }
-          ],
-          faculty:"Dr. P. S. Jamwal",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 49,
+        members: 1,
+        coordinators: [{ name: "Mr. Shubham Tayde", phone: "9075066926" }],
+        faculty: "Dr. P. S. Jamwal",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Format",
+            items: [
+              "Individual participation only (CircuitCraze: Breadboard Build-Off)",
+              "Circuit problem/task details are revealed on the spot",
+              "Participants must complete the circuit within the allotted time"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "All components are provided by the organizers",
+              "Handle components carefully — short circuits or unsafe connections may lead to disqualification",
+              "No use of pre-built circuits or external references",
+              "Mobile phones and smartwatches are not allowed during the event"
+            ]
+          },
+          {
+            section: "Evaluation Criteria",
+            items: [
+              "Correctness of the circuit",
+              "Neatness and organization of the breadboard layout",
+              "Functionality — circuit must work as expected",
+              "Time taken to complete the task"
+            ]
+          }
+        ]
       },
       {
-        id: "ITSA",
-        title: "ITSA",
+        id: "ITSA (DSA Knockout)",
+        title: "ITSA (DSA Knockout)",
         tagline: "DSA Knockout",
         description:
-          " CodeQuest 2.0: DSA coding competition, is a competitive programming contest focused on Data Structures and Algorithms. Its aim is to improve logic building, time bound coding skills, and prepare students for coding interviews.",
+          "CodeQuest 2.0: DSA coding competition, is a competitive programming contest focused on Data Structures and Algorithms. Its aim is to improve logic building, time bound coding skills, and prepare students for coding interviews.",
         icon: "Users",
         venue: "CCF/Language Lab",
         prizePool: 7000,
-          entryFee: 99,
-          members:1,
-          coordinators: [
-            {
-              name: "Mr. Om Rakhade",
-              phone: "7057676048"
-            },
-            {
-              name: "Krushna Ingle",
-              phone: "7972484842"
-            }
-          ],
-          faculty:"Dr. A. D. Sawarkar",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 99,
+        members: 1,
+        coordinators: [
+          { name: "Mr. Om Rakhade", phone: "7057676048" },
+          { name: "Krushna Ingle", phone: "7972484842" }
+        ],
+        faculty: "Dr. A. D. Sawarkar",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Participation",
+            items: [
+              "Individual participation only",
+              "Entry fee: ₹99",
+              "Valid college ID required",
+              "Venue: CCF / Language Lab"
+            ]
+          },
+          {
+            section: "Topics Covered",
+            items: [
+              "Arrays, Strings, Linked Lists",
+              "Stacks, Queues, Trees, Graphs",
+              "Sorting and Searching Algorithms",
+              "Dynamic Programming",
+              "Recursion and Backtracking",
+              "Time and Space Complexity Analysis"
+            ]
+          },
+          {
+            section: "Competition Rules",
+            items: [
+              "Problems are time-bound; faster correct solutions earn more points",
+              "No internet browsing, AI tools, or external help allowed",
+              "No communication between participants during the contest",
+              "Any language supported by the judge platform may be used",
+              "Plagiarism leads to immediate disqualification"
+            ]
+          },
+          {
+            section: "Judging",
+            items: [
+              "Solutions judged on correctness, efficiency, and time taken",
+              "Partial marks may be awarded for partial solutions (based on test cases)",
+              "Organizers' decisions are final"
+            ]
+          }
+        ]
       },
       {
-        id: "Math-E-Magic ",
-        title: "Math-E-Magic",
-        tagline: "(By Bhaskaracharya Maths  Club)",
+        id: "ITSA (Code Clash 2.0)",
+        title: "ITSA (Code Clash 2.0)",
+        tagline: "Code Clash 2.0",
         description:
-          "Math-E-Magic: A competition with different rounds to check how good you are at math and logic.Includes both standard quiz questions and hard problems that make you think.You have to use math to find the right answers before the time runs out",
+          "Code Clash 2.0 is a 3-stage technical challenge designed to test participants' logic, coding ability, and real-time problem solving. The event includes: A) Tech Quiz — A fast test of cybersecurity, programming, and technical fundamentals. B) Scenario-Based Coding — Participants write code to solve given problem statements. C) Surprise Round — Guess-the-output and rapid-fire questions.",
         icon: "Users",
-        venue: "Admin Building",
-        prizePool: 5000,
-          entryFee: 49,
-          members:1,
-          coordinators: [
-            {
-              name: "Mr. Shailesh Dhoke",
-              phone: "8999101169"
-            },
-            {
-              name: "Piyush Mudhol",
-              phone: "8421608031"
-            }
-          ],
-          faculty:"Dr. Nilesh khandekar",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
-      },
-    ],
+        venue: "CCF/Language Lab",
+        prizePool: 7000,
+        entryFee: 99,
+        members: 2,
+        coordinators: [
+          { name: "Mr. Aditya Ghuge", phone: "9356606201" },
+          { name: "Sainikesh Kokle", phone: "8390199418" }
+        ],
+        faculty: "Dr. Rupsingh P. Matwale",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Team",
+            items: [
+              "Strictly team-based: exactly 2 members per team — no solo participation allowed",
+              "Valid college ID required",
+              "Late entry may lead to disqualification",
+              "Organized by: HackIT Club"
+            ]
+          },
+          {
+            section: "Rounds (Total: 100 marks)",
+            items: [
+              "Round 1 — Tech Quiz (30 marks): General cybersecurity, programming, and IT fundamentals; no negative marking",
+              "Round 2 — Scenario-Based Coding (40 marks): Write code to solve given problem statements; judged on correctness, logic, and efficiency",
+              "Round 3 — Surprise Round (30 marks): Guess-the-output questions + rapid-fire round"
+            ]
+          },
+          {
+            section: "Tie-Breaking",
+            items: [
+              "Ties resolved based on coding round (Round 2) score",
+              "Further ties resolved at the organizing team's discretion"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "No mobiles, smartwatches, or internet access during the event",
+              "No plagiarism or use of AI tools for solving problems",
+              "HackIT Organizing Team's decisions are final and binding"
+            ]
+          }
+        ]
+      }
+    ]
   },
 
   creative: {
     name: "Creative Events",
     events: [
-      
       {
-        id: "HACKIT",
-        title: "HACKIT",
-        tagline: "Code Clash 2.0",
+        id: "Math-E-Magic",
+        title: "Math-E-Magic",
+        tagline: "(By Bhaskaracharya Maths Club)",
         description:
-          " Code Clash 2.0 is a 3-stage technical challenge designed to test participants' logic, coding ability, and real-time problem solving. The event includes:    A)Tech Quiz-A fast test of cybersecurity, programming, and technical fundamentals.  B)Scenario-Based Coding - Participants write code to solve given problem statements.   C)Surprise Round-Guess-the-output and rapid-fire questions.",
+          "Math-E-Magic: A competition with different rounds to check how good you are at math and logic. Includes both standard quiz questions and hard problems that make you think. You have to use math to find the right answers before the time runs out.",
         icon: "Users",
-        venue: "CCF/Language Lab",
-        prizePool: 7000,
-          entryFee: 99,
-          members:2,
-          coordinators: [
-            {
-              name: "Mr. Aditya Ghuge",
-              phone: "9356606201"
-            },
-            {
-              name: "Sainikesh Kokle",
-              phone: "8390199418"
-            }
-          ],
-          faculty:"Dr. Rupsingh P. Matwale",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
-      },
-      {
-        id: "E-Venture- IPL Auction",
-        title: "E-Venture (IPL Auction)",
-        tagline: "Business strategy competition modeled on IPL auction",
-        description:
-          "E Venture - A dynamic entrepreneurship track in PRAGYAA that celebrates innovation, strategy, and business thinking.IPL Auction: A fun and strategic simulation of the Indian Premier League auction, where participants bid on players and form teams testing negotiation and planning skills.",
-        icon: "Trophy",
-        venue: "A4 Hall",
-        prizePool: 10000,
-        entryFee: 199,
-       
+        venue: "Admin Building",
+        prizePool: 5000,
+        entryFee: 49,
+        members: 1,
         coordinators: [
-          {
-            name: "Mr. Darshan Singh",
-            phone: "9322199877"
-          }
+          { name: "Mr. Shailesh Dhoke", phone: "8999101169" },
+          { name: "Piyush Mudhol", phone: "8421608031" }
         ],
-        faculty:"Dr. Milind Bhalerao",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdwDsIvzLbtEAF1omUdj9abG15dOlCc4e5pltUWCD6T3MzAQA/viewform"
-
-      },
-      {
-        id: "E-Venture- Startup Expo ",
-        title: "E-Venture (Startup Expo)",
-        tagline: "Startup Expo for innovative ventures",
-        description:
-          "E Venture - A dynamic entrepreneurship track in PRAGYAA that celebrates innovation, strategy, and business thinking.Startup Expo: Showcase your startup ideas and connect with investors and mentors. ",
-        icon: "Trophy",
-        venue: "PMC-CAD Road",
-       
-          entryFee: 199,
-          members:4,
-          coordinators: [
-            {
-              name: "Mr. Darshan Singh",
-              phone: "9322199877"
-            }
-          ],
-          faculty:"Dr. Milind Bhalerao",
-          registerLink: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSecTvhCGS_LQi6Ve6UbWtW7vktkchXH2ON4sh3jomdswLTNew/viewform?usp=dialog"
-      },
-      {
-        id: "E-Venture ",
-        title: "E-Venture (Lightning Pitch)",
-        tagline: "Lightning pitch competition for startups",
-        description:
-          "E Venture - A dynamic entrepreneurship track in PRAGYAA that celebrates innovation, strategy, and business thinking.Lightning Pitch: Quick, impactful startup idea presentations testing creativity and persuasion. ",
-        icon: "Trophy",
-        venue: "Auditorium",
-        prizePool: 30000,
-          entryFee: 199,
-          
-        coordinators: [
+        faculty: "Dr. Nilesh Khandekar",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
           {
-            name: "Mr. Darshan Singh",
-            phone: "9322199877"
-          }
-        ],
-        faculty:"Dr. Milind Bhalerao",
-          registerLink: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSdQZTh6BkTzeKKF5ZiH9bpUafWRgDeAYq9pPB3FsVetnk4SyA/viewform?usp=dialog"
-      },
-
-      {
-        id: "Vision Edge",
-        title: "Vision Edge ",
-        tagline: "National Level Poster Presentation",
-        description:
-          "A national-level poster presentation competition at PRAGYAA, where students from across the country showcase their innovative ideas and projects. This platform focuses on technology for a sustainable and intelligent future, encouraging creativity, research, and impactful solutions that can shape tomorrow.",
-        icon: "Trophy",
-        prizePool: 10000,
-        entryFee:99,
-        members:2,
-        coordinators: [
-          {
-            name: "Dipali Wadwale",
-            phone: "9763212227"
+            section: "Eligibility & Team",
+            items: [
+              "Teams of max 3 members (solo participation also allowed)",
+              "Open to all years (1st–4th year students)",
+              "Date: 27 Feb 2026, 10:00 AM – 3:00 PM",
+              "Venue: AB 6 Hall, Admin Building",
+              "Entry fee: ₹100 per team",
+              "Estimated 25–30 teams"
+            ]
           },
           {
-            name: "Vijay Shinde",
-            phone: "8446250150"
-          }
-        ],
-        faculty:"Dr Atul Shinde",
-        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
-
-      },
-      {
-        id: "Inno Verse",
-        title: "Inno Verse",
-        tagline: "Project Exhibition & Competition.",
-        description:
-          "InnoVerse in PRAGYAA-Multiverse of Innovation, is a dynamic showcase of engineering talent where students present projects that blend technology, innovation, and multidisciplinary thinking. The expo serves as a platform for emerging technologists to demonstrate working models, research projects, design solutions, and technical creativity that contribute to societal and industrial progress.",
-        icon: "Trophy",
-        venue: "PMC-EMC Road",
-        prizePool: 30000,
-          entryFee: 199,
-          members:4,
-          coordinators: [
-            {
-              name: "Krishna Gaikwad ",
-              phone: "8767154816"
-            },
-            {
-              name: "Hitesh Khandekar",
-              phone: "8855953179"
-            }
-          ],
-          faculty:"Dr Atul Shinde",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
-      },
-      {
-        id: "PRAGYAA Movie Night",
-        title: "PRAGYAA Movie Night",
-        tagline: "A Journey Through Time & Shadows",
-        description:
-          "Movies:Interstellar - Embark on a mind-bending journey across space and time.The Dark Knight-Witness the rise of a legend in the battle between justice and chaos.",
-        icon: "Star",
-        venue: "Auditorium",
-        coordinators: [
-          {
-            name: "Momin Mohammad Talha",
-            phone: "8999140169"
+            section: "Rounds",
+            items: [
+              "Round 1 — The Screen (Elimination): Objective aptitude + logical reasoning test; low scorers eliminated",
+              "Round 2 — The Grind (Problem Solving): Subjective high-difficulty math problems; steps and logical approach evaluated",
+              "Round 3 — Surprise Round: Structure revealed on the spot during the event"
+            ]
           },
           {
-            name: "Alankrut Meshram",
-            phone: "8087859932"
+            section: "Judging Criteria",
+            items: [
+              "Correctness of final answer",
+              "Approach: use of correct formula and logical steps (partial marks awarded)",
+              "Steps shown — direct answers without working will not be accepted"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "No mobile phones, smartwatches, cheat sheets, or rough notebooks allowed",
+              "Zero tolerance for malpractice — immediate disqualification",
+              "Late entries will not be allowed",
+              "Calculators permitted only if specifically stated by the organizers",
+              "Participants must bring their own pens"
+            ]
+          },
+          {
+            section: "Prize Pool (₹3,000)",
+            items: [
+              "Winner: ₹2,000 + Certificate",
+              "Runner-Up: ₹1,000 + Certificate"
+            ]
           }
-        ],
-        faculty:"Dr Atul Shinde",
-        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        ]
       },
       {
         id: "FarOath6.0",
         title: "FarOath 6.0",
         tagline: "Treasure Hunt",
         description:
-          " A thrilling treasure hunt where participants solve clues, crack codes, and race against time to find hidden treasures. A test of wit, teamwork, and adventure.",
+          "A thrilling treasure hunt where participants solve clues, crack codes, and race against time to find hidden treasures. A test of wit, teamwork, and adventure.",
         icon: "Star",
         venue: "Entire Campus",
         prizePool: 5000,
-          entryFee: 199,
-          members:4,
-          coordinators: [
-            {
-              name: "Krishna Jagdambe",
-              phone: "7066658615"
-            },
-            {
-              name: "Krushna Pimple",
-              phone: "8459295642"
-            }
-          ],
-          faculty:"Dr Atul Shinde",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
+        entryFee: 199,
+        members: 4,
+        coordinators: [
+          { name: "Krishna Jagdambe", phone: "7066658615" },
+          { name: "Krushna Pimple", phone: "8459295642" }
+        ],
+        faculty: "Dr Atul Shinde",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Team & Format",
+            items: [
+              "Teams of 4 members",
+              "Entry fee: ₹199 per team",
+              "Venue: Entire campus — clue locations spread across the college",
+              "Teams race to follow a chain of clues and reach the final treasure"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "All team members must stay together throughout the hunt",
+              "Clues must be solved in order — skipping ahead is not allowed",
+              "No tampering with or removing clues meant for other teams",
+              "Mobile phones may be used only if explicitly permitted for a clue",
+              "Cheating or copying from other teams leads to disqualification"
+            ]
+          },
+          {
+            section: "Winning Criteria",
+            items: [
+              "First team to correctly complete all clues and reach the final destination wins",
+              "In case of disputes, coordinators' decisions are final"
+            ]
+          }
+        ]
+      },
+      {
+        id: "PRAGYAA Movie Night",
+        title: "PRAGYAA Movie Night",
+        tagline: "A Journey Through Time & Shadows",
+        description:
+          "Movies: Interstellar — Embark on a mind-bending journey across space and time. The Dark Knight — Witness the rise of a legend in the battle between justice and chaos.",
+        icon: "Star",
+        venue: "Auditorium",
+        coordinators: [
+          { name: "Momin Mohammad Talha", phone: "8999140169" },
+          { name: "Alankrut Meshram", phone: "8087859932" }
+        ],
+        faculty: "Dr Atul Shinde",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Event Details",
+            items: [
+              "Movie 1: Interstellar — A mind-bending journey across space and time",
+              "Movie 2: The Dark Knight — The legendary battle between justice and chaos",
+              "Venue: College Auditorium"
+            ]
+          },
+          {
+            section: "Conduct",
+            items: [
+              "Maintain silence and respect during the screenings",
+              "No flash photography or video recording of the screen",
+              "Mobile phones must be on silent mode",
+              "Food and beverages as per event organizer's allowance only",
+              "Seating will be on a first-come, first-served basis unless assigned"
+            ]
+          }
+        ]
       },
       {
         id: "CheckMate",
         title: "CheckMate",
         tagline: "Chess Tournament",
         description:
-          " A chess competition challenging players' strategy, foresight, and critical thinking in a battle of minds.",
+          "A chess competition challenging players' strategy, foresight, and critical thinking in a battle of minds.",
         icon: "Star",
         venue: "Admin GF/Gymnasium",
         prizePool: 5000,
-          entryFee: 99,
-          members:1,
-          coordinators: [
-            {
-              name: "Vijyot Silare ",
-              phone: "9172894479"
-            },
-            {
-              name: "Tanisha Dhoot",
-              phone: "8975360958"
-            }
-          ],
-          faculty:"Dr Atul Shinde",
-          registerLink: "https://forms.gle/k8CNq64WazHzRyv2A"
-      },
-    ],
+        entryFee: 99,
+        members: 1,
+        coordinators: [
+          { name: "Vijyot Silare", phone: "9172894479" },
+          { name: "Tanisha Dhoot", phone: "8975360958" }
+        ],
+        faculty: "Dr Atul Shinde",
+        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        rules: [
+          {
+            section: "Format",
+            items: [
+              "Individual participation only (1 vs 1 matches)",
+              "Standard FIDE chess rules apply",
+              "Swiss-system or elimination format depending on number of participants",
+              "Chess clocks will be used for all matches"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "Touch-Move Rule strictly enforced: if you touch a piece, you must move it",
+              "One Hand Rule: moves must be made with one hand only",
+              "No electronic devices (mobile phones, smartwatches) allowed during matches",
+              "Late arrival beyond 10 minutes from round start = forfeit of that game",
+              "Good sportsmanship expected at all times"
+            ]
+          },
+          {
+            section: "Ranking & Tie-Breaking",
+            items: [
+              "Rankings based on total points scored",
+              "Tie-breaking: Buchholz system / head-to-head result",
+              "Judges' and arbiters' decisions are final"
+            ]
+          }
+        ]
+      }
+    ]
   },
+
+  eVenture: {
+    name: "Pragyaa × E-CELL: E-Venture",
+    events: [
+      {
+        id: "E-Venture (Startup Expo)",
+        title: "E-Venture (Startup Expo)",
+        tagline: "Startup Expo for innovative ventures",
+        description:
+          "E-Venture — A dynamic entrepreneurship track in PRAGYAA that celebrates innovation, strategy, and business thinking. Startup Expo: Showcase your startup ideas and connect with investors and mentors.",
+        icon: "Trophy",
+        venue: "PMC-CAD Road",
+        entryFee: 199,
+        members: 4,
+        coordinators: [
+          { name: "Mr. Darshan Singh", phone: "9322199877" }
+        ],
+        faculty: "Dr. Milind Bhalerao",
+        registerLink: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSecTvhCGS_LQi6Ve6UbWtW7vktkchXH2ON4sh3jomdswLTNew/viewform?usp=dialog",
+        rules: [
+          {
+            section: "Eligibility & Team",
+            items: [
+              "Open to all students; no prior startup experience required",
+              "Individual or team (max 4 members)",
+              "Valid college ID mandatory",
+              "Entry fee: ₹199 per team (non-refundable) — includes exhibition space and participation certificate"
+            ]
+          },
+          {
+            section: "Startup Expo Format",
+            items: [
+              "Teams showcase their startup ideas or working prototypes at allocated stall/booth",
+              "Must present: working prototype or simulation, poster, and a 3–5 minute pitch",
+              "Investors, mentors, and judges will visit and evaluate each stall",
+              "Participants must be at their stall throughout the exhibition period"
+            ]
+          },
+          {
+            section: "Judging Criteria",
+            items: [
+              "Innovation and originality of the startup idea",
+              "Market relevance and feasibility",
+              "Prototype / demonstration quality",
+              "Business model clarity",
+              "Team presentation and communication"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "All content must be original; plagiarism leads to disqualification",
+              "Professional conduct is expected throughout the event",
+              "Judges' decisions are final and binding"
+            ]
+          }
+        ]
+      },
+      {
+        id: "E-Venture (Lightning Pitch)",
+        title: "E-Venture (Lightning Pitch)",
+        tagline: "Lightning pitch competition for startups",
+        description:
+          "E-Venture — A dynamic entrepreneurship track in PRAGYAA that celebrates innovation, strategy, and business thinking. Lightning Pitch: Quick, impactful startup idea presentations testing creativity and persuasion.",
+        icon: "Trophy",
+        venue: "Auditorium",
+        prizePool: 30000,
+        entryFee: 199,
+        coordinators: [
+          { name: "Mr. Darshan Singh", phone: "9322199877" }
+        ],
+        faculty: "Dr. Milind Bhalerao",
+        registerLink: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSdQZTh6BkTzeKKF5ZiH9bpUafWRgDeAYq9pPB3FsVetnk4SyA/viewform?usp=dialog",
+        rules: [
+          {
+            section: "Eligibility & Team",
+            items: [
+              "Open to all; individual or team (1–5 members)",
+              "One registration per idea; multiple ideas require separate registrations",
+              "Entry fee: ₹199 per team/individual"
+            ]
+          },
+          {
+            section: "Pitch Format",
+            items: [
+              "10-minute pitch + 5-minute Q&A per team",
+              "11-slide deck structure required:",
+              "1. Title Slide  2. Problem Statement  3. Solution  4. Target Market  5. Product Overview",
+              "6. Revenue Model  7. Competitive Landscape  8. Go-to-Market Strategy",
+              "9. Financial Overview (optional)  10. Team Introduction  11. Future Roadmap"
+            ]
+          },
+          {
+            section: "Judging Criteria",
+            items: [
+              "Innovation and uniqueness of the idea",
+              "Problem-solution fit",
+              "Market feasibility and potential",
+              "Viability of the business model",
+              "Execution strategy",
+              "Team strength and credibility",
+              "Presentation and communication skills"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "Plagiarism or misrepresentation of ideas leads to immediate disqualification",
+              "Presentations must stay within the allotted time",
+              "Judges' decisions are final and binding"
+            ]
+          }
+        ]
+      },
+      {
+        id: "E-Venture (IPL Auction)",
+        title: "E-Venture (IPL Auction)",
+        tagline: "Business strategy competition modeled on IPL auction",
+        description:
+          "E-Venture — A dynamic entrepreneurship track in PRAGYAA that celebrates innovation, strategy, and business thinking. IPL Auction: A fun and strategic simulation of the Indian Premier League auction, where participants bid on players and form teams testing negotiation and planning skills.",
+        icon: "Trophy",
+        venue: "A4 Hall",
+        prizePool: 10000,
+        entryFee: 199,
+        coordinators: [
+          { name: "Mr. Darshan Singh", phone: "9322199877" }
+        ],
+        faculty: "Dr. Milind Bhalerao",
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdwDsIvzLbtEAF1omUdj9abG15dOlCc4e5pltUWCD6T3MzAQA/viewform",
+        rules: [
+          {
+            section: "Team & Budget",
+            items: [
+              "Open to all — no prior cricket knowledge required",
+              "Teams of 3–5 members; each team acts as one IPL franchise",
+              "Entry fee: ₹199 per team",
+              "Fixed budget: ₹80 Crore per team — cannot be exceeded at any point"
+            ]
+          },
+          {
+            section: "Player Categories",
+            items: [
+              "Category A+ — Base price: ₹2 Crore",
+              "Category A — Base price: ₹1 Crore",
+              "Category B — Base price: ₹50 Lakh",
+              "Minimum 15 players must be purchased per team"
+            ]
+          },
+          {
+            section: "Mandatory Squad Composition",
+            items: [
+              "At least 1 Batsman, 1 Bowler, 1 Wicketkeeper, 1 Allrounder",
+              "At least 1 Uncapped Batsman, 1 Uncapped Bowler, 1 Uncapped Wicketkeeper, 1 Uncapped Allrounder",
+              "Maximum 6 overseas players per squad"
+            ]
+          },
+          {
+            section: "Auction Rules",
+            items: [
+              "Fixed time limit per player during bidding",
+              "Once sold, players cannot be re-auctioned",
+              "Auctioneer's time decisions are final",
+              "No team may exceed the ₹80 Crore budget at any point",
+              "Penalties for rule violations: budget deduction, warnings, or disqualification"
+            ]
+          },
+          {
+            section: "Winning Criteria",
+            items: [
+              "Effective budget utilization",
+              "Team balance and squad composition",
+              "Completion of mandatory squad requirements",
+              "Decision-making quality during the auction"
+            ]
+          }
+        ]
+      }
+    ]
+  }
 };
 
 export default eventData;
