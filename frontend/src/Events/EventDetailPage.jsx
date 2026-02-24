@@ -106,14 +106,14 @@ export default function EventDetailPage() {
 
           {/* Description */}
           <div className="bg-gray-900/60 border border-red-500/25 rounded-2xl p-5 sm:p-6">
-            <h2 className="text-xs font-semibold text-red-400 uppercase tracking-widest mb-3">About the Event</h2>
+            <h2 className="text-base sm:text-lg font-bold text-red-400 uppercase tracking-widest mb-3">About the Event</h2>
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{event.description}</p>
           </div>
 
           {/* Rulebook */}
           {event.rules && event.rules.length > 0 && (
             <div className="bg-gray-900/60 border border-red-500/25 rounded-2xl p-5 sm:p-6">
-              <h2 className="text-xs font-semibold text-red-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+              <h2 className="text-base sm:text-lg font-bold text-red-400 uppercase tracking-widest mb-4 flex items-center gap-2">
                 <BookOpen className="w-4 h-4" />
                 Rulebook
               </h2>
@@ -149,7 +149,7 @@ export default function EventDetailPage() {
 
           {/* Coordinators */}
           <div className="bg-gray-900/60 border border-red-500/25 rounded-2xl p-5 sm:p-6">
-            <h2 className="text-xs font-semibold text-red-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+            <h2 className="text-base sm:text-lg font-bold text-red-400 uppercase tracking-widest mb-4 flex items-center gap-2">
               <Phone className="w-4 h-4" />
               Coordinators
             </h2>

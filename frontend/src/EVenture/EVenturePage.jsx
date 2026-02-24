@@ -27,10 +27,10 @@ const events = [
     title: "Startup Expo",
     subtitle: "Showcase Your Vision to the World",
     icon: TrendingUp,
-    color: "from-emerald-500 to-teal-600",
-    borderColor: "border-emerald-500/40",
-    glowColor: "shadow-emerald-500/20",
-    textColor: "text-emerald-400",
+    color: "from-blue-500 to-cyan-500",
+    borderColor: "border-blue-500/40",
+    glowColor: "shadow-blue-500/20",
+    textColor: "text-blue-400",
     venue: "PMC-CAD Road",
     entryFee: 199,
     teamSize: "Up to 4 members",
@@ -70,10 +70,10 @@ const events = [
     title: "Lightning Pitch",
     subtitle: "Pitch Your Idea. Win the Room.",
     icon: Zap,
-    color: "from-yellow-500 to-orange-500",
-    borderColor: "border-yellow-500/40",
-    glowColor: "shadow-yellow-500/20",
-    textColor: "text-yellow-400",
+    color: "from-violet-500 to-purple-600",
+    borderColor: "border-violet-500/40",
+    glowColor: "shadow-violet-500/20",
+    textColor: "text-violet-400",
     venue: "Auditorium",
     prizePool: 30000,
     entryFee: 199,
@@ -137,10 +137,10 @@ const events = [
     title: "IPL Auction",
     subtitle: "Bid Smart. Build Your Dream Team.",
     icon: Gavel,
-    color: "from-blue-500 to-purple-600",
-    borderColor: "border-blue-500/40",
-    glowColor: "shadow-blue-500/20",
-    textColor: "text-blue-400",
+    color: "from-indigo-500 to-purple-700",
+    borderColor: "border-indigo-500/40",
+    glowColor: "shadow-indigo-500/20",
+    textColor: "text-indigo-400",
     venue: "A4 Hall",
     prizePool: 10000,
     entryFee: 199,
@@ -171,9 +171,9 @@ const events = [
       "The decision of the event coordinators and auctioneer is final and binding.",
     ],
     playerCategories: [
-      { cat: "A+ Category", base: "₹2 Crore base price", color: "text-yellow-400" },
-      { cat: "A Category", base: "₹1 Crore base price", color: "text-gray-300" },
-      { cat: "B Category", base: "₹50 Lakh base price", color: "text-orange-400" },
+      { cat: "A+ Category", base: "₹2 Crore base price", color: "text-violet-400" },
+      { cat: "A Category", base: "₹1 Crore base price", color: "text-blue-300" },
+      { cat: "B Category", base: "₹50 Lakh base price", color: "text-purple-400" },
     ],
     judging: [
       "Effective budget utilization",
@@ -187,27 +187,25 @@ const events = [
 /* ─────────────────────────────────────────────
    Sub-components
 ───────────────────────────────────────────── */
-function RulesAccordion({ title, items, defaultOpen = false, textColor = "text-red-400" }) {
+function RulesAccordion({ title, items, defaultOpen = false, textColor = "text-violet-400" }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div className="border border-white/10 rounded-xl overflow-hidden">
+    <div className="border border-violet-500/20 rounded-xl overflow-hidden backdrop-blur-sm">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between px-4 py-3 bg-white/5 hover:bg-white/10 transition-colors duration-200 text-left"
+        className="w-full flex items-center justify-between px-5 py-3.5 bg-gradient-to-r from-violet-900/20 to-blue-900/20 hover:from-violet-900/40 hover:to-blue-900/40 transition-all duration-200 text-left"
       >
-        <span className={`font-semibold text-sm ${textColor}`}>{title}</span>
-        {open ? (
-          <ChevronUp className="w-4 h-4 text-gray-400 flex-shrink-0" />
-        ) : (
-          <ChevronDown className="w-4 h-4 text-gray-400 flex-shrink-0" />
-        )}
+        <span className={`font-bold text-sm tracking-wide ${textColor}`}>{title}</span>
+        <div className={`p-1 rounded-lg bg-white/5 ${textColor}`}>
+          {open ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+        </div>
       </button>
       {open && (
-        <ul className="px-4 py-3 space-y-2 bg-black/20">
+        <ul className="px-5 py-4 space-y-2.5 bg-gradient-to-b from-black/30 to-black/10">
           {items.map((item, i) => (
-            <li key={i} className="flex gap-2 text-xs text-gray-300 leading-relaxed">
-              <span className={`font-bold ${textColor} flex-shrink-0`}>{i + 1}.</span>
-              <span>{item}</span>
+            <li key={i} className="flex gap-3 text-xs text-gray-300 leading-relaxed">
+              <span className={`font-black text-xs ${textColor} flex-shrink-0 w-4 text-right`}>{i + 1}.</span>
+              <span className="text-gray-300">{item}</span>
             </li>
           ))}
         </ul>
@@ -221,74 +219,73 @@ function EventCard({ event }) {
   return (
     <div
       id={event.id}
-      className={`bg-gradient-to-br from-gray-900/90 via-gray-900/80 to-gray-800/90 border-2 ${event.borderColor} rounded-2xl overflow-hidden shadow-2xl ${event.glowColor} hover:shadow-lg transition-all duration-500`}
+      className={`relative rounded-3xl overflow-hidden border-2 ${event.borderColor} shadow-2xl transition-all duration-500 hover:scale-[1.01] hover:shadow-[0_0_60px_-10px] ${event.glowColor}`}
+      style={{ background: 'linear-gradient(135deg, #0a0a1a 0%, #0d0d2b 50%, #0a0a1a 100%)' }}
     >
-      {/* Card header */}
-      <div className={`bg-gradient-to-r ${event.color} p-0.5`}>
-        <div className="bg-gray-950/95 px-5 sm:px-6 py-5 sm:py-6">
-          <div className="flex items-start gap-4">
-            <div className={`p-3 rounded-xl bg-gradient-to-br ${event.color} flex-shrink-0`}>
-              <Icon className="w-7 h-7 text-white" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <h2 className={`text-2xl sm:text-3xl font-black ${event.textColor} tracking-wide`}>
-                {event.title}
-              </h2>
-              <p className="text-gray-400 text-sm mt-0.5 font-medium">{event.subtitle}</p>
-            </div>
-          </div>
+      {/* Top gradient bar */}
+      <div className={`h-1.5 w-full bg-gradient-to-r ${event.color}`} />
 
-          {/* Stats row */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5">
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-gray-500 flex-shrink-0" />
-              <div>
-                <p className="text-[10px] text-gray-500 uppercase tracking-wider">Venue</p>
-                <p className="text-xs text-white font-semibold leading-tight">{event.venue}</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-gray-500 flex-shrink-0" />
-              <div>
-                <p className="text-[10px] text-gray-500 uppercase tracking-wider">Team</p>
-                <p className="text-xs text-white font-semibold leading-tight">{event.teamSize}</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <IndianRupee className="w-4 h-4 text-gray-500 flex-shrink-0" />
-              <div>
-                <p className="text-[10px] text-gray-500 uppercase tracking-wider">Entry Fee</p>
-                <p className="text-xs text-white font-semibold">₹{event.entryFee}</p>
-              </div>
-            </div>
-            {event.prizePool && (
-              <div className="flex items-center gap-2">
-                <Trophy className="w-4 h-4 text-yellow-500 flex-shrink-0" />
-                <div>
-                  <p className="text-[10px] text-gray-500 uppercase tracking-wider">Prize Pool</p>
-                  <p className="text-xs text-yellow-400 font-bold">₹{event.prizePool.toLocaleString()}</p>
-                </div>
-              </div>
-            )}
+      {/* Card header */}
+      <div className={`relative px-6 sm:px-8 pt-6 pb-5 bg-gradient-to-br from-white/[0.04] to-transparent`}>
+        {/* Faint glow blob behind icon */}
+        <div className={`absolute top-4 left-6 w-20 h-20 rounded-full bg-gradient-to-br ${event.color} opacity-10 blur-2xl pointer-events-none`} />
+
+        <div className="flex items-start gap-5">
+          <div className={`relative p-3.5 rounded-2xl bg-gradient-to-br ${event.color} shadow-lg flex-shrink-0`}>
+            <Icon className="w-7 h-7 text-white drop-shadow" />
           </div>
+          <div className="flex-1 min-w-0">
+            <h2 className={`text-2xl sm:text-3xl font-black tracking-tight bg-gradient-to-r ${event.color} bg-clip-text text-transparent`}>
+              {event.title}
+            </h2>
+            <p className="text-blue-200/60 text-sm mt-1 font-medium italic">{event.subtitle}</p>
+          </div>
+        </div>
+
+        {/* Stats row */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
+          {[
+            { icon: <MapPin className={`w-4 h-4 ${event.textColor}`} />, label: "Venue", value: event.venue },
+            { icon: <Users className={`w-4 h-4 ${event.textColor}`} />, label: "Team", value: event.teamSize },
+            { icon: <IndianRupee className={`w-4 h-4 ${event.textColor}`} />, label: "Entry Fee", value: `₹${event.entryFee}` },
+            event.prizePool
+              ? { icon: <Trophy className="w-4 h-4 text-violet-300" />, label: "Prize Pool", value: `₹${event.prizePool.toLocaleString()}`, highlight: true }
+              : null,
+          ].filter(Boolean).map((stat, i) => (
+            <div key={i} className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl border ${
+              stat.highlight ? 'border-violet-500/30 bg-violet-500/10' : 'border-white/8 bg-white/5'
+            }`}>
+              <div className="flex-shrink-0">{stat.icon}</div>
+              <div>
+                <p className="text-[9px] text-blue-300/50 uppercase tracking-widest font-semibold">{stat.label}</p>
+                <p className={`text-xs font-bold leading-tight ${
+                  stat.highlight ? 'text-violet-300' : 'text-white'
+                }`}>{stat.value}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
+      {/* Divider */}
+      <div className={`mx-6 sm:mx-8 h-px bg-gradient-to-r from-transparent ${event.color.replace('from-','via-').split(' ')[0].replace('via-','via-')} to-transparent opacity-30`} />
+
       {/* Card body */}
-      <div className="px-5 sm:px-6 py-5 space-y-5">
+      <div className="px-6 sm:px-8 py-6 space-y-6">
         {/* Description */}
-        <p className="text-sm text-gray-300 leading-relaxed">{event.description}</p>
+        <p className="text-sm text-blue-100/70 leading-relaxed">{event.description}</p>
 
         {/* Highlights */}
         <div>
-          <h4 className={`text-xs font-bold ${event.textColor} uppercase tracking-widest mb-3`}>
+          <h4 className={`text-[11px] font-black ${event.textColor} uppercase tracking-[0.2em] mb-3 flex items-center gap-2`}>
+            <span className={`inline-block w-4 h-0.5 bg-gradient-to-r ${event.color} rounded-full`} />
             Event Highlights
           </h4>
           <ul className="space-y-2">
             {event.highlights.map((h, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
+              <li key={i} className="flex items-start gap-3">
                 <CheckCircle className={`w-4 h-4 ${event.textColor} flex-shrink-0 mt-0.5`} />
-                <span>{h}</span>
+                <span className="text-sm text-blue-100/80">{h}</span>
               </li>
             ))}
           </ul>
@@ -297,17 +294,18 @@ function EventCard({ event }) {
         {/* IPL Player Categories */}
         {event.playerCategories && (
           <div>
-            <h4 className={`text-xs font-bold ${event.textColor} uppercase tracking-widest mb-3`}>
+            <h4 className={`text-[11px] font-black ${event.textColor} uppercase tracking-[0.2em] mb-3 flex items-center gap-2`}>
+              <span className={`inline-block w-4 h-0.5 bg-gradient-to-r ${event.color} rounded-full`} />
               Player Categories
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {event.playerCategories.map((pc, i) => (
                 <div
                   key={i}
-                  className="bg-white/5 border border-white/10 rounded-xl p-3 text-center"
+                  className={`rounded-xl p-4 text-center border border-white/10 bg-gradient-to-b from-white/5 to-white/[0.02]`}
                 >
-                  <p className={`font-bold text-sm ${pc.color}`}>{pc.cat}</p>
-                  <p className="text-xs text-gray-400 mt-1">{pc.base}</p>
+                  <p className={`font-black text-sm ${pc.color}`}>{pc.cat}</p>
+                  <p className="text-xs text-blue-200/50 mt-1 font-medium">{pc.base}</p>
                 </div>
               ))}
             </div>
@@ -317,21 +315,22 @@ function EventCard({ event }) {
         {/* Lightning Pitch Deck */}
         {event.pitchDeck && (
           <div>
-            <h4 className={`text-xs font-bold ${event.textColor} uppercase tracking-widest mb-3`}>
+            <h4 className={`text-[11px] font-black ${event.textColor} uppercase tracking-[0.2em] mb-3 flex items-center gap-2`}>
+              <span className={`inline-block w-4 h-0.5 bg-gradient-to-r ${event.color} rounded-full`} />
               Pitch Deck Structure (11 Slides)
             </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {event.pitchDeck.map((s, i) => (
                 <div
                   key={i}
-                  className="flex gap-3 bg-white/5 border border-white/10 rounded-xl p-3"
+                  className="flex gap-3 bg-white/[0.04] border border-white/8 rounded-xl p-3.5 hover:bg-white/[0.07] transition-colors"
                 >
-                  <span className={`text-xs font-black ${event.textColor} flex-shrink-0 w-14`}>
+                  <span className={`text-[11px] font-black ${event.textColor} flex-shrink-0 w-14 pt-0.5`}>
                     {s.slide}
                   </span>
                   <div>
-                    <p className="text-xs font-bold text-white">{s.title}</p>
-                    <p className="text-[10px] text-gray-400 mt-0.5 leading-relaxed">{s.desc}</p>
+                    <p className="text-xs font-bold text-white/90">{s.title}</p>
+                    <p className="text-[11px] text-blue-200/50 mt-0.5 leading-relaxed">{s.desc}</p>
                   </div>
                 </div>
               ))}
@@ -341,7 +340,7 @@ function EventCard({ event }) {
 
         {/* Rules */}
         <RulesAccordion
-          title="Rules & Regulations"
+          title="⚖ Rules & Regulations"
           items={event.rules}
           defaultOpen={false}
           textColor={event.textColor}
@@ -349,14 +348,15 @@ function EventCard({ event }) {
 
         {/* Judging Criteria */}
         <div>
-          <h4 className={`text-xs font-bold ${event.textColor} uppercase tracking-widest mb-3`}>
+          <h4 className={`text-[11px] font-black ${event.textColor} uppercase tracking-[0.2em] mb-3 flex items-center gap-2`}>
+            <span className={`inline-block w-4 h-0.5 bg-gradient-to-r ${event.color} rounded-full`} />
             Judging Criteria
           </h4>
           <div className="flex flex-wrap gap-2">
             {event.judging.map((j, i) => (
               <span
                 key={i}
-                className={`px-3 py-1 text-xs font-medium rounded-full border ${event.borderColor} ${event.textColor} bg-white/5`}
+                className={`px-3.5 py-1.5 text-[11px] font-semibold rounded-full border-2 ${event.borderColor} ${event.textColor} bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm hover:bg-white/10 transition-colors cursor-default`}
               >
                 {j}
               </span>
@@ -366,14 +366,14 @@ function EventCard({ event }) {
 
         {/* Pro Tips (Lightning Pitch only) */}
         {event.proTips && (
-          <div className="bg-yellow-500/5 border border-yellow-500/20 rounded-xl p-4">
-            <h4 className="text-xs font-bold text-yellow-400 uppercase tracking-widest mb-3 flex items-center gap-2">
-              <Star className="w-4 h-4" /> Pro Tips for Participants
+          <div className="bg-gradient-to-br from-violet-900/25 to-purple-900/15 border border-violet-500/30 rounded-2xl p-5">
+            <h4 className="text-[11px] font-black text-violet-300 uppercase tracking-[0.2em] mb-3 flex items-center gap-2">
+              <Star className="w-4 h-4 text-violet-400" /> Pro Tips for Participants
             </h4>
-            <ul className="space-y-1">
+            <ul className="space-y-2">
               {event.proTips.map((tip, i) => (
-                <li key={i} className="text-xs text-gray-300 flex items-start gap-2">
-                  <span className="text-yellow-400 flex-shrink-0">›</span>
+                <li key={i} className="text-sm text-blue-100/70 flex items-start gap-2.5">
+                  <span className="text-violet-400 font-black flex-shrink-0 mt-0.5">›</span>
                   {tip}
                 </li>
               ))}
@@ -386,12 +386,16 @@ function EventCard({ event }) {
           href={event.registerLink}
           target="_blank"
           rel="noopener noreferrer"
-          className={`flex items-center justify-center gap-2 w-full py-3 rounded-xl font-bold text-sm text-white bg-gradient-to-r ${event.color} hover:opacity-90 transition-all duration-300 hover:scale-[1.02] shadow-lg`}
+          className={`group relative flex items-center justify-center gap-2.5 w-full py-3.5 rounded-2xl font-black text-sm text-white bg-gradient-to-r ${event.color} hover:brightness-110 transition-all duration-300 hover:scale-[1.02] shadow-lg overflow-hidden`}
         >
-          Register Now
-          <ExternalLink className="w-4 h-4" />
+          <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+          <span className="relative">Register Now</span>
+          <ExternalLink className="w-4 h-4 relative group-hover:translate-x-1 transition-transform" />
         </a>
       </div>
+
+      {/* Bottom gradient bar */}
+      <div className={`h-0.5 w-full bg-gradient-to-r ${event.color} opacity-40`} />
     </div>
   );
 }
@@ -407,25 +411,32 @@ export default function EVenturePage() {
   };
 
   return (
-    <div className="min-h-screen bg-black flex flex-col relative overflow-x-hidden">
+    <div className="min-h-screen flex flex-col relative overflow-x-hidden" style={{ background: 'linear-gradient(160deg, #04040f 0%, #080820 40%, #060618 70%, #04040f 100%)' }}>
       <BackgroundLayer />
+
+      {/* Global ambient glows */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-violet-600/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-purple-700/8 rounded-full blur-[90px]" />
+      </div>
 
       <main className="flex-grow relative z-10">
         {/* Back Button */}
         <div className="fixed top-4 sm:top-6 left-4 sm:left-6 z-50">
           <button
             onClick={() => navigate("/")}
-            className="group flex items-center gap-2 px-4 py-2 bg-gray-950/90 backdrop-blur-xl border-2 border-red-500/40 rounded-xl hover:border-red-500/80 transition-all duration-300 hover:scale-105 shadow-lg"
+            className="group flex items-center gap-2 px-4 py-2 bg-[#080820]/90 backdrop-blur-xl border border-violet-500/40 rounded-xl hover:border-violet-400 hover:bg-violet-500/10 transition-all duration-300 hover:scale-105 shadow-lg shadow-violet-900/20"
           >
-            <ArrowLeft className="w-4 h-4 text-red-500 group-hover:-translate-x-1 transition-transform duration-300" />
-            <span className="text-red-400 font-semibold text-xs sm:text-sm">Home</span>
+            <ArrowLeft className="w-4 h-4 text-violet-400 group-hover:-translate-x-1 transition-transform duration-300" />
+            <span className="text-violet-300 font-bold text-xs sm:text-sm">Home</span>
           </button>
         </div>
 
         {/* Hero Section */}
-        <section className="pt-20 sm:pt-24 pb-8 px-4 text-center relative">
+        <section className="pt-20 sm:pt-24 pb-10 px-4 text-center relative">
           {/* Main Image */}
-          <div className="mb-4">
+          <div className="mb-6">
             <img
               src="/Pragyaa_main_image.png"
               alt="PRAGYAA 2026"
@@ -434,39 +445,42 @@ export default function EVenturePage() {
           </div>
 
           {/* E-CELL badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-yellow-500/40 bg-yellow-500/10 mb-4">
-            <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
-            <span className="text-yellow-400 text-xs font-bold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-violet-500/50 bg-gradient-to-r from-violet-900/30 to-blue-900/30 backdrop-blur-sm mb-5 shadow-lg shadow-violet-900/20">
+            <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse shadow-lg shadow-violet-400/50"></span>
+            <span className="text-violet-300 text-xs font-bold uppercase tracking-[0.15em]">
               Pragyaa × E-CELL presents
             </span>
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mb-3">
-            E-<span className="bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight text-white mb-4 leading-none">
+            E&#8209;<span className="bg-gradient-to-r from-blue-400 via-violet-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(139,92,246,0.5)]">
               VENTURE
             </span>
           </h1>
 
-          <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed mb-2">
-            A dynamic entrepreneurship track at PRAGYAA&apos;26 that celebrates innovation,
-            strategy, and business thinking. Three unique events — one platform to launch your
-            entrepreneurial journey.
+          <p className="text-blue-200/60 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-4">
+            A dynamic entrepreneurship track at PRAGYAA&apos;26 — celebrating innovation,
+            strategy, and business thinking across three thrilling events.
           </p>
 
           {/* Date badge */}
-          <div className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-full">
-            <span className="text-red-400 text-xs font-semibold">
+          <div className="inline-flex items-center gap-2.5 mt-2 px-5 py-2 bg-gradient-to-r from-blue-900/30 to-violet-900/30 border border-blue-500/30 rounded-full backdrop-blur-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+            <span className="text-blue-300 text-xs font-semibold tracking-wide">
               Feb 27–28 & Mar 1, 2026 · SGGSIE&T, Nanded
             </span>
           </div>
 
           {/* Divider */}
-          <div className="w-32 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto mt-8"></div>
+          <div className="relative mt-10 mx-auto w-64">
+            <div className="h-px bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
+            <div className="absolute inset-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent blur-sm" />
+          </div>
         </section>
 
         {/* Quick Nav */}
-        <section className="px-4 pb-8">
+        <section className="px-4 pb-10">
           <div className="max-w-3xl mx-auto flex flex-wrap justify-center gap-3">
             {events.map((ev) => {
               const Icon = ev.icon;
@@ -474,10 +488,10 @@ export default function EVenturePage() {
                 <button
                   key={ev.id}
                   onClick={() => scrollToEvent(ev.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full border-2 ${ev.borderColor} bg-white/5 hover:bg-white/10 transition-all duration-200 hover:scale-105`}
+                  className={`flex items-center gap-2.5 px-5 py-2.5 rounded-full border-2 ${ev.borderColor} bg-gradient-to-r from-white/[0.04] to-white/[0.02] hover:from-white/10 hover:to-white/5 transition-all duration-200 hover:scale-105 shadow-sm backdrop-blur-sm`}
                 >
                   <Icon className={`w-4 h-4 ${ev.textColor}`} />
-                  <span className={`text-sm font-semibold ${ev.textColor}`}>{ev.title}</span>
+                  <span className={`text-sm font-bold ${ev.textColor}`}>{ev.title}</span>
                 </button>
               );
             })}
@@ -485,31 +499,35 @@ export default function EVenturePage() {
         </section>
 
         {/* About E-Venture */}
-        <section className="px-4 pb-10">
-          <div className="max-w-5xl mx-auto bg-gradient-to-br from-red-900/30 via-gray-900/60 to-red-900/30 border border-red-500/20 rounded-2xl p-6 sm:p-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 flex items-center gap-3">
-              <span className="w-1 h-6 bg-red-500 rounded-full"></span>
-              About E-Venture
+        <section className="px-4 pb-12">
+          <div className="max-w-5xl mx-auto relative rounded-3xl overflow-hidden border border-violet-500/20 p-6 sm:p-8" style={{ background: 'linear-gradient(135deg, rgba(30,10,80,0.4) 0%, rgba(10,10,40,0.7) 50%, rgba(20,5,60,0.4) 100%)' }}>
+            {/* Corner glow */}
+            <div className="absolute top-0 right-0 w-48 h-48 bg-violet-600/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+
+            <h2 className="relative text-xl sm:text-2xl font-black text-white mb-4 flex items-center gap-3">
+              <span className="w-1 h-7 bg-gradient-to-b from-blue-400 to-violet-600 rounded-full shadow-lg shadow-violet-500/50"></span>
+              <span className="bg-gradient-to-r from-blue-300 to-violet-300 bg-clip-text text-transparent">About E-Venture</span>
             </h2>
-            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+            <p className="relative text-blue-100/70 text-sm sm:text-base leading-relaxed mb-6">
               E-Venture is the entrepreneurship wing of PRAGYAA, the national-level socio-technical
               fiesta of SGGSIE&T, Nanded — powered by E-CELL. It brings together innovators,
               strategists, and future entrepreneurs under one roof with three exciting events:
-              the <span className="text-emerald-400 font-semibold">Startup Expo</span>, the high-energy{" "}
-              <span className="text-yellow-400 font-semibold">Lightning Pitch</span>, and the strategic{" "}
-              <span className="text-blue-400 font-semibold">IPL Auction</span>. Whether you have a startup
+              the <span className="text-blue-400 font-bold">Startup Expo</span>, the high-energy{" "}
+              <span className="text-violet-400 font-bold">Lightning Pitch</span>, and the strategic{" "}
+              <span className="text-indigo-400 font-bold">IPL Auction</span>. Whether you have a startup
               idea, a business model, or a knack for strategy, there&apos;s a stage for you here.
             </p>
-            <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="relative grid grid-cols-2 sm:grid-cols-4 gap-3">
               {[
-                { label: "Events", value: "3" },
-                { label: "Prize Pool", value: "₹40,000+" },
-                { label: "Date", value: "Feb 27 – Mar 1" },
-                { label: "Coordinator", value: "Mr. Darshan Singh" },
+                { label: "Events", value: "3", color: "from-blue-500 to-blue-700" },
+                { label: "Prize Pool", value: "₹40,000+", color: "from-violet-500 to-violet-700" },
+                { label: "Date", value: "Feb 27 – Mar 1", color: "from-purple-500 to-purple-700" },
+                { label: "Coordinator", value: "Mr. Darshan Singh", color: "from-indigo-500 to-indigo-700" },
               ].map((s, i) => (
-                <div key={i} className="text-center p-3 bg-white/5 rounded-xl border border-white/10">
-                  <p className="text-lg sm:text-xl font-black text-white">{s.value}</p>
-                  <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-0.5">{s.label}</p>
+                <div key={i} className="text-center p-4 rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm">
+                  <p className={`text-base sm:text-lg font-black bg-gradient-to-r ${s.color} bg-clip-text text-transparent`}>{s.value}</p>
+                  <p className="text-[10px] text-blue-300/50 uppercase tracking-widest font-semibold mt-1">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -517,10 +535,13 @@ export default function EVenturePage() {
         </section>
 
         {/* General Rules */}
-        <section className="px-4 pb-10">
+        <section className="px-4 pb-12">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-lg sm:text-xl font-bold text-red-400 uppercase tracking-widest mb-4 text-center">
-              General Rules (All E-Venture Events)
+            <h2 className="text-lg sm:text-xl font-black uppercase tracking-[0.15em] mb-6 text-center">
+              <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
+                General Rules
+              </span>
+              <span className="text-blue-200/40 font-medium text-sm block mt-0.5 tracking-wide normal-case">Applicable to all E-Venture events</span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
@@ -535,10 +556,10 @@ export default function EVenturePage() {
               ].map((rule, i) => (
                 <div
                   key={i}
-                  className="flex gap-3 items-start bg-white/5 border border-red-500/20 rounded-xl px-4 py-3"
+                  className="flex gap-3 items-start rounded-xl px-4 py-3.5 border border-violet-500/15 bg-gradient-to-r from-violet-900/10 to-blue-900/10 hover:from-violet-900/20 hover:to-blue-900/20 transition-colors"
                 >
-                  <span className="text-red-500 font-bold text-sm flex-shrink-0">{i + 1}.</span>
-                  <p className="text-sm text-gray-300 leading-relaxed">{rule}</p>
+                  <span className="w-6 h-6 rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center text-white font-black text-[10px] flex-shrink-0 mt-0.5">{i + 1}</span>
+                  <p className="text-sm text-blue-100/70 leading-relaxed">{rule}</p>
                 </div>
               ))}
             </div>
@@ -546,10 +567,10 @@ export default function EVenturePage() {
         </section>
 
         {/* Event Cards */}
-        <section className="px-4 pb-14">
-          <div className="max-w-5xl mx-auto space-y-10">
-            <h2 className="text-2xl sm:text-3xl font-black text-center text-white uppercase tracking-widest mb-6">
-              <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-400 bg-clip-text text-transparent">
+        <section className="px-4 pb-16">
+          <div className="max-w-5xl mx-auto space-y-12">
+            <h2 className="text-3xl sm:text-4xl font-black text-center uppercase tracking-[0.12em]">
+              <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(139,92,246,0.4)]">
                 Events
               </span>
             </h2>
@@ -560,23 +581,26 @@ export default function EVenturePage() {
         </section>
 
         {/* Contact */}
-        <section className="px-4 pb-10">
-          <div className="max-w-3xl mx-auto text-center bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-red-500/20 rounded-2xl p-6 sm:p-8">
-            <h2 className="text-lg font-bold text-white mb-4">Event Coordinator</h2>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <section className="px-4 pb-12">
+          <div className="max-w-3xl mx-auto text-center relative rounded-3xl overflow-hidden border border-violet-500/20 p-7 sm:p-10" style={{ background: 'linear-gradient(135deg, rgba(20,10,60,0.6) 0%, rgba(8,8,30,0.8) 50%, rgba(20,10,60,0.6) 100%)' }}>
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-24 bg-violet-500/10 rounded-full blur-2xl" />
+            </div>
+            <h2 className="relative text-lg font-black bg-gradient-to-r from-blue-300 to-violet-300 bg-clip-text text-transparent mb-5 uppercase tracking-widest">Event Coordinator</h2>
+            <div className="relative flex flex-col sm:flex-row items-center justify-center gap-6">
               <div className="text-center">
-                <p className="text-white font-semibold">Mr. Darshan Singh</p>
+                <p className="text-white font-bold text-base">Mr. Darshan Singh</p>
                 <a
                   href="tel:9322199877"
-                  className="text-red-400 text-sm hover:text-red-300 transition-colors"
+                  className="text-violet-400 font-semibold text-sm hover:text-violet-300 transition-colors mt-0.5 block"
                 >
                   +91 9322199877
                 </a>
               </div>
-              <div className="hidden sm:block w-px h-8 bg-gray-700"></div>
+              <div className="hidden sm:block w-px h-10 bg-gradient-to-b from-transparent via-violet-500/40 to-transparent"></div>
               <div className="text-center">
-                <p className="text-gray-400 text-xs uppercase tracking-widest mb-1">Faculty In-charge</p>
-                <p className="text-white font-semibold">Dr. Milind Bhalerao</p>
+                <p className="text-blue-300/50 text-[10px] uppercase tracking-widest font-bold mb-1">Faculty In-charge</p>
+                <p className="text-white font-bold text-base">Dr. Milind Bhalerao</p>
               </div>
             </div>
           </div>
