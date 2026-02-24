@@ -136,7 +136,6 @@ const eventData = {
           "A flagship hands-on AI Bootcamp at PRAGYAA where participants explore the fundamentals of Artificial Intelligence and Machine Learning through practical sessions, guided workshops, and real-world problem solving. Ideal for enthusiasts looking to kickstart their journey into the world of AI.",
         icon: "Trophy",
         venue: "Seminar Hall",
-        entryFee: 199,
         members: 1,
         coordinators: [{ name: "PRAGYAA Team", phone: "8080720803" }],
         faculty: "Dr Atul Shinde",
@@ -146,7 +145,6 @@ const eventData = {
             section: "Participation",
             items: [
               "Individual participation; open to all students",
-              "Entry fee: ₹199 (non-refundable)",
               "Valid college ID required",
               "Prior AI/ML knowledge is not mandatory"
             ]
@@ -1327,53 +1325,6 @@ const eventData = {
               "Mobile phones must be on silent mode",
               "Food and beverages as per event organizer's allowance only",
               "Seating will be on a first-come, first-served basis unless assigned"
-            ]
-          }
-        ]
-      },
-      {
-        id: "CheckMate",
-        title: "CheckMate",
-        tagline: "Chess Tournament",
-        description:
-          "A chess competition challenging players' strategy, foresight, and critical thinking in a battle of minds.",
-        icon: "Star",
-        venue: "Admin GF/Gymnasium",
-        prizePool: 5000,
-        entryFee: 99,
-        members: 1,
-        coordinators: [
-          { name: "Vijyot Silare", phone: "9172894479" },
-          { name: "Tanisha Dhoot", phone: "8975360958" }
-        ],
-        faculty: "Dr Atul Shinde",
-        registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
-        rules: [
-          {
-            section: "Format",
-            items: [
-              "Individual participation only (1 vs 1 matches)",
-              "Standard FIDE chess rules apply",
-              "Swiss-system or elimination format depending on number of participants",
-              "Chess clocks will be used for all matches"
-            ]
-          },
-          {
-            section: "Rules",
-            items: [
-              "Touch-Move Rule strictly enforced: if you touch a piece, you must move it",
-              "One Hand Rule: moves must be made with one hand only",
-              "No electronic devices (mobile phones, smartwatches) allowed during matches",
-              "Late arrival beyond 10 minutes from round start = forfeit of that game",
-              "Good sportsmanship expected at all times"
-            ]
-          },
-          {
-            section: "Ranking & Tie-Breaking",
-            items: [
-              "Rankings based on total points scored",
-              "Tie-breaking: Buchholz system / head-to-head result",
-              "Judges' and arbiters' decisions are final"
             ]
           }
         ]
