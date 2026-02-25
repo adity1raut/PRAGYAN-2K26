@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Trophy, Users, Phone, MapPin, BookOpen } from "lucide-react";
+import { ArrowLeft, Trophy, Users, Phone, MapPin, BookOpen, FileText } from "lucide-react";
 import eventData from "./eventData";
 import BackgroundLayer from "../components/BackgroundLayer";
 import Footer from "../Footer/Footer";
@@ -142,6 +142,38 @@ export default function EventDetailPage() {
                       ))}
                     </ul>
                   </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Problem Statement */}
+          {event.problemStatements && event.problemStatements.length > 0 && (
+            <div className="bg-gray-900/60 border border-red-500/25 rounded-2xl p-5 sm:p-6">
+              <h2 className="text-base sm:text-lg font-bold text-red-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                <FileText className="w-4 h-4" />
+                Problem Statement
+              </h2>
+              <div className="space-y-3">
+                {event.problemStatements.map((ps, idx) => (
+                  <a
+                    key={idx}
+                    href={ps.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 w-full px-5 py-4 bg-gray-800/60 border border-red-500/30 rounded-xl hover:border-red-400 hover:bg-gray-800 transition-all duration-300 group"
+                  >
+                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-red-500/20 border border-red-500/30 group-hover:bg-red-500/30 transition-colors shrink-0">
+                      <FileText className="w-5 h-5 text-red-400" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-white font-semibold text-sm">{ps.label}</p>
+                      <p className="text-gray-400 text-xs mt-0.5">Click to open PDF</p>
+                    </div>
+                    <span className="text-red-400 font-bold text-sm group-hover:translate-x-1 transition-transform">
+                      Open →
+                    </span>
+                  </a>
                 ))}
               </div>
             </div>

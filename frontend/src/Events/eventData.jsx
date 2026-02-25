@@ -15,8 +15,8 @@ const eventData = {
         entryFee: 199,
         members: 4,
         coordinators: [
-          { name: "Krishna Gaikwad", phone: "8767154816" },
-          { name: "Hitesh Khandekar", phone: "8855953179" }
+          { name: "Mohit Kumre", phone: "8080720803" },
+          { name: "Shreyash Sable", phone: "9664881642" }
         ],
         faculty: "Dr Atul Shinde",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
@@ -30,21 +30,14 @@ const eventData = {
               "Open to engineering, diploma, and science students"
             ]
           },
-          {
-            section: "Project Domains",
-            items: [
-              "Technovision (Embedded Intelligence): Robotics, IoT, Embedded Systems",
-              "Energize & Mobility (Power & Mechanics): Electric Vehicles, battery management, renewable energy generators",
-              "AgriTech Solutions (Mechanizing Agriculture): Automated irrigation, crop monitoring drones, harvesting bots"
-            ]
-          },
+         
           {
             section: "Presentation Format",
             items: [
               "Setup time as per event schedule",
               "5–7 minute project presentation followed by 2–3 minute Q&A",
               "Must explain: problem statement, working principle, innovation/application, and feasibility/future scope",
-              "Working prototype or simulation along with a poster must be presented"
+              "Working prototype or simulation must be presented"
             ]
           },
           {
@@ -78,8 +71,8 @@ const eventData = {
         entryFee: 99,
         members: 2,
         coordinators: [
-          { name: "Dipali Wadwale", phone: "9763212227" },
-          { name: "Vijay Shinde", phone: "8446250150" }
+          { name: "Mohit Kumare", phone: "8080720803" },
+          { name: "Shreyansh Rajput", phone: "8308032884" }
         ],
         faculty: "Dr Atul Shinde",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
@@ -100,7 +93,8 @@ const eventData = {
               "Size: A1 or A2, portrait orientation",
               "Printed or hand-drawn posters are accepted",
               "Poster must be self-supporting (no wall attachment needed)",
-              "Required sections: Title, Participant Name(s), Institution, Problem Statement/Objective, Methodology/Concept, Results/Expected Outcomes, Conclusion, References"
+              "Required sections: Title, Participant Name(s), Institution, Problem Statement/Objective, Methodology/Concept, Results/Expected Outcomes, Conclusion, References",
+              "Participants must bring their own posters."
             ]
           },
           {
@@ -108,7 +102,8 @@ const eventData = {
             items: [
               "3–5 minutes per team/individual",
               "Cover: research motivation, technical approach, innovation/relevance, key outcomes",
-              "Late submissions will not be accepted"
+              "Late submissions will not be accepted",
+              "Participants should submit their abstract."
             ]
           },
           {
@@ -119,13 +114,7 @@ const eventData = {
               "All participants receive participation certificates; best posters receive merit certificates and prizes"
             ]
           },
-          {
-            section: "Coordinators",
-            items: [
-              "Mohit Kumare – 8080720803",
-              "Shreyansh Rajput – 8308032884"
-            ]
-          }
+          
         ]
       },
       {
@@ -137,7 +126,9 @@ const eventData = {
         icon: "Trophy",
         venue: "Seminar Hall",
         members: 1,
-        coordinators: [{ name: "PRAGYAA Team", phone: "8080720803" }],
+        coordinators: [{ name: "Mohit Kumare", phone: "8080720803" },
+          {name : "Ritesh Yevatkar", phone : "9699715813"}
+        ],
         faculty: "Dr Atul Shinde",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
         rules: [
@@ -191,6 +182,9 @@ const eventData = {
         ],
         faculty: "Dr. A. P. Chauhan",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        problemStatements: [
+          { label: "IDP Powered by ChemGate Academy", url: "/IDP-Powered-by-ChemGate-Academy-Problem-Statement.pdf" }
+        ],
         rules: [
           {
             section: "Theme & Eligibility",
@@ -350,12 +344,12 @@ const eventData = {
         title: "Mechaverse (CAD-WAR)",
         tagline: "Design. Innovate. Dominate.",
         description:
-          "A design-oriented challenge where participants use CAD software to solve mechanical design problems under time constraints, testing accuracy, speed, and conceptual understanding.",
+          "Mechaverse – CAD War 2026 is an individual design competition organized by MESA to test participants' skills in 3D modeling, drafting, assembly design, accuracy, and speed using AutoCAD. Held on 1 March 2026 (11:00 AM – 05:00 PM) at PLM Lab, Mechanical Engineering Department.",
         icon: "Users",
-        venue: "Mechanical Engineering Department",
+        venue: "PLM Lab, Mechanical Engineering Department",
         prizePool: 5000,
         entryFee: 99,
-        members: 4,
+        members: 1,
         coordinators: [
           { name: "Mr. Balaji Kasture", phone: "7249438491" },
           { name: "Balaji Kalyankar", phone: "9699536593" }
@@ -364,44 +358,55 @@ const eventData = {
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
         rules: [
           {
-            section: "Eligibility & Venue",
+            section: "Eligibility",
             items: [
-              "Open to Diploma / BE / BTech students",
-              "Individual (1v1) format — no teams",
-              "Valid college ID mandatory",
-              "Date: 1 March 2026, 11:00 AM – 05:00 PM",
-              "Venue: PLM Lab, Mechanical Engineering Department",
-              "Software: AutoCAD"
+              "Open to Diploma / B.E. / B.Tech Engineering students",
+              "Individual participation (one vs one) — no teams",
+              "Valid college ID card mandatory",
+              "Basic knowledge of CAD software is expected"
             ]
           },
           {
-            section: "Rounds",
+            section: "Event Format",
             items: [
-              "Round 1 (45–60 min): 3D modeling task — evaluated on accuracy, constraints, and features",
-              "Round 2 (60–90 min): Complex 3D part modeling from 2D drawing / isometric view / physical component",
-              "Round 3 (90–120 min): Assembly modeling / reverse engineering / creative design challenge"
+              "Round 1 – Preliminary (45–60 min): 3D modeling task; evaluated on dimensional accuracy, constraints, feature usage, and completion time",
+              "Round 2 – Advanced Modeling (60–90 min): Complex 3D part modeling from 2D drawing, isometric view, or physical component; evaluated on accuracy, feature optimization, clean modeling, and time management",
+              "Round 3 – Final (90–120 min): Assembly modeling / reverse engineering / creative design challenge; judged on assembly constraints, motion feasibility, innovation, and presentation"
+            ]
+          },
+          {
+            section: "General Rules",
+            items: [
+              "Participants must report 30 minutes before the event",
+              "Late entry beyond 15 minutes will not be allowed",
+              "Mobile phones are not allowed during the competition",
+              "Use of pen drives or external storage devices is not permitted",
+              "Files must be saved in the format: TeamName_RoundNumber",
+              "Any malpractice will lead to immediate disqualification",
+              "Judge's decision will be final and binding"
             ]
           },
           {
             section: "Evaluation Criteria",
             items: [
               "Dimensional Accuracy: 30–40%",
-              "Features and Constraints: 20%",
-              "Design Intent: 10%",
-              "Neat Modeling: 10%",
+              "Proper Use of Features: 20%",
+              "Design Intent & Constraints: 10%",
+              "Neat Sketching & Modeling Practice: 10%",
               "File Organization: 10%",
               "Completion Time: 10%"
             ]
           },
           {
-            section: "Prize Distribution",
+            section: "Disqualification Criteria",
             items: [
-              "1st Place: ₹3,000 + Trophy + Certificate",
-              "2nd Place: ₹1,500 + Certificate",
-              "3rd Place: ₹500 + Certificate",
-              "Participation certificates for all"
+              "Copying from other participants",
+              "Using external devices or internet",
+              "Creating disturbance during the event",
+              "Ignoring instructions from judges"
             ]
-          }
+          },
+         
         ]
       },
       {
@@ -413,6 +418,7 @@ const eventData = {
         icon: "Users",
         venue: "Mechanical Engineering Department",
         prizePool: 5000,
+        entryFee: 99,
         members: 2,
         coordinators: [
           { name: "Mr. Balaji Kasture", phone: "7249438491" },
@@ -450,15 +456,7 @@ const eventData = {
               "Team Coordination"
             ]
           },
-          {
-            section: "Awards",
-            items: [
-              "1st Place: Certificate + Trophy",
-              "2nd Place: Certificate",
-              "3rd Place: Certificate",
-              "Participation certificates for all"
-            ]
-          }
+          
         ]
       },
       {
@@ -700,7 +698,7 @@ const eventData = {
         members: 4,
         coordinators: [
           { name: "Mr. Omkar Dalvi", phone: "7823058329" },
-          { name: "Ayush Gulhane", phone: "9665082890" }
+          { name: "Suhani Malviya", phone: "8975160888" }
         ],
         faculty: "Dr Atul Shinde",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
@@ -750,7 +748,7 @@ const eventData = {
         members: 1,
         coordinators: [
           { name: "Mr. Omkar Dalvi", phone: "7823058329" },
-          { name: "Ayush Gulhane", phone: "9665082890" }
+          { name: "Suhani Malviya", phone: "8975160888"  }
         ],
         faculty: "Dr Atul Shinde",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
@@ -804,7 +802,7 @@ const eventData = {
         members: 2,
         coordinators: [
           { name: "Mr. Omkar Dalvi", phone: "7823058329" },
-          { name: "Ayush Gulhane", phone: "9665082890" }
+          { name: "Suhani Malviya", phone: "8975160888"  }
         ],
         faculty: "Dr Atul Shinde",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
@@ -850,7 +848,7 @@ const eventData = {
         members: 4,
         coordinators: [
           { name: "Mr. Omkar Dalvi", phone: "7823058329" },
-          { name: "Ayush Gulhane", phone: "9665082890" }
+          { name: "Suhani Malviya", phone: "8975160888" }
         ],
         faculty: "Dr Atul Shinde",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
@@ -897,7 +895,7 @@ const eventData = {
         members: 4,
         coordinators: [
           { name: "Mr. Omkar Dalvi", phone: "7823058329" },
-          { name: "Ayush Gulhane", phone: "9665082890" }
+          { name: "Suhani Malviya", phone: "8975160888" }
         ],
         faculty: "Dr Atul Shinde",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
@@ -944,41 +942,44 @@ const eventData = {
         title: "EESA-Electrospark (Voltage Voyage)",
         tagline: "Voltage Voyage",
         description:
-          "It is a technical quiz competition on all the core electrical concepts as well as the fundamentals.",
+          "Voltage Voyage is a competitive quiz event based on core Electrical Engineering subjects, covering concepts from fundamentals to advanced topics. The event is designed to test participants' conceptual clarity, analytical thinking, and quick decision-making skills while promoting technical knowledge, teamwork, and time management through engaging quiz rounds.",
         icon: "Users",
         venue: "Electrical Engineering Department",
         prizePool: 5000,
         entryFee: 99,
-        members: 3,
+        members: 4,
         coordinators: [{ name: "Mr. Shubham Tayde", phone: "9075066926" }],
-        faculty: "Dr. P. S. Jamwal",
+        faculty: "Mrs. Seema Pachpute",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
         rules: [
           {
-            section: "Team & Format",
+            section: "Rounds",
             items: [
-              "Teams of 2–3 members",
-              "Format: MCQ rounds, rapid-fire rounds, or buzzer rounds on core electrical engineering topics",
-              "Multiple rounds — top teams from each round progress further"
+              "Round 1 – Basic Level (Rapid Fire): Fundamental electrical concepts; 20 seconds to answer",
+              "Round 2 – Medium Level: Conceptual and application-based questions; 30 seconds to answer",
+              "Round 3 – Advanced Level: Analytical and higher-difficulty questions; 30 seconds to answer"
             ]
           },
           {
-            section: "Topics Covered",
+            section: "Participation & Format",
             items: [
-              "Basic electrical circuits and laws",
-              "AC/DC machines and transformers",
-              "Power systems and protection",
-              "Control systems",
-              "Electronics and instrumentation",
-              "Electrical engineering fundamentals"
+              "Participation is allowed individually or in teams of maximum 4 members",
+              "Each team/individual will be assigned a unique Group Code before the commencement of the quiz",
+              "Questions prepared by the Main Event Coordinator will be placed in a box in folded slip form and picked randomly in sequence according to the assigned Group Code",
+              "If a team fails to answer within the stipulated time, the same question will be passed to the next team",
+              "Points will be awarded only for correct and satisfactory answers as determined by the Quiz Coordinator",
+              "In case of a tie, a tie-breaker round will be conducted to determine the winner"
             ]
           },
           {
             section: "Rules",
             items: [
-              "No mobiles, smartwatches, calculators (unless explicitly permitted), or reference material allowed",
-              "Tie-breaker round conducted at organizers' discretion",
-              "Judges' and coordinators' decisions are final and binding"
+              "Use of mobile phones, smart watches, calculators (unless explicitly permitted), or any reference material is strictly prohibited",
+              "Any form of discussion, signaling, or communication between teams during the quiz is strictly prohibited",
+              "Participants must report to the venue at least 10 minutes before the scheduled start time",
+              "All participants must maintain discipline, professionalism, and fair play throughout the event",
+              "Any indisciplinary behavior, misconduct, or disruption during the event will lead to immediate disqualification",
+              "The decisions of the Quiz Coordinator and Judges shall be final"
             ]
           }
         ]
@@ -988,39 +989,43 @@ const eventData = {
         title: "EESA-Electrospark (Step Into Strange)",
         tagline: "Step Into Strange",
         description:
-          "Step Into Strange: An unconventional electrical engineering challenge where participants must diagnose and solve unusual circuit problems, pushing the boundaries of their theoretical and practical knowledge.",
+          "Step into the Strange is an individual-based interactive challenge designed to evaluate participants' quick decision-making and General Knowledge. The game progresses through a sequence of steps where participants encounter color-coded signals. Only red signals trigger questions, making strategy and alertness essential for successfully completing the activity.",
         icon: "Users",
         venue: "Electrical Engineering Department",
         prizePool: 5000,
-        entryFee: 99,
-        members: 2,
+        entryFee: 49,
+        members: 1,
         coordinators: [{ name: "Mr. Shubham Tayde", phone: "9075066926" }],
-        faculty: "Dr. P. S. Jamwal",
+        faculty: "Dr. Paramjeet Singh Jamwal",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
         rules: [
           {
-            section: "Team & Format",
+            section: "Format",
             items: [
-              "Teams of 2 members",
-              "Event: ElectroQuest — Guess the Electrical Component",
-              "One participant receives a component name; the other must explain its behavior, working, and applications — without naming it directly"
+              "Individual participation only; team entries are not permitted",
+              "The game consists of 10–12 sequential steps, which must be completed in the prescribed order; skipping or repeating steps is strictly prohibited",
+              "A time limit will be applicable for the overall game, as announced by the event coordinators"
+            ]
+          },
+          {
+            section: "Signals & Lifeline",
+            items: [
+              "Participants will encounter green or red signals while moving through the steps",
+              "Questions on general knowledge will be asked only when a participant gets a red signal; no question will be asked on a green signal",
+              "If a participant achieves three consecutive green signals, they will be awarded one lifeline (only one lifeline per participant; usable only once)",
+              "The lifeline may be used to skip one red-signal question or to get one reattempt, subject to the discretion of the event coordinator",
+              "A maximum of 30 seconds will be provided to answer each question; failure to respond within the given time will be considered an incorrect answer",
+              "If a participant gives a wrong answer to a red-signal question and does not use the lifeline, the participant will be immediately eliminated",
+              "In case more than one participant successfully completes all steps, the participant completing in the least time will be declared the winner"
             ]
           },
           {
             section: "Rules",
             items: [
-              "Hand gestures are allowed",
-              "Directly stating the component name, spelling it out, drawing it, or using mobile phones is strictly prohibited",
-              "Fixed time limit per round; points awarded per correct identification",
-              "Judges' decision is final"
-            ]
-          },
-          {
-            section: "Evaluation",
-            items: [
-              "Accuracy of description",
-              "Clarity of communication",
-              "Number of components correctly identified within the time limit"
+              "Use of mobile phones, electronic devices, written notes, or any external assistance is strictly prohibited during the game",
+              "Any form of misconduct, rule violation, or unfair practice will result in immediate disqualification",
+              "The difficulty level and selection of questions will be at the discretion of the event coordinators",
+              "The decision of the judges and event coordinators shall be final and binding in all matters"
             ]
           }
         ]
@@ -1030,40 +1035,43 @@ const eventData = {
         title: "EESA-Electrospark (Breadboard Buildoff)",
         tagline: "Breadboard Circuit Building",
         description:
-          "Breadboard Circuit Building Competition: The competition is based on core electrical/electronics circuits to test your project circuit/any circuit implementation on breadboards.",
+          "Circuit Craze (Breadboard Build-Off) is a hands-on technical event that challenges participants to design and implement electrical or electronic circuits on a breadboard within a limited time. The circuit diagram will be provided at the start of the round and all necessary components will be supplied by the organizing team.",
         icon: "Users",
         venue: "Electrical Engineering Department",
         prizePool: 5000,
         entryFee: 49,
         members: 1,
         coordinators: [{ name: "Mr. Shubham Tayde", phone: "9075066926" }],
-        faculty: "Dr. P. S. Jamwal",
+        faculty: "Mr. Satish Jamraj",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
         rules: [
           {
             section: "Format",
             items: [
-              "Individual participation only (CircuitCraze: Breadboard Build-Off)",
-              "Circuit problem/task details are revealed on the spot",
-              "Participants must complete the circuit within the allotted time"
-            ]
-          },
-          {
-            section: "Rules",
-            items: [
-              "All components are provided by the organizers",
-              "Handle components carefully — short circuits or unsafe connections may lead to disqualification",
-              "No use of pre-built circuits or external references",
-              "Mobile phones and smartwatches are not allowed during the event"
+              "Individual participation only",
+              "The circuit diagram will be provided at the start of the round; participants must assemble the given circuit on a breadboard within the stipulated time",
+              "All necessary components required for the circuit will be provided by the organizing team",
+              "The circuit must be completed within the given time limit; no extra time will be provided under any circumstances",
+              "No functional testing of the circuit will be conducted"
             ]
           },
           {
             section: "Evaluation Criteria",
             items: [
-              "Correctness of the circuit",
-              "Neatness and organization of the breadboard layout",
-              "Functionality — circuit must work as expected",
-              "Time taken to complete the task"
+              "Accuracy of connections",
+              "Correct placement of components",
+              "Time taken to complete the circuit",
+              "Any incorrect connection, improper component placement, or messy wiring may lead to deduction of marks",
+              "In case of a tie, preference will be given to the participant who completed the circuit in lesser time with higher accuracy"
+            ]
+          },
+          {
+            section: "Rules",
+            items: [
+              "Participants are not allowed to use any personal components, pre-assembled circuits, mobile phones, or reference materials during the event",
+              "Any damage to components or breadboard due to negligence may result in penalty or disqualification",
+              "Participants must maintain discipline and proper handling of equipment throughout the event",
+              "The decision of the judges and event coordinators shall be final"
             ]
           }
         ]
@@ -1075,7 +1083,7 @@ const eventData = {
         description:
           "CodeQuest 2.0: DSA coding competition, is a competitive programming contest focused on Data Structures and Algorithms. Its aim is to improve logic building, time bound coding skills, and prepare students for coding interviews.",
         icon: "Users",
-        venue: "CCF/Language Lab",
+        venue: "Language Lab",
         prizePool: 7000,
         entryFee: 99,
         members: 1,
@@ -1127,13 +1135,13 @@ const eventData = {
         ]
       },
       {
-        id: "ITSA (Code Clash 2.0)",
-        title: "ITSA (Code Clash 2.0)",
+        id: "HACKIT (Code Clash 2.0)",
+        title: "HACKIT (Code Clash 2.0)",
         tagline: "Code Clash 2.0",
         description:
           "Code Clash 2.0 is a 3-stage technical challenge designed to test participants' logic, coding ability, and real-time problem solving. The event includes: A) Tech Quiz — A fast test of cybersecurity, programming, and technical fundamentals. B) Scenario-Based Coding — Participants write code to solve given problem statements. C) Surprise Round — Guess-the-output and rapid-fire questions.",
         icon: "Users",
-        venue: "CCF/Language Lab",
+        venue: "Language Lab",
         prizePool: 7000,
         entryFee: 99,
         members: 2,
@@ -1193,11 +1201,11 @@ const eventData = {
         icon: "Users",
         venue: "Admin Building",
         prizePool: 5000,
-        entryFee: 49,
-        members: 1,
+        entryFee: 99,
+        members: 2,
         coordinators: [
           { name: "Mr. Shailesh Dhoke", phone: "8999101169" },
-          { name: "Piyush Mudhol", phone: "8421608031" }
+          { name: "Mr. krushna Gavandi", phone: "8669421351" }
         ],
         faculty: "Dr. Nilesh Khandekar",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
@@ -1239,13 +1247,7 @@ const eventData = {
               "Participants must bring their own pens"
             ]
           },
-          {
-            section: "Prize Pool (₹3,000)",
-            items: [
-              "Winner: ₹2,000 + Certificate",
-              "Runner-Up: ₹1,000 + Certificate"
-            ]
-          }
+        
         ]
       },
       {
@@ -1260,8 +1262,8 @@ const eventData = {
         entryFee: 199,
         members: 4,
         coordinators: [
-          { name: "Krishna Jagdambe", phone: "7066658615" },
-          { name: "Krushna Pimple", phone: "8459295642" }
+          { name: "Mohit Kumare", phone: "8080720803" },
+          { name: "Aditya Tangade", phone: "8956721443" }
         ],
         faculty: "Dr Atul Shinde",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
