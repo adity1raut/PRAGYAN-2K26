@@ -899,6 +899,9 @@ const eventData = {
         ],
         faculty: "Dr Atul Shinde",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
+        problemStatements: [
+          { label: "Town Planning Problem Statement", url: "/Town_Planning_Problem_Statement.pdf" }
+        ],
         rules: [
           {
             section: "Team & Format",
