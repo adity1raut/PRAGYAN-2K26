@@ -290,7 +290,7 @@ const eventData = {
           "Contraption: A creativity-driven event where participants design and construct an elaborate mechanical setup to solve industry ready challenges.",
         icon: "Users",
         venue: "Mechanical Engineering Department",
-        prizePool: 5000,
+        prizePool: 10000,
         entryFee: 199,
         members: 4,
         coordinators: [
@@ -460,8 +460,8 @@ const eventData = {
         ]
       },
       {
-        id: "Mechaverse (PESA Design-A-Thon)",
-        title: "Mechaverse (PESA Design-A-Thon)",
+        id: "PESA (Design-A-Thon)",
+        title: "PESA (Design-A-Thon)",
         tagline: "Design for a Sustainable Future",
         description:
           "PESA Design-A-Thon: A design competition where participants create innovative solutions addressing real-world mechanical and sustainability challenges, blending engineering creativity with practical problem solving.",
@@ -949,7 +949,7 @@ const eventData = {
         icon: "Users",
         venue: "Electrical Engineering Department",
         prizePool: 5000,
-        entryFee: 99,
+        entryFee: 49,
         members: 4,
         coordinators: [{ name: "Mr. Shubham Tayde", phone: "9075066926" }],
         faculty: "Mrs. Seema Pachpute",
