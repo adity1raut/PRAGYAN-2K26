@@ -887,7 +887,7 @@ const eventData = {
         title: "CESA-Cenfest (Town Planning)",
         tagline: "Town Planning",
         description:
-          "Design a sustainable, well-structured miniature town layout based on given constraints. Participants must plan roads, utilities, zoning, public spaces, and infrastructure using smart urban-planning principles.",
+          "Design a sustainable, well-structured campus master plan accommodating diverse academic departments ranging from Science and Engineering to Law, Design, and Health Sciences. Participants must plan roads, utilities, zoning, public spaces, and infrastructure using smart urban-planning principles for a multi-disciplinary university campus.",
         icon: "Users",
         venue: "Civil Engineering Department",
         prizePool: 5000,
@@ -907,32 +907,95 @@ const eventData = {
             section: "Team & Format",
             items: [
               "Team: max 4 members",
-              "Teams receive a problem statement / scenario on which the town plan must be based",
-              "Must prepare and present a detailed tender report / planning proposal",
-              "No copying from the internet or AI-generated content; false rates or unrealistic estimates attract penalty marks"
+              "Teams must design a campus master plan based on the given problem statement / scenario",
+              "Must prepare and present a detailed planning proposal / layout report",
+              "No copying from the internet or AI-generated content; plagiarised or adapted submissions will be disqualified"
             ]
           },
           {
-            section: "Plan Requirements",
+            section: "Science Departments to Plan For",
             items: [
-              "Design a miniature town layout based on given constraints",
-              "Must cover: roads, utilities, zoning, public spaces, and infrastructure",
-              "Apply smart urban-planning and sustainable development principles",
-              "Presentation of the plan before a jury panel"
+              "Physics",
+              "Chemistry",
+              "Mathematics",
+              "Statistics",
+              "Environmental Science",
+              "Data Science",
+              "Earth Sciences"
+            ]
+          },
+          {
+            section: "Management & Commerce",
+            items: [
+              "Business Administration (BBA/MBA)",
+              "Commerce",
+              "Finance",
+              "Economics",
+              "Entrepreneurship & Innovation"
+            ]
+          },
+          {
+            section: "Humanities & Social Sciences",
+            items: [
+              "English",
+              "Psychology",
+              "Sociology",
+              "Political Science",
+              "Public Administration",
+              "History",
+              "Philosophy"
+            ]
+          },
+          {
+            section: "Emerging Technological Departments",
+            items: [
+              "Robotics",
+              "Cyber Security",
+              "Blockchain Technology",
+              "Cloud Computing",
+              "IoT & Embedded Systems"
+            ]
+          },
+          {
+            section: "Health & Allied Sciences",
+            items: [
+              "Pharmacy",
+              "Nursing",
+              "Public Health",
+              "Physiotherapy"
+            ]
+          },
+          {
+            section: "Law Departments",
+            items: [
+              "Integrated Law (BA LLB / BBA LLB)",
+              "LLM"
+            ]
+          },
+          {
+            section: "Design & Fine Arts",
+            items: [
+              "Visual Communication",
+              "Animation & Multimedia",
+              "Industrial Design",
+              "Fashion Design"
             ]
           },
           {
             section: "Judging Criteria",
             items: [
-              "Comprehensiveness of the town plan",
+              "Comprehensiveness and zoning of all required departments",
               "Sustainability and environmental planning",
-              "Feasibility and practicality of the proposal",
-              "Clarity and quality of presentation"
+              "Feasibility and practicality of the campus layout",
+              "Roads, utilities, public spaces, and infrastructure coverage",
+              "Clarity and quality of the presentation"
             ]
           },
           {
             section: "Rules",
             items: [
+              "The campus master plan must be entirely original",
+              "Any submission found to be copied or adapted will be disqualified",
               "College ID cards mandatory",
               "No electronic devices (other than permitted tools) allowed",
               "Coordinators' and judges' decisions are final"
