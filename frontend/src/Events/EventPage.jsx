@@ -151,11 +151,9 @@ export default function EventPage() {
           </div>
 
           {/* Title */}
-          <section className="pt-16 sm:pt-20 md:pt-24 pb-6 sm:pb-8 px-4 text-center">
-      
-
+          <section className="pt-14 sm:pt-16 md:pt-20 pb-2 sm:pb-3 px-4 text-center">
             {/* Main Image */}
-            <div className="my-3 sm:my-4 md:my-5">
+            <div className="my-2 sm:my-3">
               <img
                 src="/Pragyaa_main_image.png"
                 alt="PRAGYAA 2026"
@@ -164,7 +162,7 @@ export default function EventPage() {
             </div>
           </section>
 
-          <section className="py-4 sm:py-6 px-4 text-center">
+          <section className="py-2 sm:py-3 px-4 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-clip-text text-transparent uppercase mb-4 sm:mb-6">
               Events & Competitions
             </h2>
@@ -172,6 +170,46 @@ export default function EventPage() {
               Explore flagship events, workshops, and competitions.
             </p>
             <div className="w-20 sm:w-28 md:w-32 h-0.5 sm:h-1 bg-gradient-to-r from-red-500 via-red-600 to-red-700 mx-auto rounded-full animate-pulse mt-4 sm:mt-6"></div>
+          </section>
+
+          {/* Mega Rulebook Banner */}
+          <section className="px-4 pb-2 sm:pb-4">
+            <div className="max-w-4xl mx-auto">
+              <a
+                href="/PRAGYAA_2026_Rulebook.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full bg-gradient-to-r from-red-950/60 via-gray-900/80 to-red-950/60 border-2 border-red-500/40 hover:border-red-400 rounded-2xl px-5 sm:px-8 py-5 sm:py-6 shadow-xl shadow-red-500/10 hover:shadow-red-500/30 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+              >
+                {/* Icon */}
+                <div className="shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center shadow-lg shadow-red-500/30">
+                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                  </svg>
+                </div>
+                {/* Text */}
+                <div className="flex-1 text-center sm:text-left">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+                    <h3 className="text-lg sm:text-xl font-bold text-white uppercase tracking-wider group-hover:text-red-300 transition-colors">
+                      PRAGYAA 2026 — Mega Rulebook
+                    </h3>
+                    <span className="inline-block px-2.5 py-0.5 rounded-full bg-red-500/20 border border-red-500/40 text-red-400 text-[10px] font-bold uppercase tracking-widest w-fit mx-auto sm:mx-0">
+                      Official
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-400 leading-relaxed max-w-xl">
+                    Official prize pool &amp; rules for all PRAGYAA 2026 events — dates, venues, team limits, and prize calculation breakdown across all categories.
+                  </p>
+                </div>
+                {/* CTA */}
+                <div className="shrink-0 flex items-center gap-2 text-red-400 group-hover:text-red-300 font-semibold text-sm transition-colors">
+                  <span>Open PDF</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>
+                </div>
+              </a>
+            </div>
           </section>
 
           {/* Category Filters */}
