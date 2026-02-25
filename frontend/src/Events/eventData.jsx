@@ -690,47 +690,94 @@ const eventData = {
         title: "CESA-Cenfest (Bridge Building)",
         tagline: "Bridge Building",
         description:
-          "Bridge Building: Classic engineering challenge — design & construct a strong bridge using ice-cream sticks. Show your structural skills and compete for maximum load capacity.",
+          "Design and construct a bridge model using only the provided bundle of sticks and glue within the given constraints. The objective is to achieve the highest load-carrying capacity with minimum material usage to obtain the best strength-to-weight ratio. Construction: 27 Feb 2026 | Testing: 28 Feb 2026.",
         icon: "Users",
-        venue: "Civil Engineering Department",
+        venue: "CE-I & CE-II (Construction) | Strength of Mechanics Lab (Testing)",
         prizePool: 5000,
         entryFee: 199,
         members: 4,
         coordinators: [
-          { name: "Mr. Omkar Dalvi", phone: "7823058329" },
-          { name: "Suhani Malviya", phone: "8975160888" }
+          { name: "Mr. Ritesh Gonde", phone: "9527509193" },
+          { name: "Mr. Ayyan Salim Shaikh", phone: "7770083016" },
+          { name: "Ms. Munnazza Shaikh", phone: "9403732656" },
+          { name: "Mr. Aryan Padalwar", phone: "9403326305" }
         ],
         faculty: "Dr Atul Shinde",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
         rules: [
           {
-            section: "Team & Materials",
+            section: "Schedule",
             items: [
-              "Team: 2–4 members",
-              "Time limit: 2 hours for construction",
-              "Bridge dimensions: 40 cm (L) × 10 cm (B) × 10 cm (H)",
-              "Materials provided: 200 ice-cream sticks and glue",
-              "Deck slab thickness: max 0.5 cm",
-              "No pre-assembled parts; basic tools only (no power tools)"
+              "Construction Date: 27 Feb 2026, 12:00 PM | Venue: CE-I & CE-II",
+              "Testing Date: 28 Feb 2026, 1:00 PM | Venue: Strength of Mechanics Lab",
+              "Participants must report 30 minutes before scheduled time",
+              "Late reporting may lead to reduced construction time or disqualification"
             ]
           },
           {
-            section: "Testing",
+            section: "Team Formation",
             items: [
-              "Bridge tested with incremental weight placed at the center",
-              "Loading continues until collapse",
-              "Last weight successfully held = performance score",
-              "Any bridge that fails before testing starts will be disqualified"
+              "Team: minimum 2 and maximum 4 participants",
+              "A participant can be a member of only one team",
+              "All team members must be present during both construction and testing"
             ]
           },
           {
-            section: "Rules",
+            section: "Bridge Specifications",
             items: [
-              "College ID cards mandatory",
-              "No electronic devices allowed during construction",
-              "No pre-built or store-bought components",
-              "Coordinators' and judges' decisions are final",
-              "Misconduct or cheating leads to disqualification"
+              "Dimensions: 50 cm (L) × 10 cm (B) × 10 cm (H) with tolerance of ±2 cm",
+              "Bridge must be structurally stable and capable of sustaining the applied load",
+              "Total construction time: 2 hours (fixed) — no extra time under any circumstances"
+            ]
+          },
+          {
+            section: "Materials Provided",
+            items: [
+              "Sticks: 200 nos.",
+              "Glue: 100 grams",
+              "Only Scale and Scissors/Cutters are allowed as accessories — must be brought by participants",
+              "No additional construction materials permitted",
+              "Sharing of materials between teams is strictly prohibited"
+            ]
+          },
+          {
+            section: "Design Guidelines",
+            items: [
+              "Participants may prepare their design/plan beforehand — design drawings will NOT be allowed during construction",
+              "Pre-assembling of parts is strictly prohibited",
+              "Any ready-made or pre-glued components will lead to immediate disqualification"
+            ]
+          },
+          {
+            section: "Testing Procedure",
+            items: [
+              "Load applied incrementally at the center of the deck slab; clear span between supports: 45 cm",
+              "Load applied using an attachment running perpendicular to the longitudinal axis",
+              "Loading continues until structural collapse",
+              "Last successfully sustained load is used for evaluation",
+              "Failure conditions: dislocation of stick, breakage of stick, skidding/sliding of support",
+              "Testing conducted openly in front of all participants for transparency",
+              "Once submitted for testing, no modifications are allowed"
+            ]
+          },
+          {
+            section: "Evaluation Criteria",
+            items: [
+              "Score = Maximum Load Sustained Before Collapse ÷ Weight of the Bridge",
+              "Higher ratio = better structural efficiency",
+              "Winner determined by highest ratio"
+            ]
+          },
+          {
+            section: "Disqualification Criteria",
+            items: [
+              "Dimensions beyond permitted tolerance (±2 cm)",
+              "Use of materials other than those provided",
+              "Pre-assembled parts or external supports",
+              "Misconduct, arguments, or indiscipline during the event",
+              "Tampering with other teams' materials or models",
+              "Failure to follow instructions of coordinators or judges",
+              "Damage to institute property"
             ]
           }
         ]
@@ -840,44 +887,79 @@ const eventData = {
         title: "CESA-Cenfest (Float-a-BO(a)T)",
         tagline: "Float a BO(a)T",
         description:
-          "Build a boat with provided materials, then test it by applying weights. How much load can your boat carry before sinking? Put your design to the ultimate test!",
+          "Design and construct a boat model using any material combination within the given dimensions. The objective is to support the maximum load while maintaining stability and using minimum material for the best efficiency ratio. Date: 28 Feb 2026, 10:00 AM | Civil Engineering Laboratory.",
         icon: "Users",
-        venue: "Civil Engineering Department",
+        venue: "Civil Engineering Laboratory",
         prizePool: 5000,
         entryFee: 199,
         members: 4,
         coordinators: [
-          { name: "Mr. Omkar Dalvi", phone: "7823058329" },
-          { name: "Suhani Malviya", phone: "8975160888" }
+          { name: "Mr. Ritesh Gonde", phone: "9527509193" },
+          { name: "Mr. Ayyan Salim Shaikh", phone: "7770083016" },
+          { name: "Ms. Munnazza Shaikh", phone: "9403732656" },
+          { name: "Mr. Aryan Padalwar", phone: "9403326305" }
         ],
         faculty: "Dr Atul Shinde",
         registerLink: "https://forms.gle/k8CNq64WazHzRyv2A",
         rules: [
           {
-            section: "Team & Design Specs",
+            section: "Team Formation",
             items: [
-              "Team: 2–4 members",
-              "Maximum boat dimensions: 30 cm × 30 cm × 30 cm",
-              "Flat center surface must be at least 14 cm × 14 cm",
-              "All materials provided by organizers"
+              "Team: minimum 2 and maximum 4 participants",
+              "Participants can be from the same or different departments",
+              "No participant can be part of more than one team",
+              "Report at least 30 minutes before the event for dimension verification"
             ]
           },
           {
-            section: "Testing",
+            section: "Boat Specifications",
             items: [
-              "Boats are tested in a water tank",
-              "Failure conditions: boat sinks 6 cm or more, or tilts beyond 30 degrees",
-              "Scoring: ratio of boat weight to (total weight held + boat weight); lower ratio wins"
+              "Dimensions: 40 cm × 30 cm × 20 cm (±1 cm tolerance)",
+              "Center flat surface: 17.5 cm × 17.5 cm (flat/plane)",
+              "Any material combination is allowed for construction",
+              "Boat must match the specified shape as instructed by the organizing committee",
+              "Any deviation beyond permitted dimensions = immediate disqualification",
+              "Load will be applied at the center of the boat only"
+            ]
+          },
+          {
+            section: "Testing Procedure",
+            items: [
+              "Boat tested in a water tank provided by organizers",
+              "Failure: boat sinks 6 cm or more from lower point (including self-weight sinking)",
+              "Failure: angle of tilt exceeds 30 degrees",
+              "Failure: breaking in any part of the boat",
+              "Only judges and authorized volunteers may handle the boat during testing",
+              "Once submitted for testing, no modifications are allowed",
+              "Teams must bring their own repair materials — no extra time for major repairs"
+            ]
+          },
+          {
+            section: "Evaluation Criteria",
+            items: [
+              "Score = Total Weight Taken by Boat ÷ Total Weight of Boat",
+              "Team with the highest ratio wins",
+              "In case of a tie, judges may conduct a re-test or consider additional parameters"
+            ]
+          },
+          {
+            section: "Disqualification Criteria",
+            items: [
+              "Dimensions modified beyond ±1 cm tolerance",
+              "Use of prohibited materials (if specified by organizers)",
+              "Misconduct, arguments, or disrespect towards judges or volunteers",
+              "Attempt to manipulate results or violate event rules",
+              "Late reporting beyond permitted time without valid reason",
+              "Damage to event property"
             ]
           },
           {
             section: "Rules",
             items: [
-              "No pre-built or store-bought boat components",
-              "All construction must happen at the venue within the allotted time",
-              "College ID cards mandatory",
-              "Coordinators' and judges' decisions are final",
-              "Misconduct or cheating leads to disqualification"
+              "Boats must be submitted for dimension checking before testing",
+              "Safety must be ensured while handling tools and materials",
+              "Entire event and testing is open for all participants — full transparency maintained",
+              "Final decision taken by judges is binding on all teams"
             ]
           }
         ]
