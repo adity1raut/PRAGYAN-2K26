@@ -107,16 +107,29 @@ function FAQ() {
           </p>
           <div className="w-20 h-0.5 bg-gradient-to-r from-red-500 via-red-600 to-red-700 mx-auto rounded-full mt-6 animate-pulse" />
 
-          {/* Accommodation Button */}
-          <div className="mt-6">
-            <a
-              href="https://forms.gle/mmZ8L4KkBBF6F8DJ8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-red-600/20 border-2 border-red-500/60 text-red-400 font-bold text-sm uppercase tracking-widest rounded-xl hover:bg-red-600/30 hover:border-red-400 hover:text-red-300 transition-all duration-300 hover:scale-105 shadow-lg shadow-red-500/10"
-            >
-              🏨 Accommodation
-            </a>
+          {/* Accommodation Box */}
+          <div className="mt-8 inline-block">
+            <div className="relative px-8 py-5 bg-gradient-to-br from-gray-900/90 via-black/80 to-red-950/30 border-2 border-red-500/50 rounded-2xl shadow-[0_0_24px_rgba(255,87,87,0.2)] hover:shadow-[0_0_36px_rgba(255,87,87,0.35)] transition-all duration-300 group max-w-sm mx-auto text-center">
+              {/* Corner accents */}
+              <span className="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-red-500 rounded-tl" />
+              <span className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-red-500 rounded-tr" />
+              <span className="absolute bottom-2 left-2 w-3 h-3 border-b-2 border-l-2 border-red-500 rounded-bl" />
+              <span className="absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-red-500 rounded-br" />
+
+              <div className="text-2xl mb-2">🏨</div>
+              <h3 className="text-red-400 font-black text-base sm:text-lg uppercase tracking-widest mb-1">Accommodation</h3>
+              <p className="text-gray-400 text-xs sm:text-sm mb-4 leading-relaxed">
+                Need a place to stay? Register for accommodation before spots run out.
+              </p>
+              <a
+                href="https://forms.gle/mmZ8L4KkBBF6F8DJ8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-widest rounded-lg transition-all duration-300 hover:scale-105 shadow-md shadow-red-700/40"
+              >
+                Register Now →
+              </a>
+            </div>
           </div>
         </section>
 
