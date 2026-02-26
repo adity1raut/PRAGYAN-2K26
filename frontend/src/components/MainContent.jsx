@@ -34,7 +34,7 @@ export default function MainContent() {
     events: "30+ Events",
     contact: {
       email: "pragyaa@sggs.ac.in",
-      phone: "+91 2462 228342",
+      phone: "+91 9834797489",
     },
   };
 
