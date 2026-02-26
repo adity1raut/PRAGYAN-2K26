@@ -106,6 +106,18 @@ function FAQ() {
             Everything you need to know about PRAGYAA 2K26. Can't find the answer? Reach out to us directly.
           </p>
           <div className="w-20 h-0.5 bg-gradient-to-r from-red-500 via-red-600 to-red-700 mx-auto rounded-full mt-6 animate-pulse" />
+
+          {/* Accommodation Button */}
+          <div className="mt-6">
+            <a
+              href="https://forms.gle/mmZ8L4KkBBF6F8DJ8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-red-600/20 border-2 border-red-500/60 text-red-400 font-bold text-sm uppercase tracking-widest rounded-xl hover:bg-red-600/30 hover:border-red-400 hover:text-red-300 transition-all duration-300 hover:scale-105 shadow-lg shadow-red-500/10"
+            >
+              🏨 Accommodation
+            </a>
+          </div>
         </section>
 
         {/* FAQ Accordion */}
