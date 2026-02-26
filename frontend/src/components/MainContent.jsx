@@ -226,15 +226,20 @@ export default function MainContent() {
               </p>
             </div>
 
-            <div className="p-3 sm:p-4 bg-white/5 backdrop-blur-sm border border-red-500/30 rounded-lg transition-all duration-300 hover:bg-white/10 hover:border-red-400/50">
-              <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-red-400 mb-1.5 sm:mb-2 mx-auto" />
+            <a
+              href="https://forms.gle/mmZ8L4KkBBF6F8DJ8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 sm:p-4 bg-white/5 backdrop-blur-sm border border-red-500/30 rounded-lg transition-all duration-300 hover:bg-white/10 hover:border-red-400/50 hover:scale-105 flex flex-col items-center"
+            >
+              <span className="text-lg sm:text-xl mb-1.5 sm:mb-2">🏨</span>
               <h3 className="text-[9px] sm:text-[10px] text-gray-400 uppercase tracking-wider mb-0.5 sm:mb-1">
-                Events
+                Accommodation
               </h3>
-              <p className="text-[10px] sm:text-xs text-white font-semibold leading-tight">
-                {eventDetails.events}
+              <p className="text-[10px] sm:text-xs text-red-400 font-semibold leading-tight">
+                Register Now
               </p>
-            </div>
+            </a>
           </div>
 
           {/* Prize Pool Section */}
