@@ -102,6 +102,14 @@ const Footer = () => {
               >
                 Gallery
               </button>
+              <a
+                href="https://forms.gle/mmZ8L4KkBBF6F8DJ8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
+              >
+                Accommodation
+              </a>
             </nav>
           </div>
 
