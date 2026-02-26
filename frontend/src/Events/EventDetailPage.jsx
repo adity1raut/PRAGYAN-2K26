@@ -410,6 +410,27 @@ function TownPlanningReveal({ event, navigate }) {
             </div>
           </div>
 
+          {/* ── PROBLEM STATEMENT PDF ── */}
+          <a
+            href="/old_Town_Planning_PS.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-4 w-full px-6 py-4 rounded-2xl transition-all duration-300 hover:scale-[1.01]"
+            style={{ background: "linear-gradient(135deg,rgba(239,68,68,0.07),rgba(249,115,22,0.04))", border: "1px solid rgba(239,68,68,0.25)", boxShadow: "0 8px 30px rgba(0,0,0,0.4)" }}>
+            {/* Icon */}
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300"
+              style={{ background: "rgba(239,68,68,0.15)", border: "1px solid rgba(239,68,68,0.35)" }}>
+              <FileText className="w-5 h-5 text-red-400" />
+            </div>
+            <div className="flex-1">
+              <p className="text-white font-black text-sm uppercase tracking-[0.1em]">Problem Statement PDF</p>
+              <p className="text-gray-500 text-[11px] mt-0.5">Click to open the official Town Planning PS</p>
+            </div>
+            <span className="text-red-400 font-black text-sm uppercase tracking-widest transition-transform duration-200 group-hover:translate-x-1">
+              Open &rarr;
+            </span>
+          </a>
+
         </div>
       </main>
 
