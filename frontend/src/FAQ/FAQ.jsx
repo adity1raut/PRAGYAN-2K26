@@ -200,11 +200,11 @@ function FAQ() {
                   pragyaa@sggs.ac.in
                 </a>
                 <a
-                  href="tel:+911234567890"
+                  href="tel:+912462 228342"
                   className="inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-gray-800/80 hover:bg-gray-700/80 border-2 border-red-500/30 hover:border-red-500/60 text-white rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105"
                 >
                   <Phone className="w-4 h-4" />
-                  +91 1234567890
+                  +91 2462 228342
                 </a>
               </div>
             </div>
