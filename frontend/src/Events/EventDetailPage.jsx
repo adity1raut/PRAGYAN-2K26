@@ -3,8 +3,21 @@ import { ArrowLeft, Trophy, Users, Phone, MapPin, BookOpen, FileText, Building2,
 import eventData from "./eventData";
 import BackgroundLayer from "../components/BackgroundLayer";
 import Footer from "../Footer/Footer";
+import BridgeBuildingPdf from "./Bridge Building Rule Book-3.pdf";
+import FloatABoatPdf from "./Float a Boat Rule Book-3.pdf";
+import CadWarPdf from "./CAD WAR RULE BOOK.pdf";
+import BuildBlindPdf from "./BUILD BLIND RULE BOOK.pdf";
+import TownPlanningRuleBookPdf from "./TOWN planning rule book.pdf";
 
 const TOWN_PLANNING_ID = "CESA-Cenfest (Town Planning)";
+
+const CESA_RULEBOOK_PDFS = {
+  bridge_building: BridgeBuildingPdf,
+  float_a_boat: FloatABoatPdf,
+  cad_war: CadWarPdf,
+  build_blind: BuildBlindPdf,
+  town_planning: TownPlanningRuleBookPdf,
+};
 
 function findEvent(eventId) {
   for (const category of Object.values(eventData)) {
@@ -189,7 +202,36 @@ function TownPlanningReveal({ event, navigate }) {
         {/* â•â•â•â• CONTENT CARDS â•â•â•â• */}
         <div className="max-w-5xl mx-auto px-4 space-y-5">
 
-          {/* â”€â”€ PROBLEM STATEMENT â”€â”€ */}
+          {/* ── RULE BOOK PDF ── */}
+          {event.ruleBookPdf && CESA_RULEBOOK_PDFS[event.ruleBookPdf] && (
+            <a
+              href={CESA_RULEBOOK_PDFS[event.ruleBookPdf]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 w-full px-6 py-4 rounded-2xl transition-all duration-300 hover:scale-[1.01]"
+              style={{
+                background: "linear-gradient(135deg,rgba(239,68,68,0.07),rgba(249,115,22,0.04))",
+                border: "1px solid rgba(239,68,68,0.25)",
+                boxShadow: "0 8px 30px rgba(0,0,0,0.4)",
+              }}
+            >
+              <div
+                className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
+                style={{ background: "rgba(239,68,68,0.15)", border: "1px solid rgba(239,68,68,0.35)" }}
+              >
+                <FileText className="w-5 h-5 text-red-400" />
+              </div>
+              <div className="flex-1">
+                <p className="text-white font-black text-sm uppercase tracking-[0.1em]">Rule Book PDF</p>
+                <p className="text-gray-500 text-[11px] mt-0.5">Click to open the official rule book</p>
+              </div>
+              <span className="text-red-400 font-black text-sm uppercase tracking-widest transition-transform duration-200 group-hover:translate-x-1">
+                Open &rarr;
+              </span>
+            </a>
+          )}
+
+          {/* ── PROBLEM STATEMENT ── */}
           <div className="relative rounded-2xl overflow-hidden"
             style={{ border: "1px solid rgba(239,68,68,0.22)", boxShadow: "0 0 0 1px rgba(239,68,68,0.06), 0 32px 80px rgba(0,0,0,0.7), 0 0 100px rgba(185,28,28,0.08)" }}>
             {/* Blueprint grid inside card */}
@@ -534,6 +576,35 @@ export default function EventDetailPage() {
               </div>
             )}
           </div>
+
+          {/* Rule Book PDF Button */}
+          {event.ruleBookPdf && CESA_RULEBOOK_PDFS[event.ruleBookPdf] && (
+            <a
+              href={CESA_RULEBOOK_PDFS[event.ruleBookPdf]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 w-full px-6 py-4 rounded-2xl transition-all duration-300 hover:scale-[1.01]"
+              style={{
+                background: "linear-gradient(135deg,rgba(239,68,68,0.07),rgba(249,115,22,0.04))",
+                border: "1px solid rgba(239,68,68,0.25)",
+                boxShadow: "0 8px 30px rgba(0,0,0,0.4)",
+              }}
+            >
+              <div
+                className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
+                style={{ background: "rgba(239,68,68,0.15)", border: "1px solid rgba(239,68,68,0.35)" }}
+              >
+                <FileText className="w-5 h-5 text-red-400" />
+              </div>
+              <div className="flex-1">
+                <p className="text-white font-black text-sm uppercase tracking-[0.1em]">Rule Book PDF</p>
+                <p className="text-gray-500 text-[11px] mt-0.5">Click to open the official rule book</p>
+              </div>
+              <span className="text-red-400 font-black text-sm uppercase tracking-widest transition-transform duration-200 group-hover:translate-x-1">
+                Open &rarr;
+              </span>
+            </a>
+          )}
 
           {/* Description */}
           <div className="bg-gray-900/60 border border-red-500/25 rounded-2xl p-5 sm:p-6">

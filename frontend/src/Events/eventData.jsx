@@ -689,6 +689,7 @@ const eventData = {
         id: "CESA-Cenfest (Bridge Building)",
         title: "CESA-Cenfest (Bridge Building)",
         tagline: "Bridge Building",
+        ruleBookPdf: "bridge_building",
         description:
           "Design and construct a bridge model using only the provided bundle of sticks and glue within the given constraints. The objective is to achieve the highest load-carrying capacity with minimum material usage to obtain the best strength-to-weight ratio. Construction: 27 Feb 2026 | Testing: 28 Feb 2026.",
         icon: "Users",
@@ -786,6 +787,7 @@ const eventData = {
         id: "CESA-Cenfest (CAD-WAR)",
         title: "CESA-Cenfest (CAD-WAR)",
         tagline: "CAD - WAR",
+        ruleBookPdf: "cad_war",
         description:
           "Convert a single-line plan into a professional double-line plan using CAD tools. Speed, accuracy, and drafting skills will decide the winner.",
         icon: "Users",
@@ -840,6 +842,7 @@ const eventData = {
         id: "CESA-Cenfest (Build Blind)",
         title: "CESA-Cenfest (Build Blind)",
         tagline: "Build Blind",
+        ruleBookPdf: "build_blind",
         description:
           "Build Blind: A fun twist on bridge building! Two members per team — one blindfolded builder, the other guiding. Bridges made with ice-cream sticks & Fevicol. Test your coordination and trust!",
         icon: "Users",
@@ -886,6 +889,7 @@ const eventData = {
         id: "CESA-Cenfest (Float-a-BO(a)T)",
         title: "CESA-Cenfest (Float-a-BO(a)T)",
         tagline: "Float a BO(a)T",
+        ruleBookPdf: "float_a_boat",
         description:
           "Design and construct a boat model using any material combination within the given dimensions. The objective is to support the maximum load while maintaining stability and using minimum material for the best efficiency ratio. Date: 28 Feb 2026, 10:00 AM | Civil Engineering Laboratory.",
         icon: "Users",
@@ -968,6 +972,7 @@ const eventData = {
         id: "CESA-Cenfest (Town Planning)",
         title: "CESA-Cenfest (Town Planning)",
         tagline: "Town Planning",
+        ruleBookPdf: "town_planning",
         description:
           "Design a sustainable, well-structured campus master plan accommodating diverse academic departments ranging from Science and Engineering to Law, Design, and Health Sciences. Participants must plan roads, utilities, zoning, public spaces, and infrastructure using smart urban-planning principles for a multi-disciplinary university campus.",
         icon: "Users",
