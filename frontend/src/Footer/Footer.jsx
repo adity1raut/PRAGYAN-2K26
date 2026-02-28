@@ -84,12 +84,13 @@ const Footer = () => {
               >
                 About Us
               </button>
-              <button
-                onClick={() => handleNavigation("/register")}
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeuim1Qf8rCYCikzYCNzzlZ00DEqoXrOa2HtTvCHl2GOUrlkw/viewform"
+                target="_blank"
                 className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
               >
                 Register
-              </button>
+              </a>
               <button
                 onClick={() => handleNavigation("/contact")}
                 className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
